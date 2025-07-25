@@ -1,0 +1,229 @@
+{
+  "batch_id": "batch_0597c0da3b484e22",
+  "created_at": "2025-07-25T16:58:05.576821Z",
+  "shot_type": "first_shot",
+  "date_folder": "Testing3_7-25-25",
+  "total_transcriptions": 10,
+  "transcriptions": [
+    {
+      "id": "msg_bdrk_aa8b71e7a84b4869872cbf82",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.amazon.nova-premier-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: B. Zemanek\ncollectedBy: B. Zemanek\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 9. I. 19 76\nminimumEventDate: 1976-01-09\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella cuspidata Broth.\nlatestScientificName: Pilotrichella cuspidata\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: Nairobi\nverbatimLocality: Ngong Hills near Nairobi, epiphytic\nlocality: Ngong Hills near Nairobi\nhabitat: epiphytic\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: 1050473\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 172
+      },
+      "image_name": "0006_C2022789F_collage.jpg",
+      "timestamp": "2025-07-25T16:56:31.949286Z"
+    },
+    {
+      "id": "msg_bdrk_f8f68010d895470ea9c8f3bd",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.amazon.nova-premier-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Y. HASEGAWA\ncollectedBy: Y. Hasegawa\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: October 31, 1974\nminimumEventDate: 1974-10-31\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella amplulacea (C. Müller) B. H. Allen & Magill\nlatestScientificName: Orthostichella amplulacea\nidentifiedBy: Bruce Allen\nverbatimDateIdentified: 2005\nassociatedTaxa: Pilotrichella cuspidata\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Around Ngorongoro Crater\nlocality: [precise locality unknown]\nhabitat: On tree-trunk\nverbatimElevation: elevation about 2000 m\nverbatimCoordinates: N/A\notherCatalogNumbers: 1027423\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 186
+      },
+      "image_name": "0010_C2022793F_collage.jpg",
+      "timestamp": "2025-07-25T16:56:41.660513Z"
+    },
+    {
+      "id": "msg_bdrk_5412c76570d94f23b8a17e59",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.amazon.nova-premier-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: leg. J.Szunyoghi (No. 18/a)\ncollectedBy: J. Szunyoghy\nsecondaryCollectors: N/A\nrecordNumber: 18/a\nverbatimEventDate: 31.3.1965\nminimumEventDate: 1965-03-31\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella ampuillacea (C. Müller) B. H. Allen & Magill\nlatestScientificName: Orthostichella ampuillacea\nidentifiedBy: Bruce Allen\nverbatimDateIdentified: 2005\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Africa orientalis; Tanzania, ramicola in silva crateris montis Meru\nlocality: [precise locality unknown]\nhabitat: ramicola in silva crateris montis Meru\nverbatimElevation: Alt. 3000 m.s.m.\nverbatimCoordinates: N/A\notherCatalogNumbers: 1066346\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 205
+      },
+      "image_name": "0012_C2022795F_collage.jpg",
+      "timestamp": "2025-07-25T16:56:52.954914Z"
+    },
+    {
+      "id": "msg_bdrk_e0826233f8af4650bde01f28",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.amazon.nova-premier-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: P. J. Greenway\ncollectedBy: P. J. Greenway\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 2/10/1965\nminimumEventDate: 1965-10-02\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella ampliaceae (C. Müller) B. H. Allen & Magill\nlatestScientificName: Orthostichella ampliaceae\nidentifiedBy: Bruce Allen\nverbatimDateIdentified: 2005\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: Arusha\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Flora of Arusha Dist., R. Tanganyika\nlocality: [precise locality unknown]\nhabitat: A moss festooning densely a dead Cass -ipourea tree, dark brown and green forming a complete cover around the branchlets and the dominant moss on trees around the rim of the Crater, T. 2, N. Side of Ngurdoto Crater\nverbatimElevation: 5,700ft.\nverbatimCoordinates: N/A\notherCatalogNumbers: 1051664\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 231
+      },
+      "image_name": "0013_C2022796F_collage.jpg",
+      "timestamp": "2025-07-25T16:57:04.620499Z"
+    },
+    {
+      "id": "msg_bdrk_2270b14350ba48a682eba8ef",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.amazon.nova-premier-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Coll. A. et J. Kornas\ncollectedBy: A. Kornas\nsecondaryCollectors: J. Kornas\nrecordNumber: 6830/M\nverbatimEventDate: 13.XI.1972\nminimumEventDate: 1972-11-13\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella ampullacea (C. Muell.) Jaeg.\nlatestScientificName: Pilotrichella ampullacea\nidentifiedBy: M. Bizot\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: S ULUGURU MTS, in bamboo forest on W slopes of MGETA River Valley E of Lukwangule Plateau\nlocality: [precise locality unknown]\nhabitat: ramicolous\nverbatimElevation: alt. 2250 m\nverbatimCoordinates: N/A\notherCatalogNumbers: No 1064574\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 198
+      },
+      "image_name": "0014_C2022797F_collage.jpg",
+      "timestamp": "2025-07-25T16:57:15.318423Z"
+    },
+    {
+      "id": "msg_bdrk_e5bb81267e354201806b04f7",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.amazon.nova-premier-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: T. Pócs\ncollectedBy: T. Pócs\nsecondaryCollectors: N/A\nrecordNumber: 8507/0\nverbatimEventDate: 19-20. Jan. 1985\nminimumEventDate: 1985-01-19\nmaximumEventDate: 1985-01-20\nverbatimIdentification: Orthostichella capillicaulis (Kindberg) B. H. Allen & Magill\nlatestScientificName: Orthostichella capillicaulis\nidentifiedBy: Bruce Allen\nverbatimDateIdentified: 2005\nassociatedTaxa: Pilotrichella cuspidata\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: West Usambara Mts. Balangai West F.R. Montane rain forest on the E ridge and N slope of Kilimandege\nlocality: [precise locality unknown]\nhabitat: Montane rain forest\nverbatimElevation: 1550-1750 m alt.\nverbatimCoordinates: N/A\notherCatalogNumbers: 1064538\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 206
+      },
+      "image_name": "0015_C2022798F_collage.jpg",
+      "timestamp": "2025-07-25T16:57:26.489742Z"
+    },
+    {
+      "id": "msg_bdrk_5c3d886498c249f6bb7f706f",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.amazon.nova-premier-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: S. Rojkowski\ncollectedBy: S. Rojkowski\nsecondaryCollectors: N/A\nrecordNumber: 243\nverbatimEventDate: 12 Jan.1976\nminimumEventDate: 1976-01-12\nmaximumEventDate: N/A\nverbatimIdentification: Pilotriebella ampuUacea (C.Muell.) Jaeg.\nlatestScientificName: Pilotriebella ampuUacea\nidentifiedBy: R. Ochyra\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Ngorongoro Crater\nlocality: Ngorongoro Crater\nhabitat: epiphytic in bamboo thickets\nverbatimElevation: alt. 2500 m\nverbatimCoordinates: N/A\notherCatalogNumbers: C2022803F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 172
+      },
+      "image_name": "0020_C2022803F_collage.jpg",
+      "timestamp": "2025-07-25T16:57:36.163651Z"
+    },
+    {
+      "id": "msg_bdrk_f5a70a643b3149ec90505d4b",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.amazon.nova-premier-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: S. Rojkowski\ncollectedBy: S. Rojkowski\nsecondaryCollectors: N/A\nrecordNumber: 183\nverbatimEventDate: 3.I.1976\nminimumEventDate: 1976-01-03\nmaximumEventDate: N/A\nverbatimIdentification: Hylocomium cylindricarpa Ther.\nlatestScientificName: Hylocomium cylindricarpa\nidentifiedBy: R. Ochyra\nverbatimDateIdentified: N/A\nassociatedTaxa: Podocarpus\ncountry: Kenya\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Mt. Kenya, Sirimon track, near Sirimon Gate\nlocality: Mt. Kenya, Sirimon track, near Sirimon Gate\nhabitat: on stem of Podocarpus\nverbatimElevation: alt. 2550 m\nverbatimCoordinates: N/A\notherCatalogNumbers: 1050658\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 181
+      },
+      "image_name": "0100_C2023371F_collage.jpg",
+      "timestamp": "2025-07-25T16:57:45.952951Z"
+    },
+    {
+      "id": "msg_bdrk_2600241143d64e0eb3ee1b19",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.amazon.nova-premier-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: V. et P. Allorge\ncollectedBy: V. Allorge\nsecondaryCollectors: P. Allorge\nrecordNumber: s.n.\nverbatimEventDate: 28.V.1937\nminimumEventDate: 1937-05-28\nmaximumEventDate: N/A\nverbatimIdentification: Pseudolepidopilium virens (Card.) Luis., c. sp.\nlatestScientificName: Pseudolepidopilium virens\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Portugal\nfirstPoliticalUnit: Azores\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: blocs de basalte ombragés Lagoa das Furnas\nlocality: blocs de basalte ombragés Lagoa das Furnas\nhabitat: N/A\nverbatimElevation: vers 300 m.\nverbatimCoordinates: N/A\notherCatalogNumbers: C2023392F\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 187
+      },
+      "image_name": "0101_C2023392F_collage.jpg",
+      "timestamp": "2025-07-25T16:57:56.482328Z"
+    },
+    {
+      "id": "msg_bdrk_1cf6857692e6447c9d24136e",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.amazon.nova-premier-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: S. Rojkowski\ncollectedBy: S. Rojkowski\nsecondaryCollectors: N/A\nrecordNumber: 428\nverbatimEventDate: 15 Febr. 1976\nminimumEventDate: 1976-02-15\nmaximumEventDate: N/A\nverbatimIdentification: Racopulum africanum Mitt.\nlatestScientificName: Racopulum africanum\nidentifiedBy: R. Ochyra\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Uganda\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: Kampala\nverbatimLocality: Entebbe near Kampala, on soil\nlocality: [precise locality unknown]\nhabitat: on soil\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: 1050653\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 166
+      },
+      "image_name": "0104_C2023421F_collage.jpg",
+      "timestamp": "2025-07-25T16:58:05.576717Z"
+    }
+  ]
+}

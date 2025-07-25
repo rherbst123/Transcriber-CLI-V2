@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_fa8509f28622499f9ef9c02e",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.amazon.nova-premier-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: V. et P. Allorge\ncollectedBy: V. Allorge\nsecondaryCollectors: P. Allorge\nrecordNumber: s.n.\nverbatimEventDate: 28.V.1937\nminimumEventDate: 1937-05-28\nmaximumEventDate: N/A\nverbatimIdentification: Pseudolepidopilium virens (Card.) Luis., c. sp.\nlatestScientificName: Pseudolepidopilium virens\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Portugal\nfirstPoliticalUnit: Azores\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: blocs de basalte ombragés Lagoa das Furnas\nlocality: blocs de basalte ombragés Lagoa das Furnas\nhabitat: N/A\nverbatimElevation: vers 300 m.\nverbatimCoordinates: N/A\notherCatalogNumbers: C2023392F\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 187
+  },
+  "image_name": "0101_C2023392F_collage.jpg",
+  "timestamp": "2025-07-25T16:57:56.481885Z"
+}

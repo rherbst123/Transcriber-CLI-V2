@@ -1,8 +1,8 @@
 from art import *
 from transcribers.FirstShot import First_Shot
 from transcribers.SecondShot import Second_Shot
-from cost_analysis import cost_tracker
-from txt_to_csv import convert_json_to_csv
+from helpers.cost_analysis import cost_tracker
+from helpers.txt_to_csv import convert_json_to_csv
 import os
 from pathlib import Path
 import requests
@@ -30,10 +30,35 @@ def get_run_name():
     if not run_name:
         from datetime import datetime
         run_name = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    # Sanitize filename
+    # Sanitize filename for cross-platform compatibility
     import re
-    run_name = re.sub(r'[<>:"/\\|?*]', '_', run_name)
+    # Remove characters that are problematic on both Windows and Unix
+    run_name = re.sub(r'[<>:"/\\|?*\x00-\x1f]', '_', run_name)
+    # Remove trailing dots and spaces (Windows issue)
+    run_name = run_name.rstrip('. ')
+    # Ensure it's not empty after sanitization
+    if not run_name:
+        from datetime import datetime
+        run_name = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     return run_name
+
+def safe_rmtree(path):
+    """Safely remove directory tree, handling Windows permission issues"""
+    if not os.path.exists(path):
+        return
+    
+    try:
+        shutil.rmtree(path)
+    except PermissionError:
+        # Windows sometimes has permission issues, try to fix them
+        if os.name == 'nt':  # Windows
+            import stat
+            def remove_readonly(func, path, exc_info):
+                os.chmod(path, stat.S_IWRITE)
+                func(path)
+            shutil.rmtree(path, onerror=remove_readonly)
+        else:
+            raise
 
 def download_images_from_urls(url_file_path, download_dir):
     """Download images from URLs in a text file"""
@@ -41,14 +66,13 @@ def download_images_from_urls(url_file_path, download_dir):
         print(f"Error: URL file not found at {url_file_path}")
         return False
     
-    # Clear existing images
+    # Clear existing images using safe removal
     if os.path.exists(download_dir):
-        import shutil
-        shutil.rmtree(download_dir)
+        safe_rmtree(download_dir)
     
     os.makedirs(download_dir, exist_ok=True)
     
-    with open(url_file_path, 'r') as f:
+    with open(url_file_path, 'r', encoding='utf-8') as f:
         urls = [line.strip() for line in f if line.strip()]
     
     print(f"\nDownloading {len(urls)} images...")
@@ -98,10 +122,25 @@ def select_prompt():
     
     return input("Enter prompt filepath: ")
 
+def get_output_base_path():
+    """Get the base output path, cross-platform compatible"""
+    home_dir = Path(os.path.expanduser("~"))
+    
+    # On Windows, prefer Desktop if it exists
+    if os.name == 'nt':  # Windows
+        desktop_path = home_dir / "Desktop"
+        if desktop_path.exists():
+            return desktop_path / "Finished Transcriptions"
+    
+    # On Unix systems or if Desktop doesn't exist, use a directory in home
+    return home_dir / "Transcriber_Output"
+
 def get_images_folder(use_urls):
     if use_urls:
         url_file = input("\nEnter path to .txt file containing image URLs: ")
-        download_dir = os.path.join(os.path.expanduser("~"), "Desktop", "Downloaded_Images")
+        # Use cross-platform path for downloads
+        downloads_dir = get_output_base_path() / "Downloaded_Images"
+        download_dir = str(downloads_dir)
         
         if download_images_from_urls(url_file, download_dir):
             return download_dir, "downloaded_images"
@@ -120,8 +159,8 @@ def main():
     print(85*"=")
     print("Welcome to the Field Museum transcriber-cli, this is an all-purpose image transcriber.")
     
-    # Create the folder structure for finished transcriptions
-    desktop_path = Path(os.path.expanduser("~")) / "Desktop" / "Finished Transcriptions"
+    # Create the folder structure for finished transcriptions using cross-platform path
+    desktop_path = get_output_base_path()
     single_shot_folder = desktop_path / "Single shot"
     dual_shot_folder = desktop_path / "Dual shot"
     
@@ -182,8 +221,8 @@ def main():
             output_dir2 = Path("SecondShot_results") / run_name
             output_dir2.mkdir(exist_ok=True, parents=True)
             
-            # Create the dual shot folder on desktop
-            dual_shot_folder = Path(os.path.expanduser("~")) / "Desktop" / "Finished Transcriptions" / "Dual shot" / run_name
+            # Create the dual shot folder using cross-platform path
+            dual_shot_folder = get_output_base_path() / "Dual shot" / run_name
             dual_shot_folder.mkdir(parents=True, exist_ok=True)
             
             # Run first shot

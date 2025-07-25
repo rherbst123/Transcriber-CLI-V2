@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_b4a20b4f5112463e8fa0fd72",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.amazon.nova-premier-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: Coll. A. et J. Kornas\ncollectedBy: A. Kornas\nsecondaryCollectors: J. Kornas\nrecordNumber: 6830/M\nverbatimEventDate: 13.XI.1972\nminimumEventDate: 1972-11-13\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella ampullacea (C. Muell.) Jaeg.\nlatestScientificName: Pilotrichella ampullacea\nidentifiedBy: M. Bizot\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: S ULUGURU MTS, in bamboo forest on W slopes of MGETA River Valley E of Lukwangule Plateau\nlocality: [precise locality unknown]\nhabitat: ramicolous\nverbatimElevation: alt. 2250 m\nverbatimCoordinates: N/A\notherCatalogNumbers: No 1064574\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 198
+  },
+  "image_name": "0014_C2022797F_collage.jpg",
+  "timestamp": "2025-07-25T16:57:15.318017Z"
+}

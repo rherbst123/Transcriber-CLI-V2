@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_fffb5e1f561c482db4d947da",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.amazon.nova-premier-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: leg. J.Szunyoghi (No. 18/a)\ncollectedBy: J. Szunyoghy\nsecondaryCollectors: N/A\nrecordNumber: 18/a\nverbatimEventDate: 31.3.1965\nminimumEventDate: 1965-03-31\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella ampuillacea (C. Müller) B. H. Allen & Magill\nlatestScientificName: Orthostichella ampuillacea\nidentifiedBy: Bruce Allen\nverbatimDateIdentified: 2005\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Africa orientalis; Tanzania, ramicola in silva crateris montis Meru\nlocality: [precise locality unknown]\nhabitat: ramicola in silva crateris montis Meru\nverbatimElevation: Alt. 3000 m.s.m.\nverbatimCoordinates: N/A\notherCatalogNumbers: 1066346\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 205
+  },
+  "image_name": "0012_C2022795F_collage.jpg",
+  "timestamp": "2025-07-25T16:56:52.954457Z"
+}

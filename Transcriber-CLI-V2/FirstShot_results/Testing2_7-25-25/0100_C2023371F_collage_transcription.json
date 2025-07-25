@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_42abe0b1da1a454389b9d984",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.amazon.nova-premier-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: S. Rojkowski\ncollectedBy: S. Rojkowski\nsecondaryCollectors: N/A\nrecordNumber: 183\nverbatimEventDate: 3.I.1976\nminimumEventDate: 1976-01-03\nmaximumEventDate: N/A\nverbatimIdentification: Hylocomium cylindricarpa Ther.\nlatestScientificName: Hylocomium cylindricarpa\nidentifiedBy: R. Ochyra\nverbatimDateIdentified: N/A\nassociatedTaxa: Podocarpus\ncountry: Kenya\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Mt. Kenya, Sirimon track, near Sirimon Gate\nlocality: Mt. Kenya, Sirimon track, near Sirimon Gate\nhabitat: on stem of Podocarpus\nverbatimElevation: alt. 2550 m\nverbatimCoordinates: N/A\notherCatalogNumbers: 1050658\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 181
+  },
+  "image_name": "0100_C2023371F_collage.jpg",
+  "timestamp": "2025-07-25T16:49:35.330082Z"
+}

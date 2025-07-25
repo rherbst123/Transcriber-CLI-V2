@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_83c97e2b0260413a9439b227",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.amazon.nova-premier-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: S. Rojkowski\ncollectedBy: S. Rojkowski\nsecondaryCollectors: N/A\nrecordNumber: 428\nverbatimEventDate: 15 Febr. 1976\nminimumEventDate: 1976-02-15\nmaximumEventDate: N/A\nverbatimIdentification: Racopulum africanum Mitt.\nlatestScientificName: Racopulum africanum\nidentifiedBy: R. Ochyra\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Uganda\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: Kampala\nverbatimLocality: Entebbe near Kampala, on soil\nlocality: [precise locality unknown]\nhabitat: on soil\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: 1050653\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 166
+  },
+  "image_name": "0104_C2023421F_collage.jpg",
+  "timestamp": "2025-07-25T16:58:05.576271Z"
+}

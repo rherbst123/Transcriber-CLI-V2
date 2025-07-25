@@ -7,8 +7,8 @@ import json
 import tempfile
 from pathlib import Path
 from datetime import datetime
-from cost_analysis import cost_tracker
-from json_output import save_json_transcription, create_batch_json_file, create_json_response
+from helpers.cost_analysis import cost_tracker
+from helpers.json_output import save_json_transcription, create_batch_json_file, create_json_response
 
 """Second Shot verification module - verifies and corrects first shot transcription results"""
 
@@ -90,7 +90,7 @@ def process_image(image_path, prompt_path, model_id):
     image = standardize_image(image)
     
     # Read prompt
-    with open(prompt_path, "r") as f:
+    with open(prompt_path, "r", encoding="utf-8") as f:
         user_message = f.read().strip()
     
     # Prepare message for model
@@ -126,7 +126,7 @@ def verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, m
         model_id = select_model()
     
     # Load first shot data
-    with open(first_shot_json_path, 'r') as f:
+    with open(first_shot_json_path, 'r', encoding='utf-8') as f:
         first_shot_data = json.load(f)
     
     transcriptions = first_shot_data['transcriptions']
@@ -135,6 +135,36 @@ def verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, m
     all_transcriptions = []
     for i, transcription in enumerate(transcriptions, 1):
         image_name = transcription['image_name']
+        
+        # Check if this transcription has an error
+        if 'error' in transcription:
+            print(f"\n{'='*50}")
+            print(f"Skipping transcription {i}/{len(transcriptions)}: {image_name}")
+            print(f"First shot error: {transcription['error']}")
+            
+            # Add error to second shot results
+            error_response = {
+                "error": f"First shot failed: {transcription['error']}",
+                "image_name": image_name,
+                "timestamp": datetime.utcnow().isoformat() + "Z"
+            }
+            all_transcriptions.append(error_response)
+            continue
+        
+        # Extract successful transcription text
+        if 'content' not in transcription or not transcription['content']:
+            print(f"\n{'='*50}")
+            print(f"Skipping transcription {i}/{len(transcriptions)}: {image_name}")
+            print("No content found in first shot transcription")
+            
+            error_response = {
+                "error": "No content found in first shot transcription",
+                "image_name": image_name,
+                "timestamp": datetime.utcnow().isoformat() + "Z"
+            }
+            all_transcriptions.append(error_response)
+            continue
+            
         first_shot_text = transcription['content'][0]['text']
         
         print(f"\n{'='*50}")
@@ -153,6 +183,17 @@ def verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, m
             continue
         
         try:
+            # Ensure first_shot_text is properly encoded and sanitized
+            if isinstance(first_shot_text, bytes):
+                first_shot_text = first_shot_text.decode('utf-8', errors='replace')
+            
+            # Sanitize the text to remove any problematic characters
+            import unicodedata
+            first_shot_text = unicodedata.normalize('NFKD', first_shot_text)
+            
+            # Replace any remaining problematic characters
+            first_shot_text = first_shot_text.encode('utf-8', errors='replace').decode('utf-8')
+            
             # Create verification prompt
             verification_prompt = f"""You are an expert verifier reviewing a herbarium label transcription.
 
@@ -161,14 +202,16 @@ Please verify the following transcription against the image and correct any erro
 {first_shot_text}
 
 Return the corrected transcription in the same format. If the transcription is accurate, return it unchanged.
-If you find information that is not entered or can be applied to new fields such as first and second political unit. Please enter the information"""
+If you find information that is not entered or can be applied to new fields such as first and second political unit. Please enter the information
+Do not say anything else, please just return the corrected transcription"""
             
-            # Create temporary prompt file
-            with tempfile.NamedTemporaryFile(mode='w', delete=False, suffix='.txt') as temp_prompt:
-                temp_prompt.write(verification_prompt)
-                temp_prompt_path = temp_prompt.name
-            
+            # Create temporary prompt file with explicit UTF-8 encoding
+            temp_prompt_path = None
             try:
+                with tempfile.NamedTemporaryFile(mode='w', delete=False, suffix='.txt', encoding='utf-8') as temp_prompt:
+                    temp_prompt.write(verification_prompt)
+                    temp_prompt_path = temp_prompt.name
+                
                 response_text = process_image(image_path, temp_prompt_path, model_id)
                 
                 # Calculate tokens
@@ -192,8 +235,22 @@ If you find information that is not entered or can be applied to new fields such
                 all_transcriptions.append(json_response)
                 
             finally:
-                os.unlink(temp_prompt_path)
+                # Clean up temporary file
+                if temp_prompt_path and os.path.exists(temp_prompt_path):
+                    try:
+                        os.unlink(temp_prompt_path)
+                    except (OSError, PermissionError) as cleanup_error:
+                        print(f"Warning: Could not delete temporary file {temp_prompt_path}: {cleanup_error}")
                 
+        except UnicodeDecodeError as e:
+            print(f"Unicode decode error verifying {image_name}: {str(e)}")
+            print(f"Error details: {e.encoding} codec can't decode byte {hex(e.object[e.start])} at position {e.start}")
+            error_response = {
+                "error": f"Unicode decode error: {str(e)}",
+                "image_name": image_name,
+                "timestamp": datetime.utcnow().isoformat() + "Z"
+            }
+            all_transcriptions.append(error_response)
         except Exception as e:
             print(f"Error verifying {image_name}: {str(e)}")
             error_response = {
@@ -213,7 +270,16 @@ If you find information that is not entered or can be applied to new fields such
 
 # Backward compatibility alias
 def process_with_first_shot(base_folder, prompt_path, first_shot_json_path, output_dir, run_name, model_id=None):
-    """Backward compatibility wrapper for verify_first_shot"""
+    """Backward compatibility wrapper for verify_first_shot
+    
+    Args:
+        base_folder: Path to the base folder containing images
+        prompt_path: Path to the prompt file (not used in verification, but kept for compatibility)
+        first_shot_json_path: Path to the first shot batch JSON file
+        output_dir: Output directory for second shot results
+        run_name: Name of the run
+        model_id: Model ID to use for verification
+    """
     return verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, model_id)
 
 if __name__ == "__main__":

@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_f0dd708086b74181bd081612",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.amazon.nova-premier-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: S. Rojkowski\ncollectedBy: S. Rojkowski\nsecondaryCollectors: N/A\nrecordNumber: 243\nverbatimEventDate: 12 Jan.1976\nminimumEventDate: 1976-01-12\nmaximumEventDate: N/A\nverbatimIdentification: Pilotriebella ampuUacea (C.Muell.) Jaeg.\nlatestScientificName: Pilotriebella ampuUacea\nidentifiedBy: R. Ochyra\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Ngorongoro Crater\nlocality: Ngorongoro Crater\nhabitat: epiphytic in bamboo thickets\nverbatimElevation: alt. 2500 m\nverbatimCoordinates: N/A\notherCatalogNumbers: C2022803F\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 172
+  },
+  "image_name": "0020_C2022803F_collage.jpg",
+  "timestamp": "2025-07-25T16:49:25.483096Z"
+}

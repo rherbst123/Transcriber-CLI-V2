@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_b6eec96d7f3148e0baf45014",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.amazon.nova-premier-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: P. J. Greenway\ncollectedBy: P. J. Greenway\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 2/10/1965\nminimumEventDate: 1965-10-02\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella ampliaceae (C. Müller) B. H. Allen & Magill\nlatestScientificName: Orthostichella ampliaceae\nidentifiedBy: Bruce Allen\nverbatimDateIdentified: 2005\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: Arusha\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Flora of Arusha Dist., R. Tanganyika\nlocality: [precise locality unknown]\nhabitat: A moss festooning densely a dead Cass -ipourea tree, dark brown and green forming a complete cover around the branchlets and the dominant moss on trees around the rim of the Crater, T. 2, N. Side of Ngurdoto Crater\nverbatimElevation: 5,700ft.\nverbatimCoordinates: N/A\notherCatalogNumbers: 1051664\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 231
+  },
+  "image_name": "0013_C2022796F_collage.jpg",
+  "timestamp": "2025-07-25T16:57:04.620069Z"
+}

@@ -4,8 +4,8 @@ import io
 import os
 from pathlib import Path
 from datetime import datetime
-from cost_analysis import cost_tracker
-from json_output import save_json_transcription, create_batch_json_file
+from helpers.cost_analysis import cost_tracker
+from helpers.json_output import save_json_transcription, create_batch_json_file
 
 """Hello, This portion of the script is for FULL Images. This is what looks over the full image for a good pass
 All models are listed below obviously, All this really is a fancy api call, Just an image and a prompt. """
@@ -86,7 +86,7 @@ def process_image(image_path, prompt_path, model_id=None):
     image = standardize_image(image)
     
     # Read prompt
-    with open(prompt_path, "r") as f:
+    with open(prompt_path, "r", encoding="utf-8") as f:
         user_message = f.read().strip()
     
     # Always use PNG format
@@ -153,7 +153,7 @@ def process_images(base_folder, prompt_path, output_dir, date_folder, model_id=N
         date_folder: Name of the date folder for naming the output file
         model_id: Pre-selected model ID (optional)
     """
-    # Check for Collaged_Images folder first (segmented images)
+    # Check for Full_Images folder first (for organized images)
     collaged_folder = os.path.join(base_folder, "Full_Images")
     if os.path.exists(collaged_folder):
         images_folder = collaged_folder
@@ -204,7 +204,7 @@ def process_images(base_folder, prompt_path, output_dir, date_folder, model_id=N
             response_text = process_image(image_path, prompt_path, model_id)
             
             # Get token counts for this request
-            with open(prompt_path, "r") as f:
+            with open(prompt_path, "r", encoding="utf-8") as f:
                 user_message = f.read().strip()
             input_tokens = cost_tracker.estimate_tokens(user_message)
             output_tokens = cost_tracker.estimate_tokens(response_text, is_output=True)
@@ -217,7 +217,7 @@ def process_images(base_folder, prompt_path, output_dir, date_folder, model_id=N
             )
             
             # Add to batch collection
-            from json_output import create_json_response
+            from helpers.json_output import create_json_response
             json_response = create_json_response(
                 image_path.name, response_text, model_id, 
                 input_tokens, output_tokens
