@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_2613e7ba0801426b852cb809",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: L.J. Brass & E. Myer-Drees\ncollectedBy: L. J. Brass\nsecondaryCollectors: E. Myer-Drees\nrecordNumber: 10323\nverbatimEventDate: Sept. 1938\nminimumEventDate: 1938-09-00\nmaximumEventDate: N/A\nverbatimIdentification: Macromitrium Archboldii Bartr.\nlatestScientificName: Macromitrium archboldii\nidentifiedBy: E. B. Bartram\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Papua New Guinea\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: subalpine forest; alt. 3800 m.\nlocality: subalpine forest; altitude 3800 meters\nhabitat: N/A\nverbatimElevation: alt. 3800 m.\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 179
+  },
+  "image_name": "0186_C2070256F_collage.jpg",
+  "timestamp": "2025-07-21T20:28:17.883982Z"
+}

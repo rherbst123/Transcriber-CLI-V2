@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_c5cf0cbe76254019a56623a0",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: G. Zenker\ncollectedBy: G. Zenker\nsecondaryCollectors: N/A\nrecordNumber: 1300\nverbatimEventDate: 28. II 99\nminimumEventDate: 1899-02-28\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella welwitschii (Duby) B. H. Allen\nlatestScientificName: Orthostichella welwitschii\nidentifiedBy: B. Allen\nverbatimDateIdentified: 2005\nassociatedTaxa: N/A\ncountry: Cameroon\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Bipindi\nlocality: Bipindi\nhabitat: N/A\nverbatimElevation: Höhe ü. d. M.: 80\nverbatimCoordinates: N/A\notherCatalogNumbers: C2022816F\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status\n\nThe transcription is accurate."
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 235,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 176
+  },
+  "image_name": "0031_C2022816F_collage.jpg",
+  "timestamp": "2025-07-24T15:09:43.373761Z"
+}

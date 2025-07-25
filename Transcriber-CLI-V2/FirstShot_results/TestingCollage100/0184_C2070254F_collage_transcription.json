@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_071d74da6d234679b72b21c3",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "Here is the list of fields with the corresponding information:\n\nverbatimCollectors: H. M. Curran, M. L. Merritt\ncollectedBy: H. M. Curran\nsecondaryCollectors: M. L. Merritt\nrecordNumber: 8188\nverbatimEventDate: Nov-Dec 1907\nminimumEventDate: 1907-11-00\nmaximumEventDate: 1907-12-00\nverbatimIdentification: Macromitrium blumei Nees\nlatestScientificName: Macromitrium blumei\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Philippines\nfirstPoliticalUnit: Luzon\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Lambales Prov.\nlocality: Lambales Prov.\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 181
+  },
+  "image_name": "0184_C2070254F_collage.jpg",
+  "timestamp": "2025-07-21T20:28:06.671896Z"
+}

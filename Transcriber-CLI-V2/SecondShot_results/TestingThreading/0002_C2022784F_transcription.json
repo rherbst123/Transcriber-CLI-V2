@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_61221a625882446aa9f3c7b6",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: R. E. Magill & T. Pócs\ncollectedBy: R E Magill\nsecondaryCollectors: T Pócs\nrecordNumber: 11241\nverbatimEventDate: 7 August 1992\nminimumEventDate: 1992-08-07\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella ampullacea (C Müller) B H Allen & Magill det B Allen 2005\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: B Allen\nverbatimDateIdentified: 2005\nassociatedTaxa: Orthostichopsis subimbricata\ncountry: Comoros\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Anjouan (Ndzouani) Primary rainforest along steep SE summit ridge of Ntringi N of Lake Dzialandze 2 km WSW of Dindri Village <11210-11246>\nlocality: Primary rainforest along steep SE summit ridge of Ntringi N of Lake Dzialandze 2 km WSW of Dindri Village\nhabitat: On branch\nverbatimElevation: 1380 m\nverbatimCoordinates: 12°12'52\"S 44°25'32\"E\notherCatalogNumbers: 1182891\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 240
+  },
+  "image_name": "0002_C2022784F.jpg",
+  "timestamp": "2025-07-21T15:34:22.804324Z"
+}

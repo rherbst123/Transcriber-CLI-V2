@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_a6c29ac8c2bd40398b775188",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: S. Rojkowski\ncollectedBy: S. Rojkowski\nsecondaryCollectors: N/A\nrecordNumber: 378\nverbatimEventDate: 22 Jan.1976\nminimumEventDate: 1976-01-22\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella ampullacea (C. Müller) B. H. Allen & Magill\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: B. Allen\nverbatimDateIdentified: 2005\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Mt. Meru, W slope of the crater rim, alt. 2700 m, epiphytic in montane rain forest\nlocality: Mt. Meru, W slope of the crater rim, epiphytic in montane rain forest\nhabitat: epiphytic in montane rain forest\nverbatimElevation: alt. 2700 m\nverbatimCoordinates: N/A\notherCatalogNumbers: 1050662\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 2075,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 212
+  },
+  "image_name": "0004_C2022786F.jpg",
+  "timestamp": "2025-07-21T20:08:22.336077Z"
+}

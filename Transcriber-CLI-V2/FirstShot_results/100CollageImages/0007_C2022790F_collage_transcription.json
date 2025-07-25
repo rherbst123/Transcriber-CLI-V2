@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_9877ff6fce33443d9d1ab622",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: T. G. Balbo\ncollectedBy: T. G. Balbo\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 18-4-1910\nminimumEventDate: 1910-04-18\nmaximumEventDate: N/A\nverbatimIdentification: Filochichella Poleana Berch\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: T. G. Balbo\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: Negeri\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: N/A\nlocality: [precise locality unknown]\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 159
+  },
+  "image_name": "0007_C2022790F_collage.jpg",
+  "timestamp": "2025-07-21T20:15:28.510902Z"
+}

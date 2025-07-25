@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_0ec26def176a4e00aabf1d46",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: G. Zenker\n\ncollectedBy: G. Zenker\n\nsecondaryCollectors: N/A\n\nrecordNumber: 1300\n\nverbatimEventDate: s.d.\n\nminimumEventDate: unsure and check\n\nmaximumEventDate: N/A\n\nverbatimIdentification: Orthostichella weiwitschii (Duby) B. H. Allen\n\nlatestScientificName: Orthostichella weiwitschii\n\nidentifiedBy: B. H. Allen\n\nverbatimDateIdentified: 2005\n\nassociatedTaxa: N/A\n\ncountry: Cameroon\n\nfirstPoliticalUnit: unsure and check\n\nsecondPoliticalUnit: N/A\n\nmunicipality: N/A\n\nverbatimLocality: Bipindi\n\nlocality: Bipindi\n\nhabitat: N/A\n\nverbatimElevation: 50\n\nverbatimCoordinates: N/A\n\notherCatalogNumbers: 1300\n\noriginalMethod: Mix of Handwritten and Typed\n\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 173
+  },
+  "image_name": "0031_C2022816F_collage.jpg",
+  "timestamp": "2025-07-24T15:01:58.840636Z"
+}

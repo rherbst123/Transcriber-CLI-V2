@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_93a5dde0a6b44b7aa43894dc",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: B. H. Allen & Magill\ncollectedBy: B. H. Allen\nsecondaryCollectors: Magill\nrecordNumber: s.n.\nverbatimEventDate: 12 Jan. 1976\nminimumEventDate: 1976-01-12\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella ampullacea (C. Müll.) B. H. Allen & Magill\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: B. H. Allen\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: TANZANIA: Ngorongoro Crater rim, epiphytic in bamboo thickets, alt. 2500 m\nlocality: Ngorongoro Crater rim, epiphytic in bamboo thickets, altitude 2500 meters\nhabitat: epiphytic in bamboo thickets\nverbatimElevation: alt. 2500 m\nverbatimCoordinates: N/A\notherCatalogNumbers: 1050643\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 2070,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 208
+  },
+  "image_name": "0010_C2022792F.jpg",
+  "timestamp": "2025-07-21T20:09:04.836411Z"
+}

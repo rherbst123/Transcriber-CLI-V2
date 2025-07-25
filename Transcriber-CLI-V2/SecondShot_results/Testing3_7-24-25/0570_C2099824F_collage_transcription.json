@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_22d615e62b614d1db3087a50",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: Joann W. Flock\ncollectedBy: Joann W. Flock\nsecondaryCollectors: N/A\nrecordNumber: NZB-232\nverbatimEventDate: 29.x.1983\nminimumEventDate: 1983-10-01\nmaximumEventDate: 1983-10-31\nverbatimIdentification: Lepidozia laevifolia (H.f. & T.) Tayl.\nlatestScientificName: Lepidozia laevifolia\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: Nothofagus solandri var. cliffortioides\ncountry: New Zealand\nfirstPoliticalUnit: Canterbury\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Craigieburn Forest Park, Craigieburn Range, Southern Alps. Upper Cave Stream Bridge to Lyndon Saddle\nlocality: Craigieburn Forest Park, Craigieburn Range, Southern Alps. Upper Cave Stream Bridge to Lyndon Saddle\nhabitat: Native bush; mountain beech (Nothofagus solandri var. cliffortioides) with dense moss-lichen cover.\nverbatimElevation: 950-1220 msm.\nverbatimCoordinates: 171°43'E, 43°08'S\notherCatalogNumbers: C2099824F\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 349,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 247
+  },
+  "image_name": "0570_C2099824F_collage.jpg",
+  "timestamp": "2025-07-24T16:55:29.602248Z"
+}

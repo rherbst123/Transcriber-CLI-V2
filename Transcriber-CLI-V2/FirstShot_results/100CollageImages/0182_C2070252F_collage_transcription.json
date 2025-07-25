@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_7b94d666c7dd453b9b5ed9c8",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "Here is the list of fields with the information from the herbarium label:\n\nverbatimCollectors: HONSHU: Yamanashi-ken, Kita-koma-gun, Takane-cho, Kiyosato-kogen plateau, ca. 1400 m alt., on tree trunks in deciduous forest. Coll. & T. Osada & N. Suzuki, April 9, 1978; det. T. Osada.\ncollectedBy: T. Osada\nsecondaryCollectors: N. Suzuki\nrecordNumber: 1530\nverbatimEventDate: April 9, 1978\nminimumEventDate: 1978-04-09\nmaximumEventDate: N/A\nverbatimIdentification: MUSCI JAPONICI EXSICCATI\nlatestScientificName: Macromitrium comatum\nidentifiedBy: T. Osada\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Japan\nfirstPoliticalUnit: Yamanashi\nsecondPoliticalUnit: Kita-koma-gun\nmunicipality: Takane-cho\nverbatimLocality: Kiyosato-kogen plateau, ca. 1400 m alt., on tree trunks in deciduous forest\nlocality: Kiyosato-kogen plateau, on tree trunks in deciduous forest\nhabitat: deciduous forest\nverbatimElevation: ca. 1400 m alt.\nverbatimCoordinates: N/A\notherCatalogNumbers: 1035994\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 258
+  },
+  "image_name": "0182_C2070252F_collage.jpg",
+  "timestamp": "2025-07-21T20:18:54.017885Z"
+}

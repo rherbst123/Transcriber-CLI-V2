@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_aa2ac1429e324ca5bc2b8d22",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: S. Rojkowski\ncollectedBy: S. Rojkowski\nsecondaryCollectors: N/A\nrecordNumber: 402\nverbatimEventDate: Febr.8,1976\nminimumEventDate: 1976-02-08\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella capillicaulis (Kindberg) B.H. Allen & Magill Det. Bruce Allen, 2005 Missouri Botanical Garden Herbarium (MO) DUPLUM HERBARIUM INSTITUTI BOTANICI ACADEMIAE SCIENTIARUM POLONAE - CRACOVIAE BRYOPHYTA Pilothrichella cuspidata Broth. KENYA, Oldoinyo National Park, 2270 m alt., epiphytic.\nlatestScientificName: Pilothrichella cuspidata\nidentifiedBy: R. Ochyra\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: KENYA, Oldoinyo National Park, 2270 m alt., epiphytic.\nlocality: Oldoinyo National Park\nhabitat: epiphytic\nverbatimElevation: 2270 m alt.\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 240
+  },
+  "image_name": "0017_C2022799F.jpg",
+  "timestamp": "2025-07-21T16:27:37.679581Z"
+}

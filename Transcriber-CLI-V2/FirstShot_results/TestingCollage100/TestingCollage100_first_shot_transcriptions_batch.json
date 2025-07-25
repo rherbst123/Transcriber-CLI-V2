@@ -1,0 +1,2209 @@
+{
+  "batch_id": "batch_17e17ee7a76843e0",
+  "created_at": "2025-07-21T20:33:47.794886Z",
+  "shot_type": "first_shot",
+  "date_folder": "TestingCollage100",
+  "total_transcriptions": 100,
+  "transcriptions": [
+    {
+      "id": "msg_bdrk_a6f5e83e4bb34af3abc59a64",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: S. Rojkowski\ncollectedBy: S. Rojkowski\nsecondaryCollectors: N/A\nrecordNumber: 394\nverbatimEventDate: 8 Febr. 1976\nminimumEventDate: 1976-02-08\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella cuspidata Broth.\nlatestScientificName: Pilotrichella cuspidata\nidentifiedBy: R. Ochyra\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: 61 Doinyo Sapuk National Park near Thika, alt. 2270 m; epiphytic\nlocality: 61 Doinyo Sapuk National Park near Thika, altitude 2270 meters; epiphytic\nhabitat: N/A\nverbatimElevation: 2270 m\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 186
+      },
+      "image_name": "0000_C2022783F_collage.jpg",
+      "timestamp": "2025-07-21T20:23:49.654412Z"
+    },
+    {
+      "id": "msg_bdrk_e6ebdedc404142e78a465516",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Orthostichella ampullacea (C. Müller) B. H. Allen & Magill det. B. Allen, 2005\ncollectedBy: R. E. Magill & T. Pócs\nsecondaryCollectors: N/A\nrecordNumber: 11241\nverbatimEventDate: 7 August 1992\nminimumEventDate: 1992-08-07\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella ampullacea (C. Müller) B. H. Allen & Magill det. B. Allen, 2005\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: B. Allen\nverbatimDateIdentified: 2005\nassociatedTaxa: N/A\ncountry: Comoros\nfirstPoliticalUnit: Anjouan\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Primary rainforest, along steep SE summit ridge of Ntringi, N of Lake Dzialandze, 2 km WSW of Dindri Village.\nlocality: Primary rainforest, along steep SE summit ridge of Ntringi, N of Lake Dzialandze, 2 km WSW of Dindri Village.\nhabitat: Primary rainforest\nverbatimElevation: 1380 m\nverbatimCoordinates: 12°12'52\"S 44°25'32\"E\notherCatalogNumbers: 1182891\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 249
+      },
+      "image_name": "0001_C2022784F_collage.jpg",
+      "timestamp": "2025-07-21T20:23:57.626865Z"
+    },
+    {
+      "id": "msg_bdrk_3437431becf14c2faaf9fd42",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "Here is the list of fields with the corresponding information:\n\nverbatimCollectors: S. Kojkowski\ncollectedBy: S. Kojkowski\nsecondaryCollectors: N/A\nrecordNumber: 207\nverbatimEventDate: 9.I.1976\nminimumEventDate: 1976-01-09\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella cuspidata Broth.\nlatestScientificName: Pilotrichella cuspidata\nidentifiedBy: R. Ochyra\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: Nairobi\nverbatimLocality: Ngong Hills near Nairobi, city of Ngong, epiphytic\nlocality: Ngong Hills near Nairobi, city of Ngong, epiphytic\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 192
+      },
+      "image_name": "0002_C2022785F_collage.jpg",
+      "timestamp": "2025-07-21T20:24:02.762756Z"
+    },
+    {
+      "id": "msg_bdrk_6fa90d611e164648b92a723a",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: S. Rojkowski\ncollectedBy: S. Rojkowski\nsecondaryCollectors: N/A\nrecordNumber: 378\nverbatimEventDate: 22 Jan. 1976\nminimumEventDate: 1976-01-22\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella cuspidata Broth.\nlatestScientificName: Pilotrichella cuspidata\nidentifiedBy: R. Ochyra\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: Meru\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: W slope of the crater rim, alt. 2700 m, epiphytic in montane rain forest\nlocality: W slope of the crater rim, 2700 meters, epiphytic in montane rain forest\nhabitat: epiphytic in montane rain forest\nverbatimElevation: alt. 2700 m\nverbatimCoordinates: N/A\notherCatalogNumbers: 1050662\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 204
+      },
+      "image_name": "0003_C2022786F_collage.jpg",
+      "timestamp": "2025-07-21T20:24:08.908921Z"
+    },
+    {
+      "id": "msg_bdrk_df07f6f6f91e4334bf30e736",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: S. Rojkowski No 253\ncollectedBy: S. Rojkowski\nsecondaryCollectors: N/A\nrecordNumber: 253\nverbatimEventDate: Jan. 13, 1976\nminimumEventDate: 1976-01-13\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella cuspidata Broth.\nlatestScientificName: Pilotrichella cuspidata\nidentifiedBy: R. Ochyra\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: Ngorongoro\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Ngorongoro Crater, alt. 2500 m, epiphytic in bamboo thickets\nlocality: Ngorongoro Crater, epiphytic in bamboo thickets\nhabitat: N/A\nverbatimElevation: alt. 2500 m\nverbatimCoordinates: N/A\notherCatalogNumbers: 1050652\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 185
+      },
+      "image_name": "0004_C2022787F_collage.jpg",
+      "timestamp": "2025-07-21T20:24:14.652441Z"
+    },
+    {
+      "id": "msg_bdrk_353566ed6dc54952aef45512",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: B. H. Allen & Magill\ncollectedBy: B. H. Allen\nsecondaryCollectors: Magill\nrecordNumber: s.n.\nverbatimEventDate: 2005\nminimumEventDate: 2005-00-00\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella ampullacea (C. Müll.) B. H. Allen & Magill\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: B. H. Allen\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: United States\nfirstPoliticalUnit: Missouri\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Missouri Botanical Garden Herbarium (MO)\nlocality: Missouri Botanical Garden Herbarium\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 181
+      },
+      "image_name": "0005_C2022788F_collage.jpg",
+      "timestamp": "2025-07-21T20:24:19.784953Z"
+    },
+    {
+      "id": "msg_bdrk_82f06f665e414c7a866d18af",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: B. Zemanek\ncollectedBy: B. Zemanek\nsecondaryCollectors: N/A\nrecordNumber: 1050473\nverbatimEventDate: 9. I. 1976\nminimumEventDate: 1976-01-09\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella cuspidata Broth.\nlatestScientificName: Pilotrichella cuspidata\nidentifiedBy: R. Ochyra\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: KENYA: Ngong Hills near Nairobi, epiphytic\nlocality: Ngong Hills near Nairobi\nhabitat: epiphytic\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 168
+      },
+      "image_name": "0006_C2022789F_collage.jpg",
+      "timestamp": "2025-07-21T20:24:24.968141Z"
+    },
+    {
+      "id": "msg_bdrk_b1f03149edf1422da7ba138d",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: T. G. Balbo\ncollectedBy: T. G. Balbo\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 18-4-1910\nminimumEventDate: 1910-04-18\nmaximumEventDate: N/A\nverbatimIdentification: Filochichella Poleana Berch\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: T. G. Balbo\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: Negeri\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: N/A\nlocality: [precise locality unknown]\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 159
+      },
+      "image_name": "0007_C2022790F_collage.jpg",
+      "timestamp": "2025-07-21T20:24:29.987631Z"
+    },
+    {
+      "id": "msg_bdrk_3542d4a12b174f57aee3b618",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: S. Rojkowski\ncollectedBy: S. Rojkowski\nsecondaryCollectors: N/A\nrecordNumber: 369\nverbatimEventDate: Jan. 22.1976\nminimumEventDate: 1976-01-22\nmaximumEventDate: N/A\nverbatimIdentification: Piltrichella ampullacea (C. Muell.) Jaeg.\nlatestScientificName: Piltrichella ampullacea\nidentifiedBy: K. Ochyra\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: Mt. Meru\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: 2600 m alt., W slope of the crater rim, epiphytic in montane rain forest\nlocality: 2600 meters altitude, west slope of the crater rim, epiphytic in montane rain forest\nhabitat: N/A\nverbatimElevation: 2600 m alt.\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 202
+      },
+      "image_name": "0008_C2022791F_collage.jpg",
+      "timestamp": "2025-07-21T20:24:36.363832Z"
+    },
+    {
+      "id": "msg_bdrk_22e1d36e1c674b3981cdd7ff",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: S. Rojkowski\ncollectedBy: S. Rojkowski\nsecondaryCollectors: N/A\nrecordNumber: 246\nverbatimEventDate: 12 Jan. 1976\nminimumEventDate: 1976-01-12\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella cuspidata Broth.\nlatestScientificName: Pilotrichella cuspidata\nidentifiedBy: R. Ochyra\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: Ngorongoro\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Ngorongoro Crater rim, epiphytic in bamboo thickets, alt. 2500 m\nlocality: Ngorongoro Crater rim, epiphytic in bamboo thickets, altitude 2500 meters\nhabitat: N/A\nverbatimElevation: alt. 2500 m\nverbatimCoordinates: N/A\notherCatalogNumbers: 1050643\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 190
+      },
+      "image_name": "0009_C2022792F_collage.jpg",
+      "timestamp": "2025-07-21T20:24:41.944929Z"
+    },
+    {
+      "id": "msg_bdrk_3248bd5502dd429a9fd7f1a7",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: H. Inoue\ncollectedBy: H. Inoue\nsecondaryCollectors: N/A\nrecordNumber: 491\nverbatimEventDate: October 31, 1974\nminimumEventDate: 1974-10-31\nmaximumEventDate: N/A\nverbatimIdentification: BRYOPHYTA SELECTA EXSICCATA\nlatestScientificName: Pilotrichella cuspidata\nidentifiedBy: Y. Hasegawa\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Around Ngrongoro Crater\nlocality: Around Ngrongoro Crater\nhabitat: N/A\nverbatimElevation: elevation about 2000 m\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 166
+      },
+      "image_name": "0010_C2022793F_collage.jpg",
+      "timestamp": "2025-07-21T20:24:46.890169Z"
+    },
+    {
+      "id": "msg_bdrk_9c2c27b5dada42429086ded1",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: P. R. Bothe\ncollectedBy: P. R. Bothe\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 8 - XI - 1924\nminimumEventDate: 1924-11-08\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella cuspidata Broth.\nlatestScientificName: Pilotrichella cuspidata\nidentifiedBy: P. R. Bothe\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Kenya: Glaucere, forest\nlocality: Glaucere, forest\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 162
+      },
+      "image_name": "0011_C2022794F_collage.jpg",
+      "timestamp": "2025-07-21T20:24:51.684774Z"
+    },
+    {
+      "id": "msg_bdrk_ce24525a2e1e4d1c843802dd",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: J. Szunyoghy (No. 18/a) det. M. Bizot\ncollectedBy: J. Szunyoghy\nsecondaryCollectors: M. Bizot\nrecordNumber: 18/a\nverbatimEventDate: 31.3.1965\nminimumEventDate: 1965-03-31\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella ampullacea (C. Müller) B. H. Allen & Magill\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: B. H. Allen & Magill\nverbatimDateIdentified: 2005\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Africa orientalis; Tanzania, ramicola in silva crateris montis Meru. Alt. 3000 m.s.m.\nlocality: Africa orientalis; Tanzania, ramicola in silva crateris montis Meru. Alt. 3000 m.s.m.\nhabitat: N/A\nverbatimElevation: Alt. 3000 m.s.m.\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 215
+      },
+      "image_name": "0012_C2022795F_collage.jpg",
+      "timestamp": "2025-07-21T20:24:58.081946Z"
+    },
+    {
+      "id": "msg_bdrk_ed744ae11ae746d8a339f16d",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: A. Borhidi & M. Steiner\ncollectedBy: A. Borhidi\nsecondaryCollectors: M. Steiner\nrecordNumber: 86226/c\nverbatimEventDate: 2. Nov. 1986\nminimumEventDate: 1986-11-02\nmaximumEventDate: N/A\nverbatimIdentification: RHYNCHOSTEGIUM HORRIDUM Broth.\nlatestScientificName: Rhynchostegium horridum\nidentifiedBy: H. Bednarek - R. Ochyra\nverbatimDateIdentified: 1992\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: Tanga Region\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: EAST USAMBARA Mts. Submontane rainforest along stream and on S slopes 0.5 km S of DEREWA village, at 780-870 m alt. Loc. 86226 Corticolous.\nlocality: East Usambara Mountains, submontane rainforest along stream and on south slopes 0.5 kilometers south of Dereva village\nhabitat: submontane rainforest along stream and on south slopes\nverbatimElevation: 780-870 m alt.\nverbatimCoordinates: 5° 38'\notherCatalogNumbers: N/A\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 249
+      },
+      "image_name": "0052_C2023112F_collage.jpg",
+      "timestamp": "2025-07-21T20:25:04.823831Z"
+    },
+    {
+      "id": "msg_bdrk_e53ea6b7b2b1429eba96294c",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Coll.T.POCS & 1st year forestry stud.\ncollectedBy: T. Pocs\nsecondaryCollectors: N/A\nrecordNumber: 8689/E\nverbatimEventDate: Dat.17.6.1986\nminimumEventDate: 1986-06-17\nmaximumEventDate: N/A\nverbatimIdentification: RHYNCHOSTEGIUM HORRIDUM Broth.\nlatestScientificName: Rhynchostegium horridum\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: Morogoro\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: RHYNCHOSTEGIUM HORRIDUM Broth. Fam:Brachytheciaceae Det.R.Ochyra 1992 MERU Mts. Rain forest of the SSW slope, above MELKA SINGH sawmill at 2050-2160 m alt. Lignicolous.\nlocality: Rain forest of the SSW slope, above MELKA SINGH sawmill\nhabitat: Rain forest of the SSW slope, above MELKA SINGH sawmill\nverbatimElevation: 2050-2160 m alt.\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 229
+      },
+      "image_name": "0053_C2023113F_collage.jpg",
+      "timestamp": "2025-07-21T20:25:11.291401Z"
+    },
+    {
+      "id": "msg_bdrk_57c43c0ba27f44b0a6bd0174",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: A. Borhidi & M. Steiner\ncollectedBy: A. Borhidi\nsecondaryCollectors: M. Steiner\nrecordNumber: 86226/c\nverbatimEventDate: 2. Nov. 1986\nminimumEventDate: 1986-11-02\nmaximumEventDate: N/A\nverbatimIdentification: RHYNCHOSTEGIUM HORRIDUM Broth.\nlatestScientificName: Rhynchostegium horridum\nidentifiedBy: H. Bednarek - R. Ochyra\nverbatimDateIdentified: 1992\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: Tanga Region\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: EAST USAMBARA Mts. Submontane rainforest along stream and on S slopes 0.5 km S of DEREWA village, at 780-870 m alt. Loc. 86226 Corticolous.\nlocality: East Usambara Mountains, submontane rainforest along stream and on south slopes 0.5 kilometers south of Dereva village\nhabitat: submontane rainforest along stream and on south slopes\nverbatimElevation: 780-870 m alt.\nverbatimCoordinates: 38°\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 244
+      },
+      "image_name": "0054_C2023114F_collage.jpg",
+      "timestamp": "2025-07-21T20:25:17.728149Z"
+    },
+    {
+      "id": "msg_bdrk_cf05d5cea8d940e69beb5ec9",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Dr Dunlap\ncollectedBy: R. Dunlap\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: Jan 3rd 1926\nminimumEventDate: 1926-01-03\nmaximumEventDate: N/A\nverbatimIdentification: Rhynchostegium megapelma (C.M.) Jaeg\nlatestScientificName: Rhynchostegium megapelma\nidentifiedBy: H.N. Dixon\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Cameroon\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Cameroon Mountain, 5000 ft. on fallen trunk\nlocality: Cameroon Mountain, 5000 feet on fallen trunk\nhabitat: N/A\nverbatimElevation: 5000 ft.\nverbatimCoordinates: N/A\notherCatalogNumbers: 1090559\noriginalMethod: Handwritten\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 178
+      },
+      "image_name": "0055_C2023115F_collage.jpg",
+      "timestamp": "2025-07-21T20:25:22.855554Z"
+    },
+    {
+      "id": "msg_bdrk_5a9bb73def7745008390d108",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: N/A\ncollectedBy: N/A\nsecondaryCollectors: N/A\nrecordNumber: 1061386\nverbatimEventDate: s.d.\nminimumEventDate: N/A\nmaximumEventDate: N/A\nverbatimIdentification: N/A\nlatestScientificName: N/A\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: N/A\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: N/A\nlocality: N/A\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 131
+      },
+      "image_name": "0056_C2023116F_collage.jpg",
+      "timestamp": "2025-07-21T20:25:27.340558Z"
+    },
+    {
+      "id": "msg_bdrk_686c9070f61c4b2f8ec79b1a",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: T. Husnot, à Cahan, par Athis (Orne)\ncollectedBy: T. Husnot\nsecondaryCollectors: Athis (Orne)\nrecordNumber: 841\nverbatimEventDate: s.d.\nminimumEventDate: N/A\nmaximumEventDate: N/A\nverbatimIdentification: Rhynchostegium tenellum Schp.\nlatestScientificName: Rhynchostegium tenellum\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: France\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: N/A\nlocality: [precise locality unknown]\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 162
+      },
+      "image_name": "0057_C2023117F_collage.jpg",
+      "timestamp": "2025-07-21T20:25:32.237081Z"
+    },
+    {
+      "id": "msg_bdrk_79b3c2b2a96d47e7bc539273",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: T. Pócs, R. Ochyra & H. Bednarek-Ochyra\ncollectedBy: T. Pócs\nsecondaryCollectors: R. Ochyra | H. Bednarek-Ochyra\nrecordNumber: 88150/C\nverbatimEventDate: 24-25 June 1988\nminimumEventDate: 1988-06-24\nmaximumEventDate: 1988-06-25\nverbatimIdentification: BRYOPHYTA AFRICANA SELECTA\nlatestScientificName: Rhynchostegium volkensii\nidentifiedBy: R. Ochyra\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: Arusha District\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Mt. Meru, Laikinoi approach on south-west slope: subalpine Stoebe kilimanjarica bush, elev. 3,000-3,300 m; lat. 3°15'S, long. 36°44'E; on ground.\nlocality: Mt. Meru, Laikinoi approach on south-west slope: subalpine Stoebe kilimanjarica bush, elevation 3,000-3,300 meters; latitude 3°15'S, longitude 36°44'E; on ground.\nhabitat: N/A\nverbatimElevation: 3,000-3,300 m\nverbatimCoordinates: 3°15'S, long. 36°44'E\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 253
+      },
+      "image_name": "0058_C2023119F_collage.jpg",
+      "timestamp": "2025-07-21T20:25:39.874762Z"
+    },
+    {
+      "id": "msg_bdrk_8da096599e9844c78d7ea55f",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: P. S. Balbo\ncollectedBy: P. S. Balbo\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 8-5-1936\nminimumEventDate: 1936-05-08\nmaximumEventDate: N/A\nverbatimIdentification: Rhynchostegium Vollonii |Broth.|\nlatestScientificName: Rhynchostegium Vollonii\nidentifiedBy: P. S. Balbo\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: N/A\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: N/A\nlocality: [precise locality unknown]\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: C2023120F\noriginalMethod: Handwritten\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 160
+      },
+      "image_name": "0059_C2023120F_collage.jpg",
+      "timestamp": "2025-07-21T20:25:44.960890Z"
+    },
+    {
+      "id": "msg_bdrk_3f38c0b15bae42d98b65dc46",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "Collectors: R.A.Dummer No.4012\ncollectedBy: R. A. Dummer\nsecondaryCollectors: N/A\nrecordNumber: 4012\nverbatimEventDate: April 19 1919\nminimumEventDate: 1919-04-19\nmaximumEventDate: N/A\nverbatimIdentification: Rhynchostegium Colensoi (Broth.) Broth.\nlatestScientificName: Rhynchostegium colensoi\nidentifiedBy: H.N.Dixon\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Uganda\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Uganda: Mulange, 4000ft\nlocality: Mulange, 4000 feet\nhabitat: N/A\nverbatimElevation: 4000ft\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 166
+      },
+      "image_name": "0060_C2023121F_collage.jpg",
+      "timestamp": "2025-07-21T20:25:50.175123Z"
+    },
+    {
+      "id": "msg_bdrk_fb8704d260254a35863f88a5",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: R.A.Dummer No 4303 det. B.N.Dixon\ncollectedBy: R. A. Dummer\nsecondaryCollectors: B. N. Dixon\nrecordNumber: 4303\nverbatimEventDate: Sept 1919\nminimumEventDate: 1919-09-00\nmaximumEventDate: N/A\nverbatimIdentification: Rhynchostegium bolkense (Broth.) Broth\nlatestScientificName: Rhynchostegium bolkense\nidentifiedBy: B. N. Dixon\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Uganda\nfirstPoliticalUnit: Mulange\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: 4000ft. Fallen log in forest\nlocality: 4000 feet. Fallen log in forest\nhabitat: N/A\nverbatimElevation: 4000ft\nverbatimCoordinates: N/A\notherCatalogNumbers: C2025122F\noriginalMethod: Handwritten\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 180
+      },
+      "image_name": "0061_C2023122F_collage.jpg",
+      "timestamp": "2025-07-21T20:25:55.513129Z"
+    },
+    {
+      "id": "msg_bdrk_4a40e8c0eedc45488db5cac4",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: T. Pócs\ncollectedBy: T. Pócs\nsecondaryCollectors: N/A\nrecordNumber: 8206\nverbatimEventDate: 14.9.91\nminimumEventDate: 1991-09-14\nmaximumEventDate: N/A\nverbatimIdentification: Eurhynchium africanum Herz. var. latifolia\nlatestScientificName: Eurhynchium africanum var. latifolia\nidentifiedBy: T. Pócs\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Rwanda\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Mt. Karisimbi. Senecio refractisquamatus paramo on Loc. 162 the E-slopes along trail to summit.\nlocality: Mt. Karisimbi. Senecio refractisquamatus paramo on Loc. 162 the E-slopes along trail to summit.\nhabitat: N/A\nverbatimElevation: 3600 - 3900 m alt.\nverbatimCoordinates: N/A\notherCatalogNumbers: 1121616\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 211
+      },
+      "image_name": "0062_C2023276F_collage.jpg",
+      "timestamp": "2025-07-21T20:26:01.823021Z"
+    },
+    {
+      "id": "msg_bdrk_258447115d4445b8aac32e79",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: A. C. Crundwell\ncollectedBy: A. C. Crundwell\nsecondaryCollectors: N/A\nrecordNumber: 82\nverbatimEventDate: 25th March 1976\nminimumEventDate: 1976-03-25\nmaximumEventDate: N/A\nverbatimIdentification: Eurhynchium meridionale (Schimp.) De Not.\nlatestScientificName: Eurhynchium meridionale\nidentifiedBy: Fred J. Hermann\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Spain\nfirstPoliticalUnit: Canary Islands\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Epiphytic in forest, 700 m. alt., Bailedero, Tenerife\nlocality: Epiphytic in forest, 700 m. alt., Bailedero, Tenerife\nhabitat: N/A\nverbatimElevation: 700 m. alt.\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 190
+      },
+      "image_name": "0063_C2023277F_collage.jpg",
+      "timestamp": "2025-07-21T20:26:07.399187Z"
+    },
+    {
+      "id": "msg_bdrk_9a7fbe2985cd40b5b933a5a2",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Alice Carter Cook\ncollectedBy: A. Carter Cook\nsecondaryCollectors: N/A\nrecordNumber: 1128\nverbatimEventDate: Oct 1897\nminimumEventDate: 1897-10-00\nmaximumEventDate: N/A\nverbatimIdentification: Eurhynchium myosuroides (L.) Schp.\nlatestScientificName: Eurhynchium myosuroides\nidentifiedBy: Cruz de Taganana\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Spain\nfirstPoliticalUnit: Canary Islands\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: N/A\nlocality: [precise locality unknown]\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: 466834\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 165
+      },
+      "image_name": "0064_C2023278F_collage.jpg",
+      "timestamp": "2025-07-21T20:26:12.400695Z"
+    },
+    {
+      "id": "msg_bdrk_83064b6af5bf4ea1bc75582e",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: B.J.HARRIS & T.PÓCS\ncollectedBy: B. J. Harris\nsecondaryCollectors: T. Pócs\nrecordNumber: No.6144/\nverbatimEventDate: 29.III.1970.\nminimumEventDate: 1970-03-29\nmaximumEventDate: N/A\nverbatimIdentification: Racopilacene\nlatestScientificName: Racopilum plicatum\nidentifiedBy: M. Bizot\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: Ulanga District\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: GOLOGOLO Mountains, MWANIHANA Forest Reserve near SONJO, in the KILOMBERO Valley\nlocality: GOLOGOLO Mountains, MWANIHANA Forest Reserve near SONJO, in the KILOMBERO Valley\nhabitat: Evergreen riverian forests, on rocks\nverbatimElevation: Alt.300 m.\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 202
+      },
+      "image_name": "0117_C2023435F_collage.jpg",
+      "timestamp": "2025-07-21T20:26:18.079053Z"
+    },
+    {
+      "id": "msg_bdrk_123d89a1b5ef4b7ab7375d25",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: C. Troll\ncollectedBy: C. Troll\nsecondaryCollectors: N/A\nrecordNumber: 4116\nverbatimEventDate: 25 October 1933\nminimumEventDate: 1933-10-25\nmaximumEventDate: N/A\nverbatimIdentification: Racopilum speluncae C. Müll.\nlatestScientificName: Racopilum speluncae\nidentifiedBy: H. N. Dixon\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Eritrea\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Mount Sabur, alt. 1200 m; on rock in moist streambed.\nlocality: Mount Sabur, 1200 meters, on rock in moist streambed.\nhabitat: N/A\nverbatimElevation: 1200 m\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 176
+      },
+      "image_name": "0118_C2023436F_collage.jpg",
+      "timestamp": "2025-07-21T20:26:23.209712Z"
+    },
+    {
+      "id": "msg_bdrk_1afeb0e644984f5bae391bcf",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "Here is the list of fields with the corresponding information:\n\nverbatimCollectors: T.Pócs & B.J.Harris\ncollectedBy: T. Pócs\nsecondaryCollectors: B. J. Harris\nrecordNumber: 6158\nverbatimEventDate: 2.5.1970\nminimumEventDate: 1970-05-02\nmaximumEventDate: N/A\nverbatimIdentification: Cyatophorella africana (DIX.) BROTH\nlatestScientificName: Cyatophorella africana\nidentifiedBy: T. Pócs\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: Uluguru\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: N-slope of Bondwa, forest edge above Morningside\nlocality: N-slope of Bondwa, forest edge above Morningside\nhabitat: Wet mountain rain-forest by streamlets\nverbatimElevation: 1450 m\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 204
+      },
+      "image_name": "0119_C2023437F_collage.jpg",
+      "timestamp": "2025-07-21T20:26:29.301206Z"
+    },
+    {
+      "id": "msg_bdrk_003158f675d742b9acbbb594",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: T. Pócs\ncollectedBy: T. Pócs\nsecondaryCollectors: N/A\nrecordNumber: 6983/B\nverbatimEventDate: 10.IV.1984\nminimumEventDate: 1984-04-10\nmaximumEventDate: N/A\nverbatimIdentification: Hypopterygium laricinum (Hook.) Brid.\nlatestScientificName: Hypopterygium laricinum\nidentifiedBy: R. Ochyra\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: Arusha\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Arusha Nat. Park. Mesic evergreen forest near Ngare Nanyuki River, alt. 1500 m, lignicolous\nlocality: Arusha National Park, near Ngare Nanyuki River, mesic evergreen forest, lignicolous\nhabitat: Mesic evergreen forest\nverbatimElevation: 1500 m\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 201
+      },
+      "image_name": "0120_C2023438F_collage.jpg",
+      "timestamp": "2025-07-21T20:26:35.316846Z"
+    },
+    {
+      "id": "msg_bdrk_bb7a3616b28247aca4e4742f",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Coll. Balfour. Ex Herb. Wm. Mitten\ncollectedBy: Balfour\nsecondaryCollectors: Wm. Mitten\nrecordNumber: 1096054\nverbatimEventDate: s.d.\nminimumEventDate: N/A\nmaximumEventDate: N/A\nverbatimIdentification: Hypoterygium laricinum Mauritius\nlatestScientificName: Hypoterygium laricinum\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Mauritius\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: N/A\nlocality: [precise locality unknown]\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 161
+      },
+      "image_name": "0121_C2023439F_collage.jpg",
+      "timestamp": "2025-07-21T20:26:40.241600Z"
+    },
+    {
+      "id": "msg_bdrk_a6fb406f8efc4504aa0724a3",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Herbier du Frère Maurice Onraedt, F. S. C. de Malonne (Belgique)\ncollectedBy: Frère M. Onraedt\nsecondaryCollectors: N/A\nrecordNumber: 1105726\nverbatimEventDate: 19.09.1971\nminimumEventDate: 1971-09-19\nmaximumEventDate: N/A\nverbatimIdentification: Hypopterygium toulouanum Schimp\nlatestScientificName: Hypopterygium toulouanum\nidentifiedBy: Frère M. Onraedt\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Belgium\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: sur basalte et les vieilles zacines d'une forêt élimacique - alt. ca. 700 m\nlocality: on basalt and old zacines of an elimacique forest - alt. ca. 700 m\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 205
+      },
+      "image_name": "0122_C2023440F_collage.jpg",
+      "timestamp": "2025-07-21T20:26:46.412452Z"
+    },
+    {
+      "id": "msg_bdrk_9ded4c4a347c455e81fca94f",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "Here is the list of fields with the corresponding information:\n\nverbatimCollectors: C.MUELL.\ncollectedBy: C. MUELL.\nsecondaryCollectors: N/A\nrecordNumber: 4886\nverbatimEventDate: 2.5.1970\nminimumEventDate: 1970-05-02\nmaximumEventDate: N/A\nverbatimIdentification: Cryptogamae exsiccatae editae a Museo Hist. Natur. Vindobonensi\nlatestScientificName: Hypopterygium viridissimum\nidentifiedBy: M. Bizot\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: E-Africa\nsecondPoliticalUnit: Uluguru Mts.\nmunicipality: N/A\nverbatimLocality: N. slope of Bondwa, forest edge above Morningside, 1450 m.\nlocality: N. slope of Bondwa, forest edge above Morningside, 1450 meters\nhabitat: Wet mountain rain forest by streamlets. On barks.\nverbatimElevation: 1450 m.\nverbatimCoordinates: N/A\notherCatalogNumbers: 1031813\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 221
+      },
+      "image_name": "0123_C2023441F_collage.jpg",
+      "timestamp": "2025-07-21T20:26:52.448235Z"
+    },
+    {
+      "id": "msg_bdrk_b924306fba5346c9b7a79368",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Herbier du Frère Maurice Onraedt, F.S.C. de Malonne (Belgique)\ncollectedBy: M. Onraedt\nsecondaryCollectors: N/A\nrecordNumber: 1089651\nverbatimEventDate: 18/XII/1970\nminimumEventDate: 1970-12-18\nmaximumEventDate: N/A\nverbatimIdentification: BRYOPHYTES DE la Reunion. Calytrachaeeta asplenoides (Brid.) Crosby. = Eriopus asplenoides Brid.\nlatestScientificName: Calytrachaeeta asplenoides\nidentifiedBy: M. Onraedt\nverbatimDateIdentified: July\nassociatedTaxa: N/A\ncountry: Belgium\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Sur blocs de basalte humide, sous bois; alt. ca. 1800m Ravine du Tremblet, W de la Fournaise\nlocality: On humid basalt blocks, under trees; altitude approximately 1800 meters Ravine du Tremblet, west of La Fournaise\nhabitat: N/A\nverbatimElevation: alt. ca. 1800m\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 237
+      },
+      "image_name": "0124_C2023442F_collage.jpg",
+      "timestamp": "2025-07-21T20:26:59.209546Z"
+    },
+    {
+      "id": "msg_bdrk_c70e647a23f047e0b8766833",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Herbier du Frère Maurice Onraedt, F. S. C. de Malonne (Belgique)\ncollectedBy: Frère M. Onraedt\nsecondaryCollectors: N/A\nrecordNumber: 1089652\nverbatimEventDate: 23/12/1973\nminimumEventDate: 1973-12-23\nmaximumEventDate: N/A\nverbatimIdentification: Glyptiochaeta asplenoides (Brid.) Broth. c. nor. =/Griopus asplenoides Brid.\nlatestScientificName: Glyptiochaeta asplenoides\nidentifiedBy: Frère M. Onraedt\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Belgium\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Petite Plaine des Palmistes\nlocality: Petite Plaine des Palmistes\nhabitat: Forêt humide, sur blocs de basalte; alt. ca. 735m!\nverbatimElevation: alt. ca. 735m!\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 209
+      },
+      "image_name": "0125_C2023443F_collage.jpg",
+      "timestamp": "2025-07-21T20:27:05.448591Z"
+    },
+    {
+      "id": "msg_bdrk_4c11febb9e5b44228bd80079",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: T. Pócs, H. BeNearek-Ochyr & R. Ochyra 88113/AK\ncollectedBy: T. Pócs\nsecondaryCollectors: H. BeNearek-Ochyr | R. Ochyra\nrecordNumber: 88113/AK\nverbatimEventDate: 9 June 1988\nminimumEventDate: 1988-06-09\nmaximumEventDate: N/A\nverbatimIdentification: Adelothecium bogotense (Hampe) Mitt.\nlatestScientificName: Adelothecium bogotense\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Uluguru Mts, E escarpment of the Lukwangule Plateau ca 3 km W of the village of NYINGWA in the valley of the MCETA River, elev. 2250-2300 m; on twigs of Podocarpus along stream bank close to waterfall with big boulders\nlocality: Uluguru Mts, E escarpment of the Lukwangule Plateau ca 3 km W of the village of NYINGWA in the valley of the MCETA River, on twigs of Podocarpus along stream bank close to waterfall with big boulders\nhabitat: N/A\nverbatimElevation: 2250-2300 m\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 272
+      },
+      "image_name": "0126_C2023444F_collage.jpg",
+      "timestamp": "2025-07-21T20:27:13.046399Z"
+    },
+    {
+      "id": "msg_bdrk_a3a7c9ae33974853b7f89e09",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: T. Pócs, H. BeNaarek-Ochyra & R. Ochyra\ncollectedBy: T. Pócs\nsecondaryCollectors: H. BeNaarek-Ochyra | R. Ochyra\nrecordNumber: 88113/AK\nverbatimEventDate: June 1988\nminimumEventDate: 1988-06-00\nmaximumEventDate: N/A\nverbatimIdentification: Adelothecium bogotense (Hampe) Mitt.\nlatestScientificName: Adelothecium bogotense\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Uluguru Mts, E escarpment of the LUKWANGULE PLATEAU ca 3 km W of the village of NYINGWA in the valley of MGETA RIVER, elev. 2250-2300 m; on twigs of Podocarpus along stream bank close to waterfall with big boulders\nlocality: Uluguru Mts, E escarpment of the LUKWANGULE PLATEAU ca 3 km W of the village of NYINGWA in the valley of MGETA RIVER, on twigs of Podocarpus along stream bank close to waterfall with big boulders\nhabitat: N/A\nverbatimElevation: 2250-2300 m\nverbatimCoordinates: N/A\notherCatalogNumbers: C2023445F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 270
+      },
+      "image_name": "0127_C2023445F_collage.jpg",
+      "timestamp": "2025-07-21T20:27:20.812373Z"
+    },
+    {
+      "id": "msg_bdrk_5c962e333d35435caf5be4f4",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: C Troll (5895) comm Th Herzog\ncollectedBy: C. Troll\nsecondaryCollectors: Th. Herzog\nrecordNumber: 5895\nverbatimEventDate: V 1934\nminimumEventDate: 1934-05-00\nmaximumEventDate: N/A\nverbatimIdentification: Bartramia aristifolia Broth\nlatestScientificName: Bartramia aristifolia\nidentifiedBy: H N Dixon\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: Mt Kenya\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: George Valley, in fissis umbrosis humidisque, 4250 m, leg\nlocality: George Valley, in fissis umbrosis humidisque, 4250 m\nhabitat: N/A\nverbatimElevation: 4250 m\nverbatimCoordinates: N/A\notherCatalogNumbers: 1356495\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 189
+      },
+      "image_name": "0128_C2023509F_collage.jpg",
+      "timestamp": "2025-07-21T20:27:26.068396Z"
+    },
+    {
+      "id": "msg_bdrk_e8a52a3591e044c8a39754d2",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: R.E. Magill\ncollectedBy: R. E. Magill\nsecondaryCollectors: N/A\nrecordNumber: 4324\nverbatimEventDate: 4 Dec 1977\nminimumEventDate: 1977-12-04\nmaximumEventDate: N/A\nverbatimIdentification: Bartramia hampeana C. Muell.\nlatestScientificName: Bartramia hampeana\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Lesotho\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Sehlabathebe National Park. Hills around sandstone outcrops just E of Lodge. Moist grassland. In rock crevices.\nlocality: Sehlabathebe National Park. Hills around sandstone outcrops just E of Lodge. Moist grassland. In rock crevices.\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: 1038335\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 204
+      },
+      "image_name": "0129_C2023510F_collage.jpg",
+      "timestamp": "2025-07-21T20:27:32.113810Z"
+    },
+    {
+      "id": "msg_bdrk_9a5d40f58a474b948faf0041",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Herbier du Frère Maurice Onraedt, F.S.C. de Malonne (Belgique)\ncollectedBy: H. Onraedt\nsecondaryCollectors: N/A\nrecordNumber: 1078904\nverbatimEventDate: 03/03/1976\nminimumEventDate: 1976-03-03\nmaximumEventDate: N/A\nverbatimIdentification: Maeromitrium fasciculare Mitt\nlatestScientificName: Maeromitrium fasciculare\nidentifiedBy: H. Onraedt\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Belgium\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Pour un arbre de la forêt, alt. ca. 1000m\nlocality: Pour un arbre de la forêt, alt. ca. 1000m\nhabitat: N/A\nverbatimElevation: alt. ca. 1000m\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 189
+      },
+      "image_name": "0179_C2070249F_collage.jpg",
+      "timestamp": "2025-07-21T20:27:38.106363Z"
+    },
+    {
+      "id": "msg_bdrk_d9156c7b5b374332bf9f44ac",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: L.J. Brass & E. Myer-Drees\ncollectedBy: L. J. Brass\nsecondaryCollectors: E. Myer-Drees\nrecordNumber: 9892\nverbatimEventDate: Sept. 1938\nminimumEventDate: 1938-09-00\nmaximumEventDate: N/A\nverbatimIdentification: Macromitrium erubescens Bartr.\nlatestScientificName: Macromitrium erubescens\nidentifiedBy: E. B. Bartram\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Papua New Guinea\nfirstPoliticalUnit: New Guinea\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Mt. Wilhelmina\nlocality: Mt. Wilhelmina\nhabitat: Subalpine forest; patched on upper branches of trees\nverbatimElevation: 3560 m\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: N/A"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 185
+      },
+      "image_name": "0180_C2070250F_collage.jpg",
+      "timestamp": "2025-07-21T20:27:43.795608Z"
+    },
+    {
+      "id": "msg_bdrk_4764c77761094160a906413c",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: L.J. Brass & E. Myer-Drees\ncollectedBy: L. J. Brass\nsecondaryCollectors: E. Myer-Drees\nrecordNumber: 9892\nverbatimEventDate: Sept. 1938\nminimumEventDate: 1938-09-00\nmaximumEventDate: N/A\nverbatimIdentification: Macromitrium erubescens Bartr.\nlatestScientificName: Macromitrium erubescens\nidentifiedBy: E. B. Bartram\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Papua New Guinea\nfirstPoliticalUnit: New Guinea\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Mt. Wilhelmina\nlocality: Mt. Wilhelmina\nhabitat: Subalpine forest; patched on upper branches of trees\nverbatimElevation: 3560 m\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 182
+      },
+      "image_name": "0181_C2070251F_collage.jpg",
+      "timestamp": "2025-07-21T20:27:49.253550Z"
+    },
+    {
+      "id": "msg_bdrk_656aaed592e343ceb46e13e7",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: HONSHU: Yamanashi-ken, Kita-koma-gun, Takane-cho, Kiyosato-kogen plateau, ca. 1400 m alt., on tree trunks in deciduous forest. Coll. & T. Osada & N. Suzuki, April 9, 1978; det. T. Osada.\ncollectedBy: T. Osada\nsecondaryCollectors: N. Suzuki\nrecordNumber: 1530\nverbatimEventDate: April 9, 1978\nminimumEventDate: 1978-04-09\nmaximumEventDate: N/A\nverbatimIdentification: MUSCI JAPONICI EXSICCATI\nlatestScientificName: Macromitrium comatum\nidentifiedBy: T. Osada\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Japan\nfirstPoliticalUnit: Yamanashi\nsecondPoliticalUnit: Kita-koma-gun\nmunicipality: Takane-cho\nverbatimLocality: Kiyosato-kogen plateau, ca. 1400 m alt., on tree trunks in deciduous forest\nlocality: Kiyosato-kogen plateau, on tree trunks in deciduous forest\nhabitat: deciduous forest\nverbatimElevation: ca. 1400 m alt.\nverbatimCoordinates: N/A\notherCatalogNumbers: 1035994\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 239
+      },
+      "image_name": "0182_C2070252F_collage.jpg",
+      "timestamp": "2025-07-21T20:27:56.372757Z"
+    },
+    {
+      "id": "msg_bdrk_316953246c1b4e31a19ac7e9",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Tadao Kamiji\ncollectedBy: T. Kamiji\nsecondaryCollectors: N/A\nrecordNumber: 136\nverbatimEventDate: August, September 1947\nminimumEventDate: 1947-08-00\nmaximumEventDate: 1947-09-00\nverbatimIdentification: Macromitrium brachycladulum Broth. & Par.\nlatestScientificName: Macromitrium brachycladulum\nidentifiedBy: E. B. Bartram\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Japan\nfirstPoliticalUnit: Honshu\nsecondPoliticalUnit: N/A\nmunicipality: Nikko\nverbatimLocality: N/A\nlocality: [precise locality unknown]\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 167
+      },
+      "image_name": "0183_C2070253F_collage.jpg",
+      "timestamp": "2025-07-21T20:28:01.176927Z"
+    },
+    {
+      "id": "msg_bdrk_12ce8de7998f4f06909c70f1",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "Here is the list of fields with the corresponding information:\n\nverbatimCollectors: H. M. Curran, M. L. Merritt\ncollectedBy: H. M. Curran\nsecondaryCollectors: M. L. Merritt\nrecordNumber: 8188\nverbatimEventDate: Nov-Dec 1907\nminimumEventDate: 1907-11-00\nmaximumEventDate: 1907-12-00\nverbatimIdentification: Macromitrium blumei Nees\nlatestScientificName: Macromitrium blumei\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Philippines\nfirstPoliticalUnit: Luzon\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Lambales Prov.\nlocality: Lambales Prov.\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 181
+      },
+      "image_name": "0184_C2070254F_collage.jpg",
+      "timestamp": "2025-07-21T20:28:06.672074Z"
+    },
+    {
+      "id": "msg_bdrk_eae6fcb3301a44f5b2108abd",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: L.J. Brass\ncollectedBy: L. J. Brass\nsecondaryCollectors: N/A\nrecordNumber: 10961\nverbatimEventDate: Oct. 1938\nminimumEventDate: 1938-10-00\nmaximumEventDate: N/A\nverbatimIdentification: Macromitrium austro-cirrosum Bartr.\nlatestScientificName: Macromitrium austro-cirrosum\nidentifiedBy: E. B. Bartram\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Papua New Guinea\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: 9 km. NE. of Lake Habbema, 2800 m. camp\nlocality: 9 km. NE. of Lake Habbema, 2800 m. camp\nhabitat: Cushioned on low trees of open secondary forest on a landslip\nverbatimElevation: 2800 m.\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 197
+      },
+      "image_name": "0185_C2070255F_collage.jpg",
+      "timestamp": "2025-07-21T20:28:12.523860Z"
+    },
+    {
+      "id": "msg_bdrk_ef9ac5d66b1345a187c58bcd",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: L.J. Brass & E. Myer-Drees\ncollectedBy: L. J. Brass\nsecondaryCollectors: E. Myer-Drees\nrecordNumber: 10323\nverbatimEventDate: Sept. 1938\nminimumEventDate: 1938-09-00\nmaximumEventDate: N/A\nverbatimIdentification: Macromitrium Archboldii Bartr.\nlatestScientificName: Macromitrium archboldii\nidentifiedBy: E. B. Bartram\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Papua New Guinea\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: subalpine forest; alt. 3800 m.\nlocality: subalpine forest; altitude 3800 meters\nhabitat: N/A\nverbatimElevation: alt. 3800 m.\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 179
+      },
+      "image_name": "0186_C2070256F_collage.jpg",
+      "timestamp": "2025-07-21T20:28:17.884172Z"
+    },
+    {
+      "id": "msg_bdrk_d3be950acb154bbba1bed088",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Mary Strong Clemens 412.5\ncollectedBy: M. S. Clemens\nsecondaryCollectors: N/A\nrecordNumber: 412.5\nverbatimEventDate: 25 April 1940\nminimumEventDate: 1940-04-25\nmaximumEventDate: N/A\nverbatimIdentification: Macromitrium angulatum Mitt\nlatestScientificName: Macromitrium angulatum\nidentifiedBy: D. H. Vitt\nverbatimDateIdentified: Mar. 14, 1993\nassociatedTaxa: N/A\ncountry: Papua New Guinea\nfirstPoliticalUnit: Morobe\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: New Guinea: Morobe District\nlocality: New Guinea: Morobe District\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 175
+      },
+      "image_name": "0187_C2070257F_collage.jpg",
+      "timestamp": "2025-07-21T20:28:22.835186Z"
+    },
+    {
+      "id": "msg_bdrk_044fb102a91147d69c764921",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: S. K. Lau\ncollectedBy: S. K. Lau\nsecondaryCollectors: N/A\nrecordNumber: 5374\nverbatimEventDate: Jan. 2-21 1935\nminimumEventDate: 1935-01-02\nmaximumEventDate: 1935-01-21\nverbatimIdentification: Macromitrium nepalense (H. & G.) Schwaegr. & Schlotheimia Grevilleana Mitt.\nlatestScientificName: Macromitrium nepalense\nidentifiedBy: E. B. Bartram\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: China\nfirstPoliticalUnit: Hainan\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Chim Fung Mt., Kan-en District\nlocality: Chim Fung Mt., Kan-en District\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: 1122765\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 180
+      },
+      "image_name": "0188_C2070258F_collage.jpg",
+      "timestamp": "2025-07-21T20:28:28.604485Z"
+    },
+    {
+      "id": "msg_bdrk_df988947592e4b4c81d35cd7",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "Here is the list of fields with the corresponding information:\n\nverbatimCollectors: Coll. S. K. Lau\ncollectedBy: S. K. Lau\nsecondaryCollectors: N/A\nrecordNumber: 5374\nverbatimEventDate: Jan 2-31, 1935\nminimumEventDate: 1935-01-02\nmaximumEventDate: 1935-01-31\nverbatimIdentification: Macromitrium nepalense (H. & G.) Schwaegr. & Schlotheimia Grevilleana Mitt.\nlatestScientificName: Macromitrium nepalense\nidentifiedBy: E. B. Bartram\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: China\nfirstPoliticalUnit: Hainan\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Chim Fung Mt. Ka-en District\nlocality: Chim Fung Mt. Ka-en District\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: 1072828\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 203
+      },
+      "image_name": "0189_C2070259F_collage.jpg",
+      "timestamp": "2025-07-21T20:28:34.765591Z"
+    },
+    {
+      "id": "msg_bdrk_93796ace0ba046c8a8a18ba6",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Daniel H. Norris\ncollectedBy: D. H. Norris\nsecondaryCollectors: N/A\nrecordNumber: 63472\nverbatimEventDate: 10 July 1981\nminimumEventDate: 1981-07-10\nmaximumEventDate: N/A\nverbatimIdentification: Macromitrium noguchianum Schultze-Motel\nlatestScientificName: Macromitrium noguchianum\nidentifiedBy: Dale H. Vitt\nverbatimDateIdentified: 1989\nassociatedTaxa: N/A\ncountry: Papua New Guinea\nfirstPoliticalUnit: Morobe\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Morobe Prov.: Mt. Sarawaket Southern Range 6 km SSW of Iloko. In upper montane rainforest approaching moss forest along trail between Iloko and Mt. Sarawaket, alt. 2700 - 2900 m, 147 10'E, 6 18.5'S\nlocality: Morobe Province, Mt. Sarawaket Southern Range, 6 km SSW of Iloko, along trail between Iloko and Mt. Sarawaket\nhabitat: upper montane rainforest approaching moss forest\nverbatimElevation: 2700 - 2900 m\nverbatimCoordinates: 147 10'E, 6 18.5'S\notherCatalogNumbers: 1142782\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 254
+      },
+      "image_name": "0190_C2070260F_collage.jpg",
+      "timestamp": "2025-07-21T20:28:41.810679Z"
+    },
+    {
+      "id": "msg_bdrk_37a9981d8eab4ec88e6a0426",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: S.Y.Cheo\ncollectedBy: S. Y. Cheo\nsecondaryCollectors: N/A\nrecordNumber: 2754\nverbatimEventDate: Sept. 15, 1933\nminimumEventDate: 1933-09-15\nmaximumEventDate: N/A\nverbatimIdentification: Macromitrium pilosum, Bartram, Sp. nov.\nlatestScientificName: Macromitrium pilosum\nidentifiedBy: E. B. Bartram\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: China\nfirstPoliticalUnit: Kwangsi Province\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Mosses of Kwangsi Province, China\nlocality: Mosses of Kwangsi Province, China\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: 1073830\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: N/A"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 176
+      },
+      "image_name": "0191_C2070261F_collage.jpg",
+      "timestamp": "2025-07-21T20:28:47.100344Z"
+    },
+    {
+      "id": "msg_bdrk_255e9c3d9cb84ee58b6644a8",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: R. S. Williams\ncollectedBy: R. S. Williams\nsecondaryCollectors: N/A\nrecordNumber: 1751\nverbatimEventDate: Nov. 29, 1904\nminimumEventDate: 1904-11-29\nmaximumEventDate: N/A\nverbatimIdentification: Macromitrium sulcatum (Hook. & Grev.) Brid.\nlatestScientificName: Macromitrium sulcatum\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Philippines\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: N/A\nlocality: [precise locality unknown]\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 164
+      },
+      "image_name": "0192_C2070262F_collage.jpg",
+      "timestamp": "2025-07-21T20:28:52.106527Z"
+    },
+    {
+      "id": "msg_bdrk_db498909ed9848dcad74851a",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Kiushiu. Kumamoto: Kawamura, ca 100 m, near the River Kuma, on stone, leg. K. Mayebara det. A. Noguchi.\ncollectedBy: K. Mayebara\nsecondaryCollectors: A. Noguchi\nrecordNumber: 112\nverbatimEventDate: 1. 1948\nminimumEventDate: 1948-01-00\nmaximumEventDate: N/A\nverbatimIdentification: Grimmia pilifera Palis\nlatestScientificName: Grimmia pilifera\nidentifiedBy: A. Noguchi\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Japan\nfirstPoliticalUnit: Kumamoto\nsecondPoliticalUnit: N/A\nmunicipality: Kawamura\nverbatimLocality: ca 100 m, near the River Kuma, on stone\nlocality: near the River Kuma, on stone\nhabitat: N/A\nverbatimElevation: ca 100 m\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 191
+      },
+      "image_name": "0207_C2075157F_collage.jpg",
+      "timestamp": "2025-07-21T20:28:58.075466Z"
+    },
+    {
+      "id": "msg_bdrk_78a546ab03ad46c18e3d7caf",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: K. Mayebara\ncollectedBy: K. Mayebara\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 1. 1948\nminimumEventDate: 1948-01-00\nmaximumEventDate: N/A\nverbatimIdentification: Gymnostomum rupestre Schleich\nlatestScientificName: Gymnostomum rupestre\nidentifiedBy: A. Noguchi\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Japan\nfirstPoliticalUnit: Kumamoto\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Koonose, ca 100 m, on calcareous rock\nlocality: Koonose, 100 meters, on calcareous rock\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 169
+      },
+      "image_name": "0208_C2075158F_collage.jpg",
+      "timestamp": "2025-07-21T20:29:03.394219Z"
+    },
+    {
+      "id": "msg_bdrk_de7578f8e27f409698cd0d2c",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Kiushiu. Kumamoto: Hitoyoshi, ca 100 m, on rocks, leg. K. Mayebara det. A. Noguchi.\ncollectedBy: K. Mayebara\nsecondaryCollectors: A. Noguchi\nrecordNumber: 108\nverbatimEventDate: III. 1948\nminimumEventDate: 1948-03-00\nmaximumEventDate: N/A\nverbatimIdentification: Leucobryum neilgherrense C. Muell.\nlatestScientificName: Leucobryum neilgherrense\nidentifiedBy: C. Muell.\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Japan\nfirstPoliticalUnit: Kumamoto\nsecondPoliticalUnit: N/A\nmunicipality: Hitoyoshi\nverbatimLocality: Hitoyoshi, ca 100 m, on rocks\nlocality: Hitoyoshi, ca 100 m, on rocks\nhabitat: N/A\nverbatimElevation: ca 100 m\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 189
+      },
+      "image_name": "0209_C2075166F_collage.jpg",
+      "timestamp": "2025-07-21T20:29:09.033212Z"
+    },
+    {
+      "id": "msg_bdrk_4f87a30bf7be43318a03f41b",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Kiushiu Kumamoto: Hitoyoshi, ca 100 m, on moist rocks, leg K Mayebara det A Noguchi\ncollectedBy: K. Mayebara\nsecondaryCollectors: A. Noguchi\nrecordNumber: s.n.\nverbatimEventDate: III 1948\nminimumEventDate: 1948-03-00\nmaximumEventDate: N/A\nverbatimIdentification: Mnium rostratum Schrad\nlatestScientificName: Mnium rostratum\nidentifiedBy: A. Noguchi\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Japan\nfirstPoliticalUnit: Kumamoto\nsecondPoliticalUnit: N/A\nmunicipality: Hitoyoshi\nverbatimLocality: ca 100 m, on moist rocks\nlocality: ca 100 m, on moist rocks\nhabitat: N/A\nverbatimElevation: ca 100 m\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 181
+      },
+      "image_name": "0210_C2075169F_collage.jpg",
+      "timestamp": "2025-07-21T20:29:14.391774Z"
+    },
+    {
+      "id": "msg_bdrk_e292705ba6954fbd87b6390d",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: A. Noguchi\ncollectedBy: A. Noguchi\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: V III. 1948\nminimumEventDate: 1948-03-00\nmaximumEventDate: N/A\nverbatimIdentification: Oncophorus crispifolius (Mitt.) Lindb. var. brevipes (Card.) Nog.\nlatestScientificName: Oncophorus crispifolius var. brevipes\nidentifiedBy: A. Noguchi\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Japan\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Mt. Jinkakuji, ca 700 m, on dry rocks\nlocality: Mt. Jinkakuji, ca 700 m, on dry rocks\nhabitat: N/A\nverbatimElevation: ca 700 m\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 182
+      },
+      "image_name": "0211_C2075171F_collage.jpg",
+      "timestamp": "2025-07-21T20:29:20.109375Z"
+    },
+    {
+      "id": "msg_bdrk_dd0fedb1fab34d31b794d308",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: A. Noguchi\ncollectedBy: A. Noguchi\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 1. 1948\nminimumEventDate: 1948-01-00\nmaximumEventDate: N/A\nverbatimIdentification: Physcomitrium eurystomum (Nees) Sendtn.\nlatestScientificName: Physcomitrium eurystomum\nidentifiedBy: A. Noguchi\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Japan\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Kiushiu. O'ita: Uyeno, 20 m, on shady ground, leg. et det. A. Noguchi\nlocality: Uyeno, 20 m, on shady ground\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 176
+      },
+      "image_name": "0212_C2075172F_collage.jpg",
+      "timestamp": "2025-07-21T20:29:25.676101Z"
+    },
+    {
+      "id": "msg_bdrk_94b82dcff9004c3598328bee",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: K. Mayebara\ncollectedBy: K. Mayebara\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: III. 1948\nminimumEventDate: 1948-03-00\nmaximumEventDate: N/A\nverbatimIdentification: Rhodobryum giganteum (Hook.) Par.\nlatestScientificName: Rhodobryum giganteum\nidentifiedBy: A. Noguchi\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Japan\nfirstPoliticalUnit: Kumamoto\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Nishinomura, 160 m, on marshy ground\nlocality: Nishinomura, 160 m, on marshy ground\nhabitat: N/A\nverbatimElevation: 160 m\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 170
+      },
+      "image_name": "0213_C2075177F_collage.jpg",
+      "timestamp": "2025-07-21T20:29:31.168340Z"
+    },
+    {
+      "id": "msg_bdrk_4a7243ba595a47c69c07c882",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: S. Hattori\ncollectedBy: S. Hattori\nsecondaryCollectors: N/A\nrecordNumber: IX. 1948\nverbatimEventDate: 1948\nminimumEventDate: 1948-00-00\nmaximumEventDate: N/A\nverbatimIdentification: Weisiopsis Cardoti (Broth.) Broth.\nlatestScientificName: Weisiopsis Cardoti\nidentifiedBy: A. Noguchi\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Japan\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Kiushiu. Miyazaki: Obi, ca 200 m, on bare bank after small landslip, in shade\nlocality: Kiushiu. Miyazaki: Obi, ca 200 m, on bare bank after small landslip, in shade\nhabitat: N/A\nverbatimElevation: ca 200 m\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 189
+      },
+      "image_name": "0214_C2075181F_collage.jpg",
+      "timestamp": "2025-07-21T20:29:36.809502Z"
+    },
+    {
+      "id": "msg_bdrk_3d96385596764d6aa2dfc016",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: A. Noguchi & S. Hattori\ncollectedBy: A. Noguchi\nsecondaryCollectors: S. Hattori\nrecordNumber: 427\nverbatimEventDate: February 17, 1952\nminimumEventDate: 1952-02-17\nmaximumEventDate: N/A\nverbatimIdentification: Hylocomium cavifolium Lac\nlatestScientificName: Hylocomium cavifolium\nidentifiedBy: A. Noguchi\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Japan\nfirstPoliticalUnit: Kumamoto\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: On rocks, ca. 600 m., near Hitoyoshi, Kumamoto Prefecture\nlocality: On rocks, ca. 600 m., near Hitoyoshi\nhabitat: N/A\nverbatimElevation: ca. 600 m.\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 181
+      },
+      "image_name": "0215_C2075257F_collage.jpg",
+      "timestamp": "2025-07-21T20:29:42.938103Z"
+    },
+    {
+      "id": "msg_bdrk_53a913a4d36749289a64eb27",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: A. Noguchi & S. Hattori\ncollectedBy: A. Noguchi\nsecondaryCollectors: S. Hattori\nrecordNumber: 428\nverbatimEventDate: October 20, 1954\nminimumEventDate: 1954-10-20\nmaximumEventDate: N/A\nverbatimIdentification: Hyophila propagulifera Broth\nlatestScientificName: Hyophila propagulifera\nidentifiedBy: A. Noguchi\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Japan\nfirstPoliticalUnit: Oita\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: On sunny concrete wall, about 10 m. above sea, Oita, Oita Prefecture\nlocality: On sunny concrete wall, about 10 meters above sea, Oita Prefecture\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 189
+      },
+      "image_name": "0216_C2075258F_collage.jpg",
+      "timestamp": "2025-07-21T20:29:48.617735Z"
+    },
+    {
+      "id": "msg_bdrk_9f2aeb373e7e4fe1a4f3944d",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Coll. & det. Z. Iwatsuki\ncollectedBy: Z. Iwatsuki\nsecondaryCollectors: N/A\nrecordNumber: 429\nverbatimEventDate: December 13, 1953\nminimumEventDate: 1953-12-13\nmaximumEventDate: N/A\nverbatimIdentification: Hypopterygium fauriei Besch.\nlatestScientificName: Hypopterygium fauriei\nidentifiedBy: A. Noguchi\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Japan\nfirstPoliticalUnit: Aichi\nsecondPoliticalUnit: N/A\nmunicipality: Miwa\nverbatimLocality: On shady damp rocks sides of the Kamebuchi rivulet\nlocality: On shady damp rocks sides of the Kamebuchi rivulet\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 180
+      },
+      "image_name": "0217_C2075259F_collage.jpg",
+      "timestamp": "2025-07-21T20:29:53.823519Z"
+    },
+    {
+      "id": "msg_bdrk_436c157ffc7347f9ac348fff",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Coll. K. Mayebara\ncollectedBy: K. Mayebara\nsecondaryCollectors: N/A\nrecordNumber: 430\nverbatimEventDate: February 11, 1952\nminimumEventDate: 1952-02-11\nmaximumEventDate: N/A\nverbatimIdentification: Macromitrium gymnostomum Sull. et Lesq.\nlatestScientificName: Macromitrium gymnostomum\nidentifiedBy: A. Noguchi\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Japan\nfirstPoliticalUnit: Kumamoto\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: On rocks, ca. 100 m. above sea, Koonose, Kumamoto Prefecture\nlocality: On rocks, 100 meters above sea, Koonose\nhabitat: N/A\nverbatimElevation: ca. 100 m. above sea\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 186
+      },
+      "image_name": "0218_C2075260F_collage.jpg",
+      "timestamp": "2025-07-21T20:29:59.278679Z"
+    },
+    {
+      "id": "msg_bdrk_be14f8628fcb46749709ce51",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: K. Mayebara\ncollectedBy: K. Mayebara\nsecondaryCollectors: N/A\nrecordNumber: 431\nverbatimEventDate: December 25, 1951\nminimumEventDate: 1951-12-25\nmaximumEventDate: N/A\nverbatimIdentification: Macromitrium incurvum (Lindb.) Par.\nlatestScientificName: Macromitrium incurvum\nidentifiedBy: A. Noguchi\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Japan\nfirstPoliticalUnit: Kumamoto\nsecondPoliticalUnit: N/A\nmunicipality: Yoshio\nverbatimLocality: On exposed rocks, 60 m. above sea\nlocality: On exposed rocks, 60 meters above sea\nhabitat: N/A\nverbatimElevation: 60 m. above sea\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 175
+      },
+      "image_name": "0219_C2075261F_collage.jpg",
+      "timestamp": "2025-07-21T20:30:04.549881Z"
+    },
+    {
+      "id": "msg_bdrk_cb9a14c95bee4e52b62fa191",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: M.Mizutani\ncollectedBy: M. Mizutani\nsecondaryCollectors: N/A\nrecordNumber: 1270\nverbatimEventDate: Oct. 6, 1973\nminimumEventDate: 1973-10-06\nmaximumEventDate: N/A\nverbatimIdentification: Forsstroemia trichomitria (Hedw.) Lindb. c.fr.\nlatestScientificName: Forsstroemia trichomitria\nidentifiedBy: Z.I.\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Japan\nfirstPoliticalUnit: Honshu\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Iwate-ken, Shimohei-gun, Yamada-cho, Toyomane Valley, 160 m alt., on tree trunk\nlocality: Iwate-ken, Shimohei-gun, Yamada-cho, Toyomane Valley, 160 m alt., on tree trunk\nhabitat: N/A\nverbatimElevation: 160 m alt.\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 195
+      },
+      "image_name": "0220_C2088970F_collage.jpg",
+      "timestamp": "2025-07-21T20:30:10.510477Z"
+    },
+    {
+      "id": "msg_bdrk_511fc1eedef44564b62be3fd",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: J. Atwood\ncollectedBy: J. Atwood\nsecondaryCollectors: N/A\nrecordNumber: 2023\nverbatimEventDate: 4 Oct 1987\nminimumEventDate: 1987-10-04\nmaximumEventDate: N/A\nverbatimIdentification: ADELANTHACEAE Syzygiella anomala (Lindenb. & Gottsche) Steph.\nlatestScientificName: Syzygiella anomala\nidentifiedBy: J. Atwood\nverbatimDateIdentified: 2023\nassociatedTaxa: N/A\ncountry: Colombia\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Sur de Jardin 5-10 km. Bosque muy humedo\nlocality: Sur de Jardin 5-10 km. Bosque muy humedo\nhabitat: Bosque muy humedo\nverbatimElevation: 2480 m\nverbatimCoordinates: 05°32'N 075°44'W\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 184
+      },
+      "image_name": "0264_C2099487F_collage.jpg",
+      "timestamp": "2025-07-21T20:30:16.576386Z"
+    },
+    {
+      "id": "msg_bdrk_4ff61426692e4eb9971999b6",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: det. J. Atwood, 2022\ncollectedBy: J. Atwood\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 27 Feb 2002\nminimumEventDate: 2002-02-27\nmaximumEventDate: N/A\nverbatimIdentification: FRULLANIACEAE Frullania brasiliensis Raddi\nlatestScientificName: Frullania brasiliensis\nidentifiedBy: S. P. Churchill & Luzmila Arroyo\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Bolivia\nfirstPoliticalUnit: Santa Cruz\nsecondPoliticalUnit: Vallegrande\nmunicipality: N/A\nverbatimLocality: Calaculo, ca. 26 km sur de Vallegrande camino a Khasamonte. Bosque montano secundario, con Podocarpus parlatorei, abundante especies de helechos.\nlocality: Calaculo, ca. 26 km south of Vallegrande on the road to Khasamonte. Secondary montane forest, with Podocarpus parlatorei, abundant species of ferns.\nhabitat: N/A\nverbatimElevation: 2450 m\nverbatimCoordinates: 18°38'S 064°02'W\notherCatalogNumbers: C2099488F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 243
+      },
+      "image_name": "0265_C2099488F_collage.jpg",
+      "timestamp": "2025-07-21T20:30:23.287405Z"
+    },
+    {
+      "id": "msg_bdrk_91d51866bcbb4d9bb2b3dabd",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: S. Orbán\ncollectedBy: S. Orbán\nsecondaryCollectors: N/A\nrecordNumber: 9646/BC\nverbatimEventDate: 17 July 1996\nminimumEventDate: 1996-07-17\nmaximumEventDate: N/A\nverbatimIdentification: Schistochila\nlatestScientificName: Schistochila\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Hungary\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Foret de BEBOUR. Plateau de DUVERNAY. Along the trail to CASSE DE TAKAMAKA. Montane rain forest with many tree ferns and epiphytes.\nlocality: Foret de BEBOUR. Plateau de DUVERNAY. Along the trail to CASSE DE TAKAMAKA. Montane rain forest with many tree ferns and epiphytes.\nhabitat: Montane rain forest with many tree ferns and epiphytes.\nverbatimElevation: N/A\nverbatimCoordinates: 21°6'S, 55°35-36'E.\notherCatalogNumbers: C2099489F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 225
+      },
+      "image_name": "0266_C2099489F_collage.jpg",
+      "timestamp": "2025-07-21T20:30:30.126684Z"
+    },
+    {
+      "id": "msg_bdrk_faa5a90a9a784c609d52bd7a",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: M. Higuchi\ncollectedBy: M. Higuchi\nsecondaryCollectors: N/A\nrecordNumber: 1250\nverbatimEventDate: December 4, 2006\nminimumEventDate: 2006-12-04\nmaximumEventDate: N/A\nverbatimIdentification: Ricciocarpos natans (L.) Corda in Opiz\nlatestScientificName: Ricciocarpos natans\nidentifiedBy: M. Higuchi\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Japan\nfirstPoliticalUnit: Honshu\nsecondPoliticalUnit: Ibaraki Prefecture\nmunicipality: N/A\nverbatimLocality: Josso-shi, Kogai River, Fukuoka-zeki floodgate\nlocality: Josso-shi, Kogai River, Fukuoka-zeki floodgate\nhabitat: On bare soil at dried waterway\nverbatimElevation: N/A\nverbatimCoordinates: 36°02'N, 140°01'E\notherCatalogNumbers: C2099490F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 191
+      },
+      "image_name": "0267_C2099490F_collage.jpg",
+      "timestamp": "2025-07-21T20:30:36.032130Z"
+    },
+    {
+      "id": "msg_bdrk_805a17815c1b4a24995a7d7c",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: T. PÓCS and A. SZABÓ\ncollectedBy: T. Pócs\nsecondaryCollectors: A. Szabó\nrecordNumber: 9886/L'\nverbatimEventDate: 24. August 1998.\nminimumEventDate: 1998-08-24\nmaximumEventDate: N/A\nverbatimIdentification: Schiffneriolejeunea\nlatestScientificName: Schiffneriolejeunea\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Madagascar\nfirstPoliticalUnit: TOAMASINA Province\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Ericaceous heath on coastal white sand between AMPANGALANAS Canal and the ocean, 5 km N of ANDOVORANTO, between ANDOMBO and ANDOVOA\nlocality: Ericaceous heath on coastal white sand between Ampangalanas Canal and the ocean, 5 km N of Andovoranto, between Andombo and Andovoa\nhabitat: Ericaceous heath on coastal white sand\nverbatimElevation: N/A\nverbatimCoordinates: 18°54.1'S, 49°7.24'E\notherCatalogNumbers: C2099491F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 234
+      },
+      "image_name": "0268_C2099491F_collage.jpg",
+      "timestamp": "2025-07-21T20:30:42.554566Z"
+    },
+    {
+      "id": "msg_bdrk_55e9e5dd0d7f4a63aa53855d",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: det. Catherine Reeb 2023\ncollectedBy: Catherine Reeb\nsecondaryCollectors: N/A\nrecordNumber: H43\nverbatimEventDate: 11 March 1987\nminimumEventDate: 1987-03-11\nmaximumEventDate: N/A\nverbatimIdentification: PLAGIOCHILACEAE Plagiochila drepanophylla Sande Lac.\nlatestScientificName: Plagiochila drepanophylla\nidentifiedBy: Peter B. Phillipson\nverbatimDateIdentified: N/A\nassociatedTaxa: Mixed with P. squamulosa\ncountry: Madagascar\nfirstPoliticalUnit: Vakinankaratra Region\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Eastern slope of Ankaratra, west of Ambatolampy. Forest reserve in and around patch of indigenous forest.\nlocality: Eastern slope of Ankaratra, west of Ambatolampy. Forest reserve in and around patch of indigenous forest.\nhabitat: Plant light green, growing at the base of tree trunks in dense shade.\nverbatimElevation: 1900 m\nverbatimCoordinates: 19°22'S 047°17'E\notherCatalogNumbers: C2099492F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 248
+      },
+      "image_name": "0269_C2099492F_collage.jpg",
+      "timestamp": "2025-07-21T20:30:49.099307Z"
+    },
+    {
+      "id": "msg_bdrk_b6adc273b12b4feea499d487",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Laurence J. Dorr & L.C. Barnett 3355\ncollectedBy: L. J. Dorr\nsecondaryCollectors: L. C. Barnett\nrecordNumber: 3355\nverbatimEventDate: 9 December 1984\nminimumEventDate: 1984-12-09\nmaximumEventDate: N/A\nverbatimIdentification: Frullania nodulosa (Reinw., Blume & Nees) Nees\nlatestScientificName: Frullania nodulosa\nidentifiedBy: Catherine Reeb\nverbatimDateIdentified: 2023\nassociatedTaxa: N/A\ncountry: Madagascar\nfirstPoliticalUnit: Atsinanana Region\nsecondPoliticalUnit: Analalava\nmunicipality: N/A\nverbatimLocality: west of Foulpointe\nlocality: west of Foulpointe\nhabitat: Epiphyte. Moss.\nverbatimElevation: 0 - 50 m\nverbatimCoordinates: 17°42'S 049°29'E\notherCatalogNumbers: C2099493F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 188
+      },
+      "image_name": "0270_C2099493F_collage.jpg",
+      "timestamp": "2025-07-21T20:30:55.040735Z"
+    },
+    {
+      "id": "msg_bdrk_ee01f30669ef44ce9213471e",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Plagiochilaceae Plagiochila repanda var. perrotiana (Steph.) Vanden Berghen det. Catherine Reeb 2023\ncollectedBy: Catherine Reeb\nsecondaryCollectors: N/A\nrecordNumber: H43\nverbatimEventDate: 1 Decembre 1994\nminimumEventDate: 1994-12-01\nmaximumEventDate: N/A\nverbatimIdentification: Plagiochila repanda var. perrotiana (Steph.) Vanden Berghen\nlatestScientificName: Plagiochila repanda var. perrotiana\nidentifiedBy: Catherine Reeb\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Madagascar\nfirstPoliticalUnit: Ihorombe Region\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Ivohibe, Ivongo, Ambatomboay. Dans la Reserve Naturelle Integrale d'Andringitra. EST du RNI. Preserver en alcool.\nlocality: Ivohibe, Ivongo, Ambatomboay. Dans la Reserve Naturelle Integrale d'Andringitra. EST du RNI.\nhabitat: N/A\nverbatimElevation: 720 m\nverbatimCoordinates: 22°15'S 047°01'E\notherCatalogNumbers: C2099494F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 246
+      },
+      "image_name": "0271_C2099494F_collage.jpg",
+      "timestamp": "2025-07-21T20:31:02.405282Z"
+    },
+    {
+      "id": "msg_bdrk_23fa8402e4714db7a92c5608",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Marshall R. & Carol A. Crosby 5783\ncollectedBy: R. Marshall & A. Crosby\nsecondaryCollectors: N/A\nrecordNumber: 5783\nverbatimEventDate: MAR 30, 1973\nminimumEventDate: 1973-03-30\nmaximumEventDate: N/A\nverbatimIdentification: Neckeraceae Porotrichum lancifrons (Hampe) Mitten\nlatestScientificName: Porotrichum lancifrons\nidentifiedBy: B. Allen\nverbatimDateIdentified: 2005\nassociatedTaxa: N/A\ncountry: Costa Rica\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Porrosati area. Moist valley of Rio Ciruelas at end of regional road 114, N of village of Barba. 18 km N of city center of San Jose.\nlocality: Porrosati area. Moist valley of Rio Ciruelas at end of regional road 114, N of village of Barba. 18 km N of city center of San Jose.\nhabitat: N/A\nverbatimElevation: 2250 m\nverbatimCoordinates: 10°06'N 84°07'W\notherCatalogNumbers: C2099495F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 236
+      },
+      "image_name": "0272_C2099495F_collage.jpg",
+      "timestamp": "2025-07-21T20:31:09.066687Z"
+    },
+    {
+      "id": "msg_bdrk_1e87873f5b424eaf99c702ae",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Bruce Allen & Ronald A. Pursell\ncollectedBy: Bruce Allen\nsecondaryCollectors: Ronald A. Pursell\nrecordNumber: 27319\nverbatimEventDate: August 2005\nminimumEventDate: 2005-08-00\nmaximumEventDate: N/A\nverbatimIdentification: 316. Dichelyma capillaceum Myrin\nlatestScientificName: Dichelyma capillaceum\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: United States\nfirstPoliticalUnit: Maine\nsecondPoliticalUnit: Sagadahoc County\nmunicipality: Georgetown\nverbatimLocality: SAGADAHOC COUNTY: Town of Georgetown. Georgetown Island, Charles Pond, 0.75 miles west of Five Islands. 43°48' 50\"N, 069°43' 45\"W. 10 meters.\nlocality: Charles Pond, 0.75 miles west of Five Islands\nhabitat: On rocks and sticks in depression near pond, seasonally dry.\nverbatimElevation: 10 meters\nverbatimCoordinates: 43°48' 50\"N, 069°43' 45\"W\notherCatalogNumbers: C2099496F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 234
+      },
+      "image_name": "0273_C2099496F_collage.jpg",
+      "timestamp": "2025-07-21T20:31:15.647839Z"
+    },
+    {
+      "id": "msg_bdrk_7413fbcd0a6d45af87998d34",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Marshall R. Crosby & Carol A. Crosby\ncollectedBy: Marshall R. Crosby\nsecondaryCollectors: Carol A. Crosby\nrecordNumber: 6283\nverbatimEventDate: 24 March 1973\nminimumEventDate: 1973-03-24\nmaximumEventDate: N/A\nverbatimIdentification: Trichosteleum microstegium (Schimp. ex Besch.)\nlatestScientificName: Trichosteleum microstegium\nidentifiedBy: A. Jaeger\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Costa Rica\nfirstPoliticalUnit: Alajuela\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Vicinity of crater of Volcán Poás, along trail from parking area to Lagoon. Ericaceous shrub vegetation. 32 km NW of N of city center of San José. Leaf cells very faintly papillose.\nlocality: Vicinity of crater of Volcán Poás, along trail from parking area to Lagoon. Ericaceous shrub vegetation. 32 km NW of N of city center of San José. Leaf cells very faintly papillose.\nhabitat: Ericaceous shrub vegetation\nverbatimElevation: 2500 m\nverbatimCoordinates: 10°11'N 084°14'W\notherCatalogNumbers: C2099497F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 271
+      },
+      "image_name": "0274_C2099497F_collage.jpg",
+      "timestamp": "2025-07-21T20:31:22.643777Z"
+    },
+    {
+      "id": "msg_bdrk_32d7e1a798fc4cdd9ef81ad9",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Ramiro Fonnegra G. & Dino Tuberquia\ncollectedBy: R. Fonnegra G.\nsecondaryCollectors: D. Tuberquia\nrecordNumber: 4662\nverbatimEventDate: 22 April 1993\nminimumEventDate: 1993-04-22\nmaximumEventDate: N/A\nverbatimIdentification: Leptodontium ulocalyx (Müll. Hal.) Mitt.\nlatestScientificName: Leptodontium ulocalyx\nidentifiedBy: B. Allen\nverbatimDateIdentified: 2022\nassociatedTaxa: N/A\ncountry: Colombia\nfirstPoliticalUnit: Antioquia\nsecondPoliticalUnit: Belmira\nmunicipality: N/A\nverbatimLocality: Páramo \"El Morro\"\nlocality: Páramo \"El Morro\"\nhabitat: Crece sobre suelo en hojarasca\nverbatimElevation: 3130 m\nverbatimCoordinates: 06°35'N 075°32'W\notherCatalogNumbers: C2099498F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 186
+      },
+      "image_name": "0275_C2099498F_collage.jpg",
+      "timestamp": "2025-07-21T20:31:28.205827Z"
+    },
+    {
+      "id": "msg_bdrk_b38f8d91977e4574a49d54bd",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: A.J. Sharp & Evelyn B. Sharp\ncollectedBy: A. J. Sharp\nsecondaryCollectors: Evelyn B. Sharp\nrecordNumber: BC-50\nverbatimEventDate: 24 September 1964\nminimumEventDate: 1964-09-24\nmaximumEventDate: N/A\nverbatimIdentification: SCAPANIACEAE Scapania bolanderi Austin\nlatestScientificName: Scapania bolanderi\nidentifiedBy: J. Atwood\nverbatimDateIdentified: 2023\nassociatedTaxa: N/A\ncountry: Canada\nfirstPoliticalUnit: British Columbia\nsecondPoliticalUnit: Vancouver Island\nmunicipality: N/A\nverbatimLocality: North-facing bluffs and slopes overlooking the east end of Lake Cameron\nlocality: North-facing bluffs and slopes overlooking the east end of Lake Cameron\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: C2099499F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 204
+      },
+      "image_name": "0276_C2099499F_collage.jpg",
+      "timestamp": "2025-07-21T20:31:33.572456Z"
+    },
+    {
+      "id": "msg_bdrk_34fea7adb57b40c997ec5594",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: S. P. Churchill\ncollectedBy: S. P. Churchill\nsecondaryCollectors: N/A\nrecordNumber: 17778\nverbatimEventDate: 23 Apr 1991\nminimumEventDate: 1991-04-23\nmaximumEventDate: N/A\nverbatimIdentification: Leptodontium viticulosoides var. sulphureum\nlatestScientificName: Leptodontium viticulosoides var. sulphureum\nidentifiedBy: S. P. Churchill\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Colombia\nfirstPoliticalUnit: Antioquia\nsecondPoliticalUnit: Belmira\nmunicipality: N/A\nverbatimLocality: Ca. 5-10 km N de Belmira. Bosque montano medio a alto. Elev. 2445-2935 m. Con A. L. Arbelaez, J. Betancur, D. L. Echeverry & F. J. Roldaln.\nlocality: Ca. 5-10 km N de Belmira. Bosque montano medio a alto. Con A. L. Arbelaez, J. Betancur, D. L. Echeverry & F. J. Roldaln.\nhabitat: Bosque montano medio a alto\nverbatimElevation: 2445-2935 m\nverbatimCoordinates: 06°41'N 075°40'W\notherCatalogNumbers: C2099500F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 243
+      },
+      "image_name": "0277_C2099500F_collage.jpg",
+      "timestamp": "2025-07-21T20:31:41.010417Z"
+    },
+    {
+      "id": "msg_bdrk_53b01c19a79f4f658ed0ccf7",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: det. W. S. Hong\ncollectedBy: W. S. Hong\nsecondaryCollectors: N/A\nrecordNumber: 9128\nverbatimEventDate: 25 May 1977\nminimumEventDate: 1977-05-25\nmaximumEventDate: N/A\nverbatimIdentification: Lophocolea minor Nees\nlatestScientificName: Lophocolea minor\nidentifiedBy: S. P. Churchill\nverbatimDateIdentified: N/A\nassociatedTaxa: Plagiochila porelloides\ncountry: United States\nfirstPoliticalUnit: South Dakota\nsecondPoliticalUnit: Lawrence County\nmunicipality: N/A\nverbatimLocality: Black Hills. Along Iron Creek, southwest of Spearfish. Conifer-deciduous woods along creek.\nlocality: Black Hills. Along Iron Creek, southwest of Spearfish. Conifer-deciduous woods along creek.\nhabitat: Conifer-deciduous woods along creek.\nverbatimElevation: N/A\nverbatimCoordinates: 44°25'N 103°55'W\notherCatalogNumbers: C2099501F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 219
+      },
+      "image_name": "0278_C2099501F_collage.jpg",
+      "timestamp": "2025-07-21T20:31:46.779969Z"
+    },
+    {
+      "id": "msg_bdrk_ccd454cc016f4a98bb62d8d7",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Bruce Allen & Ronald A. Pursell\ncollectedBy: Bruce Allen\nsecondaryCollectors: Ronald A. Pursell\nrecordNumber: 26880\nverbatimEventDate: June 2004\nminimumEventDate: 2004-06-00\nmaximumEventDate: N/A\nverbatimIdentification: 319. Brachythecium laetum (Brid.) Schimp. in B.S.G.\nlatestScientificName: Brachythecium laetum\nidentifiedBy: Bruce Allen\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: United States\nfirstPoliticalUnit: Maine\nsecondPoliticalUnit: Androscoggin County\nmunicipality: Lisbon\nverbatimLocality: Along west bank of Little River near confluence with Androscoggin River\nlocality: Along west bank of Little River near confluence with Androscoggin River\nhabitat: On talus boulders at base of cliff\nverbatimElevation: N/A\nverbatimCoordinates: 43°59' 37\"N, 070°03' 05\"W\notherCatalogNumbers: C2099502F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 221
+      },
+      "image_name": "0279_C2099502F_collage.jpg",
+      "timestamp": "2025-07-21T20:31:53.094909Z"
+    },
+    {
+      "id": "msg_bdrk_47aff93e9d3d4ccaad33d0ad",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: R.R. Ireland & G. Bellolio\ncollectedBy: R. R. Ireland\nsecondaryCollectors: G. Bellolio\nrecordNumber: N° 33406\nverbatimEventDate: November 7, 2001\nminimumEventDate: 2001-11-07\nmaximumEventDate: N/A\nverbatimIdentification: Zygodon papillatus Montagne\nlatestScientificName: Zygodon papillatus\nidentifiedBy: R.R. Ireland\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Chile\nfirstPoliticalUnit: Arauco\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: On tree trunk. Region VIII: Prov. Arauco. 8 km east of Tirúa, on north side of Tirúa River. Nothofagus spp. forest on steep slope.\nlocality: On tree trunk. 8 km east of Tirúa, on north side of Tirúa River. Nothofagus spp. forest on steep slope.\nhabitat: Nothofagus spp. forest on steep slope.\nverbatimElevation: 190 m\nverbatimCoordinates: 38°20'S, 73°27'W\notherCatalogNumbers: C2099503F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 230
+      },
+      "image_name": "0280_C2099503F_collage.jpg",
+      "timestamp": "2025-07-21T20:31:59.535336Z"
+    },
+    {
+      "id": "msg_bdrk_873e8e131db844669bef635b",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: W. D. Reese\ncollectedBy: W. D. Reese\nsecondaryCollectors: N/A\nrecordNumber: 37931A\nverbatimEventDate: 27 Jul 1976\nminimumEventDate: 1976-07-27\nmaximumEventDate: N/A\nverbatimIdentification: Calymperaceae Syrrhopodon incompletus var. berteroanus (Bridel) W. D. Reese\nlatestScientificName: Syrrhopodon incompletus var. berteroanus\nidentifiedBy: W. D. Reese\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Panama\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Serrania de Pirre, along headwaters of Rio Escucho Ruido, ca. 16 km due N of Alto de Nique.\nlocality: Serrania de Pirre, along headwaters of Rio Escucho Ruido, ca. 16 km due N of Alto de Nique.\nhabitat: Lower montane rain forest.\nverbatimElevation: 1530-1550 m\nverbatimCoordinates: N/A\notherCatalogNumbers: C2099504F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 222
+      },
+      "image_name": "0281_C2099504F_collage.jpg",
+      "timestamp": "2025-07-21T20:32:06.068745Z"
+    },
+    {
+      "id": "msg_bdrk_08bc25b67358433d81c917c1",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: det. S. Churchill, 2006\ncollectedBy: S. Churchill\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 4 Dic 2005\nminimumEventDate: 2005-12-04\nmaximumEventDate: N/A\nverbatimIdentification: Sematophyllum cuspidiferum Mitten\nlatestScientificName: Sematophyllum cuspidiferum\nidentifiedBy: S. Churchill, D. Neill, et al.\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Ecuador\nfirstPoliticalUnit: El Pangui\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Región de la Cordillera del Cóndor. Cuenca del Río Tundayme, carretera al Cóndor Mirador, 7.2 km SO de Tundayme. Bosque premontano.\nlocality: Cuenca del Río Tundayme, carretera al Cóndor Mirador, 7.2 km SO de Tundayme. Bosque premontano.\nhabitat: N/A\nverbatimElevation: 1150-1200 m\nverbatimCoordinates: 03°36'48\"S 78°27'47\"W\notherCatalogNumbers: C2099505F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 226
+      },
+      "image_name": "0282_C2099505F_collage.jpg",
+      "timestamp": "2025-07-21T20:32:13.569689Z"
+    },
+    {
+      "id": "msg_bdrk_995ab9a9d6234e26a77cffe4",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: R.R. Ireland & G. Bellolio\ncollectedBy: R. R. Ireland\nsecondaryCollectors: G. Bellolio\nrecordNumber: N33528\nverbatimEventDate: November 10, 2001\nminimumEventDate: 2001-11-10\nmaximumEventDate: N/A\nverbatimIdentification: Campylopus introflexus (Hedwig) Bridel\nlatestScientificName: Campylopus introflexus\nidentifiedBy: R.R. Ireland\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Chile\nfirstPoliticalUnit: Region VIII\nsecondPoliticalUnit: Prov. Arauco\nmunicipality: N/A\nverbatimLocality: On soil bank along road\nlocality: On soil bank along road\nhabitat: N/A\nverbatimElevation: 351 m\nverbatimCoordinates: 38°02'S, 73°21'W\notherCatalogNumbers: C2099506F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 182
+      },
+      "image_name": "0283_C2099506F_collage.jpg",
+      "timestamp": "2025-07-21T20:32:19.014717Z"
+    },
+    {
+      "id": "msg_bdrk_f2ba0a19147f4330a0002559",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Bruce Allen 27366\ncollectedBy: Bruce Allen\nsecondaryCollectors: N/A\nrecordNumber: 27366\nverbatimEventDate: 19 January 2006\nminimumEventDate: 2006-01-19\nmaximumEventDate: N/A\nverbatimIdentification: Polytrichaceae Polytrichum ohioense Renauld & Cardot\nlatestScientificName: Polytrichum ohioense\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: United States\nfirstPoliticalUnit: Missouri\nsecondPoliticalUnit: Jefferson County\nmunicipality: N/A\nverbatimLocality: Clubmoss Hollow East Labarque Creek Watershed Pacific Quad T42N R3E Sec 9 Gorge S of old Sales Lake 3 mi W of Byrnesville\nlocality: Clubmoss Hollow East Labarque Creek Watershed Pacific Quad T42N R3E Sec 9 Gorge S of old Sales Lake 3 miles W of Byrnesville\nhabitat: On soil in woods\nverbatimElevation: N/A\nverbatimCoordinates: 38°23'53\"N 090°41'20\"W\notherCatalogNumbers: C2099507F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 233
+      },
+      "image_name": "0284_C2099507F_collage.jpg",
+      "timestamp": "2025-07-21T20:32:25.759312Z"
+    },
+    {
+      "id": "msg_bdrk_1d599118315248afb2e166cf",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: det. J. Atwood, 2022\ncollectedBy: J. Atwood\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 16 Jul 1998\nminimumEventDate: 1998-07-16\nmaximumEventDate: N/A\nverbatimIdentification: FRULLANIACEAE Frullania lobatohastata Steph.\nlatestScientificName: Frullania lobatohastata\nidentifiedBy: J. Atwood\nverbatimDateIdentified: 2022\nassociatedTaxa: N/A\ncountry: Colombia\nfirstPoliticalUnit: Distrito Capital\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Páramo de Sumapaz, al lado quebrada por río Santa Rosa. Bosque de Polylepis secundario.\nlocality: Páramo de Sumapaz, al lado quebrada por río Santa Rosa. Bosque de Polylepis secundario.\nhabitat: N/A\nverbatimElevation: 3500 m\nverbatimCoordinates: 04°13'N 074°11'W\notherCatalogNumbers: C2099508F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 209
+      },
+      "image_name": "0285_C2099508F_collage.jpg",
+      "timestamp": "2025-07-21T20:32:32.152966Z"
+    },
+    {
+      "id": "msg_bdrk_e0a78573b8d8440fb395cbd6",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: S. P. Churchill & Julio C. Betancur B.\ncollectedBy: S. P. Churchill\nsecondaryCollectors: Julio C. Betancur B.\nrecordNumber: 17895\nverbatimEventDate: 9 May 1991\nminimumEventDate: 1991-05-09\nmaximumEventDate: N/A\nverbatimIdentification: Ditrichum gracile (Mitt.) Kuntze\nlatestScientificName: Ditrichum gracile\nidentifiedBy: S. P. Churchill\nverbatimDateIdentified: 1997\nassociatedTaxa: N/A\ncountry: Colombia\nfirstPoliticalUnit: Casabianca\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Cerca del Nevado del Ruiz, carretera a Murillo.\nlocality: Cerca del Nevado del Ruiz, carretera a Murillo.\nhabitat: N/A\nverbatimElevation: 3885 - 3975 m\nverbatimCoordinates: 04°56'N 075°17'W\notherCatalogNumbers: C2099509F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 196
+      },
+      "image_name": "0286_C2099509F_collage.jpg",
+      "timestamp": "2025-07-21T20:32:37.984757Z"
+    },
+    {
+      "id": "msg_bdrk_d8d7ac53914c4388ab5d726d",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: J. Atwood\ncollectedBy: J. Atwood\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 25 Jun 1985\nminimumEventDate: 1985-06-25\nmaximumEventDate: N/A\nverbatimIdentification: TRICHOCOLEACEAE Leiomitra tomentosa (Sw.) Lindb.\nlatestScientificName: Leiomitra tomentosa\nidentifiedBy: J. Atwood\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Colombia\nfirstPoliticalUnit: Antioquia\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Piedras Blancas, ca. 16.5 km NO de Medellín. Bosque montano secundario con Quercus, continuo a plantación de Cupressus.\nlocality: Piedras Blancas, ca. 16.5 km NO de Medellín. Bosque montano secundario con Quercus, continuo a plantación de Cupressus.\nhabitat: Hepatica sobre suelo, al lado de quebrada.\nverbatimElevation: 2338 m\nverbatimCoordinates: 06°15'N 075°30'W\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 228
+      },
+      "image_name": "0287_C2099510F_collage.jpg",
+      "timestamp": "2025-07-21T20:32:45.339855Z"
+    },
+    {
+      "id": "msg_bdrk_487b4cc097a143d2a88b93f8",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: S. Churchill, 2006\ncollectedBy: S. Churchill\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 17 Jul 1998\nminimumEventDate: 1998-07-17\nmaximumEventDate: N/A\nverbatimIdentification: Jungermanniaceae Jamesoniella rubricaulis (Nees in Martius) Grolle\nlatestScientificName: Jamesoniella rubricaulis\nidentifiedBy: S. Churchill\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Colombia\nfirstPoliticalUnit: Cundinamarca\nsecondPoliticalUnit: Tausa\nmunicipality: N/A\nverbatimLocality: Cuchilla Laguna Seca, alrededores Laguna Verde, páramo.\nlocality: Cuchilla Laguna Seca, alrededores Laguna Verde, páramo.\nhabitat: Sobre suelo rocoso.\nverbatimElevation: 3800 m\nverbatimCoordinates: 05°13'N 74°02'W\notherCatalogNumbers: C2099511F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 202
+      },
+      "image_name": "0288_C2099511F_collage.jpg",
+      "timestamp": "2025-07-21T20:32:51.227423Z"
+    },
+    {
+      "id": "msg_bdrk_44c51c001c7343d6b46826be",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Laurence J. Dorr & L.C. Barnett 3185\ncollectedBy: L. J. Dorr\nsecondaryCollectors: L. C. Barnett\nrecordNumber: 3185\nverbatimEventDate: 02 November 1984 - 05 November 1984\nminimumEventDate: 1984-11-02\nmaximumEventDate: 1984-11-05\nverbatimIdentification: PLAGIOCHILACEAE Plagiochila pectinata Lindenb.\nlatestScientificName: Plagiochila pectinata\nidentifiedBy: Catherine Reeb\nverbatimDateIdentified: 2023\nassociatedTaxa: N/A\ncountry: Madagascar\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Environs d'Andasibe-Perinet. Higher areas with Weinmannia (Cunoniaceae) + Tambourissa (Monimiaceae). Low, moist areas with Ficus (Moraceae).\nlocality: Environs d'Andasibe-Perinet. Higher areas with Weinmannia + Tambourissa. Low, moist areas with Ficus\nhabitat: Higher areas with Weinmannia + Tambourissa. Low, moist areas with Ficus\nverbatimElevation: 1000 m\nverbatimCoordinates: 18°56'S 048°25'E\notherCatalogNumbers: C2099512F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 255
+      },
+      "image_name": "0289_C2099512F_collage.jpg",
+      "timestamp": "2025-07-21T20:32:58.635270Z"
+    },
+    {
+      "id": "msg_bdrk_22f535c4d30f4376981f10ea",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Lepidolejeunea sullivantii (Gottsche) M.E. Reiner det. J. Atwood, 2022\ncollectedBy: J. Atwood\nsecondaryCollectors: N/A\nrecordNumber: 2022\nverbatimEventDate: 23 Jul 1998\nminimumEventDate: 1998-07-23\nmaximumEventDate: N/A\nverbatimIdentification: \"Páramo del Duende\" - Cerro Calima, ca. 60 km N de Cali. Páramo con Espeletia y arbustos.\nlatestScientificName: Lepidolejeunea sullivantii\nidentifiedBy: J. Atwood\nverbatimDateIdentified: 2022\nassociatedTaxa: N/A\ncountry: Colombia\nfirstPoliticalUnit: Valle del Cauca\nsecondPoliticalUnit: Darien\nmunicipality: N/A\nverbatimLocality: \"Páramo del Duende\" - Cerro Calima, ca. 60 km N de Cali. Páramo con Espeletia y arbustos.\nlocality: Páramo del Duende - Cerro Calima, ca. 60 km N de Cali. Páramo con Espeletia y arbustos.\nhabitat: Páramo con Espeletia y arbustos.\nverbatimElevation: 3320 m\nverbatimCoordinates: 04°03'45\"N 076°30'35\"W\notherCatalogNumbers: C2099513F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 243
+      },
+      "image_name": "0290_C2099513F_collage.jpg",
+      "timestamp": "2025-07-21T20:33:06.516632Z"
+    },
+    {
+      "id": "msg_bdrk_b9373704c6304a9681916857",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Elsa M. Zardini & P. Aquino\ncollectedBy: Elsa M. Zardini\nsecondaryCollectors: P. Aquino\nrecordNumber: 34653\nverbatimEventDate: 14 January 1993\nminimumEventDate: 1993-01-14\nmaximumEventDate: N/A\nverbatimIdentification: LEUCODONTACEAE Forsstroemia coronata (Mont.) Paris\nlatestScientificName: Forsstroemia coronata\nidentifiedBy: B. Allen\nverbatimDateIdentified: 2022\nassociatedTaxa: N/A\ncountry: Paraguay\nfirstPoliticalUnit: Central\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Estero del Ypoá. Puerto Guyrati - Villa Oliva. 4.5 km S of Puerto Guyrati. Savanna and patches of forest on clay soil.\nlocality: Estero del Ypoá. Puerto Guyrati - Villa Oliva. 4.5 km S of Puerto Guyrati. Savanna and patches of forest on clay soil.\nhabitat: Savanna and patches of forest on clay soil.\nverbatimElevation: N/A\nverbatimCoordinates: 25°38'S 057°37'W\notherCatalogNumbers: C2099514F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 238
+      },
+      "image_name": "0291_C2099514F_collage.jpg",
+      "timestamp": "2025-07-21T20:33:13.585069Z"
+    },
+    {
+      "id": "msg_bdrk_f51ca2d323ad4b5a896309f6",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: det. J. J. Atwood, 2022\ncollectedBy: J. J. Atwood\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 11 Oct 2001\nminimumEventDate: 2001-10-11\nmaximumEventDate: N/A\nverbatimIdentification: Porellaceae Porella crispata (Hook.) Trevis.\nlatestScientificName: Porella crispata\nidentifiedBy: J. J. Atwood\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Bolivia\nfirstPoliticalUnit: Santa Cruz\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Municipal de la Pampa Grande, Canton Pampa Grande. 16 km norte de Los Negros. Bosque de matorral.\nlocality: Municipal de la Pampa Grande, Canton Pampa Grande. 16 km norte de Los Negros. Bosque de matorral.\nhabitat: Hepatica sobre roca, en la sombra.\nverbatimElevation: 1520 m\nverbatimCoordinates: 17°56'S 064°18'W\notherCatalogNumbers: C2099515F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 220
+      },
+      "image_name": "0292_C2099515F_collage.jpg",
+      "timestamp": "2025-07-21T20:33:20.142823Z"
+    },
+    {
+      "id": "msg_bdrk_f60aa9e379f44a3eb54f12a1",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: det. B. Espinoza-Prieto, 2023\ncollectedBy: B. Espinoza-Prieto\nsecondaryCollectors: N/A\nrecordNumber: N/A\nverbatimEventDate: 21 November 2013\nminimumEventDate: 2013-11-21\nmaximumEventDate: N/A\nverbatimIdentification: FRULLANIACEAE Frullania ecklonii (Spreng.) Gottsche, Lindenb. & Nees\nlatestScientificName: Frullania ecklonii\nidentifiedBy: Narel Paniagua Zambrana et al.\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Peru\nfirstPoliticalUnit: La Libertad\nsecondPoliticalUnit: Bolivar\nmunicipality: Uchumarca\nverbatimLocality: Chivane, subida a Conga de Yonan. Paramo quemado frecuentemente en roca caliza carstica.\nlocality: Chivane, subida a Conga de Yonan. Paramo quemado frecuentemente en roca caliza carstica.\nhabitat: Paramo quemado frecuentemente en roca caliza carstica.\nverbatimElevation: 3550 m\nverbatimCoordinates: 07°04'02\"S 077°43'35\"W\notherCatalogNumbers: C2099516F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 239
+      },
+      "image_name": "0293_C2099516F_collage.jpg",
+      "timestamp": "2025-07-21T20:33:27.467479Z"
+    },
+    {
+      "id": "msg_bdrk_3d6dc00fc2d14f0bab71b3da",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: S. P. Churchill & Elsa R. Toapanta\ncollectedBy: S. P. Churchill\nsecondaryCollectors: Elsa R. Toapanta\nrecordNumber: 21018\nverbatimEventDate: 07 septiembre 2001\nminimumEventDate: 2001-09-07\nmaximumEventDate: N/A\nverbatimIdentification: FRULLANIACEAE Frullania peruviana Gottsche\nlatestScientificName: Frullania peruviana\nidentifiedBy: J. Atwood\nverbatimDateIdentified: 2023\nassociatedTaxa: N/A\ncountry: Ecuador\nfirstPoliticalUnit: Pichincha\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Cantón Los Bancos. Cerro Guarumos, Río Tandayapa (entre Nono y Tandayapa) Trayecto Oleoducto OCP. Bosque muy húmedo premontano. <21000-21051> 2500 - 2630 m\nlocality: Cerro Guarumos, Río Tandayapa (between Nono and Tandayapa) Trayecto Oleoducto OCP\nhabitat: very humid premontane forest\nverbatimElevation: 2500 - 2630 m\nverbatimCoordinates: 00°03'S 078°38'W\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 237
+      },
+      "image_name": "0294_C2099517F_collage.jpg",
+      "timestamp": "2025-07-21T20:33:34.365176Z"
+    },
+    {
+      "id": "msg_bdrk_94eaf3de842c4fae9b8d814e",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: S. Churchill & E. Jaramillo\ncollectedBy: S. Churchill\nsecondaryCollectors: E. Jaramillo\nrecordNumber: 24006\nverbatimEventDate: 14 Nov 2005\nminimumEventDate: 2005-11-14\nmaximumEventDate: N/A\nverbatimIdentification: Lejeuneaceae Taxilejeunea pterigonia (Lehmann & Lindenberg) Schiffner det. S. Churchill, 2005\nlatestScientificName: Taxilejeunea pterigonia\nidentifiedBy: S. Churchill\nverbatimDateIdentified: 2005\nassociatedTaxa: N/A\ncountry: Ecuador\nfirstPoliticalUnit: Napo\nsecondPoliticalUnit: Quijos\nmunicipality: N/A\nverbatimLocality: Reserva Biologica Yanayacu, arriba Cosanga. Bosque montano bajo muy humedo.\nlocality: Reserva Biologica Yanayacu, arriba Cosanga. Bosque montano bajo muy humedo.\nhabitat: Bosque montano bajo muy humedo.\nverbatimElevation: 2000-2100 m\nverbatimCoordinates: 00°36'16\"S 77°53'16\"W\notherCatalogNumbers: C2099518F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 228
+      },
+      "image_name": "0295_C2099518F_collage.jpg",
+      "timestamp": "2025-07-21T20:33:41.019540Z"
+    },
+    {
+      "id": "msg_bdrk_67aeaf942d3f4dafbf879228",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama3-2-90b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: det. J. Atwood, 2021\ncollectedBy: J. Atwood\nsecondaryCollectors: N/A\nrecordNumber: 22616\nverbatimEventDate: 21 May 2003\nminimumEventDate: 2003-05-21\nmaximumEventDate: N/A\nverbatimIdentification: FRULLANIACEAE Frullania brasiliensis Raddi\nlatestScientificName: Frullania brasiliensis\nidentifiedBy: S. P. Churchill & et al.\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Bolivia\nfirstPoliticalUnit: Cochabamba\nsecondPoliticalUnit: Carrasco\nmunicipality: N/A\nverbatimLocality: Serranía Siberia. Ca. 11 km oeste de El Churo. Bosque montano nublado.\nlocality: Serranía Siberia. Ca. 11 km oeste de El Churo. Bosque montano nublado.\nhabitat: Hepática sobre ramas de arbusto, en el sol.\nverbatimElevation: 2740 m\nverbatimCoordinates: 17°45'S 064°48'W\notherCatalogNumbers: C2099519F\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 213
+      },
+      "image_name": "0296_C2099519F_collage.jpg",
+      "timestamp": "2025-07-21T20:33:47.794864Z"
+    }
+  ]
+}

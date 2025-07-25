@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_93cb21343b5b43199f1c7afa",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: M.Mizutani\ncollectedBy: M. Mizutani\nsecondaryCollectors: N/A\nrecordNumber: 1270\nverbatimEventDate: Oct. 6, 1973\nminimumEventDate: 1973-10-06\nmaximumEventDate: N/A\nverbatimIdentification: Forsstroemia trichomitria (Hedw.) Lindb. c.fr.\nlatestScientificName: Forsstroemia trichomitria\nidentifiedBy: Z.I.\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Japan\nfirstPoliticalUnit: Honshu\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Iwate-ken, Shimohei-gun, Yamada-cho, Toyomane Valley, 160 m alt., on tree trunk\nlocality: Iwate-ken, Shimohei-gun, Yamada-cho, Toyomane Valley, 160 m alt., on tree trunk\nhabitat: N/A\nverbatimElevation: 160 m alt.\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 195
+  },
+  "image_name": "0220_C2088970F_collage.jpg",
+  "timestamp": "2025-07-21T20:30:10.510295Z"
+}

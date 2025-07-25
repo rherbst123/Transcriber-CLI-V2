@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_d7e0b56aa61a4a1a96056a5a",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: Coll. K. Mayebara\ncollectedBy: K. Mayebara\nsecondaryCollectors: N/A\nrecordNumber: 430\nverbatimEventDate: February 11, 1952\nminimumEventDate: 1952-02-11\nmaximumEventDate: N/A\nverbatimIdentification: Macromitrium gymnostomum Sull. et Lesq.\nlatestScientificName: Macromitrium gymnostomum\nidentifiedBy: A. Noguchi\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Japan\nfirstPoliticalUnit: Kumamoto\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: On rocks, ca. 100 m. above sea, Koonose, Kumamoto Prefecture\nlocality: On rocks, 100 meters above sea, Koonose\nhabitat: N/A\nverbatimElevation: ca. 100 m. above sea\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 186
+  },
+  "image_name": "0218_C2075260F_collage.jpg",
+  "timestamp": "2025-07-21T20:29:59.278504Z"
+}

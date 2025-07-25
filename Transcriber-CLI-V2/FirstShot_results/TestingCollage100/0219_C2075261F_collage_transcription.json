@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_8b0848f97894474ebe29e05b",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: K. Mayebara\ncollectedBy: K. Mayebara\nsecondaryCollectors: N/A\nrecordNumber: 431\nverbatimEventDate: December 25, 1951\nminimumEventDate: 1951-12-25\nmaximumEventDate: N/A\nverbatimIdentification: Macromitrium incurvum (Lindb.) Par.\nlatestScientificName: Macromitrium incurvum\nidentifiedBy: A. Noguchi\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Japan\nfirstPoliticalUnit: Kumamoto\nsecondPoliticalUnit: N/A\nmunicipality: Yoshio\nverbatimLocality: On exposed rocks, 60 m. above sea\nlocality: On exposed rocks, 60 meters above sea\nhabitat: N/A\nverbatimElevation: 60 m. above sea\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 175
+  },
+  "image_name": "0219_C2075261F_collage.jpg",
+  "timestamp": "2025-07-21T20:30:04.549702Z"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_1e52dc044aca48e4b75334ad",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: Herbier du Frère Maurice Onraedt, F. S. C. de Malonne (Belgique)\ncollectedBy: Frère Maurice Onraedt\nsecondaryCollectors: N/A\nrecordNumber: 1089652\nverbatimEventDate: 23/12/1973\nminimumEventDate: 1973-12-23\nmaximumEventDate: N/A\nverbatimIdentification: Glyptiochaeta asplenoides (Brid.) Broth. c. nor. =/Griopus asplenoides Brid.\nlatestScientificName: Glyptiochaeta asplenoides\nidentifiedBy: Frère Maurice Onraedt\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Belgium\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Forest humide, sur blocs de basalte; alt. ca. 7350m!\nlocality: Forest humide, sur blocs de basalte\nhabitat: Forest humide\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 208
+  },
+  "image_name": "0125_C2023443F_collage.jpg",
+  "timestamp": "2025-07-21T20:18:03.193432Z"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_c18c095b854a4d77bf7cbbeb",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: H. Inoue\ncollectedBy: H. Inoue\nsecondaryCollectors: N/A\nrecordNumber: 491\nverbatimEventDate: October 31, 1974\nminimumEventDate: 1974-10-31\nmaximumEventDate: N/A\nverbatimIdentification: BRYOPHYTA SELECTA EXSICCATA\nlatestScientificName: Pilotrichella cuspidata\nidentifiedBy: Y. Hasegawa\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Around Ngrongoro Crater\nlocality: Around Ngrongoro Crater\nhabitat: N/A\nverbatimElevation: elevation about 2000 m\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 166
+  },
+  "image_name": "0010_C2022793F_collage.jpg",
+  "timestamp": "2025-07-21T20:15:44.961269Z"
+}

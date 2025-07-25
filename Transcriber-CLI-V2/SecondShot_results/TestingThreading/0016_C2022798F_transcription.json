@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_a7bd066892ba4978a52e5f0b",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: T Pócs\ncollectedBy: T Pócs\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 19-20 Jan 1985\nminimumEventDate: 1985-01-19\nmaximumEventDate: 1985-01-20\nverbatimIdentification: Pilotrichella cuspidata Brèth\nlatestScientificName: Orthostichella capillicaulis\nidentifiedBy: R Ochyra\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: West Usambara Mts\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Balangai West F R Montane rain forest on the E ridge and N slope pf Kilimandege\nlocality: Montane rain forest on the E ridge and N slope pf Kilimandege\nhabitat: N/A\nverbatimElevation: at 1550-1750 m alt\nverbatimCoordinates: N/A\notherCatalogNumbers: 850710 | 1064538\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 197
+  },
+  "image_name": "0016_C2022798F.jpg",
+  "timestamp": "2025-07-21T15:35:31.220612Z"
+}

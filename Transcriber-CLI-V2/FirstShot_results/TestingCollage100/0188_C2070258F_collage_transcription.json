@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_b392c11da291498196716dbc",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: S. K. Lau\ncollectedBy: S. K. Lau\nsecondaryCollectors: N/A\nrecordNumber: 5374\nverbatimEventDate: Jan. 2-21 1935\nminimumEventDate: 1935-01-02\nmaximumEventDate: 1935-01-21\nverbatimIdentification: Macromitrium nepalense (H. & G.) Schwaegr. & Schlotheimia Grevilleana Mitt.\nlatestScientificName: Macromitrium nepalense\nidentifiedBy: E. B. Bartram\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: China\nfirstPoliticalUnit: Hainan\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Chim Fung Mt., Kan-en District\nlocality: Chim Fung Mt., Kan-en District\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: 1122765\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 180
+  },
+  "image_name": "0188_C2070258F_collage.jpg",
+  "timestamp": "2025-07-21T20:28:28.604274Z"
+}

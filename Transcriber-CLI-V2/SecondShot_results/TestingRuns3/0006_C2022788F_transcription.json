@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_ec9567c14cb74d7f818e476d",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: B. H. Allen & Magill\ncollectedBy: B. H. Allen\nsecondaryCollectors: Magill\nrecordNumber: s.n.\nverbatimEventDate: s.d.\nminimumEventDate: N/A\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella ampullacea (C. Müller) B. H. Allen & Magill\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: B. H. Allen & Magill\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: United States of America\nfirstPoliticalUnit: Missouri\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Missouri Botanical Garden Herbarium (MO)\nlocality: Missouri Botanical Garden Herbarium\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 2056,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 185
+  },
+  "image_name": "0006_C2022788F.jpg",
+  "timestamp": "2025-07-21T20:08:37.263985Z"
+}

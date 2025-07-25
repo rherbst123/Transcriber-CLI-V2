@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_6393c90a292d42d8a482dd7a",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: T. P. Voithe\ncollectedBy: T P Voithe\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 18-4-1910\nminimumEventDate: 1910-04-18\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella foliosa Besch\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: Bruce Allen\nverbatimDateIdentified: 2005\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Kenya - Nieri - m 1800 -\nlocality: [precise locality unknown]\nhabitat: N/A\nverbatimElevation: m 1800 -\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 166
+  },
+  "image_name": "0008_C2022790F.jpg",
+  "timestamp": "2025-07-21T15:34:53.646417Z"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_281039c4cdfa4219bff90090",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: S.Kojkowski\ncollectedBy: S. Kojkowski\nsecondaryCollectors: N/A\nrecordNumber: 31\nverbatimEventDate: 16 Dec.1975\nminimumEventDate: 1975-12-16\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella capillicaulis (Kindberg) B.H.Allen & Magill\nlatestScientificName: Orthostichella capillicaulis\nidentifiedBy: R. Ochyra\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Mt Elgon, alt. 2200 m, S slope; epiphytic\nlocality: Mt Elgon, altitude 2200 meters, south slope\nhabitat: epiphytic\nverbatimElevation: 2200 m\nverbatimCoordinates: N/A\notherCatalogNumbers: KRAM - B -\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 183
+  },
+  "image_name": "0018_C2022800F.jpg",
+  "timestamp": "2025-07-21T15:09:27.060759Z"
+}

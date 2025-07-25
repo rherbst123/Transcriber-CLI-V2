@@ -1,0 +1,95 @@
+Please transcribe all herbarium label details carefully following these explicit rules:
+
+# Do not add any * or any out of character characters Especially if using LLama Models
+# CRITICAL: Provide EXACTLY ONE list of fields per image. NEVER repeat or duplicate the entire field list even if there are duplicate images.
+# NEVER output the same specimen data twice in a row - this is a critical error.
+# Do not include periods (.) at the end of fields.
+# Explicitly insert "N/A" if information is missing.
+# Write exactly "unsure and check" if any detail is unclear.
+# Never translate or interpret—transcribe exactly as printed.
+# Do not interpret words as symbols
+# All outputs will be in a .txt format so no bolding or italisizing whatsoever
+# There will be times that text is all capitlozed for names and countries, please ALWAYS format these so that they are capitalized correctly EX: (CAMEROON -> Cameroon) , (J M FAY -> J M Fay)
+# The only fields that should refrence elevation is: verbatimElevation 
+# Ensure the list created is only ONE list of the following fields. After completing all fields, move directly to the next image.
+
+IMPORTANT WORKFLOW INSTRUCTIONS:
+1. Process each image ONCE, creating a SINGLE list of fields.
+2. After completing all fields for one image, move to the next image.
+3. NEVER repeat the same data twice for the same image. There are ONLY 24 Fields consolidate all information you see into those fields
+4. Review your output before submitting to ensure there are no duplicated entries.
+
+FORMAT REQUIREMENTS:
+- Each field must start at the beginning of a new line with NO indentation
+- Each field name must be followed by a colon and a single space
+- After each field value, insert a blank line before the next field
+- Do NOT use asterisks, bullets, or any other formatting characters
+- Do NOT indent any text
+
+Follow precisely the formatting and field order below:
+
+verbatimCollectors: The collectors as you see it on the label, this might be one collector, a string of collectors, that collected the sample) Collected by or collectors maybe prefixed by leg. or sometimes legit. Do not include dates, numbers or symbols. 
+
+collectedBy:  (The First Collector, only capitalize names) Collected by or collectors may be prefixed by leg. or sometimes legit. The collector’s name should be formatted with the first and/or middle names abbreviated and the last name spelled out, eg. R. M. Schuster. Spacing is required between the first, middle, and last names. EX: (Amanda Koch -> A Koch)
+
+secondaryCollectors:  List any additional collectors exactly as printed on the label, formatted as initials followed by last name. EX: (Amanda Koch -> A Koch) Separate each clearly listed additional collector by a pipe ("|") and add one spce inbetween the letters and pipes EX: (S. Leiva G. | F. Mejia C. | F. Peláez P. | J. Guevara B.). If the label uses "and", retain exactly as printed.
+
+recordNumber:  Exactly transcribe the collection number. If none, insert "s.n." precisely.
+
+verbatimEventDate:  Transcribe exactly as printed without alteration. If missing, insert "s.d.".
+
+minimumEventDate:  Convert to ISO-8601 (YYYY-MM-DD), inserting "00" for unknown days/months. If no information exists please enter "sd"
+
+maximumEventDate:  Only use for clearly indicated date ranges. Otherwise, insert "N/A".
+
+verbatimIdentification:  Exactly transcribe the original identification, including taxonomic authority names, qualifiers, hybrids, uncertainties, precisely as printed.
+
+latestScientificName:  Provide the full scientific name exactly as presented on the label, including clearly printed authorities (names of persons, initials, or abbreviations after the Latin binomial). Do NOT omit these authorities.
+
+identifiedBy:  Provide the identifier’s name formatted as initials and last name (e.g., R. A. Maas). Include only names explicitly indicated by "det." or "determined by". Insert "N/A" if absent or unclear. Add spaces between initals and the full name (Only one space MAX)
+
+verbatimDateIdentified:  Transcribe exactly as printed or insert "N/A" if missing., please format if there are spaces EX: (19 84 -> 1984). This date is usually the largest date out of the ones found. 
+
+associatedTaxa:  Transcribe exactly as printed, preserving all conjunctions ("and"), "sp.", or abbreviations exactly as listed. Do not add pipes unless explicitly printed.
+
+country:  Transcribe exactly as stated on the label. If abbreviated, convert clearly identified abbreviations to current full country names. You might be given text that is all capitolized, Please convert it to a regular format. EX: CAMEROON -> Cameroon. If there is a translaation to be done please translate EX: (GUINEÆ ÆQUATORIALIS -> Eqatorial Guinea) and (Surinam -> Suriname)
+
+firstPoliticalUnit:  Transcribe exactly as printed, excluding administrative descriptors ("Province", "State") unless explicitly included on the label.
+
+secondPoliticalUnit:  Transcribe exactly as printed if clearly indicated; otherwise, insert "N/A".
+
+municipality:  Transcribe exactly as explicitly named; do not guess. Insert "N/A" if absent.
+
+verbatimLocality:  Precisely transcribe original locality text. Do NOT omit or abbreviate political units, measurement units, or conjunctions if explicitly included. Exclude coordinates and elevation.
+
+locality:  Transcribe verbatim locality exactly, fully writing out units (e.g., "miles", "meters", "feet"). Do NOT shorten, omit, or abbreviate unless printed exactly so on the label. Insert "[precise locality unknown]" if unclear.
+
+habitat:  Transcribe exactly as printed. Include all explicit botanical details or associations. Do NOT summarize or omit explicitly written details. Do not include measurements or coordinates in the habitat description.
+
+verbatimElevation:  Exactly transcribe as written, including exact abbreviations ("m", "msnm", "ft", etc.). Insert "N/A" if absent. Leave out prefixes such as elev: , ele:, Alt
+
+verbatimCoordinates:  Exactly transcribe as printed, including spacing, punctuation, and directional letters. Insert "N/A" if absent.
+
+otherCatalogNumbers:  Precisely transcribe stamped or printed catalog numbers only, excluding extraneous text. This will be a 7 Digit Number Do not include any other number or letters or symbols. Please filter out any anomalies. Here is an example of what to look for EX: (NCI# Leaves Stems Q66Q/0052-L|N° 2041320 -> 2041320)
+
+originalMethod:  
+Categorize strictly based on visual clarity:
+- "Handwritten": entirely handwritten
+- "Typed": entirely typed
+- "Mix of Handwritten and Typed": explicit and clear combination
+- "Unsure": not clearly discernible
+
+typeStatus:  
+Transcribe exactly as printed (e.g., "Holotype", "Isotype", capitalized exactly as on label). Insert "no type status" only if explicitly absent. This might appear to be all capitolized but Please format it. EX: (ISOTYPE -> Isotype)
+
+Follow each rule exactly, transcribing only precisely visible text without interpretations or omissions.
+
+FINAL CHECK BEFORE SUBMISSION:
+1. Verify you have created EXACTLY ONE list of fields per image.
+2. # Confirm there are NO duplicate Lists for any image. This means one list of 24 Fields ONLY!
+3. Check that you have not repeated the same specimen data twice.
+5. Verify that each field starts at the beginning of a line with NO indentation.
+6. Confirm that each field has a blank line after its value.
+7. Check that there are NO bullets, asterisks or other formatting characters.
+8. For Reasoning Models Please Do not Reason further or log any corrections
+9. Do not include a prefix or intro to the response, Things like "Here is the transcribed data for the image:" do not need to be said or explained

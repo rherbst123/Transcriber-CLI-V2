@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_8971b67625f044dead41b980",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: Lepidolejeunea sullivantii (Gottsche) M.E. Reiner det. J. Atwood, 2022\ncollectedBy: J. Atwood\nsecondaryCollectors: N/A\nrecordNumber: 2022\nverbatimEventDate: 23 Jul 1998\nminimumEventDate: 1998-07-23\nmaximumEventDate: N/A\nverbatimIdentification: \"Páramo del Duende\" - Cerro Calima, ca. 60 km N de Cali. Páramo con Espeletia y arbustos.\nlatestScientificName: Lepidolejeunea sullivantii\nidentifiedBy: J. Atwood\nverbatimDateIdentified: 2022\nassociatedTaxa: N/A\ncountry: Colombia\nfirstPoliticalUnit: Valle del Cauca\nsecondPoliticalUnit: Darien\nmunicipality: N/A\nverbatimLocality: \"Páramo del Duende\" - Cerro Calima, ca. 60 km N de Cali. Páramo con Espeletia y arbustos.\nlocality: Páramo del Duende - Cerro Calima, ca. 60 km N de Cali. Páramo con Espeletia y arbustos.\nhabitat: Páramo con Espeletia y arbustos.\nverbatimElevation: 3320 m\nverbatimCoordinates: 04°03'45\"N 076°30'35\"W\notherCatalogNumbers: C2099513F\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 243
+  },
+  "image_name": "0290_C2099513F_collage.jpg",
+  "timestamp": "2025-07-21T20:33:06.516399Z"
+}

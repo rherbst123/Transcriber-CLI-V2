@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_021aa9e23ba0456d8162a1b6",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: Herbier du Frère Maurice Onraedt, F.S.C. de Malonne (Belgique)\ncollectedBy: H. Onraedt\nsecondaryCollectors: N/A\nrecordNumber: 1078904\nverbatimEventDate: 03/03/1976\nminimumEventDate: 1976-03-03\nmaximumEventDate: N/A\nverbatimIdentification: Maeromitrium fasciculare Mitt\nlatestScientificName: Maeromitrium fasciculare\nidentifiedBy: H. Onraedt\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Belgium\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Pour un arbre de la forêt, alt. ca. 1000m\nlocality: Pour un arbre de la forêt, alt. ca. 1000m\nhabitat: N/A\nverbatimElevation: alt. ca. 1000m\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 189
+  },
+  "image_name": "0179_C2070249F_collage.jpg",
+  "timestamp": "2025-07-21T20:27:38.106154Z"
+}

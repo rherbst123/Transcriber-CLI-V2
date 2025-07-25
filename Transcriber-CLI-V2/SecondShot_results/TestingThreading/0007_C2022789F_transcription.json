@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_52ea4407a49f49958cda159a",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: B Zemanek\ncollectedBy: B Zemanek\nsecondaryCollectors: R Ochyra\nrecordNumber: I 19\nverbatimEventDate: 1976\nminimumEventDate: 1976-00-00\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichiella cuspidata Broth\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: Bruce Allen\nverbatimDateIdentified: 2005\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: Nairobi\nverbatimLocality: Ngong Hills near\nlocality: Ngong Hills near\nhabitat: epiphytic\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: 1050473\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 167
+  },
+  "image_name": "0007_C2022789F.jpg",
+  "timestamp": "2025-07-21T15:34:47.521213Z"
+}

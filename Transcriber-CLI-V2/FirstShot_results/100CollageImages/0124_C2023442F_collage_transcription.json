@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_4530886c6e3848f6ba407f28",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: Herbier du Frère Maurice Onraedt, F.S.C. de Malonne (Belgique)\ncollectedBy: M. Onraedt\nsecondaryCollectors: N/A\nrecordNumber: 1089651\nverbatimEventDate: 18/XII/1970\nminimumEventDate: 1970-12-18\nmaximumEventDate: N/A\nverbatimIdentification: BRYOPHYTES DE la Reunion. Calytrachaeeta asplenoides (Brid.) Crosby. = Eriopus asplenoides Brid.\nlatestScientificName: Calytrachaeeta asplenoides\nidentifiedBy: M. Onraedt\nverbatimDateIdentified: July\nassociatedTaxa: N/A\ncountry: Belgium\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Sur blocs de basalte humide, sous bois; alt. ca. 1800m Ravine du Tremblet, W de la Fournaise\nlocality: On humid basalt blocks, under trees; altitude approximately 1800 meters Ravine du Tremblet, west of La Fournaise\nhabitat: N/A\nverbatimElevation: alt. ca. 1800m\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 237
+  },
+  "image_name": "0124_C2023442F_collage.jpg",
+  "timestamp": "2025-07-21T20:17:56.907826Z"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_382faafa8efd47369c834ab7",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: P J Greenway\ncollectedBy: P J Greenway\nsecondaryCollectors: N/A\nrecordNumber: 11,937\nverbatimEventDate: 2 10 1965\nminimumEventDate: 1965-10-02\nmaximumEventDate: N/A\nverbatimIdentification: Moss Plentrichella\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: Bruce Allen\nverbatimDateIdentified: 2003\nassociatedTaxa: Cassipourea tree\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Flora of Arusha Dist, R Tanganyika around the rim of the Crater, Ngorongoro Crater\nlocality: around the rim of the Crater\nhabitat: A moss festooning densely dead Cassipourea tree, dark brown and green forming a complete cover around the branchlets and the dominant moss on trees\nverbatimElevation: 5,700ft alt\nverbatimCoordinates: N/A\notherCatalogNumbers: 1051664\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 219
+  },
+  "image_name": "0014_C2022796F.jpg",
+  "timestamp": "2025-07-21T15:35:21.839553Z"
+}

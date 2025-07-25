@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_a6092d0cc3e0436c8dc8a813",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "Here is the list of fields with the corresponding information:\n\nverbatimCollectors: T.Pócs & B.J.Harris\ncollectedBy: T. Pócs\nsecondaryCollectors: B. J. Harris\nrecordNumber: 6158\nverbatimEventDate: 2.5.1970\nminimumEventDate: 1970-05-02\nmaximumEventDate: N/A\nverbatimIdentification: Cyatophorella africana (DIX.) BROTH\nlatestScientificName: Cyatophorella africana\nidentifiedBy: T. Pócs\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: Uluguru\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: N-slope of Bondwa, forest edge above Morningside\nlocality: N-slope of Bondwa, forest edge above Morningside\nhabitat: Wet mountain rain-forest by streamlets\nverbatimElevation: 1450 m\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 204
+  },
+  "image_name": "0119_C2023437F_collage.jpg",
+  "timestamp": "2025-07-21T20:17:27.817378Z"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_774e6f25682749d6be2f2ab0",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: Y. HASEGAWA\ncollectedBy: Y. Hasegawa\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: October 31, 1974\nminimumEventDate: 1974-10-31\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella cuspidata BROTH.\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: Bruce Allen\nverbatimDateIdentified: 2005\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Around Ngrongoro Crater. On tree-trunk; elevation about 2000 m.\nlocality: Around Ngrongoro Crater\nhabitat: On tree-trunk\nverbatimElevation: elevation about 2000 m\nverbatimCoordinates: N/A\notherCatalogNumbers: C2022793F\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 184
+  },
+  "image_name": "0010_C2022793F_collage.jpg",
+  "timestamp": "2025-07-22T19:17:49.517761Z"
+}

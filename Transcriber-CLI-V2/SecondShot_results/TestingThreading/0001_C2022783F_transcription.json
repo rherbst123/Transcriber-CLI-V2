@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_1b242987c9754d2a972ca955",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: B. Rojkowski\ncollectedBy: B. Rojkowski\nsecondaryCollectors: N/A\nrecordNumber: 394\nverbatimEventDate: 8 Febr.1976\nminimumEventDate: 1976-02-08\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella cuspidata Broth\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: Bruce Allen\nverbatimDateIdentified: 2005\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Ol Doinyo Sapuk National Park near Thika\nlocality: Ol Doinyo Sapuk National Park near Thika\nhabitat: N/A\nverbatimElevation: alt. 2270 m\nverbatimCoordinates: N/A\notherCatalogNumbers: 1050634\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 174
+  },
+  "image_name": "0001_C2022783F.jpg",
+  "timestamp": "2025-07-21T15:34:18.025716Z"
+}

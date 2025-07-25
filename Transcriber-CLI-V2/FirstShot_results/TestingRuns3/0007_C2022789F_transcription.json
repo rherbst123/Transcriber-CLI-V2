@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_8cb42361f2d3442bab896f66",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: B. Zemanek\ncollectedBy: B. Zemanek\nsecondaryCollectors: N/A\nrecordNumber: 1050473\nverbatimEventDate: 1976\nminimumEventDate: 1976-00-00\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella ampullacea (C. Müll.) B. H. Allen & Magill\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: B. H. Allen\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: Nairobi\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Ngong Hills near Nairobi, epiphytic\nlocality: Ngong Hills near Nairobi\nhabitat: epiphytic\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 174
+  },
+  "image_name": "0007_C2022789F.jpg",
+  "timestamp": "2025-07-21T20:07:25.994100Z"
+}

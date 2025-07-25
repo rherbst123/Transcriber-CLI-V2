@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_4191d1bd6cc740bc8919de6e",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: B Rojkowski\ncollectedBy: B Rojkowski\nsecondaryCollectors: N/A\nrecordNumber: 246\nverbatimEventDate: 12 Jan 1976\nminimumEventDate: 1976-01-12\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella cuspidata Broth\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: B H Allen & Magill\nverbatimDateIdentified: 2005\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Ngorongoro Crater rim, epiphytic in bamboo thickets, alt 2500 m\nlocality: Ngorongoro Crater rim, bamboo thickets\nhabitat: N/A\nverbatimElevation: alt 2500 m\nverbatimCoordinates: N/A\notherCatalogNumbers: 1050643\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 181
+  },
+  "image_name": "0010_C2022792F.jpg",
+  "timestamp": "2025-07-21T15:35:02.972394Z"
+}

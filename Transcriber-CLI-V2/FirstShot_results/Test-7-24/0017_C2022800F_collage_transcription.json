@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_14a05a92dafc4aa9b848aa79",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: S.Rojkowski\n\ncollectedBy: S. Rojkowski\n\nsecondaryCollectors: N/A\n\nrecordNumber: 31\n\nverbatimEventDate: 16 Dec.1975\n\nminimumEventDate: 1975-12-16\n\nmaximumEventDate: N/A\n\nverbatimIdentification: Pilotrichella pentasticha (Brid.) Wijk et Marg.\n\nlatestScientificName: Pilotrichella pentasticha\n\nidentifiedBy: R. Ochyra\n\nverbatimDateIdentified: N/A\n\nassociatedTaxa: N/A\n\ncountry: Kenya\n\nfirstPoliticalUnit: N/A\n\nsecondPoliticalUnit: N/A\n\nmunicipality: N/A\n\nverbatimLocality: Mt Elgon, S slope; epiphytic\n\nlocality: Mt Elgon, S slope; epiphytic\n\nhabitat: epiphytic\n\nverbatimElevation: alt. 2200 m\n\nverbatimCoordinates: N/A\n\notherCatalogNumbers: C2022800F\n\noriginalMethod: Mix of Handwritten and Typed\n\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 185
+  },
+  "image_name": "0017_C2022800F_collage.jpg",
+  "timestamp": "2025-07-24T15:01:51.418873Z"
+}

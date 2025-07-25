@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_7672e8e180e64d61a977241d",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: T. G. Dalbo\ncollectedBy: T. G. Dalbo\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 18-6-1910\nminimumEventDate: 1910-06-18\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella ampullacea (C. Müll.) B. H. Allen & Magill\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: B. H. Allen & Magill\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Nyeri\nlocality: Nyeri\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 164
+  },
+  "image_name": "0008_C2022790F.jpg",
+  "timestamp": "2025-07-21T16:33:05.639559Z"
+}

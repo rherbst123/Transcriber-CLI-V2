@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_8e25a6bd95e4441dacea3d65",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: det. J. Atwood, 2021\ncollectedBy: J. Atwood\nsecondaryCollectors: N/A\nrecordNumber: 22616\nverbatimEventDate: 21 May 2003\nminimumEventDate: 2003-05-21\nmaximumEventDate: N/A\nverbatimIdentification: FRULLANIACEAE Frullania brasiliensis Raddi\nlatestScientificName: Frullania brasiliensis\nidentifiedBy: S. P. Churchill & et al.\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Bolivia\nfirstPoliticalUnit: Cochabamba\nsecondPoliticalUnit: Carrasco\nmunicipality: N/A\nverbatimLocality: Serranía Siberia. Ca. 11 km oeste de El Churo. Bosque montano nublado.\nlocality: Serranía Siberia. Ca. 11 km oeste de El Churo. Bosque montano nublado.\nhabitat: Hepática sobre ramas de arbusto, en el sol.\nverbatimElevation: 2740 m\nverbatimCoordinates: 17°45'S 064°48'W\notherCatalogNumbers: C2099519F\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 213
+  },
+  "image_name": "0296_C2099519F_collage.jpg",
+  "timestamp": "2025-07-21T20:33:47.794678Z"
+}

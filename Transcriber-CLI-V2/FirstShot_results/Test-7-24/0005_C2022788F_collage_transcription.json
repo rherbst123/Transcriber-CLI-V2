@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_c7b8c0dd59064bacbe03348c",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: P. S. Soltho\n\ncollectedBy: P. S. Soltho\n\nsecondaryCollectors: N/A\n\nrecordNumber: s.n.\n\nverbatimEventDate: 7. X. 1916\n\nminimumEventDate: 1916-10-07\n\nmaximumEventDate: N/A\n\nverbatimIdentification: Orthostichella ampullacea (C. Müller) B. H. Allen & Magill\n\nlatestScientificName: Orthostichella ampullacea\n\nidentifiedBy: Bruce Allen\n\nverbatimDateIdentified: 2005\n\nassociatedTaxa: N/A\n\ncountry: Kenya\n\nfirstPoliticalUnit: N/A\n\nsecondPoliticalUnit: N/A\n\nmunicipality: N/A\n\nverbatimLocality: Valle del Slughero\n\nlocality: Valle del Slughero\n\nhabitat: N/A\n\nverbatimElevation: N/A\n\nverbatimCoordinates: N/A\n\notherCatalogNumbers: C2022788F\n\noriginalMethod: Mix of Handwritten and Typed\n\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 181
+  },
+  "image_name": "0005_C2022788F_collage.jpg",
+  "timestamp": "2025-07-24T15:01:22.776814Z"
+}

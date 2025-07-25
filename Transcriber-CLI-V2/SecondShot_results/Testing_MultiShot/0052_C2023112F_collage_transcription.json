@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_ece9975d785140599027e068",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: A. Borhidi & M. Steiner\n\ncollectedBy: A. Borhidi\n\nsecondaryCollectors: M. Steiner\n\nrecordNumber: 86126/C\n\nverbatimEventDate: 2. Nov. 1986\n\nminimumEventDate: 1986-11-02\n\nmaximumEventDate: N/A\n\nverbatimIdentification: RHYNCHOSTEGIUM HORRIDUM Broth.\n\nlatestScientificName: Rhynchostegium horridum\n\nidentifiedBy: H. Bednarek - R. Ochyra\n\nverbatimDateIdentified: 1992\n\nassociatedTaxa: N/A\n\ncountry: Tanzania\n\nfirstPoliticalUnit: Tanga\n\nsecondPoliticalUnit: N/A\n\nmunicipality: N/A\n\nverbatimLocality: EAST USAMBARA MTS. Submontane rainforest along stream and on slopes 0.5 km S of DEREMA village, at '780-870 m alt. Loc. 86226 Corticolous.\n\nlocality: East Usambara Mountains submontane rainforest along stream and on slopes 0.5 kilometers south of Derema village\n\nhabitat: Submontane rainforest\n\nverbatimElevation: 780-870 m alt.\n\nverbatimCoordinates: N/A\n\notherCatalogNumbers: Loc. 86226\n\noriginalMethod: Mix of Handwritten and Typed\n\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 2107,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 243
+  },
+  "image_name": "0052_C2023112F_collage.jpg",
+  "timestamp": "2025-07-22T19:19:58.071320Z"
+}

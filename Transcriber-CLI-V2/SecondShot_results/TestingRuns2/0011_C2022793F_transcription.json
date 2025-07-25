@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_7c6da6a6a1f64620bdbfabac",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.anthropic.claude-3-sonnet-20240229-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: Y. Hasegawa\ncollectedBy: Y. Hasegawa\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: October 31, 1974\nminimumEventDate: 1974-10-31\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella ampullacea (C. Müller) B. H. Allen & Magill\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: Bruce Allen\nverbatimDateIdentified: 2003\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Around Ngongoro Crater\nlocality: Around Ngongoro Crater\nhabitat: On tree-trunk; elevation about 2000 m\nverbatimElevation: On tree-trunk; elevation about 2000 m\nverbatimCoordinates: N/A\notherCatalogNumbers: 1027423\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 2061,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 195
+  },
+  "image_name": "0011_C2022793F.jpg",
+  "timestamp": "2025-07-21T19:58:35.548105Z"
+}

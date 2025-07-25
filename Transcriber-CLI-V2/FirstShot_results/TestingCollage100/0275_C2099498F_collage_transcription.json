@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_3e9221e3a39643d0a3426aff",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: Ramiro Fonnegra G. & Dino Tuberquia\ncollectedBy: R. Fonnegra G.\nsecondaryCollectors: D. Tuberquia\nrecordNumber: 4662\nverbatimEventDate: 22 April 1993\nminimumEventDate: 1993-04-22\nmaximumEventDate: N/A\nverbatimIdentification: Leptodontium ulocalyx (Müll. Hal.) Mitt.\nlatestScientificName: Leptodontium ulocalyx\nidentifiedBy: B. Allen\nverbatimDateIdentified: 2022\nassociatedTaxa: N/A\ncountry: Colombia\nfirstPoliticalUnit: Antioquia\nsecondPoliticalUnit: Belmira\nmunicipality: N/A\nverbatimLocality: Páramo \"El Morro\"\nlocality: Páramo \"El Morro\"\nhabitat: Crece sobre suelo en hojarasca\nverbatimElevation: 3130 m\nverbatimCoordinates: 06°35'N 075°32'W\notherCatalogNumbers: C2099498F\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 186
+  },
+  "image_name": "0275_C2099498F_collage.jpg",
+  "timestamp": "2025-07-21T20:31:28.205574Z"
+}

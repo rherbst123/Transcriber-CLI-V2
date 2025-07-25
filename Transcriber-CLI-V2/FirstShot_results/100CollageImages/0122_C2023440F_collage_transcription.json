@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_10ca1f20e006457b9de6d2ad",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: Herbier du Frère Maurice Onraedt, F. S. C. de Malonne (Belgique)\ncollectedBy: Frère M. Onraedt\nsecondaryCollectors: N/A\nrecordNumber: 1105726\nverbatimEventDate: 19.09.1971\nminimumEventDate: 1971-09-19\nmaximumEventDate: N/A\nverbatimIdentification: Hypopterygium toulouan Schimp\nlatestScientificName: Hypopterygium toulouan\nidentifiedBy: Frère M. Onraedt\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Belgium\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: sur basalte et les vieilles zacines d'une forêt élimacique - alt. ca. 700 m\nlocality: on basalt and old zacines of an elimacique forest - alt. ca. 700 m\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 204
+  },
+  "image_name": "0122_C2023440F_collage.jpg",
+  "timestamp": "2025-07-21T20:17:44.169295Z"
+}

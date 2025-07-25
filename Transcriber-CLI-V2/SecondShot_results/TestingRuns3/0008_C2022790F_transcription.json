@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_219ed914977f4d87a1cf862d",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: T G Dalbo\ncollectedBy: T. G. Dalbo\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 18-4-1910\nminimumEventDate: 1910-04-18\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella ampullacea (C. Müller) B. H. Allen & Magill Det. Bruce Allen & Magill Missouri Botanical Garden Herbarium (MO)\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: B. H. Allen & Magill\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: Nyeri\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Kenya: Nyeri - m 1800-\nlocality: [precise locality unknown]\nhabitat: N/A\nverbatimElevation: m 1800-\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 2040,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 195
+  },
+  "image_name": "0008_C2022790F.jpg",
+  "timestamp": "2025-07-21T20:08:51.541115Z"
+}

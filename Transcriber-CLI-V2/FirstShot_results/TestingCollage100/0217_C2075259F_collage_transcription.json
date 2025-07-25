@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_cf6b5d025c1f4c45950cd643",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: Coll. & det. Z. Iwatsuki\ncollectedBy: Z. Iwatsuki\nsecondaryCollectors: N/A\nrecordNumber: 429\nverbatimEventDate: December 13, 1953\nminimumEventDate: 1953-12-13\nmaximumEventDate: N/A\nverbatimIdentification: Hypopterygium fauriei Besch.\nlatestScientificName: Hypopterygium fauriei\nidentifiedBy: A. Noguchi\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Japan\nfirstPoliticalUnit: Aichi\nsecondPoliticalUnit: N/A\nmunicipality: Miwa\nverbatimLocality: On shady damp rocks sides of the Kamebuchi rivulet\nlocality: On shady damp rocks sides of the Kamebuchi rivulet\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 180
+  },
+  "image_name": "0217_C2075259F_collage.jpg",
+  "timestamp": "2025-07-21T20:29:53.823324Z"
+}

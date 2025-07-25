@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_959924afe475448eb3501e35",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.amazon.nova-premier-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: Y. HASEGAWA\ncollectedBy: Y. Hasegawa\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: October 31, 1974\nminimumEventDate: 1974-10-31\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella ampu llacea (C. Müller) B. H. Allen & Magill\nlatestScientificName: Orthostichella ampu llacea\nidentifiedBy: Bruce Allen\nverbatimDateIdentified: 2005\nassociatedTaxa: Pilotrichella cuspidata\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Around Ngorongoro Crater\nlocality: Around Ngorongoro Crater\nhabitat: On tree-trunk\nverbatimElevation: elevation about 2000 m\nverbatimCoordinates: N/A\notherCatalogNumbers: C2022793F\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 187
+  },
+  "image_name": "0010_C2022793F_collage.jpg",
+  "timestamp": "2025-07-24T15:07:44.781864Z"
+}

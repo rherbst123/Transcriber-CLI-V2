@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_b45e51fd66c94f0d9ff90cb8",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: T. Pócs\ncollectedBy: T. Pócs\nsecondaryCollectors: N/A\nrecordNumber: 8507/0\nverbatimEventDate: 19-20. Jan. 1985\nminimumEventDate: 1985-01-19\nmaximumEventDate: 1985-01-20\nverbatimIdentification: Orthostichella capillicaulis (Kindberg) B. H. Allen & Magill\nlatestScientificName: Orthostichella capillicaulis\nidentifiedBy: R. Ochyra\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: West Usambara Mts.\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Balangai West F.R. Montane rain forest on the E ridge and N slope pf Kilimandege at 1550-1750 m alt.\nlocality: Balangai West F.R. Montane rain forest on the E ridge and N slope of Kilimandege at 1550-1750 meters altitude\nhabitat: Montane rain forest\nverbatimElevation: 1550-1750 m alt.\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 224
+  },
+  "image_name": "0016_C2022798F.jpg",
+  "timestamp": "2025-07-21T15:09:11.139004Z"
+}

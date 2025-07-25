@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_e8bebc213b914d15a29fafa3",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: A. Noguchi\ncollectedBy: A. Noguchi\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 1. 1948\nminimumEventDate: 1948-01-00\nmaximumEventDate: N/A\nverbatimIdentification: Physcomitrium eurystomum (Nees) Sendtn.\nlatestScientificName: Physcomitrium eurystomum\nidentifiedBy: A. Noguchi\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Japan\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Kiushiu. O'ita: Uyeno, 20 m, on shady ground, leg. et det. A. Noguchi\nlocality: Uyeno, 20 m, on shady ground\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 176
+  },
+  "image_name": "0212_C2075172F_collage.jpg",
+  "timestamp": "2025-07-21T20:29:25.675912Z"
+}

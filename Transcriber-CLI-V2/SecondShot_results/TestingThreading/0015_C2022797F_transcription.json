@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_1440ac0757064a71a756f549",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: A et J Kornaś\ncollectedBy: A Kornaś\nsecondaryCollectors: J Kornaś\nrecordNumber: 6830/M\nverbatimEventDate: 13 XI 1972\nminimumEventDate: 1972-11-13\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella ampullacea (C Müller) B H Allen & Magill\nlatestScientificName: Pilotrichella ampullacea\nidentifiedBy: M Bizot\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Uluguru Mts, in bamboo forest on W slopes of Mgeta River Valley E of Lukwangule Plateau\nlocality: in bamboo forest on W slopes of Mgeta River Valley E of Lukwangule Plateau\nhabitat: N/A\nverbatimElevation: alt 2250 m\nverbatimCoordinates: N/A\notherCatalogNumbers: 1064574\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 201
+  },
+  "image_name": "0015_C2022797F.jpg",
+  "timestamp": "2025-07-21T15:35:26.752805Z"
+}

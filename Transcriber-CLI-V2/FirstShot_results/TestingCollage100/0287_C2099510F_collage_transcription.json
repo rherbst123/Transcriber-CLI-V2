@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_a2213466fcfa4f089f02115d",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: J. Atwood\ncollectedBy: J. Atwood\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 25 Jun 1985\nminimumEventDate: 1985-06-25\nmaximumEventDate: N/A\nverbatimIdentification: TRICHOCOLEACEAE Leiomitra tomentosa (Sw.) Lindb.\nlatestScientificName: Leiomitra tomentosa\nidentifiedBy: J. Atwood\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Colombia\nfirstPoliticalUnit: Antioquia\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Piedras Blancas, ca. 16.5 km NO de Medellín. Bosque montano secundario con Quercus, continuo a plantación de Cupressus.\nlocality: Piedras Blancas, ca. 16.5 km NO de Medellín. Bosque montano secundario con Quercus, continuo a plantación de Cupressus.\nhabitat: Hepatica sobre suelo, al lado de quebrada.\nverbatimElevation: 2338 m\nverbatimCoordinates: 06°15'N 075°30'W\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 228
+  },
+  "image_name": "0287_C2099510F_collage.jpg",
+  "timestamp": "2025-07-21T20:32:45.339650Z"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_b22554c1907042a0856e33e3",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: V et P ALLORGE\n\ncollectedBy: V. Allorge\n\nsecondaryCollectors: P. Allorge\n\nrecordNumber: s.n.\n\nverbatimEventDate: 22.VII.1937\n\nminimumEventDate: 1937-07-22\n\nmaximumEventDate: N/A\n\nverbatimIdentification: Rhynchosteriella pallidirostris (A.Br.)Loeske\n\nlatestScientificName: Rhynchosteriella pallidirostris\n\nidentifiedBy: N/A\n\nverbatimDateIdentified: N/A\n\nassociatedTaxa: N/A\n\ncountry: Portugal\n\nfirstPoliticalUnit: Açores\n\nsecondPoliticalUnit: N/A\n\nmunicipality: N/A\n\nverbatimLocality: blocs de basalte ombragés Fajãsinha vers 200 m\n\nlocality: blocs de basalte ombragés Fajãsinha vers 200 meters\n\nhabitat: blocs de basalte ombragés\n\nverbatimElevation: vers 200 m\n\nverbatimCoordinates: N/A\n\notherCatalogNumbers: 180\n\noriginalMethod: Mix of Handwritten and Typed\n\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 201
+  },
+  "image_name": "0050_C2023107F_collage.jpg",
+  "timestamp": "2025-07-24T15:02:21.397990Z"
+}

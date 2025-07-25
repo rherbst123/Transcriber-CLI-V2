@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_8c62feaa62e24b348f6a9097",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: Joann W. Flock\ncollectedBy: J. W. Flock\nsecondaryCollectors: N/A\nrecordNumber: NZB-212\nverbatimEventDate: 29.X.1983\nminimumEventDate: 1983-10-29\nmaximumEventDate: N/A\nverbatimIdentification: Bryum billardierei Schwaegr.\nlatestScientificName: Bryum billardierei\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: Nothofagus solandri var. cliffortioides\ncountry: New Zealand\nfirstPoliticalUnit: Canterbury\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Craigieburn Forest Park, Craigieburn Range, Southern Alps. Upper Cave Stream Bridge to Lyndon Saddle\nlocality: Craigieburn Forest Park, Craigieburn Range, Southern Alps. Upper Cave Stream Bridge to Lyndon Saddle\nhabitat: Native bush; mountain beech (Nothofagus solandri var. cliffortioides) with dense moss-lichen cover.\nverbatimElevation: 950-1220 msm.\nverbatimCoordinates: 171°43'E, 43°08'S\notherCatalogNumbers: C2099709F\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 351,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 247
+  },
+  "image_name": "0484_C2099709F_collage.jpg",
+  "timestamp": "2025-07-24T16:55:06.596328Z"
+}

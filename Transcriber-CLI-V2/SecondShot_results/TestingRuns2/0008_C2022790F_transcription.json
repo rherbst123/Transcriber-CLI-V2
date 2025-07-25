@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_6cdddaedf4db4770bc6e780d",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.anthropic.claude-3-sonnet-20240229-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: T. G. Dalbo\ncollectedBy: T. G. Dalbo  \nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 18-6-1910\nminimumEventDate: 1910-06-18\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella foliicaulis Broth.\nlatestScientificName: Pilotrichella foliicaulis\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A  \nmunicipality: N/A\nverbatimLocality: Nyeri - m. 1800-\nlocality: Nyeri\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 2035,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 157
+  },
+  "image_name": "0008_C2022790F.jpg",
+  "timestamp": "2025-07-21T19:58:09.670062Z"
+}

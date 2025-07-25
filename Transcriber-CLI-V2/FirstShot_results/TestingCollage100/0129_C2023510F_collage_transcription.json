@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_82702a2885164c2aa0c51f07",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: R.E. Magill\ncollectedBy: R. E. Magill\nsecondaryCollectors: N/A\nrecordNumber: 4324\nverbatimEventDate: 4 Dec 1977\nminimumEventDate: 1977-12-04\nmaximumEventDate: N/A\nverbatimIdentification: Bartramia hampeana C. Muell.\nlatestScientificName: Bartramia hampeana\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Lesotho\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Sehlabathebe National Park. Hills around sandstone outcrops just E of Lodge. Moist grassland. In rock crevices.\nlocality: Sehlabathebe National Park. Hills around sandstone outcrops just E of Lodge. Moist grassland. In rock crevices.\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: 1038335\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 204
+  },
+  "image_name": "0129_C2023510F_collage.jpg",
+  "timestamp": "2025-07-21T20:27:32.113633Z"
+}

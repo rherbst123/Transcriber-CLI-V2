@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_6792d17556814c5eb229ed5d",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: C. Troll\ncollectedBy: C. Troll\nsecondaryCollectors: N/A\nrecordNumber: 4116\nverbatimEventDate: 25 October 1933\nminimumEventDate: 1933-10-25\nmaximumEventDate: N/A\nverbatimIdentification: Racopilum speluncae C. Müll.\nlatestScientificName: Racopilum speluncae\nidentifiedBy: H. N. Dixon\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Eritrea\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Mount Sabur, alt. 1200 m; on rock in moist streambed.\nlocality: Mount Sabur, 1200 meters, on rock in moist streambed.\nhabitat: N/A\nverbatimElevation: 1200 m\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 176
+  },
+  "image_name": "0118_C2023436F_collage.jpg",
+  "timestamp": "2025-07-21T20:26:23.209544Z"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_aeca41430ed54355bc89c93e",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.amazon.nova-premier-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: P. J. Greenway\ncollectedBy: P. J. Greenway\nsecondaryCollectors: N/A\nrecordNumber: 11,937\nverbatimEventDate: 2/10/1965\nminimumEventDate: 1965-02-10\nmaximumEventDate: N/A\nverbatimIdentification: FLORA OF ARUSHA DIST., R. TANGANYIKA Moss Pilotrichella\nlatestScientificName: Orthostichella amplulacea\nidentifiedBy: B. H. Allen & Magill\nverbatimDateIdentified: 2005\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: Arusha\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: T. 2, N. Side of Ngurdoto Crater\nlocality: [precise locality unknown]\nhabitat: A moss festooning densely a dead Cass-ipourea tree, dark brown and green forming a complete cover around the branchlets and the dominant moss on trees around the rim of the Crater\nverbatimElevation: 5,700ft. alt.\nverbatimCoordinates: N/A\notherCatalogNumbers: C2022796F\noriginalMethod: Handwritten\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 227
+  },
+  "image_name": "0013_C2022796F_collage.jpg",
+  "timestamp": "2025-07-24T15:15:26.144110Z"
+}

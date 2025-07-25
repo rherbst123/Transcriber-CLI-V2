@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_ed1c62bb2d5241c9b66cfe5c",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.amazon.nova-premier-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: M.A.M. Renner 6380, V.C. Linis & E.A. Brown\ncollectedBy: M.A.M. Renner\nsecondaryCollectors: V.C. Linis | E.A. Brown\nrecordNumber: 6380\nverbatimEventDate: 28 Mar 2012\nminimumEventDate: 2012-03-28\nmaximumEventDate: N/A\nverbatimIdentification: Frullania\nlatestScientificName: Frullania\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: Anastrophyllum piligerum | Drepanolejeunea | Pleurozia articulata\ncountry: Australia\nfirstPoliticalUnit: Queensland\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Coast Range, Little Falls Creek catchment, immediately above the coral fern patch on the Manjal Jimalji track from Karnak to rock pinnacle, ENE of spot height 1198. Daintree National Park\nlocality: Daintree National Park\nhabitat: Simply microphyll forest to 8 m tall with Leptospermum wooroonooran, Helicia, Elaeocarpus sp. 'Mossman Bluff', on face with ESE aspect, with numerous large granite outcrops. On branches of Leptospermum wooroonooran on edge of fern patch\nverbatimElevation: 1030 m\nverbatimCoordinates: Lat. 16° 23'43\"S Long. 145° 17'57\"E\notherCatalogNumbers: C2099822F\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 292
+  },
+  "image_name": "0568_C2099822F_collage.jpg",
+  "timestamp": "2025-07-24T16:53:36.103248Z"
+}

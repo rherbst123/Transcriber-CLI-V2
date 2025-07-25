@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_a89fbed588a04ccbbfc046b0",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: S. P. Churchill & Elsa R. Toapanta\ncollectedBy: S. P. Churchill\nsecondaryCollectors: Elsa R. Toapanta\nrecordNumber: 21018\nverbatimEventDate: 07 septiembre 2001\nminimumEventDate: 2001-09-07\nmaximumEventDate: N/A\nverbatimIdentification: FRULLANIACEAE Frullania peruviana Gottsche\nlatestScientificName: Frullania peruviana\nidentifiedBy: J. Atwood\nverbatimDateIdentified: 2023\nassociatedTaxa: N/A\ncountry: Ecuador\nfirstPoliticalUnit: Pichincha\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Cantón Los Bancos. Cerro Guarumos, Río Tandayapa (entre Nono y Tandayapa) Trayecto Oleoducto OCP. Bosque muy húmedo premontano. <21000-21051> 2500 - 2630 m\nlocality: Cerro Guarumos, Río Tandayapa (between Nono and Tandayapa) Trayecto Oleoducto OCP\nhabitat: very humid premontane forest\nverbatimElevation: 2500 - 2630 m\nverbatimCoordinates: 00°03'S 078°38'W\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 237
+  },
+  "image_name": "0294_C2099517F_collage.jpg",
+  "timestamp": "2025-07-21T20:33:34.364961Z"
+}

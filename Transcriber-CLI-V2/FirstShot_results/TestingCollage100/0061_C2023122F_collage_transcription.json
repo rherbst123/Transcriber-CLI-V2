@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_6176934d14cd4eb784784dec",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: R.A.Dummer No 4303 det. B.N.Dixon\ncollectedBy: R. A. Dummer\nsecondaryCollectors: B. N. Dixon\nrecordNumber: 4303\nverbatimEventDate: Sept 1919\nminimumEventDate: 1919-09-00\nmaximumEventDate: N/A\nverbatimIdentification: Rhynchostegium bolkense (Broth.) Broth\nlatestScientificName: Rhynchostegium bolkense\nidentifiedBy: B. N. Dixon\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Uganda\nfirstPoliticalUnit: Mulange\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: 4000ft. Fallen log in forest\nlocality: 4000 feet. Fallen log in forest\nhabitat: N/A\nverbatimElevation: 4000ft\nverbatimCoordinates: N/A\notherCatalogNumbers: C2025122F\noriginalMethod: Handwritten\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 180
+  },
+  "image_name": "0061_C2023122F_collage.jpg",
+  "timestamp": "2025-07-21T20:25:55.512932Z"
+}

@@ -1,0 +1,129 @@
+
+### 🌿 **Herbarium Label Transcription – Authoritative Prompt**
+
+**Read carefully—every rule is mandatory.**
+
+#### 1 · Output format  
+Produce **exactly one** list of the 22 fields shown below, in this order.  
+For each field:
+
+- Begin the line with the **field name**, a colon, one space, then the **verbatim value**.  
+- After the value, insert **one blank line** (empty line).  
+- **No indentation** anywhere.  
+- **No periods** at the end of values.  
+- If data are missing, write **N/A**.  
+- If text is unclear, write **unsure and check**.
+
+#### 2 · Transcription principles  
+
+| Topic | Rule |
+|-------|------|
+| Characters | Transcribe **exactly** as printed. Do **not** translate, interpret, or add symbols. |
+| Capitalization | Convert FULL‑CAPS names/countries to normal case (e.g., CAMEROON → Cameroon). |
+| Collectors’ names | Format as initials + surname (e.g., Amanda Koch → A Koch). |
+| Pipes | For **secondaryCollectors**, separate names with `" | "` (space, pipe, space). Do not add pipes elsewhere. |
+| Dates | `minimumEventDate` in ISO‑8601 (YYYY‑MM‑DD; use 00 for unknown MM or DD). `maximumEventDate` only if the label shows a range, otherwise N/A. |
+| Elevation | Only `verbatimElevation` may mention altitude. |
+| originalMethod | Choose one of: Handwritten, Typed, Mix of Handwritten and Typed, Unsure. |
+| typeStatus | Transcribe exactly; if absent, write **no type status**. |
+
+#### 3 · Field list (copy as‑is)
+
+verbatimCollectors:  
+
+collectedBy:  
+
+secondaryCollectors:  
+
+recordNumber:  
+
+verbatimEventDate:  
+
+minimumEventDate:  
+
+maximumEventDate:  
+
+verbatimIdentification:  
+
+latestScientificName:  
+
+identifiedBy:  
+
+verbatimDateIdentified:  
+
+associatedTaxa:  
+
+country:  
+
+firstPoliticalUnit:  
+
+secondPoliticalUnit:  
+
+municipality:  
+
+verbatimLocality:  
+
+locality:  
+
+habitat:  
+
+verbatimElevation:  
+
+verbatimCoordinates:  
+
+otherCatalogNumbers:  
+
+#### 4 · Critical guards
+
+1. **One and only one** complete field list per image.  
+2. Never repeat a field list, collection number, or any specimen data.  
+3. Do not log reasoning—output only the final list.  
+4. Do not add asterisks, bullets, markdown, or extra characters anywhere.
+
+#### 5 · Example (for reference only – *do not copy into your output*)
+
+verbatimCollectors: H. S. Irwin, R. SouzaJ, W. Grear, R. Reis dos Santos  
+
+collectedBy: H S Irwin  
+
+secondaryCollectors: R SouzaJ | W Grear | R Reis dos Santos  
+
+recordNumber: 18016  
+
+verbatimEventDate: 29 June 1966  
+
+minimumEventDate: 1966-06-29  
+
+maximumEventDate: N/A  
+
+verbatimIdentification: Ruellia neesiana (Mart.) Lindau  
+
+latestScientificName: Ruellia neesiana (Mart.) Lindau  
+
+identifiedBy: D C Wasshausen  
+
+verbatimDateIdentified: 1967  
+
+associatedTaxa: N/A  
+
+country: Brazil  
+
+firstPoliticalUnit: Estado de Goiás  
+
+secondPoliticalUnit: Serra do Calapó  
+
+municipality: N/A  
+
+verbatimLocality: ca. 50 km. S. of Catapónia, road to Jataí  
+
+locality: ca. 50 km. S. of Catapónia, road to Jataí  
+
+habitat: Gallery forest  
+
+verbatimElevation: 900 m  
+
+verbatimCoordinates: N/A  
+
+otherCatalogNumbers: N/A  
+
+---

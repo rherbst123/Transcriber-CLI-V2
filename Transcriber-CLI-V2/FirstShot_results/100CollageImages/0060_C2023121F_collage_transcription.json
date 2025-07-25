@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_20b9a71ce6a24fac8224f107",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: R.A.Dummer No.4012\ncollectedBy: R. A. Dummer\nsecondaryCollectors: N/A\nrecordNumber: 4012\nverbatimEventDate: April 19 1919\nminimumEventDate: 1919-04-19\nmaximumEventDate: N/A\nverbatimIdentification: Rhynchostegium Colensoi (Broth.) Broth\nlatestScientificName: Rhynchostegium colensoi\nidentifiedBy: H.N.Dixon\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Uganda\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Uganda: Mulange, 4000ft\nlocality: Mulange, 4000 feet\nhabitat: N/A\nverbatimElevation: 4000ft\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 167
+  },
+  "image_name": "0060_C2023121F_collage.jpg",
+  "timestamp": "2025-07-21T20:16:48.990141Z"
+}

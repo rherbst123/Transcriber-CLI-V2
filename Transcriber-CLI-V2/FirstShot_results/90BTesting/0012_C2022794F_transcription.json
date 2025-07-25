@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_6d1eabde94a94bfe9e7c0248",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: P.R.Bothe\ncollectedBy: P. R. Bothe\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 8- XI- 1924\nminimumEventDate: 1924-11-08\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella curzadala Broth.\nlatestScientificName: Pilotrichella curzadala\nidentifiedBy: P.R.Bothe\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Gwambene, forest\nlocality: Gwambene, forest\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 159
+  },
+  "image_name": "0012_C2022794F.jpg",
+  "timestamp": "2025-07-21T16:05:37.207540Z"
+}

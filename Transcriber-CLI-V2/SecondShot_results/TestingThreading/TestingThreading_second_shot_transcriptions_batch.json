@@ -1,0 +1,449 @@
+{
+  "batch_id": "batch_e66a265c520d457e",
+  "created_at": "2025-07-21T15:35:51.841307Z",
+  "shot_type": "second_shot",
+  "date_folder": "TestingThreading",
+  "total_transcriptions": 20,
+  "transcriptions": [
+    {
+      "id": "msg_bdrk_0333636313564e9ba8abaef0",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: B. Rojkowski\ncollectedBy: B. Rojkowski\nsecondaryCollectors: N/A\nrecordNumber: 394\nverbatimEventDate: 8 Febr.1976\nminimumEventDate: 1976-02-08\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella cuspidata Broth\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: Bruce Allen\nverbatimDateIdentified: 2005\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Ol Doinyo Sapuk National Park near Thika\nlocality: Ol Doinyo Sapuk National Park near Thika\nhabitat: N/A\nverbatimElevation: alt. 2270 m\nverbatimCoordinates: N/A\notherCatalogNumbers: 1050634\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 174
+      },
+      "image_name": "0001_C2022783F.jpg",
+      "timestamp": "2025-07-21T15:34:18.026157Z"
+    },
+    {
+      "id": "msg_bdrk_3f87d29dadc04a4e9c376c65",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: R. E. Magill & T. Pócs\ncollectedBy: R E Magill\nsecondaryCollectors: T Pócs\nrecordNumber: 11241\nverbatimEventDate: 7 August 1992\nminimumEventDate: 1992-08-07\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella ampullacea (C Müller) B H Allen & Magill det B Allen 2005\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: B Allen\nverbatimDateIdentified: 2005\nassociatedTaxa: Orthostichopsis subimbricata\ncountry: Comoros\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Anjouan (Ndzouani) Primary rainforest along steep SE summit ridge of Ntringi N of Lake Dzialandze 2 km WSW of Dindri Village <11210-11246>\nlocality: Primary rainforest along steep SE summit ridge of Ntringi N of Lake Dzialandze 2 km WSW of Dindri Village\nhabitat: On branch\nverbatimElevation: 1380 m\nverbatimCoordinates: 12°12'52\"S 44°25'32\"E\notherCatalogNumbers: 1182891\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 240
+      },
+      "image_name": "0002_C2022784F.jpg",
+      "timestamp": "2025-07-21T15:34:22.804758Z"
+    },
+    {
+      "id": "msg_bdrk_87e208dd85b84447b3f6319d",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: S. Rojkowski\ncollectedBy: S. Rojkowski\nsecondaryCollectors: N/A\nrecordNumber: 207\nverbatimEventDate: 9.I.1976\nminimumEventDate: 1976-01-09\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella cuspidata Broth\nlatestScientificName: Pilotrichella cuspidata\nidentifiedBy: R. Ochyra\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: Nairobi\nverbatimLocality: Ngong Hills near Nairobi, city of Ngong\nlocality: Ngong Hills near Nairobi, city of Ngong\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: 1050638\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 171
+      },
+      "image_name": "0003_C2022785F.jpg",
+      "timestamp": "2025-07-21T15:34:27.801760Z"
+    },
+    {
+      "id": "msg_bdrk_02f204e6a86348f3851d12fe",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: B Kojkowski\ncollectedBy: B Kojkowski\nsecondaryCollectors: N/A\nrecordNumber: 373\nverbatimEventDate: 22 Jan 1976\nminimumEventDate: 1976-01-22\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella ampullacea (C Müller) B H Allen & Magill Det Bruce Allen Missouri Botanical Garden Herbarium (MO) 2005\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: R Ochyra\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Mt Meru, W slope of the crater rim\nlocality: W slope of the crater rim Mt Meru\nhabitat: epiphytic in montane rain forest\nverbatimElevation: alt 2700 m\nverbatimCoordinates: N/A\notherCatalogNumbers: 1050662\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 199
+      },
+      "image_name": "0004_C2022786F.jpg",
+      "timestamp": "2025-07-21T15:34:32.301808Z"
+    },
+    {
+      "id": "msg_bdrk_9993e5de7d544e9a82281130",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: S. Rojkowski No 253\ncollectedBy: S. Rojkowski\nsecondaryCollectors: N/A\nrecordNumber: 253\nverbatimEventDate: Jan. 12, 1976\nminimumEventDate: 1976-01-12\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella cuspidata Broth Orthostichella ampullacea (C. Müller) B. H. Allen & Magill Det. B. Allen, 2003\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: B. Allen\nverbatimDateIdentified: 2003\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: Ngorongoro Crater\nverbatimLocality: TANZANIA: Ngorongoro Crater, alt. 2500 m, epiphytic in bamboo thickets\nlocality: bamboo thickets\nhabitat: N/A\nverbatimElevation: alt. 2500 m\nverbatimCoordinates: N/A\notherCatalogNumbers: 1050652\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 201
+      },
+      "image_name": "0005_C2022787F.jpg",
+      "timestamp": "2025-07-21T15:34:37.514416Z"
+    },
+    {
+      "id": "msg_bdrk_4fc2cc91cd18461b99dda9e1",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: P C Holt\ncollectedBy: P C Holt\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 7 X 1914\nminimumEventDate: 1914-10-07\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella imbricata (Hedw) Broth\nlatestScientificName: Orthostichella imbricata\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Valle Lee Sheylesse\nlocality: Valle Lee Sheylesse\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 159
+      },
+      "image_name": "0006_C2022788F.jpg",
+      "timestamp": "2025-07-21T15:34:42.784419Z"
+    },
+    {
+      "id": "msg_bdrk_4672606860514a84bf32481a",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: B Zemanek\ncollectedBy: B Zemanek\nsecondaryCollectors: R Ochyra\nrecordNumber: I 19\nverbatimEventDate: 1976\nminimumEventDate: 1976-00-00\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichiella cuspidata Broth\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: Bruce Allen\nverbatimDateIdentified: 2005\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: Nairobi\nverbatimLocality: Ngong Hills near\nlocality: Ngong Hills near\nhabitat: epiphytic\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: 1050473\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 167
+      },
+      "image_name": "0007_C2022789F.jpg",
+      "timestamp": "2025-07-21T15:34:47.521622Z"
+    },
+    {
+      "id": "msg_bdrk_5a5bbc9c9bf24a94973cbd1e",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: T. P. Voithe\ncollectedBy: T P Voithe\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 18-4-1910\nminimumEventDate: 1910-04-18\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella foliosa Besch\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: Bruce Allen\nverbatimDateIdentified: 2005\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Kenya - Nieri - m 1800 -\nlocality: [precise locality unknown]\nhabitat: N/A\nverbatimElevation: m 1800 -\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 166
+      },
+      "image_name": "0008_C2022790F.jpg",
+      "timestamp": "2025-07-21T15:34:53.646866Z"
+    },
+    {
+      "id": "msg_bdrk_8b9252e14b06485eaff79a2c",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: S. Kojkowski\ncollectedBy: S. Kojkowski\nsecondaryCollectors: N/A\nrecordNumber: 369\nverbatimEventDate: Jan.22.1976\nminimumEventDate: 1976-01-22\nmaximumEventDate: N/A\nverbatimIdentification: Piltrichella ampullacea (C. Muell.) Jaeg.\nlatestScientificName: Piltrichella ampullacea\nidentifiedBy: K. Ochyra\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Mt Meru, 2500 m alt., W slope of the crater rim, epiphytic in montane rain forest\nlocality: W slope of the crater rim\nhabitat: montane rain forest\nverbatimElevation: 2500 m alt.\nverbatimCoordinates: N/A\notherCatalogNumbers: 1050650\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 187
+      },
+      "image_name": "0009_C2022791F.jpg",
+      "timestamp": "2025-07-21T15:34:57.959753Z"
+    },
+    {
+      "id": "msg_bdrk_665fb6444aae4536a8ce9f91",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: B Rojkowski\ncollectedBy: B Rojkowski\nsecondaryCollectors: N/A\nrecordNumber: 246\nverbatimEventDate: 12 Jan 1976\nminimumEventDate: 1976-01-12\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella cuspidata Broth\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: B H Allen & Magill\nverbatimDateIdentified: 2005\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Ngorongoro Crater rim, epiphytic in bamboo thickets, alt 2500 m\nlocality: Ngorongoro Crater rim, bamboo thickets\nhabitat: N/A\nverbatimElevation: alt 2500 m\nverbatimCoordinates: N/A\notherCatalogNumbers: 1050643\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 181
+      },
+      "image_name": "0010_C2022792F.jpg",
+      "timestamp": "2025-07-21T15:35:02.972834Z"
+    },
+    {
+      "id": "msg_bdrk_77c06349b23b4ba3866467b9",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: Y Hasegawa\ncollectedBy: Y Hasegawa\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: October 31, 1974\nminimumEventDate: 1974-10-31\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella cuspidata Broth Bot Jahrb 24: 255 (1897)\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: T Pócs\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Around Ngorongoro Crater\nlocality: Around Ngorongoro Crater\nhabitat: N/A\nverbatimElevation: elevation about 2000 m\nverbatimCoordinates: N/A\notherCatalogNumbers: 1027423\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 175
+      },
+      "image_name": "0011_C2022793F.jpg",
+      "timestamp": "2025-07-21T15:35:08.049798Z"
+    },
+    {
+      "id": "msg_bdrk_084d6b752c8b4a4ab9f0b399",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: P R Roth\ncollectedBy: P R Roth\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 8 - XI - 1927\nminimumEventDate: 1927-11-08\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella curvata Broth\nlatestScientificName: Pilotrichella curvata\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Bamboo forest\nlocality: Bamboo forest\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Handwritten\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 154
+      },
+      "image_name": "0012_C2022794F.jpg",
+      "timestamp": "2025-07-21T15:35:12.589049Z"
+    },
+    {
+      "id": "msg_bdrk_cbc86be0185e42fca3c70169",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: J.Szunyoghy (No. 18/a)\ncollectedBy: J Szunyoghy\nsecondaryCollectors: N/A\nrecordNumber: 18/a\nverbatimEventDate: 31.3.1965\nminimumEventDate: 1965-03-31\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella ampullacea (C.M.) JAEG.\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: M Bizot\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Africa orientalis; Tanzania, ramicola in silva crateris montis Meru\nlocality: ramicola in silva crateris montis Meru\nhabitat: N/A\nverbatimElevation: Alt 3000 m.s.m.\nverbatimCoordinates: N/A\notherCatalogNumbers: 1066346\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 185
+      },
+      "image_name": "0013_C2022795F.jpg",
+      "timestamp": "2025-07-21T15:35:16.962488Z"
+    },
+    {
+      "id": "msg_bdrk_4acbfa4fdb28490bae957ed8",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: P J Greenway\ncollectedBy: P J Greenway\nsecondaryCollectors: N/A\nrecordNumber: 11,937\nverbatimEventDate: 2 10 1965\nminimumEventDate: 1965-10-02\nmaximumEventDate: N/A\nverbatimIdentification: Moss Plentrichella\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: Bruce Allen\nverbatimDateIdentified: 2003\nassociatedTaxa: Cassipourea tree\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Flora of Arusha Dist, R Tanganyika around the rim of the Crater, Ngorongoro Crater\nlocality: around the rim of the Crater\nhabitat: A moss festooning densely dead Cassipourea tree, dark brown and green forming a complete cover around the branchlets and the dominant moss on trees\nverbatimElevation: 5,700ft alt\nverbatimCoordinates: N/A\notherCatalogNumbers: 1051664\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 219
+      },
+      "image_name": "0014_C2022796F.jpg",
+      "timestamp": "2025-07-21T15:35:21.839846Z"
+    },
+    {
+      "id": "msg_bdrk_e35f991a0cf346988298cf16",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: A et J Kornaś\ncollectedBy: A Kornaś\nsecondaryCollectors: J Kornaś\nrecordNumber: 6830/M\nverbatimEventDate: 13 XI 1972\nminimumEventDate: 1972-11-13\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella ampullacea (C Müller) B H Allen & Magill\nlatestScientificName: Pilotrichella ampullacea\nidentifiedBy: M Bizot\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Uluguru Mts, in bamboo forest on W slopes of Mgeta River Valley E of Lukwangule Plateau\nlocality: in bamboo forest on W slopes of Mgeta River Valley E of Lukwangule Plateau\nhabitat: N/A\nverbatimElevation: alt 2250 m\nverbatimCoordinates: N/A\notherCatalogNumbers: 1064574\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 201
+      },
+      "image_name": "0015_C2022797F.jpg",
+      "timestamp": "2025-07-21T15:35:26.753266Z"
+    },
+    {
+      "id": "msg_bdrk_42fbc91514cc4599a5cc143b",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: T Pócs\ncollectedBy: T Pócs\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 19-20 Jan 1985\nminimumEventDate: 1985-01-19\nmaximumEventDate: 1985-01-20\nverbatimIdentification: Pilotrichella cuspidata Brèth\nlatestScientificName: Orthostichella capillicaulis\nidentifiedBy: R Ochyra\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: West Usambara Mts\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Balangai West F R Montane rain forest on the E ridge and N slope pf Kilimandege\nlocality: Montane rain forest on the E ridge and N slope pf Kilimandege\nhabitat: N/A\nverbatimElevation: at 1550-1750 m alt\nverbatimCoordinates: N/A\notherCatalogNumbers: 850710 | 1064538\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 197
+      },
+      "image_name": "0016_C2022798F.jpg",
+      "timestamp": "2025-07-21T15:35:31.220893Z"
+    },
+    {
+      "id": "msg_bdrk_afaef50b09244113a5648712",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: S Rojkowski\ncollectedBy: S Rojkowski\nsecondaryCollectors: N/A\nrecordNumber: 402\nverbatimEventDate: Febr 8, 1976\nminimumEventDate: 1976-02-08\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella cuspidata Broth\nlatestScientificName: Orthostichella capillicaulis\nidentifiedBy: B H H & Magill | Bruce Allen\nverbatimDateIdentified: 2005\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Oldoinyo National Park\nlocality: Oldoinyo National Park\nhabitat: N/A\nverbatimElevation: 2270 m alt\nverbatimCoordinates: N/A\notherCatalogNumbers: 1050621\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 170
+      },
+      "image_name": "0017_C2022799F.jpg",
+      "timestamp": "2025-07-21T15:35:35.325464Z"
+    },
+    {
+      "id": "msg_bdrk_48c6e02df9414ba2ae1ed2bb",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: B Rojkowski\ncollectedBy: B Rojkowski\nsecondaryCollectors: N/A\nrecordNumber: 31\nverbatimEventDate: 16 Dec 1975\nminimumEventDate: 1975-12-16\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella pentasticha (Brid) Wijk et Marg\nlatestScientificName: Orthostichella capillicaulis\nidentifiedBy: R Ochyra\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: Mt Elgon\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: alt 2200 m S slope epiphytic\nlocality: S slope\nhabitat: epiphytic\nverbatimElevation: alt 2200 m\nverbatimCoordinates: N/A\notherCatalogNumbers: 1050628\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 169
+      },
+      "image_name": "0018_C2022800F.jpg",
+      "timestamp": "2025-07-21T15:35:39.746755Z"
+    },
+    {
+      "id": "msg_bdrk_db78bc5c44fc4e95a4d571af",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: R. Kemp\ncollectedBy: R. Kemp\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 1911\nminimumEventDate: 1911-00-00\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichlia cuspidata Broth | Pilotrichlopsis cuspidata Broth\nlatestScientificName: Orthostichella capilliculmis\nidentifiedBy: B. H. Allen & Magill | H. N. Dixon\nverbatimDateIdentified: 2005 | N/A\nassociatedTaxa: N/A\ncountry: Uganda\nfirstPoliticalUnit: Baringo\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Baringo, Brit. East Africa; on trees\nlocality: on trees\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: 972790\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 182
+      },
+      "image_name": "0019_C2022801F.jpg",
+      "timestamp": "2025-07-21T15:35:45.203191Z"
+    },
+    {
+      "id": "msg_bdrk_eb4c4cb3e0a341c591122598",
+      "type": "message",
+      "role": "assistant",
+      "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+      "content": [
+        {
+          "type": "text",
+          "text": "verbatimCollectors: H N Dixon\ncollectedBy: H N Dixon\nsecondaryCollectors: N/A\nrecordNumber: 117\nverbatimEventDate: 1911\nminimumEventDate: 1911-00-00\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella cuspidata Broth\nlatestScientificName: Pilotrichella cuspidata\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: AFRICA ORIENT BRITANN in loc Solia, ad arborum truncos ramosque\nlocality: Solia, ad arborum truncos ramosque\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: 1356179\noriginalMethod: Typed\ntypeStatus: no type status"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 1848,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 171
+      },
+      "image_name": "0020_C2022802F.jpg",
+      "timestamp": "2025-07-21T15:35:51.841244Z"
+    }
+  ]
+}

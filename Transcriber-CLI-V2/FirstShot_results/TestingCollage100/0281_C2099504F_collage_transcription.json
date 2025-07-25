@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_07579462334f49a7b41c68f8",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: W. D. Reese\ncollectedBy: W. D. Reese\nsecondaryCollectors: N/A\nrecordNumber: 37931A\nverbatimEventDate: 27 Jul 1976\nminimumEventDate: 1976-07-27\nmaximumEventDate: N/A\nverbatimIdentification: Calymperaceae Syrrhopodon incompletus var. berteroanus (Bridel) W. D. Reese\nlatestScientificName: Syrrhopodon incompletus var. berteroanus\nidentifiedBy: W. D. Reese\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Panama\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Serrania de Pirre, along headwaters of Rio Escucho Ruido, ca. 16 km due N of Alto de Nique.\nlocality: Serrania de Pirre, along headwaters of Rio Escucho Ruido, ca. 16 km due N of Alto de Nique.\nhabitat: Lower montane rain forest.\nverbatimElevation: 1530-1550 m\nverbatimCoordinates: N/A\notherCatalogNumbers: C2099504F\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 222
+  },
+  "image_name": "0281_C2099504F_collage.jpg",
+  "timestamp": "2025-07-21T20:32:06.068561Z"
+}

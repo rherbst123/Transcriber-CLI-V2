@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_a3d56a1e40ae4235841a43a1",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: Leg. H. Humbert, juin 1929\n\ncollectedBy: H. Humbert\n\nsecondaryCollectors: N/A\n\nrecordNumber: s.n.\n\nverbatimEventDate: juin 1929\n\nminimumEventDate: 1929-06-00\n\nmaximumEventDate: N/A\n\nverbatimIdentification: Antitrichia kilimandschariea Broth.\n\nlatestScientificName: Antitrichia kilimandschariea\n\nidentifiedBy: R. Potier de la Varde\n\nverbatimDateIdentified: N/A\n\nassociatedTaxa: N/A\n\ncountry: Democratic Republic of the Congo\n\nfirstPoliticalUnit: Kivu\n\nsecondPoliticalUnit: N/A\n\nmunicipality: N/A\n\nverbatimLocality: Volcan Muhavura (Congo Belge, Kivu)\n\nlocality: Volcan Muhavura\n\nhabitat: N/A\n\nverbatimElevation: alt.: 3500-4147 m.\n\nverbatimCoordinates: N/A\n\notherCatalogNumbers: G2022957F\n\noriginalMethod: Typed\n\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 189
+  },
+  "image_name": "0045_C2022957F_collage.jpg",
+  "timestamp": "2025-07-24T15:02:12.632609Z"
+}

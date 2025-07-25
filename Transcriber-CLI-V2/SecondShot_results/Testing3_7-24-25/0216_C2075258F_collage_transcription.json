@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_2d54856586624e11ad0014df",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: Coll. & det. A. Noguchi\ncollectedBy: A. Noguchi\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: October 20, 1954\nminimumEventDate: 1954-10-20\nmaximumEventDate: N/A\nverbatimIdentification: 428. Hyophila propagulifera Broth.\nlatestScientificName: Hyophila propagulifera\nidentifiedBy: A. Noguchi\nverbatimDateIdentified: 1954\nassociatedTaxa: N/A\ncountry: Japan\nfirstPoliticalUnit: Oita Prefecture\nsecondPoliticalUnit: N/A\nmunicipality: Oita\nverbatimLocality: On sunny concrete wall, about 10 m. above sea, Oita, Oita Prefecture\nlocality: [precise locality unknown]\nhabitat: On sunny concrete wall\nverbatimElevation: about 10 m. above sea\nverbatimCoordinates: N/A\notherCatalogNumbers: C2075258F\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 296,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 193
+  },
+  "image_name": "0216_C2075258F_collage.jpg",
+  "timestamp": "2025-07-24T16:54:46.305164Z"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_b5175fbb0fc74255901e0b17",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: S. Rojkowski\ncollectedBy: S. Rojkowski\nsecondaryCollectors: N/A\nrecordNumber: 369\nverbatimEventDate: Jan. 22.1976\nminimumEventDate: 1976-01-22\nmaximumEventDate: N/A\nverbatimIdentification: Piltrichella ampullacea (C. Muell.) Jaeg.\nlatestScientificName: Piltrichella ampullacea\nidentifiedBy: K. Ochyra\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Tanzania\nfirstPoliticalUnit: Mt. Meru\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: 2600 m alt., W slope of the crater rim, epiphytic in montane rain forest\nlocality: 2600 meters altitude, west slope of the crater rim, epiphytic in montane rain forest\nhabitat: N/A\nverbatimElevation: 2600 m alt.\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 202
+  },
+  "image_name": "0008_C2022791F_collage.jpg",
+  "timestamp": "2025-07-21T20:24:36.363648Z"
+}

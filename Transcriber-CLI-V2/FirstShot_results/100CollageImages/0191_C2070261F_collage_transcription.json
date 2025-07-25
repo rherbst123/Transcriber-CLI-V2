@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_92db40192c4d484cb6e5a873",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: S.Y.Cheo\ncollectedBy: S. Y. Cheo\nsecondaryCollectors: N/A\nrecordNumber: 2754\nverbatimEventDate: Sept. 15, 1933\nminimumEventDate: 1933-09-15\nmaximumEventDate: N/A\nverbatimIdentification: Macromitrium pilosum, Bartram, Sp. nov.\nlatestScientificName: Macromitrium pilosum\nidentifiedBy: E. B. Bartram\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: China\nfirstPoliticalUnit: Kwangsi Province\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Mosses of Kwangsi Province, China\nlocality: Mosses of Kwangsi Province, China\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: 1073830\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: N/A"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 176
+  },
+  "image_name": "0191_C2070261F_collage.jpg",
+  "timestamp": "2025-07-21T20:19:44.003078Z"
+}

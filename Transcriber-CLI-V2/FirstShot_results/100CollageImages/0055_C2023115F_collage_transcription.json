@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_c3581ad6d8aa4fceb2667bdc",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: Dr Dunlap\ncollectedBy: R. Dunlap\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: Jan 3rd 1926\nminimumEventDate: 1926-01-03\nmaximumEventDate: N/A\nverbatimIdentification: Rhynchostegium megapelma (C.M.) Jaeg\nlatestScientificName: Rhynchostegium megapelma\nidentifiedBy: H.N. Dixon\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Cameroon\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Cameroon Mountain, 5000 ft. on fallen trunk\nlocality: Cameroon Mountain, 5000 feet on fallen trunk\nhabitat: N/A\nverbatimElevation: 5000 ft.\nverbatimCoordinates: N/A\notherCatalogNumbers: 1090559\noriginalMethod: Handwritten\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 178
+  },
+  "image_name": "0055_C2023115F_collage.jpg",
+  "timestamp": "2025-07-21T20:16:21.783376Z"
+}

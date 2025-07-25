@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_e16a9497c9c1472fb0d8f051",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: det. J. Atwood, 2022\ncollectedBy: J. Atwood\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 16 Jul 1998\nminimumEventDate: 1998-07-16\nmaximumEventDate: N/A\nverbatimIdentification: FRULLANIACEAE Frullania lobatohastata Steph.\nlatestScientificName: Frullania lobatohastata\nidentifiedBy: J. Atwood\nverbatimDateIdentified: 2022\nassociatedTaxa: N/A\ncountry: Colombia\nfirstPoliticalUnit: Distrito Capital\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Páramo de Sumapaz, al lado quebrada por río Santa Rosa. Bosque de Polylepis secundario.\nlocality: Páramo de Sumapaz, al lado quebrada por río Santa Rosa. Bosque de Polylepis secundario.\nhabitat: N/A\nverbatimElevation: 3500 m\nverbatimCoordinates: 04°13'N 074°11'W\notherCatalogNumbers: C2099508F\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 209
+  },
+  "image_name": "0285_C2099508F_collage.jpg",
+  "timestamp": "2025-07-21T20:32:32.152768Z"
+}

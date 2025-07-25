@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_a18b0dba8d9e4145b898c388",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: Marshall R. & Carol A. Crosby 5783\ncollectedBy: R. Marshall & A. Crosby\nsecondaryCollectors: N/A\nrecordNumber: 5783\nverbatimEventDate: MAR 30, 1973\nminimumEventDate: 1973-03-30\nmaximumEventDate: N/A\nverbatimIdentification: Neckeraceae Porotrichum lancifrons (Hampe) Mitten\nlatestScientificName: Porotrichum lancifrons\nidentifiedBy: B. Allen\nverbatimDateIdentified: 2005\nassociatedTaxa: N/A\ncountry: Costa Rica\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Porrosati area. Moist valley of Rio Ciruelas at end of regional road 114, N of village of Barba. 18 km N of city center of San Jose.\nlocality: Porrosati area. Moist valley of Rio Ciruelas at end of regional road 114, N of village of Barba. 18 km N of city center of San Jose.\nhabitat: N/A\nverbatimElevation: 2250 m\nverbatimCoordinates: 10°06'N 84°07'W\notherCatalogNumbers: C2099495F\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 236
+  },
+  "image_name": "0272_C2099495F_collage.jpg",
+  "timestamp": "2025-07-21T20:31:09.066497Z"
+}

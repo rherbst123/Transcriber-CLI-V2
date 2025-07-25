@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_e98464c97c3b46f3af6f40ed",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: Plagiochilaceae Plagiochila repanda var. perrotiana (Steph.) Vanden Berghen det. Catherine Reeb 2023\ncollectedBy: Catherine Reeb\nsecondaryCollectors: N/A\nrecordNumber: H43\nverbatimEventDate: 1 Decembre 1994\nminimumEventDate: 1994-12-01\nmaximumEventDate: N/A\nverbatimIdentification: Plagiochila repanda var. perrotiana (Steph.) Vanden Berghen\nlatestScientificName: Plagiochila repanda var. perrotiana\nidentifiedBy: Catherine Reeb\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Madagascar\nfirstPoliticalUnit: Ihorombe Region\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Ivohibe, Ivongo, Ambatomboay. Dans la Reserve Naturelle Integrale d'Andringitra. EST du RNI. Preserver en alcool.\nlocality: Ivohibe, Ivongo, Ambatomboay. Dans la Reserve Naturelle Integrale d'Andringitra. EST du RNI.\nhabitat: N/A\nverbatimElevation: 720 m\nverbatimCoordinates: 22°15'S 047°01'E\notherCatalogNumbers: C2099494F\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 246
+  },
+  "image_name": "0271_C2099494F_collage.jpg",
+  "timestamp": "2025-07-21T20:31:02.405089Z"
+}

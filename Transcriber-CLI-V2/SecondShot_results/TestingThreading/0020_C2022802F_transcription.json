@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_4e26c8c998d84783bb498765",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: H N Dixon\ncollectedBy: H N Dixon\nsecondaryCollectors: N/A\nrecordNumber: 117\nverbatimEventDate: 1911\nminimumEventDate: 1911-00-00\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella cuspidata Broth\nlatestScientificName: Pilotrichella cuspidata\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: AFRICA ORIENT BRITANN in loc Solia, ad arborum truncos ramosque\nlocality: Solia, ad arborum truncos ramosque\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: 1356179\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 171
+  },
+  "image_name": "0020_C2022802F.jpg",
+  "timestamp": "2025-07-21T15:35:51.840795Z"
+}

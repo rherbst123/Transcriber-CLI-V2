@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_0380d1a2341c4dea9ac4a2d8",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: det. J. Atwood, 2022\ncollectedBy: J. Atwood\nsecondaryCollectors: N/A\nrecordNumber: s.n.\nverbatimEventDate: 27 Feb 2002\nminimumEventDate: 2002-02-27\nmaximumEventDate: N/A\nverbatimIdentification: FRULLANIACEAE Frullania brasiliensis Raddi\nlatestScientificName: Frullania brasiliensis\nidentifiedBy: S. P. Churchill & Luzmila Arroyo\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Bolivia\nfirstPoliticalUnit: Santa Cruz\nsecondPoliticalUnit: Vallegrande\nmunicipality: N/A\nverbatimLocality: Calaculo, ca. 26 km sur de Vallegrande camino a Khasamonte. Bosque montano secundario, con Podocarpus parlatorei, abundante especies de helechos.\nlocality: Calaculo, ca. 26 km south of Vallegrande on the road to Khasamonte. Secondary montane forest, with Podocarpus parlatorei, abundant species of ferns.\nhabitat: N/A\nverbatimElevation: 2450 m\nverbatimCoordinates: 18°38'S 064°02'W\notherCatalogNumbers: C2099488F\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 243
+  },
+  "image_name": "0265_C2099488F_collage.jpg",
+  "timestamp": "2025-07-21T20:30:23.287223Z"
+}

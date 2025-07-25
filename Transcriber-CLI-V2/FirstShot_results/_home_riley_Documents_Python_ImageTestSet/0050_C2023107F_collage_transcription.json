@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_0ae2a1d962304615995f9a06",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.amazon.nova-premier-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: V. et P. Allorge\ncollectedBy: V. Allorge\nsecondaryCollectors: P. Allorge\nrecordNumber: s.n.\nverbatimEventDate: 22.VII.1937\nminimumEventDate: 1937-07-22\nmaximumEventDate: N/A\nverbatimIdentification: Rhynchostegiella pallidirostra (A.Br.)Loeske\nlatestScientificName: Rhynchostegiella pallidirostra\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Portugal\nfirstPoliticalUnit: Azores\nsecondPoliticalUnit: Flores\nmunicipality: N/A\nverbatimLocality: blocs de basalte ombragés, Fajasinh vers 200 m.\nlocality: [precise locality unknown]\nhabitat: blocs de basalte ombragés\nverbatimElevation: vers 200 m.\nverbatimCoordinates: N/A\notherCatalogNumbers: C2023107F\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 186
+  },
+  "image_name": "0050_C2023107F_collage.jpg",
+  "timestamp": "2025-07-24T15:16:14.670618Z"
+}

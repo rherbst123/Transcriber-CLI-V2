@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_abb78c1c20a14675a47e4cca",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.amazon.nova-premier-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: R.A. Dummer\ncollectedBy: R.A. Dummer\nsecondaryCollectors: N/A\nrecordNumber: 4012\nverbatimEventDate: April 19 1919\nminimumEventDate: 1919-04-19\nmaximumEventDate: N/A\nverbatimIdentification: Atrichostegium Bothansi (Broth.) Broth.\nlatestScientificName: Atrichostegium Bothansi\nidentifiedBy: H.N. Dixon\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Uganda\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Mulange\nlocality: Mulange\nhabitat: N/A\nverbatimElevation: 4000ft\nverbatimCoordinates: N/A\notherCatalogNumbers: C2023121F\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 165
+  },
+  "image_name": "0060_C2023121F_collage.jpg",
+  "timestamp": "2025-07-24T15:09:06.604321Z"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_2065b449b8d54a4ab61ef2d1",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.anthropic.claude-3-sonnet-20240229-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: H. Allen & Magill\ncollectedBy: H. Allen\nsecondaryCollectors: Magill\nrecordNumber: 2902\nverbatimEventDate: AUG 1954\nminimumEventDate: 1954-08-00\nmaximumEventDate: N/A\nverbatimIdentification: Pilotrichella curzidala Broth.\nlatestScientificName: Pilotrichella curzidala\nidentifiedBy: unsure and check\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: United States\nfirstPoliticalUnit: Missouri\nsecondPoliticalUnit: N/A\nmunicipality: Garden Herbarium\nverbatimLocality: nilacca (C.\nlocality: [precise locality unknown]\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 2030,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 174
+  },
+  "image_name": "0012_C2022794F.jpg",
+  "timestamp": "2025-07-21T19:58:44.381913Z"
+}

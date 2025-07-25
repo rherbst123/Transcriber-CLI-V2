@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_de37934e25704bb597e7454b",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "Here is the corrected transcription:\n\nverbatimCollectors: G. Zenker\ncollectedBy: G. Zenker\nsecondaryCollectors: N/A\nrecordNumber: 1300\nverbatimEventDate: 1897\nminimumEventDate: 1897-00-00\nmaximumEventDate: N/A\nverbatimIdentification: Pilostigma panduraefolia C.M.\nlatestScientificName: Pilostigma panduraefolia\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Cameroon\nfirstPoliticalUnit: Centre Region\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Africa: Kamerun; Bipindi\nlocality: [precise locality unknown]\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: C2022817F\noriginalMethod: Handwritten\ntypeStatus: no type status\n\nNote: The first political unit was added as Centre Region, which is the region where Bipindi is located in Cameroon."
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 265,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 204
+  },
+  "image_name": "0032_C2022817F_collage.jpg",
+  "timestamp": "2025-07-24T15:17:26.119765Z"
+}

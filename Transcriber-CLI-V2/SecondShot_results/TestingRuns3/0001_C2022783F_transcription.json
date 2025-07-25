@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_8b077fac92684a8a8c1653e0",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: S. Rojkowski\ncollectedBy: S. Rojkowski\nsecondaryCollectors: N/A\nrecordNumber: 394\nverbatimEventDate: 8 Febr.1976\nminimumEventDate: 1976-02-08\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella ampullacea (C. Müller) B. H. Allen & Magill\nlatestScientificName: Orthostichella ampullacea\nidentifiedBy: B. Ochyra\nverbatimDateIdentified: unsure and check\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: 01 Doinyo Sapuk National Park near Thika, alt. 2270 m; epiphytic\nlocality: 01 Doinyo Sapuk National Park near Thika; epiphytic\nhabitat: epiphytic\nverbatimElevation: alt. 2270 m\nverbatimCoordinates: N/A\notherCatalogNumbers: 1050634\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 2064,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 200
+  },
+  "image_name": "0001_C2022783F.jpg",
+  "timestamp": "2025-07-21T20:07:57.785195Z"
+}

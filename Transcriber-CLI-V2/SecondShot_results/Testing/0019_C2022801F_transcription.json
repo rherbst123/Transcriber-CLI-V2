@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_c223f60b8c024adeb8520572",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.meta.llama3-2-90b-instruct-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: R. Kemp\ncollectedBy: R. Kemp\nsecondaryCollectors: N/A\nrecordNumber: 1911\nverbatimEventDate: 1911\nminimumEventDate: 1911-00-00\nmaximumEventDate: N/A\nverbatimIdentification: Orthostichella capillaris (Kindb.) B.H. Allen & Magill\nlatestScientificName: Orthostichella capillaris\nidentifiedBy: R. Kemp\nverbatimDateIdentified: N/A\nassociatedTaxa: N/A\ncountry: Kenya\nfirstPoliticalUnit: N/A\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: Baringo, Brit. East Africa; on trees\nlocality: Baringo, on trees\nhabitat: N/A\nverbatimElevation: N/A\nverbatimCoordinates: N/A\notherCatalogNumbers: N/A\noriginalMethod: Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 166
+  },
+  "image_name": "0019_C2022801F.jpg",
+  "timestamp": "2025-07-21T16:34:36.116573Z"
+}
