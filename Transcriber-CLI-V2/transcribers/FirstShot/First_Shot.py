@@ -16,6 +16,7 @@ All models are listed below obviously, All this really is a fancy api call, Just
 # List of available models
 AVAILABLE_MODELS = [
     "us.anthropic.claude-3-sonnet-20240229-v1:0",
+    "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
     "us.anthropic.claude-opus-4-20250514-v1:0",
     "us.anthropic.claude-sonnet-4-20250514-v1:0",
     "us.meta.llama3-2-90b-instruct-v1:0",

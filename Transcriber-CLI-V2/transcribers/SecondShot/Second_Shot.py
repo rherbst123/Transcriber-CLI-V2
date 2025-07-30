@@ -14,6 +14,7 @@ from helpers.json_output import save_json_transcription, create_batch_json_file,
 
 AVAILABLE_MODELS = [
     "us.anthropic.claude-3-sonnet-20240229-v1:0",
+    "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
     "us.anthropic.claude-opus-4-20250514-v1:0",
     "us.anthropic.claude-sonnet-4-20250514-v1:0",
     "us.meta.llama3-2-90b-instruct-v1:0",
@@ -55,7 +56,7 @@ def convert_to_png(image_path):
     return png_bytes.getvalue()
 
 def _clean_response_text(response_text):
-    """Clean up response text by removing common prefixes"""
+    #Bad way of doing this but this is how it goes sometimes
     prefixes_to_remove = [
         "Here is the list of fields with the information from the herbarium label:",
         "Here are the fields extracted from the herbarium label:",
@@ -106,7 +107,8 @@ def process_image(image_path, prompt_path, model_id):
     response = bedrock_runtime.converse(
         modelId=model_id,
         messages=messages,
-        inferenceConfig={"temperature": 0.25}
+        #I like to think creatively
+        inferenceConfig={"temperature": 0.15}
     )
     
     response_text = response["output"]["message"]["content"][0]["text"]
@@ -195,14 +197,17 @@ def verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, m
             first_shot_text = first_shot_text.encode('utf-8', errors='replace').decode('utf-8')
             
             # Create verification prompt
-            verification_prompt = f"""You are an expert verifier reviewing a herbarium label transcription.
+            verification_prompt = f"""You are an expert Botanist verifier reviewing a herbarium label transcription.
 
 Please verify the following transcription against the image and correct any errors:
 
 {first_shot_text}
 
 Return the corrected transcription in the same format. If the transcription is accurate, return it unchanged.
-If you find information that is not entered or can be applied to new fields such as first and second political unit. Please enter the information
+If you find information that is not entered or can be applied to new fields such as first and second political unit and Municipality. 
+The Locality field contains a lot of clues as to detailed locations
+Please enter the information
+Do not Create any new Fields, The fields set are as standard and dont need to be expanded upon
 Do not say anything else, please just return the corrected transcription"""
             
             # Create temporary prompt file with explicit UTF-8 encoding

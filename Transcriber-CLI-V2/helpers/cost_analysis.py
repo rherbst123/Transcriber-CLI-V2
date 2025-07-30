@@ -14,7 +14,7 @@ def get_output_base_path():
             return desktop_path / "Finished Transcriptions"
     
     # On Unix systems or if Desktop doesn't exist, use a directory in home
-    return home_dir / "Transcriber_Output"
+    return home_dir / "Finished Transcriptions"
 
 class CostTracker:
     # AWS Bedrock pricing per 1K tokens (updated from AWS pricing page)
@@ -176,20 +176,24 @@ class CostTracker:
         
         return "\n".join(report)
     
-    def save_report_to_desktop(self, run_name=None):
-        """Save cost report using cross-platform path"""
-        # Create the base folder structure using cross-platform path
-        reports_folder = get_output_base_path()
+    def save_report_to_desktop(self, run_name=None, target_dir=None):
+        """Save cost report to specified directory or default location"""
+        # Use target directory if provided, otherwise use default
+        if target_dir:
+            reports_folder = Path(target_dir)
+        else:
+            reports_folder = get_output_base_path()
+        
         reports_folder.mkdir(parents=True, exist_ok=True)
         
         # Create the filename
         if run_name:
-            filename = f"bedrock_cost_analysis_{run_name}.txt"
+            filename = f"{run_name}_cost_analysis.txt"
         else:
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             filename = f"bedrock_cost_analysis_{timestamp}.txt"
         
-        # Save to the main folder
+        # Save to the specified folder
         filepath = reports_folder / filename
         
         report = self.generate_report()

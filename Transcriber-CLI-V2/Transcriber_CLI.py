@@ -1,46 +1,57 @@
-from art import *
+from art import tprint
 from transcribers.FirstShot import First_Shot
 from transcribers.SecondShot import Second_Shot
 from helpers.cost_analysis import cost_tracker
 from helpers.txt_to_csv import convert_json_to_csv
+from Validation.validate_csv_names import validate_csv_scientific_names
 import os
+import re
+import stat
 from pathlib import Path
 import requests
 from urllib.parse import urlparse
 import shutil
+from datetime import datetime
+
+
+
 
 def select_shots():
     while True:
-        choice = input("\nChoose processing mode:\n1. One shot\n2. Two shots\nEnter choice (1-2): ")
+        choice = input("\nChoose processing mode:\n1. One shot\n2. Two shots\nEnter choice (1-2) or 'back' to go back: ")
         if choice in ['1', '2']:
             return int(choice)
-        print("Please enter 1 or 2")
+        elif choice.lower() == 'back':
+            return 'back'
+        print("Please enter 1, 2, or 'back'")
 
 def select_image_source():
     while True:
-        choice = input("\nChoose image source:\n1. Local images\n2. URL download\nEnter choice (1-2): ")
+        choice = input("\nChoose image source:\n1. Local images\n2. URL download\nEnter choice (1-2) or 'back' to go back: ")
         if choice in ['1', '2']:
             return choice == '2'  # Returns True for URL, False for local
-        print("Please enter 1 or 2")
+        elif choice.lower() == 'back':
+            return 'back'
+        print("Please enter 1, 2, or 'back'")
 
 
 
 def get_run_name():
-    run_name = input("\nEnter a name for this run (or press Enter for default): ").strip()
-    if not run_name:
-        from datetime import datetime
-        run_name = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    # Sanitize filename for cross-platform compatibility
-    import re
-    # Remove characters that are problematic on both Windows and Unix
-    run_name = re.sub(r'[<>:"/\\|?*\x00-\x1f]', '_', run_name)
-    # Remove trailing dots and spaces (Windows issue)
-    run_name = run_name.rstrip('. ')
-    # Ensure it's not empty after sanitization
-    if not run_name:
-        from datetime import datetime
-        run_name = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    return run_name
+    while True:
+        run_name = input("\nEnter a name for this run (or press Enter for default): ").strip()
+        if run_name.lower() == 'back':
+            return 'back'
+        if not run_name:
+            run_name = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+        # Sanitize filename for cross-platform compatibility
+        # Remove characters that are problematic on both Windows and Unix
+        run_name = re.sub(r'[<>:"/\\|?*\x00-\x1f]', '_', run_name)
+        # Remove trailing dots and spaces (Windows issue)
+        run_name = run_name.rstrip('. ')
+        # Ensure it's not empty after sanitization
+        if not run_name:
+            run_name = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+        return run_name
 
 def safe_rmtree(path):
     """Safely remove directory tree, handling Windows permission issues"""
@@ -110,131 +121,238 @@ def select_prompt():
             print(f"{len(prompt_files) + 1}. Custom filepath")
             
             while True:
+                choice_input = input(f"\nSelect prompt (1-{len(prompt_files) + 1}) or 'back' to go back: ")
+                if choice_input.lower() == 'back':
+                    return 'back'
                 try:
-                    choice = int(input(f"\nSelect prompt (1-{len(prompt_files) + 1}): "))
+                    choice = int(choice_input)
                     if 1 <= choice <= len(prompt_files):
                         return os.path.join(prompts_dir, prompt_files[choice-1])
                     elif choice == len(prompt_files) + 1:
-                        return input("Enter custom prompt filepath: ")
+                        custom_path = input("Enter custom prompt filepath (or 'back' to go back): ")
+                        if custom_path.lower() == 'back':
+                            continue
+                        return custom_path
                     print(f"Please enter a number between 1 and {len(prompt_files) + 1}")
                 except ValueError:
-                    print("Please enter a valid number")
+                    print("Please enter a valid number or 'back'")
     
-    return input("Enter prompt filepath: ")
+    while True:
+        prompt_path = input("Enter prompt filepath (or 'back' to go back): ")
+        if prompt_path.lower() == 'back':
+            return 'back'
+        return prompt_path
 
 def get_output_base_path():
     """Get the base output path, cross-platform compatible"""
     home_dir = Path(os.path.expanduser("~"))
     
-    # On Windows, prefer Desktop if it exists
-    if os.name == 'nt':  # Windows
-        desktop_path = home_dir / "Desktop"
-        if desktop_path.exists():
-            return desktop_path / "Finished Transcriptions"
+    # Try Desktop first on all systems
+    desktop_path = home_dir / "Desktop"
+    if desktop_path.exists():
+        return desktop_path / "Finished Transcriptions"
     
-    # On Unix systems or if Desktop doesn't exist, use a directory in home
-    return home_dir / "Transcriber_Output"
+    # Fallback to home directory if Desktop doesn't exist
+    return home_dir / "Finished Transcriptions"
+
+def show_images_in_folder(folder_path):
+    """Display images found in the folder"""
+    image_extensions = {'.jpg', '.jpeg', '.png', '.gif', '.bmp', '.tiff', '.webp'}
+    images = [f for f in os.listdir(folder_path) if os.path.splitext(f.lower())[1] in image_extensions]
+    
+    if not images:
+        print("No image files found in the folder.")
+        return
+    
+    print(f"\nFound {len(images)} image(s):")
+    for i, img in enumerate(sorted(images), 1):
+        print(f"{i:3d}. {img}")
 
 def get_images_folder(use_urls):
-    if use_urls:
-        url_file = input("\nEnter path to .txt file containing image URLs: ")
-        # Use cross-platform path for downloads
-        downloads_dir = get_output_base_path() / "Downloaded_Images"
-        download_dir = str(downloads_dir)
-        
-        if download_images_from_urls(url_file, download_dir):
-            return download_dir, "downloaded_images"
+    while True:
+        if use_urls:
+            url_file = input("\nEnter path to .txt file containing image URLs (or 'back' to go back): ")
+            if url_file.lower() == 'back':
+                return 'back', None
+            # Use cross-platform path for downloads within temp area
+            downloads_dir = get_output_base_path() / "temp_downloads"
+            download_dir = str(downloads_dir)
+            
+            if download_images_from_urls(url_file, download_dir):
+                return download_dir, "downloaded_images"
+            else:
+                print("Failed to download images. Please try again.")
+                continue
         else:
-            return None, None
-    else:
-        folder_path = input("\nEnter path to local images folder: ")
-        if not os.path.exists(folder_path):
-            print(f"Error: Folder not found at {folder_path}")
-            return None, None
-        return folder_path, os.path.basename(folder_path)
+            folder_path = input("\nEnter path to local images folder (or 'back' to go back): ")
+            if folder_path.lower() == 'back':
+                return 'back', None
+            if not os.path.exists(folder_path):
+                print(f"Error: Folder not found at {folder_path}")
+                continue
+            
+            # Ask if user wants to see the images in the folder
+            while True:
+                show_choice = input("\nDo you want to see the images in this folder? (y/n): ").lower()
+                if show_choice in ['y', 'yes']:
+                    show_images_in_folder(folder_path)
+                    break
+                elif show_choice in ['n', 'no']:
+                    break
+                else:
+                    print("Please enter 'y' or 'n'")
+            
+            return folder_path, os.path.basename(folder_path)
+
+
+def rename_csv_files(source_dir, run_name, shot_type):
+    """Rename CSV files with run name and shot type"""
+    for csv_file in source_dir.glob('*.csv'):
+        new_name = f"{run_name}_{shot_type}.csv"
+        new_path = source_dir / new_name
+        csv_file.rename(new_path)
+        print(f"Renamed {csv_file.name} to {new_name}")
+        return new_path  # Return the new path for moving
+
+def move_json_files_to_shot_folder(source_dir, raw_dir, shot_name):
+    """Move all JSON files from source directory to shot-specific folder in Raw Transcriptions"""
+    shot_dir = raw_dir / shot_name
+    shot_dir.mkdir(parents=True, exist_ok=True)
+    
+    for json_file in source_dir.glob('*.json'):
+        destination = shot_dir / json_file.name
+        shutil.move(str(json_file), str(destination))
+        #print(f"Moved {json_file.name} to {shot_name} folder")
+
+def configure_transcription():
+    """Handle the configuration flow with back navigation"""
+    config = {}
+    step = 'run_name'
+    
+    while True:
+        if step == 'run_name':
+            run_name = get_run_name()
+            if run_name == 'back':
+                print("Cannot go back from the first step.")
+                continue
+            config['run_name'] = run_name
+            print(f"Run name: {run_name}")
+            step = 'shots'
+            
+        elif step == 'shots':
+            num_shots = select_shots()
+            if num_shots == 'back':
+                step = 'run_name'
+                continue
+            config['num_shots'] = num_shots
+            step = 'prompt'
+            
+        elif step == 'prompt':
+            prompt_path = select_prompt()
+            if prompt_path == 'back':
+                step = 'shots'
+                continue
+            print(f"Using: {prompt_path}")
+            if not os.path.exists(prompt_path):
+                print(f"Error: Prompt file not found at {prompt_path}")
+                continue
+            config['prompt_path'] = prompt_path
+            step = 'image_source'
+            
+        elif step == 'image_source':
+            use_urls = select_image_source()
+            if use_urls == 'back':
+                step = 'prompt'
+                continue
+            config['use_urls'] = use_urls
+            step = 'images_folder'
+            
+        elif step == 'images_folder':
+            base_folder, folder_name = get_images_folder(config['use_urls'])
+            if base_folder == 'back':
+                step = 'image_source'
+                continue
+            config['base_folder'] = base_folder
+            config['folder_name'] = folder_name
+            break
+    
+    return config
 
 def main():
     tprint("Transcriber-CLI-V2")
     print("Created by: Riley Herbst")
     print(85*"=")
     print("Welcome to the Field Museum transcriber-cli, this is an all-purpose image transcriber.")
+    print("(You can type 'back' at any step to return to the previous choice)")
     
-    # Create the folder structure for finished transcriptions using cross-platform path
-    desktop_path = get_output_base_path()
-    single_shot_folder = desktop_path / "Single shot"
-    dual_shot_folder = desktop_path / "Dual shot"
+    # Create the main output directory
+    output_base = get_output_base_path()
+    output_base.mkdir(parents=True, exist_ok=True)
     
-    # Create the folders if they don't exist
-    single_shot_folder.mkdir(parents=True, exist_ok=True)
-    dual_shot_folder.mkdir(parents=True, exist_ok=True)
+    print(f"Finished transcriptions will be saved to: {output_base}")
     
-    print(f"Finished transcriptions will be saved to: {desktop_path}")
+    # Configure transcription with back navigation
+    config = configure_transcription()
+    run_name = config['run_name']
+    num_shots = config['num_shots']
+    prompt_path = config['prompt_path']
+    base_folder = config['base_folder']
+    folder_name = config['folder_name']
     
+    # Create run-specific output directory
+    run_output_dir = get_output_base_path() / run_name
+    run_output_dir.mkdir(parents=True, exist_ok=True)
     
-    # Get run name
-    run_name = get_run_name()
-    print(f"Run name: {run_name}")
-    
-    # Select number of shots
-    num_shots = select_shots()
-    
-    # Get prompt file
-    prompt_path = select_prompt()
-    print(f"Using: {prompt_path}")
-    if not os.path.exists(prompt_path):
-        print(f"Error: Prompt file not found at {prompt_path}")
-        return
+    # Create Raw Transcriptions folder
+    raw_transcriptions_dir = run_output_dir / "Raw Transcriptions"
     
     try:
         if num_shots == 1:
-            # One shot - user chooses image source
-            use_urls = select_image_source()
-            base_folder, folder_name = get_images_folder(use_urls)
-            if not base_folder:
-                print("Exiting due to folder selection error.")
-                return
-            
             print("\nSelect model for image processing:")
             model = First_Shot.select_model()
             
-            output_dir = Path("FirstShot_results") / run_name
-            output_dir.mkdir(exist_ok=True, parents=True)
+            # Use run-specific directory for output
+            output_dir = run_output_dir
             First_Shot.process_images(base_folder, prompt_path, output_dir, run_name, model_id=model)
             
             # Convert JSON files to CSV
             print("\n=== Converting JSON files to CSV ===")
             convert_json_to_csv(str(output_dir))
+            
+            # Validate scientific names in CSV files
+            print("\n=== Validating Scientific Names ===")
+            for csv_file in output_dir.glob('*.csv'):
+                validate_csv_scientific_names(csv_file)
+            
+            # Rename CSV files
+            print("\n=== Renaming CSV files ===")
+            rename_csv_files(output_dir, run_name, "single_shot")
+            
+            # Move JSON files to Raw Transcriptions folder
+            print("\n=== Moving JSON files to Raw Transcriptions folder ===")
+            move_json_files_to_shot_folder(output_dir, raw_transcriptions_dir, "Single Shot")
         
         else:  # Two shots
             print("\nTwo shots mode: Running first pass, then second pass using first pass results")
             
-            # Get images (either local or from URLs)
-            use_urls = select_image_source()
-            base_folder, folder_name = get_images_folder(use_urls)
-            if not base_folder:
-                print("Exiting due to folder selection error.")
-                return
-            
-            # Create output directories
-            output_dir1 = Path("FirstShot_results") / run_name
-            output_dir1.mkdir(exist_ok=True, parents=True)
-            output_dir2 = Path("SecondShot_results") / run_name
-            output_dir2.mkdir(exist_ok=True, parents=True)
-            
-            # Create the dual shot folder using cross-platform path
-            dual_shot_folder = get_output_base_path() / "Dual shot" / run_name
-            dual_shot_folder.mkdir(parents=True, exist_ok=True)
+            # Create temporary processing directories
+
+            #Change filenames
+            temp_first_dir = run_output_dir / "temp_first"
+            temp_second_dir = run_output_dir / "temp_second"
+            temp_first_dir.mkdir(exist_ok=True)
+            temp_second_dir.mkdir(exist_ok=True)
             
             # Run first shot
             print("\n=== Running First Pass ===")
             print("\nSelect model for first pass processing:")
             model1 = First_Shot.select_model()
-            First_Shot.process_images(base_folder, prompt_path, output_dir1, run_name, model_id=model1)
+            First_Shot.process_images(base_folder, prompt_path, temp_first_dir, run_name, model_id=model1)
             print("\n=== Converting First Pass JSON files to CSV ===")
-            convert_json_to_csv(str(output_dir1))
+            convert_json_to_csv(str(temp_first_dir))
             
             # Find the batch JSON file from first shot
-            batch_file = list(output_dir1.glob(f"{run_name}_first_shot_transcriptions_batch.json"))
+            batch_file = list(temp_first_dir.glob(f"{run_name}_first_shot_transcriptions_batch.json"))
             if not batch_file:
                 print("Error: Could not find first shot batch JSON file. Skipping second shot.")
                 return
@@ -252,26 +370,50 @@ def main():
                 base_folder, 
                 prompt_path, 
                 batch_json_path, 
-                output_dir2, 
+                temp_second_dir, 
                 run_name, 
                 model_id=model2
             )
             
             # Convert second shot JSON files to CSV
             print("\n=== Converting Second Pass JSON files to CSV ===")
-            convert_json_to_csv(str(output_dir2))
+            convert_json_to_csv(str(temp_second_dir))
+            
+            # Rename and move CSV files to main run directory
+            print("\n=== Renaming and moving CSV files ===")
+            first_csv = rename_csv_files(temp_first_dir, run_name, "first_shot")
+            second_csv = rename_csv_files(temp_second_dir, run_name, "second_shot")
+            
+            if first_csv:
+                shutil.move(str(first_csv), str(run_output_dir / first_csv.name))
+            if second_csv:
+                shutil.move(str(second_csv), str(run_output_dir / second_csv.name))
+            
+            # Validate scientific names in CSV files
+            print("\n=== Validating Scientific Names ===")
+            for csv_file in run_output_dir.glob('*.csv'):
+                validate_csv_scientific_names(csv_file)
+                
+            # Move JSON files to shot-specific folders in Raw Transcriptions
+            print("\n=== Moving JSON files to Raw Transcriptions folders ===")
+            move_json_files_to_shot_folder(temp_first_dir, raw_transcriptions_dir, "First Shot")
+            move_json_files_to_shot_folder(temp_second_dir, raw_transcriptions_dir, "Second Shot")
+            
+            # Clean up temporary directories
+            shutil.rmtree(temp_first_dir)
+            shutil.rmtree(temp_second_dir)
         
         print("\nTranscription and CSV conversion completed, Thank you!")
         
-        # Generate and save cost analysis report
+        # Generate and save cost analysis report directly to run directory
         print("\n=== Generating Cost Analysis Report ===")
-        cost_tracker.save_report_to_desktop(run_name)
+        cost_tracker.save_report_to_desktop(run_name, target_dir=str(run_output_dir))
         
     except Exception as e:
         print(f"\nError during transcription process: {str(e)}")
         # Still generate cost report even if there was an error
         print("\n=== Generating Cost Analysis Report ===")
-        cost_tracker.save_report_to_desktop(run_name)
+        cost_tracker.save_report_to_desktop(run_name, target_dir=str(run_output_dir))
 
 if __name__ == "__main__":
     main()

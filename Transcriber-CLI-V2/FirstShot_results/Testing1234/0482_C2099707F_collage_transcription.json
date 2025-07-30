@@ -1,0 +1,22 @@
+{
+  "id": "msg_bdrk_4f3c0d6af4ca4ae5b77729f5",
+  "type": "message",
+  "role": "assistant",
+  "model": "us.amazon.nova-premier-v1:0",
+  "content": [
+    {
+      "type": "text",
+      "text": "verbatimCollectors: Joann W. Flock\ncollectedBy: J. W. Flock\nsecondaryCollectors: N/A\nrecordNumber: NZB-224\nverbatimEventDate: 29.X.1983\nminimumEventDate: 1983-10-29\nmaximumEventDate: N/A\nverbatimIdentification: BARTRAMIA PAPILLATA Hook. f. & Wils.\nlatestScientificName: Bartramia papillata\nidentifiedBy: N/A\nverbatimDateIdentified: N/A\nassociatedTaxa: Nothofagus solandri var. cliffortioides\ncountry: New Zealand\nfirstPoliticalUnit: South Island\nsecondPoliticalUnit: N/A\nmunicipality: N/A\nverbatimLocality: CRAIGIEBURN FOREST PARK, CRAIGIEBURN RANGE, SOUTHERN ALPS. UPPER CAVE STREAM BRIDGE TO LYNDON SADDLE\nlocality: Craigieburn Forest Park, Craigieburn Range, Southern Alps. Upper Cave Stream Bridge to Lyndon Saddle\nhabitat: NATIVE MOUNTAIN BEECH (NOTHOFAGUS SOLANDRI VAR. CLIFFORTIOIDES) WITH DENSE MOSS-LICHEN COVER. Along stream bank.\nverbatimElevation: 950-1220 MSM.\nverbatimCoordinates: 171°43'E, 43°08'S\notherCatalogNumbers: C2099707F\noriginalMethod: Mix of Handwritten and Typed\ntypeStatus: no type status"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 1848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 253
+  },
+  "image_name": "0482_C2099707F_collage.jpg",
+  "timestamp": "2025-07-28T16:25:05.381329Z"
+}

@@ -103,21 +103,58 @@ def parse_transcription_text(transcription_text, image_name):
     
     return data
 
-def get_fieldnames_in_order(data):
-    fieldnames = []
+def get_standard_fieldnames():
+    """Return standardized field names in consistent order"""
+    return [
+        "Image",
+        "verbatimCollectors",
+        "collectedBy", 
+        "secondaryCollectors",
+        "recordNumber",
+        "verbatimEventDate",
+        "minimumEventDate",
+        "maximumEventDate",
+        "verbatimIdentification",
+        "latestScientificName",
+        "identifiedBy",
+        "verbatimDateIdentified",
+        "associatedTaxa",
+        "country",
+        "firstPoliticalUnit",
+        "secondPoliticalUnit",
+        "municipality",
+        "verbatimLocality",
+        "locality",
+        "habitat",
+        "verbatimElevation",
+        "verbatimCoordinates",
+        "otherCatalogNumbers",
+        "originalMethod",
+        "typeStatus"
+    ]
+
+def normalize_data_structure(data):
+    """Ensure all records have the same fields with N/A for missing values"""
+    standard_fields = get_standard_fieldnames()
+    normalized_data = []
+    
     for record in data:
-        for key in record.keys():
-            if key not in fieldnames:
-                fieldnames.append(key)
-    return fieldnames
+        normalized_record = {}
+        for field in standard_fields:
+            normalized_record[field] = record.get(field, "N/A")
+        normalized_data.append(normalized_record)
+    
+    return normalized_data
 
 def write_to_csv(data, output_filename):
-    fieldnames = get_fieldnames_in_order(data)
+    """Write data to CSV with standardized structure"""
+    normalized_data = normalize_data_structure(data)
+    fieldnames = get_standard_fieldnames()
     
     with open(output_filename, "w", newline="", encoding="utf-8") as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
-        for record in data:
+        for record in normalized_data:
             writer.writerow(record)
 
 def convert_json_to_csv(json_folder_path):
@@ -184,7 +221,7 @@ def convert_json_to_csv(json_folder_path):
             print("No data found to convert")
             return None
         
-        # Write to CSV in both locations
+        # Write to CSV in both locations with standardized format
         write_to_csv(data, original_csv_path)  # Original location for backward compatibility
         write_to_csv(data, export_csv_path)    # New location in the organized folder structure
         
@@ -195,6 +232,49 @@ def convert_json_to_csv(json_folder_path):
         import traceback
         traceback.print_exc()
         return None
+
+def standardize_existing_csv(csv_file_path):
+    """Standardize an existing CSV file to ensure consistent column structure"""
+    if not os.path.exists(csv_file_path):
+        print(f"CSV file not found: {csv_file_path}")
+        return False
+    
+    try:
+        # Read existing CSV data
+        data = []
+        with open(csv_file_path, 'r', encoding='utf-8') as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                data.append(row)
+        
+        if not data:
+            print(f"No data found in {csv_file_path}")
+            return False
+        
+        # Write back with standardized structure
+        write_to_csv(data, csv_file_path)
+        print(f"Standardized CSV file: {csv_file_path}")
+        return True
+        
+    except Exception as e:
+        print(f"Error standardizing CSV {csv_file_path}: {e}")
+        return False
+
+def standardize_all_csv_files(base_directory):
+    """Find and standardize all CSV files in the project"""
+    base_path = Path(base_directory)
+    csv_files = list(base_path.rglob("*.csv"))
+    
+    if not csv_files:
+        print("No CSV files found to standardize")
+        return
+    
+    print(f"Found {len(csv_files)} CSV files to standardize")
+    
+    for csv_file in csv_files:
+        standardize_existing_csv(csv_file)
+    
+    print("CSV standardization complete")
 
 def convert_txt_to_csv(txt_file_path):
     """Legacy function - now redirects to JSON conversion if folder is provided"""
