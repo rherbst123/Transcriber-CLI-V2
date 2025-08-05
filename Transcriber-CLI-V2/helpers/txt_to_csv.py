@@ -88,6 +88,17 @@ def parse_transcription_text(transcription_text, image_name):
             if not value or value.lower() in ['n/a', 'na', '']:
                 value = "N/A"
             
+            # Format scientific names - capitalize first word, lowercase the rest
+            if key == "latestScientificName" and value != "N/A":
+                # Split the name into parts and format properly
+                name_parts = value.split()
+                if name_parts:
+                    # Genus should be capitalized, species and below should be lowercase
+                    name_parts[0] = name_parts[0].capitalize()
+                    for i in range(1, len(name_parts)):
+                        name_parts[i] = name_parts[i].lower()
+                    value = " ".join(name_parts)
+            
             # If we see a field we've already seen, start a new record
             if key in field_counts and key != "Image":
                 if current_record and len(current_record) > 1:  # More than just Image field

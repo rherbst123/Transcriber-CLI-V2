@@ -14,8 +14,7 @@ import shutil
 from datetime import datetime
 
 
-
-
+#Determine how many shots to do
 def select_shots():
     while True:
         choice = input("\nChoose processing mode:\n1. One shot\n2. Two shots\nEnter choice (1-2) or 'back' to go back: ")
@@ -25,6 +24,8 @@ def select_shots():
             return 'back'
         print("Please enter 1, 2, or 'back'")
 
+
+#Local or URL download Images
 def select_image_source():
     while True:
         choice = input("\nChoose image source:\n1. Local images\n2. URL download\nEnter choice (1-2) or 'back' to go back: ")
@@ -35,7 +36,7 @@ def select_image_source():
         print("Please enter 1, 2, or 'back'")
 
 
-
+#Name the run instead of having a bunch of dates and shitty formatting
 def get_run_name():
     while True:
         run_name = input("\nEnter a name for this run (or press Enter for default): ").strip()
@@ -53,8 +54,10 @@ def get_run_name():
             run_name = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
         return run_name
 
+
+#The most stupid workaround to make this work on all platforms 
+#I hate you Bill Gates, you are on that list I know it. 
 def safe_rmtree(path):
-    """Safely remove directory tree, handling Windows permission issues"""
     if not os.path.exists(path):
         return
     
@@ -71,6 +74,7 @@ def safe_rmtree(path):
         else:
             raise
 
+#Pretty self explanitory
 def download_images_from_urls(url_file_path, download_dir):
     """Download images from URLs in a text file"""
     if not os.path.exists(url_file_path):
@@ -120,6 +124,7 @@ def select_prompt():
                 print(f"{i}. {prompt}")
             print(f"{len(prompt_files) + 1}. Custom filepath")
             
+            #Implementing Back options for if you make an oopsie 
             while True:
                 choice_input = input(f"\nSelect prompt (1-{len(prompt_files) + 1}) or 'back' to go back: ")
                 if choice_input.lower() == 'back':
@@ -143,6 +148,7 @@ def select_prompt():
             return 'back'
         return prompt_path
 
+#WHERE THE HELL ARE THE TRANSCRITPIONS GOING????????
 def get_output_base_path():
     """Get the base output path, cross-platform compatible"""
     home_dir = Path(os.path.expanduser("~"))
@@ -150,11 +156,13 @@ def get_output_base_path():
     # Try Desktop first on all systems
     desktop_path = home_dir / "Desktop"
     if desktop_path.exists():
+        #Right HERE :)
         return desktop_path / "Finished Transcriptions"
     
     # Fallback to home directory if Desktop doesn't exist
     return home_dir / "Finished Transcriptions"
 
+#Shows the number of images in the folder just as a double check for things. 
 def show_images_in_folder(folder_path):
     """Display images found in the folder"""
     image_extensions = {'.jpg', '.jpeg', '.png', '.gif', '.bmp', '.tiff', '.webp'}
@@ -168,8 +176,10 @@ def show_images_in_folder(folder_path):
     for i, img in enumerate(sorted(images), 1):
         print(f"{i:3d}. {img}")
 
+#Local or URL Images entering 
 def get_images_folder(use_urls):
     while True:
+        #User chooses URLS
         if use_urls:
             url_file = input("\nEnter path to .txt file containing image URLs (or 'back' to go back): ")
             if url_file.lower() == 'back':
@@ -184,6 +194,7 @@ def get_images_folder(use_urls):
                 print("Failed to download images. Please try again.")
                 continue
         else:
+            #User chooses Local images on Machine
             folder_path = input("\nEnter path to local images folder (or 'back' to go back): ")
             if folder_path.lower() == 'back':
                 return 'back', None
@@ -224,6 +235,7 @@ def move_json_files_to_shot_folder(source_dir, raw_dir, shot_name):
         shutil.move(str(json_file), str(destination))
         #print(f"Moved {json_file.name} to {shot_name} folder")
 
+#Wrapper for all the stuff before
 def configure_transcription():
     """Handle the configuration flow with back navigation"""
     config = {}
@@ -291,7 +303,7 @@ def main():
     
     print(f"Finished transcriptions will be saved to: {output_base}")
     
-    # Configure transcription with back navigation
+    # Configure transcription 
     config = configure_transcription()
     run_name = config['run_name']
     num_shots = config['num_shots']
@@ -303,7 +315,7 @@ def main():
     run_output_dir = get_output_base_path() / run_name
     run_output_dir.mkdir(parents=True, exist_ok=True)
     
-    # Create Raw Transcriptions folder
+    # Create Raw Transcriptions folder (.json files)
     raw_transcriptions_dir = run_output_dir / "Raw Transcriptions"
     
     try:
