@@ -1,0 +1,5 @@
+# Runtime dependencies for Transcriber-CLI-V2
+boto3
+Pillow
+requests
+art

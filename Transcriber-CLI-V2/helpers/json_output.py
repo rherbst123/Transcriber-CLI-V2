@@ -4,8 +4,8 @@ import uuid
 from datetime import datetime
 from pathlib import Path
 
-def create_json_response(image_name, transcription_text, model_id, input_tokens=0, output_tokens=0):
-    """Create a JSON response in the specified format"""
+def create_json_response(image_name, transcription_text, model_id, input_tokens=0, output_tokens=0, image_url=None):
+    """Create a JSON response in the specified format, optionally including image_url"""
     
     # Generate a unique message ID
     msg_id = f"msg_bdrk_{uuid.uuid4().hex[:24]}"
@@ -34,13 +34,17 @@ def create_json_response(image_name, transcription_text, model_id, input_tokens=
         "timestamp": datetime.utcnow().isoformat() + "Z"
     }
     
+    # Include the source URL if provided
+    if image_url:
+        json_response["image_url"] = image_url
+    
     return json_response
 
-def save_json_transcription(output_dir, date_folder, shot_type, image_name, transcription_text, model_id, input_tokens=0, output_tokens=0):
+def save_json_transcription(output_dir, date_folder, shot_type, image_name, transcription_text, model_id, input_tokens=0, output_tokens=0, image_url=None):
     """Save individual JSON transcription file"""
     
     # Create JSON response
-    json_response = create_json_response(image_name, transcription_text, model_id, input_tokens, output_tokens)
+    json_response = create_json_response(image_name, transcription_text, model_id, input_tokens, output_tokens, image_url=image_url)
     
     # Create individual JSON file for this transcription
     json_filename = f"{Path(image_name).stem}_transcription.json"

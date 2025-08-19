@@ -137,6 +137,7 @@ def verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, m
     all_transcriptions = []
     for i, transcription in enumerate(transcriptions, 1):
         image_name = transcription['image_name']
+        image_url = transcription.get('image_url')  # carry over if present
         
         # Check if this transcription has an error
         if 'error' in transcription:
@@ -223,17 +224,17 @@ Do not say anything else, please just return the corrected transcription"""
                 input_tokens = cost_tracker.estimate_tokens(verification_prompt)
                 output_tokens = cost_tracker.estimate_tokens(response_text, is_output=True)
                 
-                # Save individual JSON
+                # Save individual JSON, keep original image_url if any
                 json_filepath = save_json_transcription(
                     output_dir, run_name, "second_shot_verification", 
                     image_name, response_text, model_id, 
-                    input_tokens, output_tokens
+                    input_tokens, output_tokens, image_url=image_url
                 )
                 
-                # Create response for batch
+                # Create response for batch, include image_url
                 json_response = create_json_response(
                     image_name, response_text, model_id, 
-                    input_tokens, output_tokens
+                    input_tokens, output_tokens, image_url=image_url
                 )
                 
                 print(f"Verification JSON saved to: {json_filepath}")

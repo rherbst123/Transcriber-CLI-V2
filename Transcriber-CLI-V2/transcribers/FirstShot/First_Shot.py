@@ -163,6 +163,20 @@ def process_images(base_folder, prompt_path, output_dir, date_folder, model_id=N
         images_folder = base_folder
         
     print(f"First Shot processing images from: {images_folder}")
+
+    # If this is a downloaded images folder, attempt to load the URL map
+    url_map = {}
+    try:
+        map_path = Path(images_folder) / 'url_map.json'
+        if map_path.exists():
+            import json
+            with open(map_path, 'r', encoding='utf-8') as mf:
+                url_map = json.load(mf)
+            # Normalize keys to just filenames (no directories)
+            url_map = {Path(k).name: v for k, v in url_map.items()}
+            print(f"Loaded URL map with {len(url_map)} entries")
+    except Exception as e:
+        print(f"Warning: Could not load URL map: {e}")
     
     # Get all image files
     image_extensions = ['.png', '.jpg', '.jpeg']
@@ -209,19 +223,22 @@ def process_images(base_folder, prompt_path, output_dir, date_folder, model_id=N
                 user_message = f.read().strip()
             input_tokens = cost_tracker.estimate_tokens(user_message)
             output_tokens = cost_tracker.estimate_tokens(response_text, is_output=True)
+
+            # Lookup source URL if available
+            image_url = url_map.get(image_path.name)
             
-            # Save individual JSON file
+            # Save individual JSON file, including URL if available
             json_filepath = save_json_transcription(
                 output_dir, date_folder, "first_shot", 
                 image_path.name, response_text, model_id, 
-                input_tokens, output_tokens
+                input_tokens, output_tokens, image_url=image_url
             )
             
             # Add to batch collection
             from helpers.json_output import create_json_response
             json_response = create_json_response(
                 image_path.name, response_text, model_id, 
-                input_tokens, output_tokens
+                input_tokens, output_tokens, image_url=image_url
             )
             all_transcriptions.append(json_response)
             

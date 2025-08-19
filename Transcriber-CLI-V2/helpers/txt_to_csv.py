@@ -36,8 +36,9 @@ def parse_json_files(json_folder):
             with open(json_file, 'r', encoding='utf-8') as f:
                 json_data = json.load(f)
             
-            # Extract image name
+            # Extract image name and possible source URL
             image_name = json_data.get('image_name', json_file.stem)
+            image_url = json_data.get('image_url')
             
             # Extract transcription text from content
             transcription_text = ""
@@ -52,7 +53,7 @@ def parse_json_files(json_folder):
                 continue
             
             # Parse the transcription text to extract fields
-            records = parse_transcription_text(transcription_text, image_name)
+            records = parse_transcription_text(transcription_text, image_name, image_url=image_url)
             data.extend(records)
             
         except Exception as e:
@@ -61,13 +62,13 @@ def parse_json_files(json_folder):
     
     return data
 
-def parse_transcription_text(transcription_text, image_name):
+def parse_transcription_text(transcription_text, image_name, image_url=None):
     """Parse transcription text to extract structured data"""
     lines = transcription_text.splitlines()
     data = []
     
     # Split into multiple records if there are duplicate field names
-    current_record = {"Image": image_name}
+    current_record = {"Image": image_name, "ImageURL": image_url or "N/A"}
     field_counts = {}
     
     for line in lines:
@@ -103,7 +104,7 @@ def parse_transcription_text(transcription_text, image_name):
             if key in field_counts and key != "Image":
                 if current_record and len(current_record) > 1:  # More than just Image field
                     data.append(current_record)
-                current_record = {"Image": image_name}
+                current_record = {"Image": image_name, "ImageURL": image_url or "N/A"}
                 field_counts = {}
             
             current_record[key] = value
@@ -118,6 +119,7 @@ def get_standard_fieldnames():
     """Return standardized field names in consistent order"""
     return [
         "Image",
+        "ImageURL",
         "verbatimCollectors",
         "collectedBy", 
         "secondaryCollectors",

@@ -3,7 +3,7 @@ from transcribers.FirstShot import First_Shot
 from transcribers.SecondShot import Second_Shot
 from helpers.cost_analysis import cost_tracker
 from helpers.txt_to_csv import convert_json_to_csv
-from Validation.validate_csv_names import validate_csv_scientific_names
+from Validation.validate_scientific_names import validate_csv_scientific_names
 import os
 import re
 import stat
@@ -12,6 +12,7 @@ import requests
 from urllib.parse import urlparse
 import shutil
 from datetime import datetime
+import json
 
 
 #Determine how many shots to do
@@ -76,7 +77,7 @@ def safe_rmtree(path):
 
 #Pretty self explanitory
 def download_images_from_urls(url_file_path, download_dir):
-    """Download images from URLs in a text file"""
+    """Download images from URLs in a text file and save a filename->URL map"""
     if not os.path.exists(url_file_path):
         print(f"Error: URL file not found at {url_file_path}")
         return False
@@ -91,6 +92,7 @@ def download_images_from_urls(url_file_path, download_dir):
         urls = [line.strip() for line in f if line.strip()]
     
     print(f"\nDownloading {len(urls)} images...")
+    url_map = {}
     for i, url in enumerate(urls, 1):
         try:
             response = requests.get(url, stream=True)
@@ -105,9 +107,21 @@ def download_images_from_urls(url_file_path, download_dir):
                 for chunk in response.iter_content(chunk_size=8192):
                     f.write(chunk)
             
+            # Track mapping of saved filename to original URL
+            url_map[filename] = url
+            
             print(f"Downloaded {i}/{len(urls)}: {filename}")
         except Exception as e:
             print(f"Failed to download {url}: {e}")
+    
+    # Save URL map for later enrichment of JSON/CSV
+    try:
+        map_path = os.path.join(download_dir, 'url_map.json')
+        with open(map_path, 'w', encoding='utf-8') as mf:
+            json.dump(url_map, mf, indent=2, ensure_ascii=False)
+        print(f"Saved URL map to {map_path}")
+    except Exception as e:
+        print(f"Warning: Could not save URL map: {e}")
     
     return True
 
