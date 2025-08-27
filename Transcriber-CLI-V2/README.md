@@ -32,8 +32,7 @@ Transcriber CLI is designed to process and transcribe text from herbarium specim
    git clone https://github.com/rherbst123/Transcriber-CLI-V2
    cd Transcriber_CLI
    ```
-2. 
-    While a virtual enviroment is not required it is reccomended 
+2. While a virtual enviroment is not required it is reccomended 
    ```
    python3 -m venv "Whatever you want to call the venv"
    ```
@@ -96,7 +95,7 @@ The tool uses specialized prompts for herbarium label transcription, located in 
 
 
 
-Created by Riley Herbst, for the Field Museum. With much thanks to the following: Matt Von Konrat, Jeff Gwilliam, Dan Stille 
+Created by Riley Herbst, for the Field Museum. With much thanks to the following incredible people: Matt Von Konrat, Jeff Gwilliam, Rick Ree, Dan Stille, Kimberly Hansen 
 
 
 

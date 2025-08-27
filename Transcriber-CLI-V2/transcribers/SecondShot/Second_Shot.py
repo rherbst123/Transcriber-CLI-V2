@@ -198,7 +198,7 @@ def verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, m
             first_shot_text = first_shot_text.encode('utf-8', errors='replace').decode('utf-8')
             
             # Create verification prompt
-            verification_prompt = f"""You are an expert Botanist verifier reviewing a herbarium label transcription.
+            verification_prompt = f"""You are an expert Botanist and Geography with a P.H.D level understanding verifier reviewing a herbarium label transcription.
 
 Please verify the following transcription against the image and correct any errors:
 
@@ -206,6 +206,9 @@ Please verify the following transcription against the image and correct any erro
 
 Return the corrected transcription in the same format. If the transcription is accurate, return it unchanged.
 If you find information that is not entered or can be applied to new fields such as first and second political unit and Municipality. 
+If you find that one of the fields for location is in an incorrect field please move it to the correct field. 
+If There is a lower level location such as municipality, but no country. Please work your way up and insert all higher level locations.
+Correct any mispelled locations of all ranges. Use georefrenced knowledge.
 The Locality field contains a lot of clues as to detailed locations
 Please enter the information
 Do not Create any new Fields, The fields set are as standard and dont need to be expanded upon
