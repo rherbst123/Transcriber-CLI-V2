@@ -7,8 +7,7 @@ from datetime import datetime
 from helpers.cost_analysis import cost_tracker
 from helpers.json_output import save_json_transcription, create_batch_json_file
 
-"""Hello, This portion of the script is for FULL Images. This is what looks over the full image for a good pass
-All models are listed below obviously, All this really is a fancy api call, Just an image and a prompt. """
+"First shot, Looks over the image imported and gives its best shot at a transcription"
 
 
 
@@ -16,7 +15,6 @@ All models are listed below obviously, All this really is a fancy api call, Just
 # List of available models
 AVAILABLE_MODELS = [
     "us.anthropic.claude-3-sonnet-20240229-v1:0",
-    "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
     "us.anthropic.claude-opus-4-20250514-v1:0",
     "us.anthropic.claude-sonnet-4-20250514-v1:0",
     "us.meta.llama3-2-90b-instruct-v1:0",
@@ -163,20 +161,6 @@ def process_images(base_folder, prompt_path, output_dir, date_folder, model_id=N
         images_folder = base_folder
         
     print(f"First Shot processing images from: {images_folder}")
-
-    # If this is a downloaded images folder, attempt to load the URL map
-    url_map = {}
-    try:
-        map_path = Path(images_folder) / 'url_map.json'
-        if map_path.exists():
-            import json
-            with open(map_path, 'r', encoding='utf-8') as mf:
-                url_map = json.load(mf)
-            # Normalize keys to just filenames (no directories)
-            url_map = {Path(k).name: v for k, v in url_map.items()}
-            print(f"Loaded URL map with {len(url_map)} entries")
-    except Exception as e:
-        print(f"Warning: Could not load URL map: {e}")
     
     # Get all image files
     image_extensions = ['.png', '.jpg', '.jpeg']
@@ -223,22 +207,19 @@ def process_images(base_folder, prompt_path, output_dir, date_folder, model_id=N
                 user_message = f.read().strip()
             input_tokens = cost_tracker.estimate_tokens(user_message)
             output_tokens = cost_tracker.estimate_tokens(response_text, is_output=True)
-
-            # Lookup source URL if available
-            image_url = url_map.get(image_path.name)
             
-            # Save individual JSON file, including URL if available
+            # Save individual JSON file
             json_filepath = save_json_transcription(
                 output_dir, date_folder, "first_shot", 
                 image_path.name, response_text, model_id, 
-                input_tokens, output_tokens, image_url=image_url
+                input_tokens, output_tokens
             )
             
             # Add to batch collection
             from helpers.json_output import create_json_response
             json_response = create_json_response(
                 image_path.name, response_text, model_id, 
-                input_tokens, output_tokens, image_url=image_url
+                input_tokens, output_tokens
             )
             all_transcriptions.append(json_response)
             
