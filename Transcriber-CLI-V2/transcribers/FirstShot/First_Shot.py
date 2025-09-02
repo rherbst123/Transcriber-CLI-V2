@@ -15,13 +15,17 @@ from helpers.json_output import save_json_transcription, create_batch_json_file
 # List of available models
 AVAILABLE_MODELS = [
     "us.anthropic.claude-3-sonnet-20240229-v1:0",
+    "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
     "us.anthropic.claude-opus-4-20250514-v1:0",
     "us.anthropic.claude-sonnet-4-20250514-v1:0",
     "us.meta.llama3-2-90b-instruct-v1:0",
     "us.meta.llama4-maverick-17b-instruct-v1:0",
     "us.amazon.nova-premier-v1:0",
     "us.amazon.nova-pro-v1:0",
-    "us.mistral.pixtral-large-2502-v1:0"
+    "us.amazon.nova-lite-v1:0",
+    "us.mistral.pixtral-large-2502-v1:0",
+    "us.anthropic.claude-opus-4-1-20250805-v1:0"
+
 ]
 
 def standardize_image(image_bytes):
