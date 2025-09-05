@@ -335,7 +335,7 @@ def process_images_segmentation(input_folder, output_folder, model_xml_path=None
     """
     # Default settings
     if model_xml_path is None:
-        model_xml_path = r"/home/riley/Documents/GitHub/TextCollage/models/openvino/best.xml"
+        model_xml_path = r"helpers/SegmentationModels/RoboFlowModels/best.xml"
     
     if classes_to_render is None:
         classes_to_render = ["label", "barcode", "map"]
