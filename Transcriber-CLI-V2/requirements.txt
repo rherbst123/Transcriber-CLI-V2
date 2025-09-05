@@ -3,3 +3,7 @@ boto3
 Pillow
 requests
 art
+# Segmentation dependencies
+opencv-python
+openvino
+numpy

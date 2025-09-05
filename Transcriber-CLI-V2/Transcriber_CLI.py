@@ -3,6 +3,7 @@ from transcribers.FirstShot import First_Shot
 from transcribers.SecondShot import Second_Shot
 from helpers.cost_analysis import cost_tracker
 from helpers.txt_to_csv import convert_json_to_csv
+from helpers.segmentation import process_images_segmentation, get_segmentation_settings
 from Validation.validate_scientific_names import validate_csv_scientific_names
 import os
 import re
@@ -21,6 +22,17 @@ def select_shots():
         choice = input("\nChoose processing mode:\n1. One shot\n2. Two shots\nEnter choice (1-2) or 'back' to go back: ")
         if choice in ['1', '2']:
             return int(choice)
+        elif choice.lower() == 'back':
+            return 'back'
+        print("Please enter 1, 2, or 'back'")
+
+
+#Ask if user wants to use segmentation
+def select_segmentation():
+    while True:
+        choice = input("\nDo you want to use image segmentation before transcription?\n1. Yes - Run segmentation first\n2. No - Skip segmentation\nEnter choice (1-2) or 'back' to go back: ")
+        if choice in ['1', '2']:
+            return choice == '1'  # Returns True for segmentation, False for skip
         elif choice.lower() == 'back':
             return 'back'
         print("Please enter 1, 2, or 'back'")
@@ -250,6 +262,24 @@ def move_json_files_to_shot_folder(source_dir, raw_dir, shot_name):
         #print(f"Moved {json_file.name} to {shot_name} folder")
 
 #Wrapper for all the stuff before
+def ask_continue_after_segmentation():
+    """Ask user if they want to continue with transcription after segmentation"""
+    while True:
+        choice = input("\nSegmentation completed. Do you want to continue with transcription?\n1. Yes - Continue with transcription\n2. No - Stop here\nEnter choice (1-2): ").strip().lower()
+        
+        # Handle various input formats
+        if choice in ['1', 'y', 'yes', 'continue']:
+            return True
+        elif choice in ['2', 'n', 'no', 'stop']:
+            return False
+        elif choice == 'quit' or choice == 'exit':
+            print("Exiting...")
+            return False
+        else:
+            print("Please enter 1, 2, 'yes', 'no', or 'quit'")
+            print(f"You entered: '{choice}'")  # Debug info to help user see what they entered
+
+
 def configure_transcription():
     """Handle the configuration flow with back navigation"""
     config = {}
@@ -263,12 +293,24 @@ def configure_transcription():
                 continue
             config['run_name'] = run_name
             print(f"Run name: {run_name}")
+            step = 'segmentation'
+            
+        elif step == 'segmentation':
+            use_segmentation = select_segmentation()
+            if use_segmentation == 'back':
+                step = 'run_name'
+                continue
+            config['use_segmentation'] = use_segmentation
+            if use_segmentation:
+                print("Segmentation will be performed before transcription.")
+            else:
+                print("Segmentation will be skipped.")
             step = 'shots'
             
         elif step == 'shots':
             num_shots = select_shots()
             if num_shots == 'back':
-                step = 'run_name'
+                step = 'segmentation'
                 continue
             config['num_shots'] = num_shots
             step = 'prompt'
@@ -320,6 +362,7 @@ def main():
     # Configure transcription 
     config = configure_transcription()
     run_name = config['run_name']
+    use_segmentation = config['use_segmentation']
     num_shots = config['num_shots']
     prompt_path = config['prompt_path']
     base_folder = config['base_folder']
@@ -328,6 +371,45 @@ def main():
     # Create run-specific output directory
     run_output_dir = get_output_base_path() / run_name
     run_output_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Handle segmentation if requested
+    processing_folder = base_folder  # Default to original folder
+    
+    if use_segmentation:
+        # Create segmentation output folder
+        segmentation_output_dir = run_output_dir / "Segmented_Images"
+        segmentation_output_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Get segmentation settings
+        model_path, classes_to_render = get_segmentation_settings()
+        
+        try:
+            # Run segmentation
+            success_count, total_count = process_images_segmentation(
+                base_folder, 
+                str(segmentation_output_dir), 
+                model_path, 
+                classes_to_render
+            )
+            
+            print(f"\nSegmentation Results:")
+            print(f"Successfully processed: {success_count}/{total_count} images")
+            print(f"Segmented images saved to: {segmentation_output_dir}")
+            
+            # Ask if user wants to continue
+            if not ask_continue_after_segmentation():
+                print("Stopping at segmentation as requested.")
+                print(f"Segmented images can be found at: {segmentation_output_dir}")
+                return
+            
+            # Use segmented images for transcription
+            processing_folder = str(segmentation_output_dir)
+            print(f"\nContinuing with transcription using segmented images from: {processing_folder}")
+            
+        except Exception as e:
+            print(f"Error during segmentation: {e}")
+            print("Continuing with original images...")
+            processing_folder = base_folder
     
     # Create Raw Transcriptions folder (.json files)
     raw_transcriptions_dir = run_output_dir / "Raw Transcriptions"
@@ -339,7 +421,7 @@ def main():
             
             # Use run-specific directory for output
             output_dir = run_output_dir
-            First_Shot.process_images(base_folder, prompt_path, output_dir, run_name, model_id=model)
+            First_Shot.process_images(processing_folder, prompt_path, output_dir, run_name, model_id=model)
             
             # Convert JSON files to CSV
             print("\n=== Converting JSON files to CSV ===")
@@ -373,7 +455,7 @@ def main():
             print("\n=== Running First Pass ===")
             print("\nSelect model for first pass processing:")
             model1 = First_Shot.select_model()
-            First_Shot.process_images(base_folder, prompt_path, temp_first_dir, run_name, model_id=model1)
+            First_Shot.process_images(processing_folder, prompt_path, temp_first_dir, run_name, model_id=model1)
             print("\n=== Converting First Pass JSON files to CSV ===")
             convert_json_to_csv(str(temp_first_dir))
             
@@ -393,7 +475,7 @@ def main():
             
             # Process second shot using first shot results
             Second_Shot.process_with_first_shot(
-                base_folder, 
+                processing_folder, 
                 prompt_path, 
                 batch_json_path, 
                 temp_second_dir, 
