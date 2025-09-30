@@ -87,6 +87,10 @@ The tool supports multiple AWS Bedrock models:
 
 Transcription results are saved in:
 - Desktop/Finished_Transcriptions_"User Entered Run Name"
+- Contents Include
+   - Segmented Images
+   - First and Second shot raw data
+   - First and Second shot .csv files
 
 ## Prompts
 
