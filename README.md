@@ -33,7 +33,7 @@ Transcriber CLI is designed to process and transcribe text from herbarium specim
    cd Transcriber_CLI
    ```
 2. 
-    - While a virtual enviroment is not required it is reccomended 
+    - Create a virtual enviroment 
    ```
    python3 -m venv "Whatever you want to call the venv"
    ```
@@ -62,20 +62,23 @@ The tool will:
 ## Future Updates
 
 - [x] Scientific Name Validation (Done with Global Names Validator on Tropicos) [Global Names](https://verifier.globalnames.org/)
-- [ ] Validation using GBIF, IDigBio and Sybiota
-- [ ] Automatic Segmentation for all images done before transcription (75% done)
+- [ ] Validation using GBIF, IDigBio and Sybiota ()
+- [ ] Search in Portal for Duplicate Catalog numbers
+- [ ] Search in Portal for Entries on "Collector, record Number and Date" 
+- [x] Automatic Segmentation for all images done before transcription
 
 ## Supported AI Models
 
 The tool supports multiple AWS Bedrock models:
 - Claude 3 Sonnet
 - Claude 3.7 Sonnet
-- Claude 4.1 Opus
 - Claude 4 Sonnet
-- Llama 3 (90B)
-- Llama 4 Maverick 17b
-- Amazon Nova Premier
-- Amazon Nova Pro
+- Claude 4.5 Sonnet
+- Claude 4 Opus
+- Claude 4.1 Opus
+- LLama 3.2 90b 
+- LLama 4 17b
+- Amazon Nova-lite,pro,premier
 - Mistral Pixtral Large
 
 ##### More models will be added as they come out. 
@@ -92,7 +95,7 @@ The tool uses specialized prompts for herbarium label transcription, located in 
 ## Customization
 
 - Modify prompts in the `Prompts/` directory to adjust transcription behavior
-- Add or remove models in the `AVAILABLE_MODELS` list in each transcriber module
+- Add or remove models in the `AVAILABLE_MODELS` list in each transcriber module (This is updated frequently so you dont have to really)
 
 
 

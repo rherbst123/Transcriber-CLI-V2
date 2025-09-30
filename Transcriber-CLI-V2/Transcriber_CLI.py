@@ -16,6 +16,75 @@ from datetime import datetime
 import json
 
 
+# Global validation settings
+validation_settings = {
+    'scientific_names': True,  # Default: enabled
+    # Future validation types can be added here
+    # 'genus_species': True,
+    # 'collection_data': True,
+}
+
+
+def configure_validation_settings():
+    """Configure which validation steps will be performed"""
+    global validation_settings
+    
+    print("\n" + "="*60)
+    print("VALIDATION SETTINGS")
+    print("="*60)
+    print("Configure which fields will be validated at the end of transcription.")
+    print("All validations are enabled by default.")
+    print("Use numbers to toggle settings, 'r' to reset all to default, 'q' to finish.")
+    print("-"*60)
+    
+    while True:
+        # Display current settings
+        print("\nCurrent Validation Settings:")
+        print("1. Scientific Names Validation:", "✓ ENABLED" if validation_settings['scientific_names'] else "✗ DISABLED")
+        # Future validations can be added here:
+        # print("2. Genus/Species Validation:", "✓ ENABLED" if validation_settings['genus_species'] else "✗ DISABLED")
+        # print("3. Collection Data Validation:", "✓ ENABLED" if validation_settings['collection_data'] else "✗ DISABLED")
+        
+        print("\nOptions:")
+        print("1 - Toggle Scientific Names Validation")
+        # print("2 - Toggle Genus/Species Validation")
+        # print("3 - Toggle Collection Data Validation")
+        print("r - Reset all to default (all enabled)")
+        print("q - Finish and return to main menu")
+        print("back - Return to main menu")
+        
+        choice = input("\nEnter your choice: ").strip().lower()
+        
+        if choice == '1':
+            validation_settings['scientific_names'] = not validation_settings['scientific_names']
+            status = "enabled" if validation_settings['scientific_names'] else "disabled"
+            print(f"Scientific Names Validation {status}")
+            
+        # Future validation toggles:
+        # elif choice == '2':
+        #     validation_settings['genus_species'] = not validation_settings['genus_species']
+        #     status = "enabled" if validation_settings['genus_species'] else "disabled"
+        #     print(f"Genus/Species Validation {status}")
+        
+        elif choice == 'r' or choice == 'reset':
+            validation_settings = {
+                'scientific_names': True,
+                # Future defaults:
+                # 'genus_species': True,
+                # 'collection_data': True,
+            }
+            print("All validation settings reset to default (enabled)")
+            
+        elif choice == 'q' or choice == 'quit' or choice == 'back':
+            break
+            
+        else:
+            print("Invalid choice. Please enter 1, 'r', 'q', or 'back'")
+    
+    print("\nValidation settings saved!")
+    return validation_settings
+
+
 #Determine how many shots to do
 def select_shots():
     while True:
@@ -289,8 +358,7 @@ def configure_transcription():
         if step == 'run_name':
             run_name = get_run_name()
             if run_name == 'back':
-                print("Cannot go back from the first step.")
-                continue
+                return None  # Return to main menu
             config['run_name'] = run_name
             print(f"Run name: {run_name}")
             step = 'segmentation'
@@ -359,8 +427,36 @@ def main():
     
     print(f"Finished transcriptions will be saved to: {output_base}")
     
-    # Configure transcription 
-    config = configure_transcription()
+    # Main menu loop
+    while True:
+        print("\n" + "="*60)
+        print("MAIN MENU")
+        print("="*60)
+        print("1. Start Transcription Process")
+        print("2. Configure Validation Settings")
+        print("3. Exit")
+        
+        choice = input("\nEnter your choice (1-3): ").strip()
+        
+        if choice == '1':
+            # Configure transcription 
+            config = configure_transcription()
+            if config is None:  # User went back to main menu
+                continue
+            break  # Exit main menu to continue with transcription
+            
+        elif choice == '2':
+            configure_validation_settings()
+            continue  # Return to main menu
+            
+        elif choice == '3':
+            print("Goodbye!")
+            return
+            
+        else:
+            print("Invalid choice. Please enter 1, 2, or 3.")
+    
+    # Continue with transcription process
     run_name = config['run_name']
     use_segmentation = config['use_segmentation']
     num_shots = config['num_shots']
@@ -427,10 +523,19 @@ def main():
             print("\n=== Converting JSON files to CSV ===")
             convert_json_to_csv(str(output_dir))
             
-            # Validate scientific names in CSV files
-            print("\n=== Validating Scientific Names ===")
-            for csv_file in output_dir.glob('*.csv'):
-                validate_csv_scientific_names(csv_file)
+            # Validate fields based on user settings
+            if validation_settings['scientific_names']:
+                print("\n=== Validating Scientific Names ===")
+                for csv_file in output_dir.glob('*.csv'):
+                    validate_csv_scientific_names(csv_file)
+            else:
+                print("\n=== Skipping Scientific Names Validation (disabled by user) ===")
+            
+            # Future validation types can be added here:
+            # if validation_settings['genus_species']:
+            #     print("\n=== Validating Genus/Species ===")
+            #     for csv_file in output_dir.glob('*.csv'):
+            #         validate_genus_species(csv_file)
             
             # Rename CSV files
             print("\n=== Renaming CSV files ===")
@@ -455,7 +560,10 @@ def main():
             print("\n=== Running First Pass ===")
             print("\nSelect model for first pass processing:")
             model1 = First_Shot.select_model()
-            First_Shot.process_images(processing_folder, prompt_path, temp_first_dir, run_name, model_id=model1)
+            First_Shot.process_images(processing_folder, 
+                                      prompt_path, temp_first_dir, 
+                                      run_name, 
+                                      model_id=model1)
             print("\n=== Converting First Pass JSON files to CSV ===")
             convert_json_to_csv(str(temp_first_dir))
             
@@ -497,10 +605,19 @@ def main():
             if second_csv:
                 shutil.move(str(second_csv), str(run_output_dir / second_csv.name))
             
-            # Validate scientific names in CSV files
-            print("\n=== Validating Scientific Names ===")
-            for csv_file in run_output_dir.glob('*.csv'):
-                validate_csv_scientific_names(csv_file)
+            # Validate fields based on user settings
+            if validation_settings['scientific_names']:
+                print("\n=== Validating Scientific Names ===")
+                for csv_file in run_output_dir.glob('*.csv'):
+                    validate_csv_scientific_names(csv_file)
+            else:
+                print("\n=== Skipping Scientific Names Validation (disabled by user) ===")
+            
+            # Future validation types can be added here:
+            # if validation_settings['genus_species']:
+            #     print("\n=== Validating Genus/Species ===")
+            #     for csv_file in run_output_dir.glob('*.csv'):
+            #         validate_genus_species(csv_file)
                 
             # Move JSON files to shot-specific folders in Raw Transcriptions
             print("\n=== Moving JSON files to Raw Transcriptions folders ===")

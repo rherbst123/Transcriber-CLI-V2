@@ -402,7 +402,7 @@ def get_segmentation_settings():
     print("\n=== Segmentation Configuration ===")
     
     # Use fixed model path
-    model_path = r"/home/riley/Documents/GitHub/Transcriber-CLI-V2/Transcriber-CLI-V2/helpers/SegmentationModels/RoboFlowModels/best.xml"
+    model_path = os.path.expanduser("~/Documents/GitHub/Transcriber-CLI-V2/Transcriber-CLI-V2/helpers/SegmentationModels/RoboFlowModels/best.xml")
     print(f"Using model: {model_path}")
     
     # Classes to render
