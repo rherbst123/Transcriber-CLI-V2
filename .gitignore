@@ -2,3 +2,8 @@
 /Transcriber-CLI-V2/SecondShot_results
 /Transcriber-CLI-V2/transcribers/FirstShot
 /Transcriber-CLI-V2/transcribers/SecondShot/__pycache__
+/Transcriber
+*.pyc
+*.pyc
+/Transcriber-CLI-V2/transcribers/SecondShot/__pycache__
+/Transcriber-CLI-V2/transcribers/FirstShot
