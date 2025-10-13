@@ -1,4 +1,3 @@
-# segmentation_with_orientation.py
 import os
 import glob
 import json
@@ -8,18 +7,17 @@ import base64
 import threading
 from openvino import Core
 
-# NEW
-import pytesseract
-from math import degrees
-
 
 class Segmentation:
 
+#       0: ac_number
+#   1: barcode
+#   2: labels
+#   3: locator
+#   4: scale
+#   5: specimen
     # Statically define all classes the model was trained on
-    all_possible_classes = [
-        'ruler', 'barcode', 'colorcard', 'label', 'map',
-        'envelope', 'photo', 'attached_item', 'weights'
-    ]
+    all_possible_classes = ['ruler', 'barcode', 'colorcard', 'label', 'map', 'envelope', 'photo', 'attached_item', 'weights']
 
     def __init__(
         self,
@@ -29,20 +27,12 @@ class Segmentation:
         hide_long_objects: bool = False,
         draw_overlay: bool = False,
         output_path: str | None = None,
-        auto_orient: bool = True,
-        deskew: bool = True,
-        blank_score_cutoff: float = 50.0,
     ):
         self.engine = engine
         self.hide_long_objects = hide_long_objects
         self.draw_overlay = draw_overlay
         self.output_path = output_path
         self.segmentation_classes = segmentation_classes
-
-        # NEW: orientation controls
-        self.auto_orient = auto_orient
-        self.deskew = deskew
-        self.blank_score_cutoff = blank_score_cutoff
 
         self.core = Core()
         self.model = self.core.read_model(model=model_xml_path)
@@ -182,7 +172,7 @@ class Segmentation:
             x_off = 0
             for c in row["crops"]:
                 h, w = c["img"].shape[:2]
-                canvas[y_off: y_off + h, x_off: x_off + w] = c["img"]
+                canvas[y_off : y_off + h, x_off : x_off + w] = c["img"]
                 positions[c["class"]].append([x_off, y_off, x_off + w, y_off + h])
                 x_off += w
             y_off += row_dims[i][1]
@@ -194,9 +184,7 @@ class Segmentation:
         long_strip, long_pos_relative = self._create_condensed_segmentation_from_crops(
             long_crops
         )
-        base_h, base_w = (
-            base_segmentation.shape[:2] if base_segmentation is not None else (0, 0)
-        )
+        base_h, base_w = (base_segmentation.shape[:2] if base_segmentation is not None else (0, 0))
         strip_h, strip_w = long_strip.shape[:2]
 
         final_w = max(base_w, strip_w)
@@ -237,81 +225,6 @@ class Segmentation:
                 image = cv2.resize(image, (int(w * step2), int(h * step2)))
         return image, scale
 
-    # ───────────── Orientation helpers (NEW) ─────────────
-    def _rotate90(self, img, k):
-        return np.rot90(img, k).copy()
-
-    def _tesseract_ocr_score(self, img_bgr):
-        """Lightweight score: sum(confidence * alnum_chars) over words."""
-        gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY) if img_bgr.ndim == 3 else img_bgr
-        data = pytesseract.image_to_data(
-            gray, output_type=pytesseract.Output.DICT,
-            config="--oem 1 --psm 6"
-        )
-        score = 0.0
-        if "conf" in data and "text" in data:
-            for conf, text in zip(data["conf"], data["text"]):
-                try:
-                    c = float(conf)
-                except Exception:
-                    c = -1.0
-                if c > 0 and text:
-                    alnum = sum(ch.isalnum() for ch in text)
-                    score += c * max(alnum, 1)
-        return score
-
-    def _deskew_small_angle(self, img_bgr, max_angle=10):
-        """Deskew small slants using Hough lines (±max_angle degrees)."""
-        gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY) if img_bgr.ndim == 3 else img_bgr
-        gray = cv2.medianBlur(gray, 3)
-        bw = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
-        edges = cv2.Canny(255 - bw, 50, 150, L2gradient=True)
-
-        lines = cv2.HoughLines(edges, 1, np.pi / 180, threshold=80)
-        if lines is None:
-            return img_bgr
-
-        angles = []
-        for l in lines[:200]:
-            rho, theta = l[0]
-            ang = degrees(theta) - 90
-            if ang >= 90:
-                ang -= 180
-            if ang < -90:
-                ang += 180
-            if abs(ang) <= max_angle:
-                angles.append(ang)
-        if not angles:
-            return img_bgr
-
-        angle = float(np.median(angles))
-        if abs(angle) < 0.5:
-            return img_bgr
-        h, w = img_bgr.shape[:2]
-        M = cv2.getRotationMatrix2D((w / 2, h / 2), angle, 1.0)
-        return cv2.warpAffine(img_bgr, M, (w, h), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)
-
-    def _fix_orientation(self, crop_bgr):
-        """Try 0/90/180/270; pick best OCR score; optional small deskew."""
-        # quick exits
-        if not self.auto_orient:
-            return crop_bgr
-
-        candidates = [self._rotate90(crop_bgr, k) for k in range(4)]
-        scores = []
-        for c in candidates:
-            try:
-                scores.append(self._tesseract_ocr_score(c))
-            except Exception:
-                scores.append(0.0)
-        best_k = int(np.argmax(scores))
-        best = candidates[best_k]
-
-        # skip deskew on crops with little text (photos, rulers, color cards)
-        if self.deskew and scores[best_k] >= self.blank_score_cutoff:
-            best = self._deskew_small_angle(best, max_angle=10)
-        return best
-
     # ───────────── Main entry point ─────────────
     def run(self, image_path: str, output_path_override: str | None = None):
         """Return JSON dict; save segmentation if an output path is supplied.
@@ -336,35 +249,40 @@ class Segmentation:
             "base64image_text_segmentation": None,
         }
 
-        # Build crops (NOW with auto-orientation)
+        # Build crops
         crops_for_segmentation = []
-
+        
         for class_name in self.segmentation_classes:
             for box in normal_boxes.get(class_name, []):
                 x1, y1, x2, y2 = map(int, box)
                 crop_img = original_image[y1:y2, x1:x2]
+                
+                # Validate crop before processing
                 if crop_img.size == 0:
                     continue
-                try:
-                    crop_img = self._fix_orientation(crop_img)
-                except Exception:
-                    pass
+                
                 crops_for_segmentation.append(
-                    {"img": crop_img, "box": box, "class": class_name}
+                    {
+                        "img": crop_img,
+                        "box": box,
+                        "class": class_name,
+                    }
                 )
-
             if self.hide_long_objects:
                 for box in long_boxes.get(class_name, []):
                     x1, y1, x2, y2 = map(int, box)
                     crop_img = original_image[y1:y2, x1:x2]
+                    
+                    # Validate crop before processing
                     if crop_img.size == 0:
                         continue
-                    try:
-                        crop_img = self._fix_orientation(crop_img)
-                    except Exception:
-                        pass
+                    
                     crops_for_segmentation.append(
-                        {"img": crop_img, "box": box, "class": class_name}
+                        {
+                            "img": crop_img,
+                            "box": box,
+                            "class": class_name,
+                        }
                     )
 
         segmentation, positions = self._create_condensed_segmentation_from_crops(
@@ -380,9 +298,7 @@ class Segmentation:
         }
 
         if self.draw_overlay:
-            segmentation = self.draw_overlay_on_segmentation(
-                segmentation, final_output["position_segmentation"]
-            )
+            segmentation = self.draw_overlay_on_segmentation(segmentation, final_output["position_segmentation"])
 
         # Encode to JPG bytes
         success, jpg_array = cv2.imencode(".jpg", segmentation)
@@ -396,9 +312,9 @@ class Segmentation:
             with open(dest_path, "wb") as f:
                 f.write(jpg_bytes)
         else:
-            final_output["base64image_text_segmentation"] = base64.b64encode(
-                jpg_bytes
-            ).decode("utf-8")
+            final_output["base64image_text_segmentation"] = base64.b64encode(jpg_bytes).decode(
+                "utf-8"
+            )
         return final_output
 
     # ─────────────- Optional overlay (unchanged) -─────────────
@@ -416,38 +332,39 @@ class Segmentation:
         return overlay
 
 
+
 def process_images_segmentation(input_folder, output_folder, model_xml_path=None, classes_to_render=None):
     """
     Process images through segmentation pipeline
-
+    
     Args:
         input_folder (str): Path to input images folder
         output_folder (str): Path to output folder for segmented segmentations
         model_xml_path (str): Path to OpenVINO model XML file
         classes_to_render (list): List of classes to render in segmentation
-
+    
     Returns:
         tuple: (success_count, total_count)
     """
     # Default settings
     if model_xml_path is None:
         model_xml_path = r"helpers/SegmentationModels/RoboFlowModels/best.xml"
-
+    
     if classes_to_render is None:
         classes_to_render = ["label", "barcode", "map"]
-
+    
     # Validate model path
     if not os.path.exists(model_xml_path):
         raise FileNotFoundError(f"Model XML file not found at: {model_xml_path}")
-
+    
     # Create output folder if it doesn't exist
     os.makedirs(output_folder, exist_ok=True)
-
+    
     print(f"\n=== Starting Image Segmentation ===")
     print(f"Input folder: {input_folder}")
     print(f"Output folder: {output_folder}")
     print(f"Classes to render: {classes_to_render}")
-
+    
     # Instantiate the engine once
     try:
         engine = Segmentation(
@@ -459,69 +376,82 @@ def process_images_segmentation(input_folder, output_folder, model_xml_path=None
     except Exception as e:
         print(f"Error initializing segmentation {e}")
         return 0, 0
-
+    
     # Process every supported image in the folder
     IMAGE_EXTS = (".jpg", ".jpeg", ".png", ".tif", ".tiff", ".bmp")
     img_paths = [
         p for p in glob.glob(os.path.join(input_folder, "*"))
         if p.lower().endswith(IMAGE_EXTS)
     ]
-
+    
     if not img_paths:
         print(f"No images with extensions {IMAGE_EXTS} found in {input_folder}")
         return 0, 0
-
+    
     print(f"\nFound {len(img_paths)} images to process")
-
+    
     success_count = 0
     for i, img_path in enumerate(sorted(img_paths), 1):
         basename = os.path.splitext(os.path.basename(img_path))[0]
         segmentation_path = os.path.join(output_folder, f"{basename}_segmentation.jpg")
-
+        
         try:
             print(f"Processing {i}/{len(img_paths)}: {os.path.basename(img_path)}")
             result_json = engine.run(img_path, output_path_override=segmentation_path)
-
+            
             print(f"✓ Processed {os.path.basename(img_path)} → {os.path.basename(segmentation_path)}")
             success_count += 1
         except Exception as exc:
             print(f"✗ Failed on {img_path}: {exc}")
-
+    
     print(f"\n=== Segmentation Complete ===")
     print(f"Successfully processed: {success_count}/{len(img_paths)} images")
-
+    
     return success_count, len(img_paths)
 
 
 def get_segmentation_settings():
     """Get segmentation settings from user"""
     print("\n=== Segmentation Configuration ===")
-
-    # Use fixed model path (adjust to your repo layout)
-    model_path = os.path.expanduser(
-        "~/Documents/GitHub/Transcriber-CLI-V2/Transcriber-CLI-V2/helpers/SegmentationModels/RoboFlowModels/best.xml"
-    )
+    
+    # Use fixed model path
+    model_path = os.path.expanduser("~/Documents/GitHub/Transcriber-CLI-V2/Transcriber-CLI-V2/helpers/SegmentationModels/RoboFlowModels/best.xml")
     print(f"Using model: {model_path}")
-
+    
     # Classes to render
-    default_classes = ["label", "map"]
+    default_classes = ["label","map"]
     print(f"\nDefault classes to render: {default_classes}")
     print("Available classes: ruler, barcode, colorcard, label, map, envelope, photo, attached_item, weights")
-
+    
     custom_classes = input("Enter custom classes (comma-separated, or press Enter for default): ").strip()
     if custom_classes:
         classes_to_render = [c.strip() for c in custom_classes.split(',')]
     else:
         classes_to_render = default_classes
-
+    
     return model_path, classes_to_render
 
 
 if __name__ == "__main__":
-    # Example: use the helpers above to run a folder if desired.
+    # This script is now integrated into the main pipeline
+    # For standalone testing, you can modify these paths as needed
+    print("")
+
+    
+    # Example paths - modify as needed for testing
     # MODEL_XML_PATH = r"/path/to/your/model.xml"
     # INPUT_FOLDER = r"/path/to/input/images"
     # OUTPUT_FOLDER = r"/path/to/output/folder"
     # CLASSES_TO_RENDER = ["label", "barcode", "map"]
-    # success_count, total = process_images_segmentation(INPUT_FOLDER, OUTPUT_FOLDER, MODEL_XML_PATH, CLASSES_TO_RENDER)
-    pass
+    
+    # Uncomment and modify the following lines for standalone testing:
+    # try:
+    #     success_count, total_count = process_images_segmentation(
+    #         INPUT_FOLDER, 
+    #         OUTPUT_FOLDER, 
+    #         MODEL_XML_PATH, 
+    #         CLASSES_TO_RENDER
+    #     )
+    #     print(f"\nProcessing completed: {success_count}/{total_count} images processed successfully")
+    # except Exception as e:
+    #     print(f"Error: {e}")
