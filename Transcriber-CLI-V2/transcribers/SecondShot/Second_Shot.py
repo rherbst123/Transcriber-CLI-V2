@@ -131,6 +131,18 @@ def verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, m
     if model_id is None:
         model_id = select_model()
     
+    # Load URL mapping if it exists (for downloaded images)
+    url_map = {}
+    url_map_path = os.path.join(base_folder, 'url_map.json')
+    if os.path.exists(url_map_path):
+        try:
+            with open(url_map_path, 'r', encoding='utf-8') as f:
+                url_map = json.load(f)
+            print(f"Loaded URL mapping for {len(url_map)} images")
+        except Exception as e:
+            print(f"Warning: Could not load URL mapping: {e}")
+            url_map = {}
+    
     # Load first shot data
     with open(first_shot_json_path, 'r', encoding='utf-8') as f:
         first_shot_data = json.load(f)
@@ -141,7 +153,8 @@ def verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, m
     all_transcriptions = []
     for i, transcription in enumerate(transcriptions, 1):
         image_name = transcription['image_name']
-        image_url = transcription.get('image_url')  # carry over if present
+        # Prioritize URL from first shot, fall back to URL map if not available
+        image_url = transcription.get('image_url') or url_map.get(image_name)
         
         # Check if this transcription has an error
         if 'error' in transcription:

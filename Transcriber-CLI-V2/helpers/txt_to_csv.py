@@ -90,7 +90,8 @@ def parse_transcription_text(transcription_text, image_name, image_url=None):
                 value = "N/A"
             
             # Format scientific names - capitalize first word, lowercase the rest
-            if key == "latestScientificName" and value != "N/A":
+            # Only apply this formatting if the field appears to be a scientific name field
+            if ("scientificname" in key.lower() or "scientific_name" in key.lower()) and value != "N/A":
                 # Split the name into parts and format properly
                 name_parts = value.split()
                 if name_parts:
@@ -115,8 +116,25 @@ def parse_transcription_text(transcription_text, image_name, image_url=None):
     
     return data
 
-def get_standard_fieldnames():
-    """Return standardized field names in consistent order"""
+def discover_all_fields(data):
+    """Discover all unique field names from the dataset, preserving order of appearance"""
+    field_order = ["Image", "ImageURL"]  # Always put these first
+    seen_fields = set(field_order)
+    
+    for record in data:
+        for field in record.keys():
+            if field not in seen_fields:
+                field_order.append(field)
+                seen_fields.add(field)
+    
+    return field_order
+
+def get_standard_fieldnames(data=None):
+    """Return field names - either discovered from data or fallback to herbarium defaults"""
+    if data:
+        return discover_all_fields(data)
+    
+    # Fallback to herbarium fields for backward compatibility
     return [
         "Image",
         "ImageURL",
@@ -148,7 +166,11 @@ def get_standard_fieldnames():
 
 def normalize_data_structure(data):
     """Ensure all records have the same fields with N/A for missing values"""
-    standard_fields = get_standard_fieldnames()
+    if not data:
+        return []
+    
+    # Discover all fields present in the data
+    standard_fields = get_standard_fieldnames(data)
     normalized_data = []
     
     for record in data:
@@ -160,9 +182,13 @@ def normalize_data_structure(data):
     return normalized_data
 
 def write_to_csv(data, output_filename):
-    """Write data to CSV with standardized structure"""
+    """Write data to CSV with dynamically discovered structure"""
+    if not data:
+        print("No data to write to CSV")
+        return
+    
     normalized_data = normalize_data_structure(data)
-    fieldnames = get_standard_fieldnames()
+    fieldnames = get_standard_fieldnames(data)
     
     with open(output_filename, "w", newline="", encoding="utf-8") as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
@@ -234,6 +260,10 @@ def convert_json_to_csv(json_folder_path):
             print("No data found to convert")
             return None
         
+        # Show detected fields for user awareness
+        detected_fields = get_standard_fieldnames(data)
+        print(f"Detected {len(detected_fields)} fields: {', '.join(detected_fields)}")
+        
         # Write to CSV in both locations with standardized format
         write_to_csv(data, original_csv_path)  # Original location for backward compatibility
         write_to_csv(data, export_csv_path)    # New location in the organized folder structure
@@ -264,7 +294,7 @@ def standardize_existing_csv(csv_file_path):
             print(f"No data found in {csv_file_path}")
             return False
         
-        # Write back with standardized structure
+        # Write back with dynamically discovered structure
         write_to_csv(data, csv_file_path)
         print(f"Standardized CSV file: {csv_file_path}")
         return True

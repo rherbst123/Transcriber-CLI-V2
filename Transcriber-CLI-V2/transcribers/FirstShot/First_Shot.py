@@ -2,6 +2,7 @@ import boto3
 from PIL import Image
 import io
 import os
+import json
 from pathlib import Path
 from datetime import datetime
 from helpers.cost_analysis import cost_tracker
@@ -164,6 +165,18 @@ def process_images(base_folder, prompt_path, output_dir, date_folder, model_id=N
     else:
         # Use base folder directly for downloaded images
         images_folder = base_folder
+    
+    # Load URL mapping if it exists (for downloaded images)
+    url_map = {}
+    url_map_path = os.path.join(base_folder, 'url_map.json')
+    if os.path.exists(url_map_path):
+        try:
+            with open(url_map_path, 'r', encoding='utf-8') as f:
+                url_map = json.load(f)
+            print(f"Loaded URL mapping for {len(url_map)} images")
+        except Exception as e:
+            print(f"Warning: Could not load URL mapping: {e}")
+            url_map = {}
         
     print(f"First Shot processing images from: {images_folder}")
     
@@ -213,18 +226,21 @@ def process_images(base_folder, prompt_path, output_dir, date_folder, model_id=N
             input_tokens = cost_tracker.estimate_tokens(user_message)
             output_tokens = cost_tracker.estimate_tokens(response_text, is_output=True)
             
+            # Get the image URL if available
+            image_url = url_map.get(image_path.name)
+            
             # Save individual JSON file
             json_filepath = save_json_transcription(
                 output_dir, date_folder, "first_shot", 
                 image_path.name, response_text, model_id, 
-                input_tokens, output_tokens
+                input_tokens, output_tokens, image_url=image_url
             )
             
             # Add to batch collection
             from helpers.json_output import create_json_response
             json_response = create_json_response(
                 image_path.name, response_text, model_id, 
-                input_tokens, output_tokens
+                input_tokens, output_tokens, image_url=image_url
             )
             all_transcriptions.append(json_response)
             
