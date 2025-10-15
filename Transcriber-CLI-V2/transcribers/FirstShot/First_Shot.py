@@ -168,15 +168,29 @@ def process_images(base_folder, prompt_path, output_dir, date_folder, model_id=N
     
     # Load URL mapping if it exists (for downloaded images)
     url_map = {}
-    url_map_path = os.path.join(base_folder, 'url_map.json')
-    if os.path.exists(url_map_path):
+    # Try multiple locations for url_map.json
+    url_map_locations = [
+        os.path.join(base_folder, 'url_map.json'),  # Original location
+        os.path.join(base_folder, 'temp_downloads', 'url_map.json'),  # Common download location
+        os.path.join(os.path.dirname(base_folder), 'temp_downloads', 'url_map.json'),  # Parent dir download location
+    ]
+    
+    url_map_path = None
+    for location in url_map_locations:
+        if os.path.exists(location):
+            url_map_path = location
+            break
+    
+    if url_map_path:
         try:
             with open(url_map_path, 'r', encoding='utf-8') as f:
                 url_map = json.load(f)
-            print(f"Loaded URL mapping for {len(url_map)} images")
+            print(f"Loaded URL mapping for {len(url_map)} images from: {url_map_path}")
         except Exception as e:
             print(f"Warning: Could not load URL mapping: {e}")
             url_map = {}
+    else:
+        print("No URL mapping file found (images may be local)")
         
     print(f"First Shot processing images from: {images_folder}")
     
@@ -227,7 +241,16 @@ def process_images(base_folder, prompt_path, output_dir, date_folder, model_id=N
             output_tokens = cost_tracker.estimate_tokens(response_text, is_output=True)
             
             # Get the image URL if available
-            image_url = url_map.get(image_path.name)
+            # Handle segmented image names by removing '_segmentation' suffix when looking up URLs
+            image_name_for_url_lookup = image_path.name
+            if '_segmentation' in image_name_for_url_lookup:
+                image_name_for_url_lookup = image_name_for_url_lookup.replace('_segmentation', '')
+            
+            image_url = url_map.get(image_name_for_url_lookup)
+            if image_url:
+                print(f"Found URL for {image_path.name}: {image_url}")
+            elif url_map:
+                print(f"No URL found for {image_path.name} (looking for {image_name_for_url_lookup})")
             
             # Save individual JSON file
             json_filepath = save_json_transcription(

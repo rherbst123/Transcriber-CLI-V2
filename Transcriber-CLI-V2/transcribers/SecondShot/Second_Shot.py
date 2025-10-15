@@ -133,15 +133,29 @@ def verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, m
     
     # Load URL mapping if it exists (for downloaded images)
     url_map = {}
-    url_map_path = os.path.join(base_folder, 'url_map.json')
-    if os.path.exists(url_map_path):
+    # Try multiple locations for url_map.json
+    url_map_locations = [
+        os.path.join(base_folder, 'url_map.json'),  # Original location
+        os.path.join(base_folder, 'temp_downloads', 'url_map.json'),  # Common download location
+        os.path.join(os.path.dirname(base_folder), 'temp_downloads', 'url_map.json'),  # Parent dir download location
+    ]
+    
+    url_map_path = None
+    for location in url_map_locations:
+        if os.path.exists(location):
+            url_map_path = location
+            break
+    
+    if url_map_path:
         try:
             with open(url_map_path, 'r', encoding='utf-8') as f:
                 url_map = json.load(f)
-            print(f"Loaded URL mapping for {len(url_map)} images")
+            print(f"Loaded URL mapping for {len(url_map)} images from: {url_map_path}")
         except Exception as e:
             print(f"Warning: Could not load URL mapping: {e}")
             url_map = {}
+    else:
+        print("No URL mapping file found (images may be local)")
     
     # Load first shot data
     with open(first_shot_json_path, 'r', encoding='utf-8') as f:
@@ -154,7 +168,16 @@ def verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, m
     for i, transcription in enumerate(transcriptions, 1):
         image_name = transcription['image_name']
         # Prioritize URL from first shot, fall back to URL map if not available
-        image_url = transcription.get('image_url') or url_map.get(image_name)
+        # Handle segmented image names by removing '_segmentation' suffix when looking up URLs
+        image_name_for_url_lookup = image_name
+        if '_segmentation' in image_name_for_url_lookup:
+            image_name_for_url_lookup = image_name_for_url_lookup.replace('_segmentation', '')
+        
+        image_url = transcription.get('image_url') or url_map.get(image_name_for_url_lookup)
+        if image_url:
+            print(f"Found URL for {image_name}: {image_url}")
+        elif url_map:
+            print(f"No URL found for {image_name} (looking for {image_name_for_url_lookup})")
         
         # Check if this transcription has an error
         if 'error' in transcription:

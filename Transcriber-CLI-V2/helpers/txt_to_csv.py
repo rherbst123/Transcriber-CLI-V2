@@ -22,6 +22,31 @@ def parse_json_files(json_folder):
     json_folder = Path(json_folder)
     data = []
     
+    # Try to load URL mapping from various locations
+    url_map = {}
+    url_map_locations = [
+        json_folder / 'url_map.json',  # Same folder as JSON files
+        json_folder.parent / 'url_map.json',  # Parent folder
+        json_folder.parent / 'temp_downloads' / 'url_map.json',  # Parent/temp_downloads
+        json_folder.parent.parent / 'temp_downloads' / 'url_map.json',  # Parent's parent/temp_downloads
+        json_folder.parent.parent.parent / 'temp_downloads' / 'url_map.json',  # Great-grandparent/temp_downloads
+    ]
+    
+    url_map_path = None
+    for location in url_map_locations:
+        if location.exists():
+            url_map_path = location
+            break
+    
+    if url_map_path:
+        try:
+            with open(url_map_path, 'r', encoding='utf-8') as f:
+                url_map = json.load(f)
+            print(f"Loaded URL mapping for {len(url_map)} images from: {url_map_path}")
+        except Exception as e:
+            print(f"Warning: Could not load URL mapping: {e}")
+            url_map = {}
+    
     # Get all JSON files (excluding batch files)
     json_files = [f for f in json_folder.glob("*.json") if not f.name.endswith("_batch.json")]
     
@@ -39,6 +64,17 @@ def parse_json_files(json_folder):
             # Extract image name and possible source URL
             image_name = json_data.get('image_name', json_file.stem)
             image_url = json_data.get('image_url')
+            
+            # If no URL in JSON, try to get it from URL map
+            if not image_url and url_map:
+                # Handle segmented image names by removing '_segmentation' suffix when looking up URLs
+                image_name_for_url_lookup = image_name
+                if '_segmentation' in image_name_for_url_lookup:
+                    image_name_for_url_lookup = image_name_for_url_lookup.replace('_segmentation', '')
+                
+                image_url = url_map.get(image_name_for_url_lookup)
+                if image_url:
+                    print(f"Found URL for {image_name}: {image_url}")
             
             # Extract transcription text from content
             transcription_text = ""
