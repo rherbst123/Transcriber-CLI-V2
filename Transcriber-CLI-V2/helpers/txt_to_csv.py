@@ -5,7 +5,6 @@ import json
 from pathlib import Path
 
 def get_output_base_path():
-    """Get the base output path, cross-platform compatible"""
     home_dir = Path(os.path.expanduser("~"))
     
     # On Windows, prefer Desktop if it exists
@@ -18,7 +17,6 @@ def get_output_base_path():
     return home_dir / "Transcriber_Output"
 
 def parse_json_files(json_folder):
-    """Parse all JSON files in a folder and extract transcription data"""
     json_folder = Path(json_folder)
     data = []
     
@@ -99,7 +97,6 @@ def parse_json_files(json_folder):
     return data
 
 def parse_transcription_text(transcription_text, image_name, image_url=None):
-    """Parse transcription text to extract structured data"""
     lines = transcription_text.splitlines()
     data = []
     
@@ -153,7 +150,6 @@ def parse_transcription_text(transcription_text, image_name, image_url=None):
     return data
 
 def discover_all_fields(data):
-    """Discover all unique field names from the dataset, preserving order of appearance"""
     field_order = ["Image", "ImageURL"]  # Always put these first
     seen_fields = set(field_order)
     
@@ -166,7 +162,6 @@ def discover_all_fields(data):
     return field_order
 
 def get_standard_fieldnames(data=None):
-    """Return field names - either discovered from data or fallback to herbarium defaults"""
     if data:
         return discover_all_fields(data)
     
@@ -201,7 +196,6 @@ def get_standard_fieldnames(data=None):
     ]
 
 def normalize_data_structure(data):
-    """Ensure all records have the same fields with N/A for missing values"""
     if not data:
         return []
     
@@ -218,7 +212,6 @@ def normalize_data_structure(data):
     return normalized_data
 
 def write_to_csv(data, output_filename):
-    """Write data to CSV with dynamically discovered structure"""
     if not data:
         print("No data to write to CSV")
         return
@@ -233,7 +226,6 @@ def write_to_csv(data, output_filename):
             writer.writerow(record)
 
 def convert_json_to_csv(json_folder_path):
-    """Convert JSON transcription files to CSV format"""
     print(f"Converting JSON files from folder: {json_folder_path}")
     
     if not os.path.exists(json_folder_path):
@@ -313,7 +305,6 @@ def convert_json_to_csv(json_folder_path):
         return None
 
 def standardize_existing_csv(csv_file_path):
-    """Standardize an existing CSV file to ensure consistent column structure"""
     if not os.path.exists(csv_file_path):
         print(f"CSV file not found: {csv_file_path}")
         return False
@@ -340,7 +331,6 @@ def standardize_existing_csv(csv_file_path):
         return False
 
 def standardize_all_csv_files(base_directory):
-    """Find and standardize all CSV files in the project"""
     base_path = Path(base_directory)
     csv_files = list(base_path.rglob("*.csv"))
     
@@ -356,7 +346,6 @@ def standardize_all_csv_files(base_directory):
     print("CSV standardization complete")
 
 def convert_txt_to_csv(txt_file_path):
-    """Legacy function - now redirects to JSON conversion if folder is provided"""
     # Check if this is actually a folder path (for JSON files)
     if os.path.isdir(txt_file_path):
         return convert_json_to_csv(txt_file_path)
