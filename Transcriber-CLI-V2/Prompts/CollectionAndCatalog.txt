@@ -3,12 +3,13 @@ You are an expert transcriber tasked with extracting specific information from s
 Extract the following THREE fields:
 
 1. **CatalogNumber**: 
-    - Location: Bottom right or left corner of the image
+    - Location: Bottom Left most of the time or Right of the image in Rare Cases. 
     - Format: 6-7 digit bold number, preceded by "No"
     - Usually positioned above "Field Museum of Natural History" text
+    - If Catalog Number is missing, Please specify
 
 2. **CollectionNumber**: 
-    - Location: Within text-dense regions, typically immediately following a collector's name
+    - Location: Within Label of text-dense regions, typically immediately following a collector's name
     - Format: 3-5 digits (length may vary)
     - In cases might be preceded by "No"
 
@@ -17,7 +18,7 @@ Extract the following THREE fields:
     - Separate multiple issues with commas
     - Possible values:
       * "image - label obscured by specimen"
-      * "specimen upside down"
+      * "Lable or any text upside down"
       * "missing" (if no Field Museum of Natural History stamp with catalog number is visible)
       * "packet only - no physical specimen"
       * "cropped badly"

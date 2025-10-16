@@ -158,7 +158,6 @@ def safe_rmtree(path):
 
 #Pretty self explanitory
 def download_images_from_urls(url_file_path, download_dir):
-    """Download images from URLs in a text file and save a filename->URL map"""
     if not os.path.exists(url_file_path):
         print(f"Error: URL file not found at {url_file_path}")
         return False
@@ -259,7 +258,6 @@ def get_output_base_path():
 
 #Shows the number of images in the folder just as a double check for things. 
 def show_images_in_folder(folder_path):
-    """Display images found in the folder"""
     image_extensions = {'.jpg', '.jpeg', '.png', '.gif', '.bmp', '.tiff', '.webp'}
     images = [f for f in os.listdir(folder_path) if os.path.splitext(f.lower())[1] in image_extensions]
     
@@ -312,7 +310,6 @@ def get_images_folder(use_urls):
 
 
 def rename_csv_files(source_dir, run_name, shot_type):
-    """Rename CSV files with run name and shot type"""
     for csv_file in source_dir.glob('*.csv'):
         new_name = f"{run_name}_{shot_type}.csv"
         new_path = source_dir / new_name
@@ -321,7 +318,6 @@ def rename_csv_files(source_dir, run_name, shot_type):
         return new_path  # Return the new path for moving
 
 def move_json_files_to_shot_folder(source_dir, raw_dir, shot_name):
-    """Move all JSON files from source directory to shot-specific folder in Raw Transcriptions"""
     shot_dir = raw_dir / shot_name
     shot_dir.mkdir(parents=True, exist_ok=True)
     
@@ -332,7 +328,6 @@ def move_json_files_to_shot_folder(source_dir, raw_dir, shot_name):
 
 #Wrapper for all the stuff before
 def ask_continue_after_segmentation():
-    """Ask user if they want to continue with transcription after segmentation"""
     while True:
         choice = input("\nSegmentation completed. Do you want to continue with transcription?\n1. Yes - Continue with transcription\n2. No - Stop here\nEnter choice (1-2): ").strip().lower()
         
@@ -350,7 +345,6 @@ def ask_continue_after_segmentation():
 
 
 def configure_transcription():
-    """Handle the configuration flow with back navigation"""
     config = {}
     step = 'run_name'
     

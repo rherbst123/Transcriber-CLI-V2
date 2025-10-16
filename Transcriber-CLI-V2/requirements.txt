@@ -7,3 +7,4 @@ art
 opencv-python
 openvino
 numpy
+pytesseract

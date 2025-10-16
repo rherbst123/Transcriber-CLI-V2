@@ -7,8 +7,6 @@ import numpy as np
 import base64
 import threading
 from openvino import Core
-
-# NEW
 import pytesseract
 from math import degrees
 
@@ -237,12 +235,12 @@ class Segmentation:
                 image = cv2.resize(image, (int(w * step2), int(h * step2)))
         return image, scale
 
-    # ───────────── Orientation helpers (NEW) ─────────────
+
+    #Orientation of segments
     def _rotate90(self, img, k):
         return np.rot90(img, k).copy()
 
     def _tesseract_ocr_score(self, img_bgr):
-        """Lightweight score: sum(confidence * alnum_chars) over words."""
         gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY) if img_bgr.ndim == 3 else img_bgr
         data = pytesseract.image_to_data(
             gray, output_type=pytesseract.Output.DICT,
@@ -261,7 +259,6 @@ class Segmentation:
         return score
 
     def _deskew_small_angle(self, img_bgr, max_angle=10):
-        """Deskew small slants using Hough lines (±max_angle degrees)."""
         gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY) if img_bgr.ndim == 3 else img_bgr
         gray = cv2.medianBlur(gray, 3)
         bw = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
@@ -292,7 +289,6 @@ class Segmentation:
         return cv2.warpAffine(img_bgr, M, (w, h), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)
 
     def _fix_orientation(self, crop_bgr):
-        """Try 0/90/180/270; pick best OCR score; optional small deskew."""
         # quick exits
         if not self.auto_orient:
             return crop_bgr
@@ -314,11 +310,6 @@ class Segmentation:
 
     # ───────────── Main entry point ─────────────
     def run(self, image_path: str, output_path_override: str | None = None):
-        """Return JSON dict; save segmentation if an output path is supplied.
-
-        You can pass `output_path_override` to change the destination on a
-        per-image basis without re-instantiating the engine.
-        """
         original_image, raw_boxes = self.get_bounding_boxes(image_path)
         merged_boxes = {
             c: self.merge_overlapping_boxes(b) for c, b in raw_boxes.items() if b
@@ -401,34 +392,9 @@ class Segmentation:
             ).decode("utf-8")
         return final_output
 
-    # ─────────────- Optional overlay (unchanged) -─────────────
-    def draw_overlay_on_segmentation(self, image, positions):
-        overlay = image.copy()
-        font = cv2.FONT_HERSHEY_SIMPLEX
-        for class_name, bboxes in positions.items():
-            for box in bboxes:
-                x1, y1, x2, y2 = map(int, box)
-                cv2.rectangle(overlay, (x1, y1), (x2, y2), (0, 255, 0), 2)
-                label = f"{class_name}: {x1},{y1},{x2},{y2}"
-                (w, h), _ = cv2.getTextSize(label, font, 0.5, 1)
-                cv2.rectangle(overlay, (x1, y1 - h - 4), (x1 + w, y1), (0, 255, 0), -1)
-                cv2.putText(overlay, label, (x1, y1 - 2), font, 0.5, (0, 0, 0), 1)
-        return overlay
 
 
 def process_images_segmentation(input_folder, output_folder, model_xml_path=None, classes_to_render=None):
-    """
-    Process images through segmentation pipeline
-
-    Args:
-        input_folder (str): Path to input images folder
-        output_folder (str): Path to output folder for segmented segmentations
-        model_xml_path (str): Path to OpenVINO model XML file
-        classes_to_render (list): List of classes to render in segmentation
-
-    Returns:
-        tuple: (success_count, total_count)
-    """
     # Default settings
     if model_xml_path is None:
         model_xml_path = r"helpers/SegmentationModels/RoboFlowModels/best.xml"
@@ -494,7 +460,6 @@ def process_images_segmentation(input_folder, output_folder, model_xml_path=None
 
 
 def get_segmentation_settings():
-    """Get segmentation settings from user"""
     print("\n=== Segmentation Configuration ===")
 
     # Use fixed model path (adjust to your repo layout)
