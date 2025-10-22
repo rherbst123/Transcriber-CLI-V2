@@ -26,7 +26,6 @@ validation_settings = {
 
 
 def configure_validation_settings():
-    """Configure which validation steps will be performed"""
     global validation_settings
     
     print("\n" + "="*60)
@@ -244,7 +243,6 @@ def select_prompt():
 
 #WHERE THE HELL ARE THE TRANSCRITPIONS GOING????????
 def get_output_base_path():
-    """Get the base output path, cross-platform compatible"""
     home_dir = Path(os.path.expanduser("~"))
     
     # Try Desktop first on all systems
@@ -542,9 +540,14 @@ def main():
         else:  # Two shots
             print("\nTwo shots mode: Running first pass, then second pass using first pass results")
             
+            # Select models for both passes upfront
+            print("\n=== Model Selection ===")
+            print("\nSelect model for first pass processing:")
+            model1 = First_Shot.select_model()
+            print("\nSelect model for second pass processing:")
+            model2 = Second_Shot.select_model()
+            
             # Create temporary processing directories
-
-            #Change filenames
             temp_first_dir = run_output_dir / "temp_first"
             temp_second_dir = run_output_dir / "temp_second"
             temp_first_dir.mkdir(exist_ok=True)
@@ -552,12 +555,10 @@ def main():
             
             # Run first shot
             print("\n=== Running First Pass ===")
-            print("\nSelect model for first pass processing:")
-            model1 = First_Shot.select_model()
             First_Shot.process_images(processing_folder, 
-                                      prompt_path, temp_first_dir, 
-                                      run_name, 
-                                      model_id=model1)
+                          prompt_path, temp_first_dir, 
+                          run_name, 
+                          model_id=model1)
             print("\n=== Converting First Pass JSON files to CSV ===")
             convert_json_to_csv(str(temp_first_dir))
             
@@ -566,23 +567,21 @@ def main():
             if not batch_file:
                 print("Error: Could not find first shot batch JSON file. Skipping second shot.")
                 return
-                
+            
             batch_json_path = batch_file[0]
             print(f"\nFound first shot batch JSON: {batch_json_path}")
             
             # Run second shot with the JSON file from first shot
             print("\n=== Running Second Pass using First Pass Results ===")
-            print("\nSelect model for second pass processing:")
-            model2 = Second_Shot.select_model()
             
             # Process second shot using first shot results
             Second_Shot.process_with_first_shot(
-                processing_folder, 
-                prompt_path, 
-                batch_json_path, 
-                temp_second_dir, 
-                run_name, 
-                model_id=model2
+            processing_folder, 
+            prompt_path, 
+            batch_json_path, 
+            temp_second_dir, 
+            run_name, 
+            model_id=model2
             )
             
             # Convert second shot JSON files to CSV
@@ -602,8 +601,8 @@ def main():
             # Validate fields based on user settings
             if validation_settings['scientific_names']:
                 print("\n=== Validating Scientific Names ===")
-                for csv_file in run_output_dir.glob('*.csv'):
-                    validate_csv_scientific_names(csv_file)
+            for csv_file in run_output_dir.glob('*.csv'):
+                validate_csv_scientific_names(csv_file)
             else:
                 print("\n=== Skipping Scientific Names Validation (disabled by user) ===")
             
@@ -612,7 +611,7 @@ def main():
             #     print("\n=== Validating Genus/Species ===")
             #     for csv_file in run_output_dir.glob('*.csv'):
             #         validate_genus_species(csv_file)
-                
+            
             # Move JSON files to shot-specific folders in Raw Transcriptions
             print("\n=== Moving JSON files to Raw Transcriptions folders ===")
             move_json_files_to_shot_folder(temp_first_dir, raw_transcriptions_dir, "First Shot")

@@ -13,19 +13,8 @@ Extract the following THREE fields:
     - Format: 3-5 digits (length may vary)
     - In cases might be preceded by "No"
 
-3. **ImageQuality**: 
-    - Assess image quality issues and list all that apply
-    - Separate multiple issues with commas
-    - Possible values:
-      * "image - label obscured by specimen"
-      * "Lable or any text upside down"
-      * "missing" (if no Field Museum of Natural History stamp with catalog number is visible)
-      * "packet only - no physical specimen"
-      * "cropped badly"
-    - Use your best judgment for assessment
 
 **IMPORTANT**: Return ONLY the three requested fields with their values. Do not include any prefixes, explanations, commentary, or additional text. Format your response exactly as:
 
 CatalogNumber: [value]
 CollectionNumber: [value]
-ImageQuality: [value]

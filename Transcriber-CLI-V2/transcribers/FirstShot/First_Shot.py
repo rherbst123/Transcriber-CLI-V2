@@ -136,7 +136,6 @@ def process_image(image_path, prompt_path, model_id=None):
     
     # Check if the response contains the prompt itself instead of the structured data
     if "## 🌿 Herbarium Label Transcription" in response_text or "**Herbarium Label Transcription**" in response_text:
-        print("Warning: Response contains the prompt instead of structured data. Extracting only the field list...")
         
         # Try to find the actual field list in the response
         field_list_start = response_text.find("verbatimCollectors:")
