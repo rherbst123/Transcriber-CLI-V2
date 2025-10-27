@@ -4,6 +4,41 @@ import os
 import json
 from pathlib import Path
 
+def extract_barcode_from_filename(filename_or_url):
+    """
+    Extract barcode from image filename or URL.
+    Examples:
+    - 'V0623679F.jpg' -> 'V0623679F'
+    - 'http://fm-digital-assets.fieldmuseum.org/2823/588/V0623679F.jpg' -> 'V0623679F'
+    - '0002_C0021497F_segmentation.jpg' -> 'C0021497F'
+    - '0006_C2022789F_collage.jpg' -> 'C2022789F'
+    """
+    if not filename_or_url:
+        return "N/A"
+    
+    # If it's a URL, extract the filename part
+    if filename_or_url.startswith('http'):
+        filename = filename_or_url.split('/')[-1]
+    else:
+        filename = filename_or_url
+    
+    # Remove file extension to get the base name
+    base_name = os.path.splitext(filename)[0]
+    
+    # Clean up any remaining path separators
+    base_name = base_name.split('/')[-1]
+    
+    # Look for catalog number pattern: letter followed by numbers and letters
+    # This pattern should match things like C0021497F, V0623679F, etc.
+    catalog_pattern = r'[A-Z]\d+[A-Z]*'
+    match = re.search(catalog_pattern, base_name)
+    
+    if match:
+        return match.group()
+    
+    # If no catalog pattern found, return the base name (fallback)
+    return base_name if base_name else "N/A"
+
 def get_output_base_path():
     home_dir = Path(os.path.expanduser("~"))
     
@@ -100,8 +135,15 @@ def parse_transcription_text(transcription_text, image_name, image_url=None):
     lines = transcription_text.splitlines()
     data = []
     
+    # Extract barcode from image name or URL
+    barcode = extract_barcode_from_filename(image_name)
+    
     # Split into multiple records if there are duplicate field names
-    current_record = {"Image": image_name, "ImageURL": image_url or "N/A"}
+    current_record = {
+        "Image": image_name, 
+        "ImageURL": image_url or "N/A",
+        "Barcode": barcode
+    }
     field_counts = {}
     
     for line in lines:
@@ -136,21 +178,25 @@ def parse_transcription_text(transcription_text, image_name, image_url=None):
             
             # If we see a field we've already seen, start a new record
             if key in field_counts and key != "Image":
-                if current_record and len(current_record) > 1:  # More than just Image field
+                if current_record and len(current_record) > 2:  # More than just Image, ImageURL, and Barcode fields
                     data.append(current_record)
-                current_record = {"Image": image_name, "ImageURL": image_url or "N/A"}
+                current_record = {
+                    "Image": image_name, 
+                    "ImageURL": image_url or "N/A",
+                    "Barcode": barcode
+                }
                 field_counts = {}
             
             current_record[key] = value
             field_counts[key] = 1
     
-    if current_record and len(current_record) > 1:  # More than just Image field
+    if current_record and len(current_record) > 2:  # More than just Image, ImageURL, and Barcode fields
         data.append(current_record)
-    
+
     return data
 
 def discover_all_fields(data):
-    field_order = ["Image", "ImageURL"]  # Always put these first
+    field_order = ["Image", "ImageURL", "Barcode"]  # Always put these first
     seen_fields = set(field_order)
     
     for record in data:
@@ -169,6 +215,7 @@ def get_standard_fieldnames(data=None):
     return [
         "Image",
         "ImageURL",
+        "Barcode",
         "verbatimCollectors",
         "collectedBy", 
         "secondaryCollectors",
