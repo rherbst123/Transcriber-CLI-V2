@@ -11,6 +11,11 @@
 ### Prompt 1.5.6:
 - This prompt was an edit of 1.5.2, with Jeff cleaning up a lot of characters and grammar
 
+### Prompt 1.5.7:
+- Removed: otherCatalogNumbers, verbatimEventDate
+- accessionNumber: do not include barcode numbers
+- Other minor edits
+
 
 
 ## Current Prompt Being used as of : 11/12/2025
