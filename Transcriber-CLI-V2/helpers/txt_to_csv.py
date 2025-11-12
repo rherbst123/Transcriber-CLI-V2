@@ -4,8 +4,42 @@ import os
 import json
 from pathlib import Path
 
+def extract_barcode_from_filename(filename_or_url):
+    """
+    Extract barcode from image filename or URL.
+    Examples:
+    - 'V0623679F.jpg' -> 'V0623679F'
+    - 'http://fm-digital-assets.fieldmuseum.org/2823/588/V0623679F.jpg' -> 'V0623679F'
+    - '0002_C0021497F_segmentation.jpg' -> 'C0021497F'
+    - '0006_C2022789F_collage.jpg' -> 'C2022789F'
+    """
+    if not filename_or_url:
+        return "N/A"
+    
+    # If it's a URL, extract the filename part
+    if filename_or_url.startswith('http'):
+        filename = filename_or_url.split('/')[-1]
+    else:
+        filename = filename_or_url
+    
+    # Remove file extension to get the base name
+    base_name = os.path.splitext(filename)[0]
+    
+    # Clean up any remaining path separators
+    base_name = base_name.split('/')[-1]
+    
+    # Look for catalog number pattern: letter followed by numbers and letters
+    # This pattern should match things like C0021497F, V0623679F, etc.
+    catalog_pattern = r'[A-Z]\d+[A-Z]*'
+    match = re.search(catalog_pattern, base_name)
+    
+    if match:
+        return match.group()
+    
+    # If no catalog pattern found, return the base name (fallback)
+    return base_name if base_name else "N/A"
+
 def get_output_base_path():
-    """Get the base output path, cross-platform compatible"""
     home_dir = Path(os.path.expanduser("~"))
     
     # On Windows, prefer Desktop if it exists
@@ -18,7 +52,6 @@ def get_output_base_path():
     return home_dir / "Transcriber_Output"
 
 def parse_json_files(json_folder):
-    """Parse all JSON files in a folder and extract transcription data"""
     json_folder = Path(json_folder)
     data = []
     
@@ -99,12 +132,18 @@ def parse_json_files(json_folder):
     return data
 
 def parse_transcription_text(transcription_text, image_name, image_url=None):
-    """Parse transcription text to extract structured data"""
     lines = transcription_text.splitlines()
     data = []
     
+    # Extract barcode from image name or URL
+    barcode = extract_barcode_from_filename(image_name)
+    
     # Split into multiple records if there are duplicate field names
-    current_record = {"Image": image_name, "ImageURL": image_url or "N/A"}
+    current_record = {
+        "Image": image_name, 
+        "ImageURL": image_url or "N/A",
+        "Barcode": barcode
+    }
     field_counts = {}
     
     for line in lines:
@@ -139,22 +178,25 @@ def parse_transcription_text(transcription_text, image_name, image_url=None):
             
             # If we see a field we've already seen, start a new record
             if key in field_counts and key != "Image":
-                if current_record and len(current_record) > 1:  # More than just Image field
+                if current_record and len(current_record) > 2:  # More than just Image, ImageURL, and Barcode fields
                     data.append(current_record)
-                current_record = {"Image": image_name, "ImageURL": image_url or "N/A"}
+                current_record = {
+                    "Image": image_name, 
+                    "ImageURL": image_url or "N/A",
+                    "Barcode": barcode
+                }
                 field_counts = {}
             
             current_record[key] = value
             field_counts[key] = 1
     
-    if current_record and len(current_record) > 1:  # More than just Image field
+    if current_record and len(current_record) > 2:  # More than just Image, ImageURL, and Barcode fields
         data.append(current_record)
-    
+
     return data
 
 def discover_all_fields(data):
-    """Discover all unique field names from the dataset, preserving order of appearance"""
-    field_order = ["Image", "ImageURL"]  # Always put these first
+    field_order = ["Image", "ImageURL", "Barcode"]  # Always put these first
     seen_fields = set(field_order)
     
     for record in data:
@@ -166,7 +208,6 @@ def discover_all_fields(data):
     return field_order
 
 def get_standard_fieldnames(data=None):
-    """Return field names - either discovered from data or fallback to herbarium defaults"""
     if data:
         return discover_all_fields(data)
     
@@ -174,6 +215,7 @@ def get_standard_fieldnames(data=None):
     return [
         "Image",
         "ImageURL",
+        "Barcode",
         "verbatimCollectors",
         "collectedBy", 
         "secondaryCollectors",
@@ -201,7 +243,6 @@ def get_standard_fieldnames(data=None):
     ]
 
 def normalize_data_structure(data):
-    """Ensure all records have the same fields with N/A for missing values"""
     if not data:
         return []
     
@@ -218,7 +259,6 @@ def normalize_data_structure(data):
     return normalized_data
 
 def write_to_csv(data, output_filename):
-    """Write data to CSV with dynamically discovered structure"""
     if not data:
         print("No data to write to CSV")
         return
@@ -233,7 +273,6 @@ def write_to_csv(data, output_filename):
             writer.writerow(record)
 
 def convert_json_to_csv(json_folder_path):
-    """Convert JSON transcription files to CSV format"""
     print(f"Converting JSON files from folder: {json_folder_path}")
     
     if not os.path.exists(json_folder_path):
@@ -313,7 +352,6 @@ def convert_json_to_csv(json_folder_path):
         return None
 
 def standardize_existing_csv(csv_file_path):
-    """Standardize an existing CSV file to ensure consistent column structure"""
     if not os.path.exists(csv_file_path):
         print(f"CSV file not found: {csv_file_path}")
         return False
@@ -340,7 +378,6 @@ def standardize_existing_csv(csv_file_path):
         return False
 
 def standardize_all_csv_files(base_directory):
-    """Find and standardize all CSV files in the project"""
     base_path = Path(base_directory)
     csv_files = list(base_path.rglob("*.csv"))
     
@@ -356,7 +393,6 @@ def standardize_all_csv_files(base_directory):
     print("CSV standardization complete")
 
 def convert_txt_to_csv(txt_file_path):
-    """Legacy function - now redirects to JSON conversion if folder is provided"""
     # Check if this is actually a folder path (for JSON files)
     if os.path.isdir(txt_file_path):
         return convert_json_to_csv(txt_file_path)

@@ -5,6 +5,7 @@ from helpers.cost_analysis import cost_tracker
 from helpers.txt_to_csv import convert_json_to_csv
 from helpers.segmentation import process_images_segmentation, get_segmentation_settings
 from Validation.validate_scientific_names import validate_csv_scientific_names
+from Validation.find_duplicate_records import validate_csv_duplicate_records
 import os
 import re
 import stat
@@ -19,6 +20,7 @@ import json
 # Global validation settings
 validation_settings = {
     'scientific_names': True,  # Default: enabled
+    'duplicate_records': True,  # Default: enabled
     # Future validation types can be added here
     # 'genus_species': True,
     # 'collection_data': True,
@@ -26,7 +28,6 @@ validation_settings = {
 
 
 def configure_validation_settings():
-    """Configure which validation steps will be performed"""
     global validation_settings
     
     print("\n" + "="*60)
@@ -41,14 +42,16 @@ def configure_validation_settings():
         # Display current settings
         print("\nCurrent Validation Settings:")
         print("1. Scientific Names Validation:", "✓ ENABLED" if validation_settings['scientific_names'] else "✗ DISABLED")
+        print("2. Duplicate Records Validation:", "✓ ENABLED" if validation_settings['duplicate_records'] else "✗ DISABLED")
         # Future validations can be added here:
-        # print("2. Genus/Species Validation:", "✓ ENABLED" if validation_settings['genus_species'] else "✗ DISABLED")
-        # print("3. Collection Data Validation:", "✓ ENABLED" if validation_settings['collection_data'] else "✗ DISABLED")
+        # print("3. Genus/Species Validation:", "✓ ENABLED" if validation_settings['genus_species'] else "✗ DISABLED")
+        # print("4. Collection Data Validation:", "✓ ENABLED" if validation_settings['collection_data'] else "✗ DISABLED")
         
         print("\nOptions:")
         print("1 - Toggle Scientific Names Validation")
-        # print("2 - Toggle Genus/Species Validation")
-        # print("3 - Toggle Collection Data Validation")
+        print("2 - Toggle Duplicate Records Validation")
+        # print("3 - Toggle Genus/Species Validation")
+        # print("4 - Toggle Collection Data Validation")
         print("r - Reset all to default (all enabled)")
         print("q - Finish and return to main menu")
         print("back - Return to main menu")
@@ -60,8 +63,13 @@ def configure_validation_settings():
             status = "enabled" if validation_settings['scientific_names'] else "disabled"
             print(f"Scientific Names Validation {status}")
             
+        elif choice == '2':
+            validation_settings['duplicate_records'] = not validation_settings['duplicate_records']
+            status = "enabled" if validation_settings['duplicate_records'] else "disabled"
+            print(f"Duplicate Records Validation {status}")
+            
         # Future validation toggles:
-        # elif choice == '2':
+        # elif choice == '3':
         #     validation_settings['genus_species'] = not validation_settings['genus_species']
         #     status = "enabled" if validation_settings['genus_species'] else "disabled"
         #     print(f"Genus/Species Validation {status}")
@@ -69,6 +77,7 @@ def configure_validation_settings():
         elif choice == 'r' or choice == 'reset':
             validation_settings = {
                 'scientific_names': True,
+                'duplicate_records': True,
                 # Future defaults:
                 # 'genus_species': True,
                 # 'collection_data': True,
@@ -158,7 +167,6 @@ def safe_rmtree(path):
 
 #Pretty self explanitory
 def download_images_from_urls(url_file_path, download_dir):
-    """Download images from URLs in a text file and save a filename->URL map"""
     if not os.path.exists(url_file_path):
         print(f"Error: URL file not found at {url_file_path}")
         return False
@@ -245,7 +253,6 @@ def select_prompt():
 
 #WHERE THE HELL ARE THE TRANSCRITPIONS GOING????????
 def get_output_base_path():
-    """Get the base output path, cross-platform compatible"""
     home_dir = Path(os.path.expanduser("~"))
     
     # Try Desktop first on all systems
@@ -259,7 +266,6 @@ def get_output_base_path():
 
 #Shows the number of images in the folder just as a double check for things. 
 def show_images_in_folder(folder_path):
-    """Display images found in the folder"""
     image_extensions = {'.jpg', '.jpeg', '.png', '.gif', '.bmp', '.tiff', '.webp'}
     images = [f for f in os.listdir(folder_path) if os.path.splitext(f.lower())[1] in image_extensions]
     
@@ -312,7 +318,6 @@ def get_images_folder(use_urls):
 
 
 def rename_csv_files(source_dir, run_name, shot_type):
-    """Rename CSV files with run name and shot type"""
     for csv_file in source_dir.glob('*.csv'):
         new_name = f"{run_name}_{shot_type}.csv"
         new_path = source_dir / new_name
@@ -321,7 +326,6 @@ def rename_csv_files(source_dir, run_name, shot_type):
         return new_path  # Return the new path for moving
 
 def move_json_files_to_shot_folder(source_dir, raw_dir, shot_name):
-    """Move all JSON files from source directory to shot-specific folder in Raw Transcriptions"""
     shot_dir = raw_dir / shot_name
     shot_dir.mkdir(parents=True, exist_ok=True)
     
@@ -332,7 +336,6 @@ def move_json_files_to_shot_folder(source_dir, raw_dir, shot_name):
 
 #Wrapper for all the stuff before
 def ask_continue_after_segmentation():
-    """Ask user if they want to continue with transcription after segmentation"""
     while True:
         choice = input("\nSegmentation completed. Do you want to continue with transcription?\n1. Yes - Continue with transcription\n2. No - Stop here\nEnter choice (1-2): ").strip().lower()
         
@@ -350,7 +353,6 @@ def ask_continue_after_segmentation():
 
 
 def configure_transcription():
-    """Handle the configuration flow with back navigation"""
     config = {}
     step = 'run_name'
     
@@ -531,6 +533,13 @@ def main():
             else:
                 print("\n=== Skipping Scientific Names Validation (disabled by user) ===")
             
+            if validation_settings['duplicate_records']:
+                print("\n=== Validating Duplicate Records ===")
+                for csv_file in output_dir.glob('*.csv'):
+                    validate_csv_duplicate_records(csv_file)
+            else:
+                print("\n=== Skipping Duplicate Records Validation (disabled by user) ===")
+            
             # Future validation types can be added here:
             # if validation_settings['genus_species']:
             #     print("\n=== Validating Genus/Species ===")
@@ -548,9 +557,14 @@ def main():
         else:  # Two shots
             print("\nTwo shots mode: Running first pass, then second pass using first pass results")
             
+            # Select models for both passes upfront
+            print("\n=== Model Selection ===")
+            print("\nSelect model for first pass processing:")
+            model1 = First_Shot.select_model()
+            print("\nSelect model for second pass processing:")
+            model2 = Second_Shot.select_model()
+            
             # Create temporary processing directories
-
-            #Change filenames
             temp_first_dir = run_output_dir / "temp_first"
             temp_second_dir = run_output_dir / "temp_second"
             temp_first_dir.mkdir(exist_ok=True)
@@ -558,12 +572,10 @@ def main():
             
             # Run first shot
             print("\n=== Running First Pass ===")
-            print("\nSelect model for first pass processing:")
-            model1 = First_Shot.select_model()
             First_Shot.process_images(processing_folder, 
-                                      prompt_path, temp_first_dir, 
-                                      run_name, 
-                                      model_id=model1)
+                          prompt_path, temp_first_dir, 
+                          run_name, 
+                          model_id=model1)
             print("\n=== Converting First Pass JSON files to CSV ===")
             convert_json_to_csv(str(temp_first_dir))
             
@@ -572,23 +584,21 @@ def main():
             if not batch_file:
                 print("Error: Could not find first shot batch JSON file. Skipping second shot.")
                 return
-                
+            
             batch_json_path = batch_file[0]
             print(f"\nFound first shot batch JSON: {batch_json_path}")
             
             # Run second shot with the JSON file from first shot
             print("\n=== Running Second Pass using First Pass Results ===")
-            print("\nSelect model for second pass processing:")
-            model2 = Second_Shot.select_model()
             
             # Process second shot using first shot results
             Second_Shot.process_with_first_shot(
-                processing_folder, 
-                prompt_path, 
-                batch_json_path, 
-                temp_second_dir, 
-                run_name, 
-                model_id=model2
+            processing_folder, 
+            prompt_path, 
+            batch_json_path, 
+            temp_second_dir, 
+            run_name, 
+            model_id=model2
             )
             
             # Convert second shot JSON files to CSV
@@ -613,12 +623,19 @@ def main():
             else:
                 print("\n=== Skipping Scientific Names Validation (disabled by user) ===")
             
+            if validation_settings['duplicate_records']:
+                print("\n=== Validating Duplicate Records ===")
+                for csv_file in run_output_dir.glob('*.csv'):
+                    validate_csv_duplicate_records(csv_file)
+            else:
+                print("\n=== Skipping Duplicate Records Validation (disabled by user) ===")
+            
             # Future validation types can be added here:
             # if validation_settings['genus_species']:
             #     print("\n=== Validating Genus/Species ===")
             #     for csv_file in run_output_dir.glob('*.csv'):
             #         validate_genus_species(csv_file)
-                
+            
             # Move JSON files to shot-specific folders in Raw Transcriptions
             print("\n=== Moving JSON files to Raw Transcriptions folders ===")
             move_json_files_to_shot_folder(temp_first_dir, raw_transcriptions_dir, "First Shot")

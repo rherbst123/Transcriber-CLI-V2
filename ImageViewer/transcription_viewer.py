@@ -143,15 +143,15 @@ def fields_to_text(fields):
     """Convert fields dictionary back to formatted text"""
     lines = ["# Transcription of Herbarium Label", ""]
     for key, value in fields.items():
-        if key not in ['Image', 'ImageURL']:  # Skip metadata fields
+        if key not in ['Image', 'ImageURL', 'Barcode']:  # Skip metadata fields
             lines.append(f"{key}: {value}")
     return '\n\n'.join([lines[0]] + ['\n'.join(lines[2:])])
 
 def csv_row_to_fields(csv_row):
-    """Convert CSV row to fields dictionary, excluding Image and ImageURL"""
+    """Convert CSV row to fields dictionary, excluding Image, ImageURL, and Barcode"""
     if not csv_row:
         return {}
-    return {k: v for k, v in csv_row.items() if k not in ['Image', 'ImageURL']}
+    return {k: v for k, v in csv_row.items() if k not in ['Image', 'ImageURL', 'Barcode']}
 
 def update_csv_file(csv_path, image_name, updated_fields):
     """Update the corresponding row in the CSV file"""
@@ -450,6 +450,7 @@ def display_and_edit_transcription(transcription_path, transcription_data, selec
         edited_fields = {}
         
         # Group fields by category for better organization
+        metadata_fields = ['Barcode']
         collector_fields = ['verbatimCollectors', 'collectedBy', 'secondaryCollectors', 'recordNumber']
         date_fields = ['verbatimEventDate', 'minimumEventDate', 'maximumEventDate']
         identification_fields = ['verbatimIdentification', 'latestScientificName', 'VerifiedLatestScientificName', 
@@ -457,6 +458,16 @@ def display_and_edit_transcription(transcription_path, transcription_data, selec
         location_fields = ['country', 'firstPoliticalUnit', 'secondPoliticalUnit', 'municipality', 
                           'verbatimLocality', 'locality', 'habitat', 'verbatimElevation', 'verbatimCoordinates']
         other_fields = ['associatedTaxa', 'otherCatalogNumbers', 'originalMethod', 'typeStatus']
+        
+        # Metadata Information
+        with st.expander("🏷️ Metadata", expanded=True):
+            for key in metadata_fields:
+                if key in fields:
+                    edited_fields[key] = st.text_input(
+                        key,
+                        value=fields[key],
+                        key=f"field_{key}_{selected_image}"
+                    )
         
         # Collector Information
         with st.expander("👥 Collector Information", expanded=True):
