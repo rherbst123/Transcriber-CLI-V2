@@ -59,13 +59,35 @@ The tool will:
 5. Ask Model for second shot (If chosen)
 6. Output a completed .csv file to your desktop with a cost analysis and raw .json files 
 
+## Validation Features
+
+The tool includes comprehensive validation capabilities that can be configured in the settings menu:
+
+### 1. Scientific Name Validation
+- Validates scientific names against the Global Names Validator on Tropicos
+- Flags potential issues with taxonomic nomenclature
+- Provides suggested corrections when available
+
+### 2. Duplicate Records Validation
+- Searches the Bryophyte Portal for existing records by catalog number
+- Identifies potential duplicate specimens in the database
+- Adds detailed duplicate information to CSV output
+
+### 3. Duplicate Entries Validation
+- Searches for existing entries based on collector, collection date, and collection ID
+- Helps identify specimens that may already be in the database under different catalog numbers
+- Useful for detecting field collection duplicates
+
+All validation features can be enabled/disabled in the configuration menu and run automatically after transcription. 
+
 ## Future Updates
 
 - [x] Scientific Name Validation (Done with Global Names Validator on Tropicos) [Global Names](https://verifier.globalnames.org/)
-- [ ] Validation using GBIF, IDigBio and Sybiota ()
-- [ ] Search in Portal for Duplicate Catalog numbers
-- [ ] Search in Portal for Entries on "Collector, record Number and Date" 
+- [x] Search in Portal for Duplicate Catalog numbers
+- [x] Search in Portal for Entries on "Collector, record Number and Date" 
 - [x] Automatic Segmentation for all images done before transcription
+- [ ] Validation using GBIF, IDigBio and Sybiota
+- [ ] Enhanced genus/species validation
 
 ## Supported AI Models
 

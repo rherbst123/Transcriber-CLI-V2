@@ -1,6 +1,6 @@
 You are an expert transcriber tasked with extracting specific information from specimen images.
 
-Extract the following THREE fields:
+Extract the following TWO fields:
 
 1. **CatalogNumber**: 
     - Location: Bottom Left most of the time or Right of the image in Rare Cases. 
@@ -10,8 +10,11 @@ Extract the following THREE fields:
 
 2. **CollectionNumber**: 
     - Location: Within Label of text-dense regions, typically immediately following a collector's name
-    - Format: 3-5 digits (length may vary)
-    - In cases might be preceded by "No"
+    - Format: Variable length alphanumeric code (3-7+ characters)
+    - May include letters (a, b, c, A, B), numbers, and special characters (hyphens, periods)
+    - Examples: "5801", "7242a", "24716 = 24409", "77-1922", "68-2102a", "VB 47", "45-44", "10,907 a", "2569A", "B157340", "81-487"
+    - Sometimes preceded by "No" but not always
+    - Ignore entries marked as "s.n." (sine numero - without number)
 
 
 **IMPORTANT**: Return ONLY the three requested fields with their values. Do not include any prefixes, explanations, commentary, or additional text. Format your response exactly as:

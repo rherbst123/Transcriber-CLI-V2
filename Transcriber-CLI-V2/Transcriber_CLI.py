@@ -6,6 +6,7 @@ from helpers.txt_to_csv import convert_json_to_csv
 from helpers.segmentation import process_images_segmentation, get_segmentation_settings
 from Validation.validate_scientific_names import validate_csv_scientific_names
 from Validation.find_duplicate_records import validate_csv_duplicate_records
+from Validation.find_duplicate_entries import validate_csv_entries
 import os
 import re
 import stat
@@ -20,7 +21,8 @@ import json
 # Global validation settings
 validation_settings = {
     'scientific_names': True,  # Default: enabled
-    'duplicate_records': True,  # Default: enabled
+    'duplicate_records': False,  # Default: disabled
+    'duplicate_entries': True,  # Default: enabled (collector, date, collid search)
     # Future validation types can be added here
     # 'genus_species': True,
     # 'collection_data': True,
@@ -43,15 +45,17 @@ def configure_validation_settings():
         print("\nCurrent Validation Settings:")
         print("1. Scientific Names Validation:", "✓ ENABLED" if validation_settings['scientific_names'] else "✗ DISABLED")
         print("2. Duplicate Records Validation:", "✓ ENABLED" if validation_settings['duplicate_records'] else "✗ DISABLED")
+        print("3. Duplicate Entries Validation:", "✓ ENABLED" if validation_settings['duplicate_entries'] else "✗ DISABLED")
         # Future validations can be added here:
-        # print("3. Genus/Species Validation:", "✓ ENABLED" if validation_settings['genus_species'] else "✗ DISABLED")
+        # print("4. Genus/Species Validation:", "✓ ENABLED" if validation_settings['genus_species'] else "✗ DISABLED")
         # print("4. Collection Data Validation:", "✓ ENABLED" if validation_settings['collection_data'] else "✗ DISABLED")
         
         print("\nOptions:")
         print("1 - Toggle Scientific Names Validation")
         print("2 - Toggle Duplicate Records Validation")
-        # print("3 - Toggle Genus/Species Validation")
-        # print("4 - Toggle Collection Data Validation")
+        print("3 - Toggle Duplicate Entries Validation")
+        # print("4 - Toggle Genus/Species Validation")
+        # print("5 - Toggle Collection Data Validation")
         print("r - Reset all to default (all enabled)")
         print("q - Finish and return to main menu")
         print("back - Return to main menu")
@@ -68,8 +72,13 @@ def configure_validation_settings():
             status = "enabled" if validation_settings['duplicate_records'] else "disabled"
             print(f"Duplicate Records Validation {status}")
             
+        elif choice == '3':
+            validation_settings['duplicate_entries'] = not validation_settings['duplicate_entries']
+            status = "enabled" if validation_settings['duplicate_entries'] else "disabled"
+            print(f"Duplicate Entries Validation {status}")
+            
         # Future validation toggles:
-        # elif choice == '3':
+        # elif choice == '4':
         #     validation_settings['genus_species'] = not validation_settings['genus_species']
         #     status = "enabled" if validation_settings['genus_species'] else "disabled"
         #     print(f"Genus/Species Validation {status}")
@@ -77,7 +86,8 @@ def configure_validation_settings():
         elif choice == 'r' or choice == 'reset':
             validation_settings = {
                 'scientific_names': True,
-                'duplicate_records': True,
+                'duplicate_records': False,
+                'duplicate_entries': True,
                 # Future defaults:
                 # 'genus_species': True,
                 # 'collection_data': True,
@@ -540,6 +550,13 @@ def main():
             else:
                 print("\n=== Skipping Duplicate Records Validation (disabled by user) ===")
             
+            if validation_settings['duplicate_entries']:
+                print("\n=== Validating Duplicate Entries (Collector, Date, CollID) ===")
+                for csv_file in output_dir.glob('*.csv'):
+                    validate_csv_entries(csv_file)
+            else:
+                print("\n=== Skipping Duplicate Entries Validation (disabled by user) ===")
+            
             # Future validation types can be added here:
             # if validation_settings['genus_species']:
             #     print("\n=== Validating Genus/Species ===")
@@ -629,6 +646,13 @@ def main():
                     validate_csv_duplicate_records(csv_file)
             else:
                 print("\n=== Skipping Duplicate Records Validation (disabled by user) ===")
+            
+            if validation_settings['duplicate_entries']:
+                print("\n=== Validating Duplicate Entries (Collector, Date, CollID) ===")
+                for csv_file in run_output_dir.glob('*.csv'):
+                    validate_csv_entries(csv_file)
+            else:
+                print("\n=== Skipping Duplicate Entries Validation (disabled by user) ===")
             
             # Future validation types can be added here:
             # if validation_settings['genus_species']:

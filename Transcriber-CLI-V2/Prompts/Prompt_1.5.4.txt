@@ -1,6 +1,7 @@
 Please transcribe and expand all details from this herbarium label. Do not Include any Full stops. If there is no information present for a field insert N/A. If in a language other than English, do not translate. If unsure at all, state “unsure and check”. I require information on the following categories and to output in the following order(Make sure the fields are exactly as typed). Create A single list of these fields, consolidate all information into this single list.
 Please Do NOT add any prefixes to the fields or number the fields. Only the Field names and their information should be returned. 
 Please Do NOT add a header for the response This includes a summary or any other information.
+Please IF there is NO INFORMATION or you are not certain Insert "N/A" into the field
 
 
 verbatimCollectors: (The collectors as you see it on the label, this might be one collector, a string of collectors, that collected the sample) Collected by or collectors maybe prefixed by leg. or sometimes legit

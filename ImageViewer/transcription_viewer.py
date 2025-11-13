@@ -232,7 +232,7 @@ def save_transcription(transcription_path, data, updated_text, folder_paths, ima
         return False, False
 
 def main():
-    st.title("🔬 Herbarium Transcription Viewer & Editor")
+    st.title("Herbarium Transcription Viewer & Editor")
     st.markdown("View and edit transcriptions from segmented herbarium images")
     
     # Initialize session state for tracking changes
@@ -243,15 +243,15 @@ def main():
     
     # Check if Finished Transcriptions folder exists
     if not FINISHED_TRANSCRIPTIONS_DIR.exists():
-        st.error(f"❌ Finished Transcriptions folder not found at: `{FINISHED_TRANSCRIPTIONS_DIR}`")
-        st.info("💡 Please ensure the CLI has created the 'Finished Transcriptions' folder on your Desktop.")
+        st.error(f"Finished Transcriptions folder not found at: `{FINISHED_TRANSCRIPTIONS_DIR}`")
+        st.info("Please ensure the CLI has created the 'Finished Transcriptions' folder on your Desktop.")
         return
     
     # Sidebar for navigation
     st.sidebar.header("Navigation")
     
     # Display base directory location
-    st.sidebar.success(f"✅ Found: `{FINISHED_TRANSCRIPTIONS_DIR.name}`")
+    st.sidebar.success(f"Found: `{FINISHED_TRANSCRIPTIONS_DIR.name}`")
     st.sidebar.markdown("---")
     
     # Folder selection
@@ -259,11 +259,11 @@ def main():
     
     if not available_folders:
         st.error("No project folders found in the Finished Transcriptions directory")
-        st.info(f"📁 Looking in: `{FINISHED_TRANSCRIPTIONS_DIR}`")
+        st.info(f"Looking in: `{FINISHED_TRANSCRIPTIONS_DIR}`")
         return
     
     selected_folder = st.sidebar.selectbox(
-        "📁 Select Folder",
+        "Select Folder",
         available_folders,
         key="folder_selector"
     )
@@ -299,33 +299,33 @@ def main():
     if len(available_shots) == 1:
         # Only one shot type available, use it directly
         shot_type = available_shots[0]
-        st.sidebar.info(f"📝 Transcription Type: **{shot_type}**")
+        st.sidebar.info(f"Transcription Type: **{shot_type}**")
     else:
         # Multiple shot types available, let user choose
         shot_type = st.sidebar.radio(
-            "📝 Transcription Type",
+            "Transcription Type",
             available_shots,
             key="shot_type"
         )
     
     # Display mode
     display_mode = st.sidebar.radio(
-        "👁️ Display Mode",
+        "Display Mode",
         ["Side by Side", "Stacked"],
         key="display_mode"
     )
     
     st.sidebar.markdown("---")
-    st.sidebar.info(f"📊 Total Images: {len(image_files)}")
-    st.sidebar.info(f"📁 Current Folder: {selected_folder}")
-    st.sidebar.info(f"🖼️ Image {st.session_state.current_image_index + 1} of {len(image_names)}")
+    st.sidebar.info(f"Total Images: {len(image_files)}")
+    st.sidebar.info(f"Current Folder: {selected_folder}")
+    st.sidebar.info(f"Image {st.session_state.current_image_index + 1} of {len(image_names)}")
     
     # Navigation buttons at the top
     st.markdown("---")
     col1, col2, col3, col4, col5 = st.columns([1, 1, 3, 1, 1])
     
     with col1:
-        if st.button("⬅️ Previous", disabled=(st.session_state.current_image_index == 0), use_container_width=True):
+        if st.button("⬅Previous", disabled=(st.session_state.current_image_index == 0), use_container_width=True):
             # Save pending changes before navigating
             save_pending_changes(folder_paths, shot_type)
             st.session_state.current_image_index -= 1
@@ -333,7 +333,7 @@ def main():
             st.rerun()
     
     with col2:
-        if st.button("➡️ Next", disabled=(st.session_state.current_image_index == len(image_names) - 1), use_container_width=True):
+        if st.button("Next", disabled=(st.session_state.current_image_index == len(image_names) - 1), use_container_width=True):
             # Save pending changes before navigating
             save_pending_changes(folder_paths, shot_type)
             st.session_state.current_image_index += 1
@@ -345,7 +345,7 @@ def main():
     
     with col4:
         # Jump to first
-        if st.button("⏮️ First", disabled=(st.session_state.current_image_index == 0), use_container_width=True):
+        if st.button("⏮First", disabled=(st.session_state.current_image_index == 0), use_container_width=True):
             save_pending_changes(folder_paths, shot_type)
             st.session_state.current_image_index = 0
             st.session_state.pending_changes = {}
@@ -353,7 +353,7 @@ def main():
     
     with col5:
         # Jump to last
-        if st.button("⏭️ Last", disabled=(st.session_state.current_image_index == len(image_names) - 1), use_container_width=True):
+        if st.button("⏭Last", disabled=(st.session_state.current_image_index == len(image_names) - 1), use_container_width=True):
             save_pending_changes(folder_paths, shot_type)
             st.session_state.current_image_index = len(image_names) - 1
             st.session_state.pending_changes = {}
@@ -379,7 +379,7 @@ def main():
             col1, col2 = st.columns([1, 1])
             
             with col1:
-                st.subheader("📷 Image")
+                st.subheader("Image")
                 try:
                     image = Image.open(image_path)
                     st.image(image, use_container_width=True)
@@ -387,12 +387,12 @@ def main():
                     st.error(f"Error loading image: {e}")
             
             with col2:
-                st.subheader(f"📝 {shot_type} Transcription")
+                st.subheader(f"{shot_type} Transcription")
                 display_and_edit_transcription(transcription_path, transcription_data, selected_image,
                                              folder_paths, shot_type, csv_data, csv_fieldnames)
         
         else:  # Stacked mode
-            st.subheader("📷 Image")
+            st.subheader("Image")
             try:
                 image = Image.open(image_path)
                 st.image(image, use_container_width=True)
@@ -410,12 +410,12 @@ def display_and_edit_transcription(transcription_path, transcription_data, selec
     
     # Check if we have CSV data for this image
     if csv_data is None:
-        st.error("❌ CSV file not found. Cannot display transcription data.")
+        st.error("CSV file not found. Cannot display transcription data.")
         st.info("The CSV file should be in the folder with the format: `{folder_name}_{shot_type}.csv`")
         return
     
     if selected_image not in csv_data:
-        st.warning(f"⚠️ No data found for {selected_image} in CSV file")
+        st.warning(f"No data found for {selected_image} in CSV file")
         st.info("This image may not have been processed or is missing from the CSV.")
         return
     
@@ -426,7 +426,7 @@ def display_and_edit_transcription(transcription_path, transcription_data, selec
     # Also show JSON transcription metadata if available
     if transcription_data is not None:
         # Display metadata
-        with st.expander("📊 Transcription Metadata", expanded=False):
+        with st.expander("Transcription Metadata", expanded=False):
             cols = st.columns(3)
             with cols[0]:
                 st.write(f"**Model:** {transcription_data.get('model', 'N/A')}")
@@ -441,7 +441,7 @@ def display_and_edit_transcription(transcription_path, transcription_data, selec
     st.markdown("---")
     
     # Create tabs for different editing modes
-    tab1, tab2 = st.tabs(["📋 Field Editor", "📄 CSV View"])
+    tab1, tab2 = st.tabs(["Field Editor", "CSV View"])
     
     with tab1:
         st.markdown("**Edit transcription fields:**")
@@ -460,7 +460,7 @@ def display_and_edit_transcription(transcription_path, transcription_data, selec
         other_fields = ['associatedTaxa', 'otherCatalogNumbers', 'originalMethod', 'typeStatus']
         
         # Metadata Information
-        with st.expander("🏷️ Metadata", expanded=True):
+        with st.expander("Metadata", expanded=True):
             for key in metadata_fields:
                 if key in fields:
                     edited_fields[key] = st.text_input(
@@ -470,7 +470,7 @@ def display_and_edit_transcription(transcription_path, transcription_data, selec
                     )
         
         # Collector Information
-        with st.expander("👥 Collector Information", expanded=True):
+        with st.expander("Collector Information", expanded=True):
             for key in collector_fields:
                 if key in fields:
                     edited_fields[key] = st.text_input(
@@ -480,7 +480,7 @@ def display_and_edit_transcription(transcription_path, transcription_data, selec
                     )
         
         # Date Information
-        with st.expander("📅 Date Information", expanded=True):
+        with st.expander("Date Information", expanded=True):
             for key in date_fields:
                 if key in fields:
                     edited_fields[key] = st.text_input(
@@ -490,7 +490,7 @@ def display_and_edit_transcription(transcription_path, transcription_data, selec
                     )
         
         # Identification Information
-        with st.expander("🔬 Identification & Validation", expanded=True):
+        with st.expander("Identification & Validation", expanded=True):
             for key in identification_fields:
                 if key in fields:
                     edited_fields[key] = st.text_input(
@@ -500,7 +500,7 @@ def display_and_edit_transcription(transcription_path, transcription_data, selec
                     )
         
         # Location Information
-        with st.expander("📍 Location Information", expanded=True):
+        with st.expander("Location Information", expanded=True):
             for key in location_fields:
                 if key in fields:
                     edited_fields[key] = st.text_input(
@@ -510,7 +510,7 @@ def display_and_edit_transcription(transcription_path, transcription_data, selec
                     )
         
         # Other Information
-        with st.expander("📝 Additional Information", expanded=True):
+        with st.expander("Additional Information", expanded=True):
             for key in other_fields:
                 if key in fields:
                     edited_fields[key] = st.text_input(
@@ -524,16 +524,16 @@ def display_and_edit_transcription(transcription_path, transcription_data, selec
         
         col1, col2, col3 = st.columns([1, 1, 4])
         with col1:
-            if st.button("💾 Save Now", type="primary", disabled=not fields_modified):
+            if st.button("Save Now", type="primary", disabled=not fields_modified):
                 # Update CSV and JSON
                 json_saved, csv_updated = save_transcription(transcription_path, transcription_data, 
                                                              fields_to_text(edited_fields), folder_paths, 
                                                              selected_image, shot_type, edited_fields)
                 if json_saved:
                     if csv_updated:
-                        st.success("✅ Saved! (JSON + CSV)")
+                        st.success("Saved! (JSON + CSV)")
                     else:
-                        st.success("✅ Saved! (JSON only)")
+                        st.success("Saved! (JSON only)")
                     st.rerun()
         
         # Store changes in session state for auto-save on navigation
@@ -545,7 +545,7 @@ def display_and_edit_transcription(transcription_path, transcription_data, selec
                 'transcription_data': transcription_data,
                 'transcription_path': transcription_path
             }
-            st.info("💡 Changes detected. Click 'Save Now' or navigate to auto-save.")
+            st.info("Changes detected. Click 'Save Now' or navigate to auto-save.")
     
     with tab2:
         st.markdown("**Raw CSV Data View:**")

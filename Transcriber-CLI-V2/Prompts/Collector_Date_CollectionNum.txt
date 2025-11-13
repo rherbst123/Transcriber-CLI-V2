@@ -1,0 +1,40 @@
+You are an expert transcriber tasked with extracting specific information from specimen images.
+Extract the following THREE fields:
+
+**collectedBy**: (The primary collector's name, properly formatted)
+    - Location: Usually found at the beginning of specimen labels or in dedicated collector fields
+    - Format: Last name with abbreviated first/middle initials, separated by spaces
+    - Pattern: [Initial]. [Initial]. [Last Name] or [Initial]. [Last Name]
+    - Examples: "R. M. Schuster", "V. Bagdonas", "J. J. Engel", "H. S. Conard", "F. J. Hermann, "W. Kiener"
+    - May be preceded by "leg.", "legit.", "coll.", or "collected by"
+    - Use only the primary collector if multiple collectors are listed
+    - Maintain proper spacing between initials and last name
+    - Capitalize only the first letter of the last name and initials
+    - If you see a name directly right after a blurry name or crossed out name, assume this is the collector.
+
+**minimumEventDate**: (The collection date in ISO-8601 format: YYYY-MM-DD)
+    - Location: Usually found on specimen labels, often near collector information
+    - Format: Convert all dates to YYYY-MM-DD format
+    - Use "00" for unknown months or days (e.g., "1956-03-00" for "March 1956")
+    - Examples: "1947-09-02", "1948-07-06", "1952-07-05", "1956-06-10"
+    - Common date formats on labels: "Sept. 2, 1947", "July 6, 1948", "9/2/47"
+    - May be abbreviated: "Sep", "Sept", "Jul", "Aug" for months
+    - For date ranges, use the earliest/start date
+    - Ignore obvious errors or impossible dates
+    - If only year is visible, format as "YYYY-00-00"
+
+**recordNumber**: 
+    - Location: Within Label of text-dense regions, typically immediately following a collector's name
+    - Format: Variable length alphanumeric code (3-7+ characters)
+    - May include letters (a, b, c, A, B), numbers, and special characters (hyphens, periods)
+    - Examples: "5801", "7242a", "24716 = 24409", "77-1922", "68-2102a", "VB 47", "45-44", "10,907 a", "2569A", "B157340", "81-487"
+    - Sometimes preceded by "No" but not always
+    - Ignore entries marked as "s.n." (sine numero - without number)
+
+
+
+**IMPORTANT**: Return ONLY the three requested fields with their values. Do not include any prefixes, explanations, commentary, or additional text. Format your response exactly as:
+
+collectedBy: 
+minimumEventDate: 
+recordNumber: 

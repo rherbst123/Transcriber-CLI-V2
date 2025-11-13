@@ -308,7 +308,6 @@ class Segmentation:
             best = self._deskew_small_angle(best, max_angle=10)
         return best
 
-    # ───────────── Main entry point ─────────────
     def run(self, image_path: str, output_path_override: str | None = None):
         original_image, raw_boxes = self.get_bounding_boxes(image_path)
         merged_boxes = {
