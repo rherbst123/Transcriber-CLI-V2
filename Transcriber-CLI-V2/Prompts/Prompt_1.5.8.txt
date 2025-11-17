@@ -7,19 +7,26 @@ Please Do NOT add a header for the response. This includes a summary or any othe
 **verbatimCollectors**: (The collectors as you see it on the label, this might be one collector, a string of collectors, that collected the sample)
     - Location: Usually found at the beginning of specimen labels or in dedicated collector fields
     - Format: Exactly as appearing on label with no modifications
-    - Examples: "leg. R. M. Schuster", "collected by V. Bagdonas & J. Smith", "legit. H. S. Conard"
+    - Examples: "leg. R. M. Schuster", "collected by V. Bagdonas & J. Smith", "legit. H. S. Conard", "R. M. Schuster", "Schuster, R.M. & Smith, J."
     - May be preceded by "leg.", "legit.", "coll.", or "collected by"
     - Transcribe precisely as written including any abbreviations or formatting
+    - CRITICAL: This field must ALWAYS be populated if collectedBy has a value
+    - This is the raw, unformatted version of the collector information before processing for collectedBy
+    - Include ALL text related to collectors, even if poorly formatted or abbreviated
 
-**collectedBy**: (The first collector, only capitalize names)
+**collectedBy**: (The primary collector's name, properly formatted)
     - Location: Usually found at the beginning of specimen labels or in dedicated collector fields
-    - Format: Last name with abbreviated first/middle initials, separated by spaces
-    - Pattern: [Initial]. [Initial]. [Last Name] or [Initial]. [Last Name]
-    - Examples: "R. M. Schuster", "V. Bagdonas", "J. J. Engel", "H. S. Conard", "F. J. Hermann"
-    - May be preceded by "leg.", "legit.", "coll.", or "collected by"
-    - Use only the primary collector if multiple collectors are listed
-    - Maintain proper spacing between initials and last name
-    - Capitalize only the first letter of the last name and initials
+    - Format: MUST follow this exact pattern: [Initial(s)] [Last Name]
+    - Each initial MUST be a single capital letter followed by a period and space
+    - The last name MUST be capitalized with remaining letters lowercase
+    - CORRECT examples: "R. M. Schuster", "V. Bagdonas", "J. J. Engel", "H. S. Conard", "F. J. Hermann", "W. Kiener"
+    - INCORRECT examples: "Schuster, R.M.", "R.M.Schuster", "SCHUSTER", "r. m. schuster"
+    - May be preceded by "leg.", "legit.", "coll.", or "collected by" - remove these prefixes
+    - Use only the primary collector if multiple collectors are listed (ignore "&", "et al.", "and", etc.)
+    - Always convert reversed formats (Last, First) to the correct format (Initial(s) Last)
+    - If you see a name directly after a blurry name or crossed out name, assume this is the collector
+    - Never include punctuation after the last name
+    - Never include titles (Dr., Prof., etc.)
 
 **secondaryCollectors**: (These are collectors listed after the first, only capitalize names)
     - Location: Found after the primary collector name
@@ -35,6 +42,9 @@ Please Do NOT add a header for the response. This includes a summary or any othe
     - Examples: "5801", "7242a", "24716", "77-1922", "68-2102a", "VB 47", "45-44", "10907a", "2569A", "B157340", "81-487"
     - May include letters, numbers, and special characters (hyphens, periods)
     - Sometimes preceded by "No" but not always
+    - CRITICAL: This is NOT a person's name
+    - Do NOT confuse this with collector names or initials
+    - Do NOT format this like collectedBy field
     - If not present put "s.n."
 
 **verbatimEventDate**: (The verbatim date field exactly as shown on the label)

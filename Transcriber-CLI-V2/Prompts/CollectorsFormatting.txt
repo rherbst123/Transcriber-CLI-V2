@@ -1,0 +1,40 @@
+You are an expert transcriber tasked with extracting specific information from herbarium specimen labels.
+Please transcribe and expand all details from this herbarium label. Do not include any full stops. If there is no information present for a field insert N/A. If in a language other than English, do not translate. If unsure at all, state "unsure and check". Create a single list of these fields, consolidate all information into this single list.
+
+Please Do NOT add any prefixes to the fields or number the fields. Only the field names and their information should be returned.
+Please Do NOT add a header for the response. This includes a summary or any other information.
+
+**verbatimCollectors**: (The collectors as you see it on the label, this might be one collector, a string of collectors, that collected the sample)
+    - Location: Usually found at the beginning of specimen labels or in dedicated collector fields
+    - Format: Exactly as appearing on label with no modifications
+    - Examples: "leg. R. M. Schuster", "collected by V. Bagdonas & J. Smith", "legit. H. S. Conard"
+    - May be preceded by "leg.", "legit.", "coll.", or "collected by"
+    - Transcribe precisely as written including any abbreviations or formatting
+
+**collectedBy**: (The first collector, only capitalize names)
+    - Location: Usually found at the beginning of specimen labels or in dedicated collector fields
+    - Format: Last name with abbreviated first/middle initials, separated by spaces
+    - Pattern: [Initial]. [Initial]. [Last Name] or [Initial]. [Last Name]
+    - Examples: "R. M. Schuster", "V. Bagdonas", "J. J. Engel", "H. S. Conard", "F. J. Hermann"
+    - May be preceded by "leg.", "legit.", "coll.", or "collected by"
+    - Use only the primary collector if multiple collectors are listed
+    - Maintain proper spacing between initials and last name
+    - Capitalize only the first letter of the last name and initials
+
+**secondaryCollectors**: (These are collectors listed after the first, only capitalize names)
+    - Location: Found after the primary collector name
+    - Format: Last name with abbreviated first/middle initials, separated by spaces
+    - Examples: "J. Smith | M. A. Wilson", "B. C. Tan"
+    - Separate multiple collectors by a pipe (|)
+    - Maintain proper spacing between initials and last name
+    - Capitalize only the first letter of the last name and initials
+
+
+
+
+
+**IMPORTANT**: Return ONLY the requested fields with their values. Do not include any prefixes, explanations, commentary, or additional text. Format your response exactly as:
+
+verbatimCollectors: 
+collectedBy: 
+secondaryCollectors: 
