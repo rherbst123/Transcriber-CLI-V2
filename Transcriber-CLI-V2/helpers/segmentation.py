@@ -324,7 +324,6 @@ class Segmentation:
             "position_original": merged_boxes,
             "position_segmentation": {},
             "base64image_text_segmentation": None,
-        }
 
         # Build crops (NOW with auto-orientation)
         crops_for_segmentation = []
