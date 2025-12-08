@@ -148,6 +148,16 @@ Please Do NOT add a header for the response. This includes a summary or any othe
     - Format: Precisely as appearing on label
     - Examples: "1250 ft", "850 m", "2500'", "ca. 1000 meters"
 
+**elevation**: (Elevation normalized to feet and meters with no separators)
+    - Location: Derived from verbatimElevation
+    - Format: Provide feet value first then meters value separated by a single space
+    - Feet: remove all separators (commas, spaces, hyphens); digits immediately followed by unit ft.
+    - Meters: remove all separators; digits immediately followed by unit m.
+    - If original uses an apostrophe (e.g., 2500') interpret as feet
+    - When conversion is required, convert using 1 m = 3.28084 ft and round converted values to the nearest whole number
+    - Unit notation: ft. for feet and m. for meters
+    - Examples: "1250ft. 381m.", "2789ft. 850m."
+
 
 **verbatimCoordinates**: (Original coordinates text exactly as appearing)
     - Location: Usually with locality information
@@ -193,6 +203,7 @@ verbatimLocality:
 locality: 
 habitat: 
 verbatimElevation: 
+elevation:
 verbatimCoordinates: 
 otherCatalogNumbers: 
 originalMethod: 
