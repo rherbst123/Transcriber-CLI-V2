@@ -18,7 +18,6 @@ CHUNK_SIZE = 1_000
 DEFAULT_SOURCES = [165]  # Tropicos
 
 def post_chunk(names: List[str], api: str = DEFAULT_API, preferred=None, timeout: int = 30):
-    """Send chunk of names to GN Verifier and return raw records."""
     if len(names) > CHUNK_SIZE:
         raise ValueError(f"max {CHUNK_SIZE} names per request")
 
@@ -33,7 +32,6 @@ def post_chunk(names: List[str], api: str = DEFAULT_API, preferred=None, timeout
     return data.get("verifications") or data.get("names") or data
 
 def first(obj: dict, *keys: str, default: str = "") -> str:
-    """Return the first non-empty value among keys."""
     if isinstance(obj, dict):
         for k in keys:
             val = obj.get(k)
@@ -42,7 +40,6 @@ def first(obj: dict, *keys: str, default: str = "") -> str:
     return default
 
 def get_verified_info(rec: dict) -> dict:
-    """Extract verification information including name, match type and author."""
     if "bestResult" in rec:
         best = rec["bestResult"]
         container = rec

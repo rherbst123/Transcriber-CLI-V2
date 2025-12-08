@@ -116,7 +116,7 @@ Please Do NOT add a header for the response. This includes a summary or any othe
 **secondPoliticalUnit**: (Second-order administrative division)
     - Location: Usually follows first political unit
     - Format: Name only, omit political division tier
-    - Examples: "Chester County", "York Region", "Alameda County"
+    - Examples: "Chester", "York", "Alameda"
     - This would be county, district, etc.
 
 **municipality**: (The city, town, or village)
