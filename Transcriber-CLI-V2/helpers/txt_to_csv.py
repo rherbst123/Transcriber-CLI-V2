@@ -236,6 +236,7 @@ def get_standard_fieldnames(data=None):
         "locality",
         "habitat",
         "verbatimElevation",
+        "elevation",
         "verbatimCoordinates",
         "otherCatalogNumbers",
         "originalMethod",

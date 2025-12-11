@@ -522,6 +522,9 @@ def main():
     # Create Raw Transcriptions folder (.json files)
     raw_transcriptions_dir = run_output_dir / "Raw Transcriptions"
     
+    # Set the prompt path in the cost tracker
+    cost_tracker.set_prompt_path(prompt_path)
+    
     try:
         if num_shots == 1:
             print("\nSelect model for image processing:")

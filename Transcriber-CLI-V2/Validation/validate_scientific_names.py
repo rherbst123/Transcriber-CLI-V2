@@ -118,7 +118,7 @@ def validate_csv_scientific_names(csv_path: Path, sources: List[int] = None):
         # Find latestScientificName column and insert verification columns after it
         try:
             idx = fieldnames.index('latestScientificName')
-            new_columns = ['VerifiedLatestScientificName', 'MatchType', 'VerifiedBy', 'Source']
+            new_columns = ['GlobalNamesVerifiedLatestScientificName', 'GlobalNamesMatchType', 'GlobalNamesVerifiedBy', 'GlobalNamesSource']
             for i, col in enumerate(new_columns):
                 fieldnames.insert(idx + 1 + i, col)
         except ValueError:
@@ -179,15 +179,15 @@ def validate_csv_scientific_names(csv_path: Path, sources: List[int] = None):
             original_name = row.get('latestScientificName', '').strip()
             if original_name in verification_results:
                 info = verification_results[original_name]
-                row['VerifiedLatestScientificName'] = info["name"] or original_name
-                row['MatchType'] = info["match_type"]
-                row['VerifiedBy'] = info["author"]
-                row['Source'] = info["source"]
+                row['GlobalNamesVerifiedLatestScientificName'] = info["name"] or original_name
+                row['GlobalNamesMatchType'] = info["match_type"]
+                row['GlobalNamesVerifiedBy'] = info["author"]
+                row['GlobalNamesSource'] = info["source"]
             else:
-                row['VerifiedLatestScientificName'] = original_name
-                row['MatchType'] = "Not Verified"
-                row['VerifiedBy'] = ""
-                row['Source'] = ""
+                row['GlobalNamesVerifiedLatestScientificName'] = original_name
+                row['GlobalNamesMatchType'] = "Not Verified"
+                row['GlobalNamesVerifiedBy'] = ""
+                row['GlobalNamesSource'] = ""
             writer.writerow(row)
     
     print(f"✓ Scientific names validated and added to {csv_path.name} with match types, authors, and sources")

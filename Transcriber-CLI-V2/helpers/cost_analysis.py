@@ -110,7 +110,8 @@ class CostTracker:
             "start_time": time.time(),
             "models_used": {},
             "total_images": 0,
-            "total_cost": 0.0
+            "total_cost": 0.0,
+            "prompt_path": None
         }
     
     def track_request(self, model_id, input_tokens, output_tokens, image_count=1):
@@ -142,6 +143,10 @@ class CostTracker:
         """Rough token estimation (4 chars ≈ 1 token)"""
         return len(text) // 4 if text else 0
     
+    def set_prompt_path(self, prompt_path):
+        """Set the prompt path used for this session"""
+        self.session_data["prompt_path"] = prompt_path
+    
     def generate_report(self):
         """Generate detailed cost report"""
         end_time = time.time()
@@ -155,6 +160,13 @@ class CostTracker:
         report.append(f"Session Duration: {duration:.2f} seconds ({duration/60:.2f} minutes)")
         report.append(f"Total Images Processed: {self.session_data['total_images']}")
         report.append(f"Total Estimated Cost: ${self.session_data['total_cost']:.6f}")
+        
+        # Add prompt information if available
+        if self.session_data.get('prompt_path'):
+            prompt_name = Path(self.session_data['prompt_path']).name
+            report.append(f"Prompt Used: {prompt_name}")
+            report.append(f"Prompt Path: {self.session_data['prompt_path']}")
+        
         report.append("")
         
         report.append("MODEL BREAKDOWN:")

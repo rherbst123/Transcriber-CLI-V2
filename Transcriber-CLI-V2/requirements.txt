@@ -7,4 +7,5 @@ art
 opencv-python
 openvino
 numpy
-pytesseract
+paddleocr
+paddlepaddle

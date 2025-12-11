@@ -29,7 +29,7 @@ class Segmentation:
         output_path: str | None = None,
         auto_orient: bool = True,
         deskew: bool = True,
-        blank_score_cutoff: float = 50.0,
+        blank_score_cutoff: float = 40.0,
     ):
         self.engine = engine
         self.hide_long_objects = hide_long_objects
@@ -289,22 +289,44 @@ class Segmentation:
         return cv2.warpAffine(img_bgr, M, (w, h), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)
 
     def _fix_orientation(self, crop_bgr):
-        # quick exits
-        if not self.auto_orient:
-            return crop_bgr
+        # If auto_orient is True, we check all 4 directions
+        if self.auto_orient:
+            candidates = [self._rotate90(crop_bgr, k) for k in range(4)]
+            scores = []
+            for c in candidates:
+                try:
+                    scores.append(self._tesseract_ocr_score(c))
+                except Exception:
+                    scores.append(0.0)
+            
+            best_k = int(np.argmax(scores))
 
-        candidates = [self._rotate90(crop_bgr, k) for k in range(4)]
-        scores = []
-        for c in candidates:
-            try:
-                scores.append(self._tesseract_ocr_score(c))
-            except Exception:
-                scores.append(0.0)
-        best_k = int(np.argmax(scores))
-        best = candidates[best_k]
+            # Bias towards original orientation (k=0) to prevent random flips on handwriting
+            # 1. If the best score is very low (likely noise/handwriting), stick to original.
+            if scores[best_k] < self.blank_score_cutoff:
+                best_k = 0
+            # 2. If original orientation has a decent score, require significant improvement to rotate.
+            #    We use a strict multiplier (2.0) to assume original is correct unless proven otherwise.
+            elif best_k != 0 and scores[0] > (self.blank_score_cutoff / 2):
+                if scores[best_k] < scores[0] * 2.0:
+                    best_k = 0
+
+            best = candidates[best_k]
+            best_score = scores[best_k]
+        else:
+            # Assume original orientation
+            best = crop_bgr
+            # If deskew is enabled, we still need a score to decide if we should deskew (is it text?)
+            if self.deskew:
+                try:
+                    best_score = self._tesseract_ocr_score(best)
+                except Exception:
+                    best_score = 0.0
+            else:
+                best_score = 0.0
 
         # skip deskew on crops with little text (photos, rulers, color cards)
-        if self.deskew and scores[best_k] >= self.blank_score_cutoff:
+        if self.deskew and best_score >= self.blank_score_cutoff:
             best = self._deskew_small_angle(best, max_angle=10)
         return best
 
@@ -324,6 +346,7 @@ class Segmentation:
             "position_original": merged_boxes,
             "position_segmentation": {},
             "base64image_text_segmentation": None,
+        }
 
         # Build crops (NOW with auto-orientation)
         crops_for_segmentation = []
