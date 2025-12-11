@@ -23,6 +23,7 @@ AVAILABLE_MODELS = [
     "us.amazon.nova-premier-v1:0",
     "us.amazon.nova-pro-v1:0",
     "us.amazon.nova-lite-v1:0",
+    "us.amazon.nova-2-lite-v1:0",
     "us.mistral.pixtral-large-2502-v1:0",
     "us.anthropic.claude-opus-4-1-20250805-v1:0"
 
@@ -240,19 +241,19 @@ def verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, m
             # Create verification prompt
             verification_prompt = f"""You are an expert Botanist and Geography with a P.H.D level understanding verifier reviewing a herbarium label transcription.
 
-Please verify the following transcription against the image and correct any errors:
+                Please verify the following transcription against the image and correct any errors:
 
-{first_shot_text}
+                {first_shot_text}
 
-Return the corrected transcription in the same format. If the transcription is accurate, return it unchanged.
-If you find information that is not entered or can be applied to new fields such as first and second political unit and Municipality. 
-If you find that one of the fields for location is in an incorrect field please move it to the correct field. 
-If There is a lower level location such as municipality, but no country. Please work your way up and insert all higher level locations.
-Correct any mispelled locations of all ranges. Use georefrenced knowledge.
-The Locality field contains a lot of clues as to detailed locations
-Please enter the information
-Do not Create any new Fields, The fields set are as standard and dont need to be expanded upon
-Do not say anything else, please just return the corrected transcription"""
+                Return the corrected transcription in the same format. If the transcription is accurate, return it unchanged.
+                If you find information that is not entered or can be applied to new fields such as first and second political unit and Municipality. 
+                If you find that one of the fields for location is in an incorrect field please move it to the correct field. 
+                If There is a lower level location such as municipality, but no country. Please work your way up and insert all higher level locations.
+                Correct any mispelled locations of all ranges. Use georefrenced knowledge.
+                The Locality field contains a lot of clues as to detailed locations
+                Please enter the information
+                Do not Create any new Fields, The fields set are as standard and dont need to be expanded upon
+                Do not say anything else, please just return the corrected transcription"""
             
             # Create temporary prompt file with explicit UTF-8 encoding
             temp_prompt_path = None

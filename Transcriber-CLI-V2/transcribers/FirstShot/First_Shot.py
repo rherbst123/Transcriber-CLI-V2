@@ -25,6 +25,7 @@ AVAILABLE_MODELS = [
     "us.amazon.nova-premier-v1:0",
     "us.amazon.nova-pro-v1:0",
     "us.amazon.nova-lite-v1:0",
+    "us.amazon.nova-2-lite-v1:0",
     "us.mistral.pixtral-large-2502-v1:0",
     "us.anthropic.claude-opus-4-1-20250805-v1:0"
 

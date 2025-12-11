@@ -35,6 +35,10 @@ class CostTracker:
             "input": 0.015,  # $15 per 1M input tokens
             "output": 0.075  # $75 per 1M output tokens
         },
+         "us.anthropic.claude-opus-4-5-20251101-v1:0": {
+            "input": 0.005,  # $15 per 1M input tokens
+            "output": 0.025  # $75 per 1M output tokens
+        },
         "us.meta.llama3-2-90b-instruct-v1:0": {
             "input": 0.00072,  # $0.72 per 1M input tokens
             "output": 0.00072  # $0.72 per 1M output tokens
@@ -62,6 +66,10 @@ class CostTracker:
         "us.meta.llama4-scout-v1:0": {
             "input": 0.00017,  # $0.17 per 1M input tokens
             "output": 0.00066  # $0.66 per 1M output tokens
+        },
+        "us.amazon.nova-2-lite-v1:0": {
+            "input": 0.0003,  # $2.5 per 1M input tokens
+            "output": 0.0003  # $12.5 per 1M output tokens
         },
         "us.amazon.nova-premier-v1:0": {
             "input": 0.0025,  # $2.5 per 1M input tokens
