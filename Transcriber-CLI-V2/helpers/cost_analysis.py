@@ -102,6 +102,18 @@ class CostTracker:
         "us.mistral.mistral-medium-2312-v1:0": {
             "input": 0.0006,  # $0.6 per 1M input tokens
             "output": 0.0018  # $1.8 per 1M output tokens
+        },
+        "us.mistral.mistral-large-3-675b-instruct": {
+            "input": 0.00050,  # $0.6 per 1M input tokens
+            "output": 0.00150  # $1.8 per 1M output tokens
+        },
+        "us.qwen.qwen3-vl-235b-a22b": {
+            "input": 0.00053,  # $0.6 per 1M input tokens
+            "output": 0.00266  # $1.8 per 1M output tokens
+        },
+        "us.google.gemma-3-27b-it": {
+            "input": 0.00023,  # $0.6 per 1M input tokens
+            "output": 0.00038  # $1.8 per 1M output tokens
         }
     }
     
