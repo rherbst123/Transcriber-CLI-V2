@@ -4,15 +4,16 @@ Please transcribe and expand all details from this herbarium label. Do not inclu
 Please Do NOT add any prefixes to the fields or number the fields. Only the field names and their information should be returned.
 Please Do NOT add a header for the response. This includes a summary or any other information.
 
-**verbatimCollectors**: (The collectors as you see it on the label, this might be one collector, a string of collectors, that collected the sample)
-    - Location: Usually found at the beginning of specimen labels or in dedicated collector fields
-    - Format: Exactly as appearing on label with no modifications
-    - Examples: "leg. R. M. Schuster", "collected by V. Bagdonas & J. Smith", "legit. H. S. Conard", "R. M. Schuster", "Schuster, R.M. & Smith, J."
-    - May be preceded by "leg.", "legit.", "coll.", or "collected by"
-    - Transcribe precisely as written including any abbreviations or formatting
-    - CRITICAL: This field must ALWAYS be populated if collectedBy has a value
-    - This is the raw, unformatted version of the collector information before processing for collectedBy
-    - Include ALL text related to collectors, even if poorly formatted or abbreviated
+**verbatimCollectors**: (The collectors exactly as shown on the label this field is MANDATORY)
+    - Location: Usually at the top of specimen labels or in a dedicated collector field
+    - Requirement: MUST be transcribed exactly as it appears on the label with no normalization or reformatting
+    - Preserve all prefixes, punctuation, ampersands, commas, abbreviations, line breaks (join multi-line values with a single space), and any surrounding qualifiers (leg., legit., coll., collected by, etc.)
+    - Do NOT remove titles, prefixes, or invert name order for this field
+    - If multiple collectors are shown transcribe the full literal string (e.g., "leg. R. M. Schuster & J. Smith", "Schuster, R.M.; Smith, J.")
+    - If the label is partially illegible transcribe the literal unreadable text (e.g., "illegible", "blurry", "name crossed out") or transcribe exactly what is visible
+    - If you are unsure about any characters write "unsure and check" rather than guessing
+    - If there is no collector information on the label insert "N/A"
+    - CRITICAL: This raw value must ALWAYS be included in the output; if collectedBy is populated verbatimCollectors MUST reflect the original unmodified text
 
 **collectedBy**: (The primary collector's name, properly formatted)
     - Location: Usually found at the beginning of specimen labels or in dedicated collector fields
@@ -52,6 +53,16 @@ Please Do NOT add a header for the response. This includes a summary or any othe
     - Format: Precisely as appearing on label with no corrections
     - Examples: "Sept. 2, 1947", "July 6, 1948", "9/2/47", "March 1956"
     - If not present put "s.d."
+
+**eventDate**: (The collection date converted from verbatimEventDate into ISO-8601 format: YYYY-MM-DD)
+    - Location: Usually found on specimen labels, often near collector information
+    - Purpose: This is the formatted/normalized version of verbatimEventDate
+    - Format: Convert the verbatimEventDate to YYYY-MM-DD
+    - Use "00" for unknown months or days (e.g., "1956-03-00" for "March 1956")
+    - For date ranges, use the earliest/start date
+    - If only year is visible, format as "YYYY-00-00"
+    - If no date is present, put "s.d."
+    - Examples: "1947-09-02", "1948-07-06", "1956-03-00", "1956-00-00"
 
 **minimumEventDate**: (The collection date in ISO-8601 format: YYYY-MM-DD)
     - Location: Usually found on specimen labels, often near collector information
@@ -158,7 +169,6 @@ Please Do NOT add a header for the response. This includes a summary or any othe
     - Unit notation: ft. for feet and m. for meters
     - Examples: "1250ft. 381m.", "2789ft. 850m."
 
-
 **verbatimCoordinates**: (Original coordinates text exactly as appearing)
     - Location: Usually with locality information
     - Format: Precisely as appearing on label
@@ -187,7 +197,8 @@ verbatimCollectors:
 collectedBy: 
 secondaryCollectors: 
 recordNumber: 
-verbatimEventDate: 
+verbatimEventDate:
+eventDate: 
 minimumEventDate: 
 maximumEventDate: 
 verbatimIdentification: 

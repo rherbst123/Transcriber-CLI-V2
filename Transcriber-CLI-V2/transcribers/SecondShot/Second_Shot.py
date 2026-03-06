@@ -126,8 +126,20 @@ def process_image(image_path, prompt_path, model_id):
     print(response_text)
     return response_text
 
-def verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, model_id=None):
-    """Verify and correct first shot transcription results"""
+def verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, model_id=None, skip_images=None):
+    """Verify and correct first shot transcription results
+    
+    Args:
+        base_folder: Path to the base folder containing images
+        first_shot_json_path: Path to the first shot batch JSON file
+        output_dir: Output directory for second shot results
+        run_name: Name of the run
+        model_id: Model ID to use for verification
+        skip_images: Set of image names to skip (for resuming runs)
+    """
+    if skip_images is None:
+        skip_images = set()
+    
     if model_id is None:
         model_id = select_model()
     
@@ -165,8 +177,15 @@ def verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, m
     print(f"\nVerifying {len(transcriptions)} first shot transcriptions")
     
     all_transcriptions = []
+    skipped_count = 0
     for i, transcription in enumerate(transcriptions, 1):
         image_name = transcription['image_name']
+        
+        # Skip if already processed (for resume functionality)
+        if image_name in skip_images:
+            skipped_count += 1
+            print(f"\nSkipping {i}/{len(transcriptions)}: {image_name} (already processed)")
+            continue
         # Prioritize URL from first shot, fall back to URL map if not available
         # Handle segmented image names by removing '_segmentation' suffix when looking up URLs
         image_name_for_url_lookup = image_name
@@ -238,21 +257,39 @@ def verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, m
             first_shot_text = first_shot_text.encode('utf-8', errors='replace').decode('utf-8')
             
             # Create verification prompt
-            verification_prompt = f"""You are an expert Botanist and Geography with a P.H.D level understanding verifier reviewing a herbarium label transcription.
+            verification_prompt = f"""You are an expert Botanist and Geographer with a Ph.D.-level understanding, acting as a verifier reviewing a herbarium label transcription.
 
-Please verify the following transcription against the image and correct any errors:
+            Please verify the following transcription against the image and correct any errors:
 
-{first_shot_text}
+            {first_shot_text}
 
-Return the corrected transcription in the same format. If the transcription is accurate, return it unchanged.
-If you find information that is not entered or can be applied to new fields such as first and second political unit and Municipality. 
-If you find that one of the fields for location is in an incorrect field please move it to the correct field. 
-If There is a lower level location such as municipality, but no country. Please work your way up and insert all higher level locations.
-Correct any mispelled locations of all ranges. Use georefrenced knowledge.
-The Locality field contains a lot of clues as to detailed locations
-Please enter the information
-Do not Create any new Fields, The fields set are as standard and dont need to be expanded upon
-Do not say anything else, please just return the corrected transcription"""
+            Return the corrected transcription in the same format. If the transcription is accurate, return it unchanged.
+            If you find information that is not entered or can be applied to new fields such as first and second political unit and Municipality, add or move it into existing fields as appropriate.
+            If you find that one of the fields for location is in an incorrect field please move it to the correct field.
+            If there is a lower-level location such as municipality, but no country, please work your way up and insert all higher-level locations.
+            Correct any misspelled locations using georeferenced knowledge. The Locality field contains many clues to detailed locations — use them.
+
+            Name formatting rule (collectedBy):
+            - Field targeted: collectedBy (also apply to any clearly collector-related fields such as "collector", "collected_by", etc.)
+            - Location: Usually found at the beginning of specimen labels or in dedicated collector fields.
+            - Format: MUST follow this exact pattern: [Initial(s)] [Last Name]
+                - Each initial MUST be a single capital letter followed by a period and a space (e.g., "R. M.").
+                - The last name MUST be capitalized with remaining letters lowercase (e.g., "Schuster").
+                - Use only the primary collector if multiple collectors are listed (ignore "&", "et al.", "and", etc.). Choose the first primary name after removing qualifiers.
+                - Remove common prefixes such as "leg.", "legit.", "coll.", "collected by" if present.
+                - Convert reversed formats ("Last, First" or "Last, F. M.") into the required initials + last name pattern.
+                - Never include punctuation after the last name (no trailing commas or periods).
+                - Never include titles (Dr., Prof., Mr., Mrs., etc.).
+                - If a name appears directly after a blurry or crossed-out name, assume the legible name is the collector.
+                - Examples:
+                    - CORRECT: "R. M. Schuster", "V. Bagdonas", "J. J. Engel", "H. S. Conard", "F. J. Hermann", "W. Kiener"
+                    - INCORRECT: "Schuster, R.M.", "R.M.Schuster", "SCHUSTER", "r. m. schuster", "Dr. R. Schuster", "R. Schuster."
+                - If initials are inferred from given given/first names, produce them as separate single-letter initials with periods and spaces (e.g., "R. M. Schuster").
+                - If multiple names appear and it's ambiguous who is primary, choose the first legible name after removing prefixes and qualifiers.
+
+            Do not create any new fields beyond those already present in the transcription. Move or correct values only within the existing field set.
+            Do not add commentary, explanations, or metadata — return only the corrected transcription in the exact same structured format as the input.
+            Do not say anything else, please just return the corrected transcription."""
             
             # Create temporary prompt file with explicit UTF-8 encoding
             temp_prompt_path = None
@@ -314,11 +351,13 @@ Do not say anything else, please just return the corrected transcription"""
         batch_filepath = create_batch_json_file(output_dir, run_name, "second_shot_verification", all_transcriptions)
         print(f"\nBatch verification JSON file created: {batch_filepath}")
     
+    if skipped_count > 0:
+        print(f"\nSkipped {skipped_count} already processed images")
     print(f"Second Shot verification completed! JSON files saved to {output_dir}")
     return all_transcriptions
 
 # Backward compatibility alias
-def process_with_first_shot(base_folder, prompt_path, first_shot_json_path, output_dir, run_name, model_id=None):
+def process_with_first_shot(base_folder, prompt_path, first_shot_json_path, output_dir, run_name, model_id=None, skip_images=None):
     """Backward compatibility wrapper for verify_first_shot
     
     Args:
@@ -328,8 +367,9 @@ def process_with_first_shot(base_folder, prompt_path, first_shot_json_path, outp
         output_dir: Output directory for second shot results
         run_name: Name of the run
         model_id: Model ID to use for verification
+        skip_images: Set of image names to skip (for resuming runs)
     """
-    return verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, model_id)
+    return verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, model_id, skip_images)
 
 if __name__ == "__main__":
     print("Taking Another Look...")

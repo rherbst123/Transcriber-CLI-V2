@@ -274,6 +274,43 @@ def get_output_base_path():
     # Fallback to home directory if Desktop doesn't exist
     return home_dir / "Finished Transcriptions"
 
+def save_run_state(run_dir, state):
+    
+    state_file = Path(run_dir) / "run_state.json"
+    with open(state_file, 'w', encoding='utf-8') as f:
+        json.dump(state, f, indent=2)
+    
+def load_run_state(run_dir):
+    
+    state_file = Path(run_dir) / "run_state.json"
+    if state_file.exists():
+        with open(state_file, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    return None
+
+def mark_run_complete(run_dir):
+    
+    state = load_run_state(run_dir)
+    if state:
+        state['status'] = 'completed'
+        state['completed_at'] = datetime.utcnow().isoformat() + "Z"
+        save_run_state(run_dir, state)
+
+def find_incomplete_runs():
+   
+    output_base = get_output_base_path()
+    if not output_base.exists():
+        return []
+    
+    incomplete_runs = []
+    for run_dir in output_base.iterdir():
+        if run_dir.is_dir():
+            state = load_run_state(run_dir)
+            if state and state.get('status') == 'in_progress':
+                incomplete_runs.append((run_dir.name, state))
+    
+    return incomplete_runs
+
 #Shows the number of images in the folder just as a double check for things. 
 def show_images_in_folder(folder_path):
     image_extensions = {'.jpg', '.jpeg', '.png', '.gif', '.bmp', '.tiff', '.webp'}
@@ -426,6 +463,48 @@ def configure_transcription():
     
     return config
 
+def resume_run_menu():
+    incomplete_runs = find_incomplete_runs()
+    
+    if not incomplete_runs:
+        print("\nNo incomplete runs found.")
+        input("Press Enter to return to main menu...")
+        return None
+    
+    print("\n" + "="*60)
+    print("INCOMPLETE RUNS")
+    print("="*60)
+    print("Select a run to resume:\n")
+    
+    for i, (run_name, state) in enumerate(incomplete_runs, 1):
+        current_step = state.get('current_step', 'unknown')
+        num_shots = state.get('num_shots', 'unknown')
+        mode = 'Single Shot' if num_shots == 1 else 'Dual Shot'
+        print(f"{i}. {run_name}")
+        print(f"   Mode: {mode}")
+        print(f"   Current step: {current_step}")
+        print(f"   Started: {state.get('started_at', 'unknown')}")
+        print()
+    
+    print("Type 'back' to return to main menu")
+    
+    while True:
+        choice = input("\nEnter run number to resume: ").strip().lower()
+        
+        if choice == 'back':
+            return None
+        
+        try:
+            selection = int(choice)
+            if 1 <= selection <= len(incomplete_runs):
+                run_name, state = incomplete_runs[selection - 1]
+                print(f"\nResuming run: {run_name}")
+                return {'resume': True, 'run_name': run_name, 'state': state}
+            else:
+                print(f"Please enter a number between 1 and {len(incomplete_runs)}")
+        except ValueError:
+            print("Please enter a valid number or 'back'")
+
 def main():
     tprint("Transcriber-CLI-V2")
     print("Created by: Riley Herbst")
@@ -444,11 +523,12 @@ def main():
         print("\n" + "="*60)
         print("MAIN MENU")
         print("="*60)
-        print("1. Start Transcription Process")
-        print("2. Configure Validation Settings")
-        print("3. Exit")
+        print("1. Start New Transcription Process")
+        print("2. Resume Incomplete Run")
+        print("3. Configure Validation Settings")
+        print("4. Exit")
         
-        choice = input("\nEnter your choice (1-3): ").strip()
+        choice = input("\nEnter your choice (1-4): ").strip()
         
         if choice == '1':
             # Configure transcription 
@@ -458,27 +538,68 @@ def main():
             break  # Exit main menu to continue with transcription
             
         elif choice == '2':
+            # Resume an incomplete run
+            config = resume_run_menu()
+            if config is None:  # User went back to main menu
+                continue
+            break  # Exit main menu to continue with resumed transcription
+            
+        elif choice == '3':
             configure_validation_settings()
             continue  # Return to main menu
             
-        elif choice == '3':
+        elif choice == '4':
             print("Goodbye!")
             return
             
         else:
-            print("Invalid choice. Please enter 1, 2, or 3.")
+            print("Invalid choice. Please enter 1, 2, 3, or 4.")
     
     # Continue with transcription process
-    run_name = config['run_name']
-    use_segmentation = config['use_segmentation']
-    num_shots = config['num_shots']
-    prompt_path = config['prompt_path']
-    base_folder = config['base_folder']
-    folder_name = config['folder_name']
+    is_resume = config.get('resume', False)
     
-    # Create run-specific output directory
-    run_output_dir = get_output_base_path() / run_name
-    run_output_dir.mkdir(parents=True, exist_ok=True)
+    if is_resume:
+        # Resuming an existing run
+        run_name = config['run_name']
+        saved_state = config['state']
+        run_output_dir = get_output_base_path() / run_name
+        
+        # Extract config from saved state
+        use_segmentation = saved_state.get('use_segmentation', False)
+        num_shots = saved_state['num_shots']
+        prompt_path = saved_state['prompt_path']
+        base_folder = saved_state['base_folder']
+        folder_name = saved_state.get('folder_name', run_name)
+        
+        print(f"\nResuming run from: {run_output_dir}")
+        print(f"Current step: {saved_state.get('current_step')}")
+        
+    else:
+        # Starting a new run
+        run_name = config['run_name']
+        use_segmentation = config['use_segmentation']
+        num_shots = config['num_shots']
+        prompt_path = config['prompt_path']
+        base_folder = config['base_folder']
+        folder_name = config['folder_name']
+        
+        # Create run-specific output directory
+        run_output_dir = get_output_base_path() / run_name
+        run_output_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Initialize run state
+        initial_state = {
+            'status': 'in_progress',
+            'started_at': datetime.utcnow().isoformat() + "Z",
+            'run_name': run_name,
+            'num_shots': num_shots,
+            'use_segmentation': use_segmentation,
+            'prompt_path': prompt_path,
+            'base_folder': base_folder,
+            'folder_name': folder_name,
+            'current_step': 'starting'
+        }
+        save_run_state(run_output_dir, initial_state)
     
     # Handle segmentation if requested
     processing_folder = base_folder  # Default to original folder
@@ -486,38 +607,49 @@ def main():
     if use_segmentation:
         # Create segmentation output folder
         segmentation_output_dir = run_output_dir / "Segmented_Images"
-        segmentation_output_dir.mkdir(parents=True, exist_ok=True)
         
-        # Get segmentation settings
-        model_path, classes_to_render = get_segmentation_settings()
-        
-        try:
-            # Run segmentation
-            success_count, total_count = process_images_segmentation(
-                base_folder, 
-                str(segmentation_output_dir), 
-                model_path, 
-                classes_to_render
-            )
-            
-            print(f"\nSegmentation Results:")
-            print(f"Successfully processed: {success_count}/{total_count} images")
-            print(f"Segmented images saved to: {segmentation_output_dir}")
-            
-            # Ask if user wants to continue
-            if not ask_continue_after_segmentation():
-                print("Stopping at segmentation as requested.")
-                print(f"Segmented images can be found at: {segmentation_output_dir}")
-                return
-            
-            # Use segmented images for transcription
+        # Check if segmentation was already completed
+        if is_resume and segmentation_output_dir.exists() and any(segmentation_output_dir.glob('*')):
+            print(f"\nSegmentation already completed, using existing segmented images from: {segmentation_output_dir}")
             processing_folder = str(segmentation_output_dir)
-            print(f"\nContinuing with transcription using segmented images from: {processing_folder}")
+        else:
+            segmentation_output_dir.mkdir(parents=True, exist_ok=True)
             
-        except Exception as e:
-            print(f"Error during segmentation: {e}")
-            print("Continuing with original images...")
-            processing_folder = base_folder
+            # Update state
+            state = load_run_state(run_output_dir)
+            state['current_step'] = 'segmentation'
+            save_run_state(run_output_dir, state)
+            
+            # Get segmentation settings
+            model_path, classes_to_render = get_segmentation_settings()
+            
+            try:
+                # Run segmentation
+                success_count, total_count = process_images_segmentation(
+                    base_folder, 
+                    str(segmentation_output_dir), 
+                    model_path, 
+                    classes_to_render
+                )
+                
+                print(f"\nSegmentation Results:")
+                print(f"Successfully processed: {success_count}/{total_count} images")
+                print(f"Segmented images saved to: {segmentation_output_dir}")
+                
+                # Ask if user wants to continue
+                if not ask_continue_after_segmentation():
+                    print("Stopping at segmentation as requested.")
+                    print(f"Segmented images can be found at: {segmentation_output_dir}")
+                    return
+                
+                # Use segmented images for transcription
+                processing_folder = str(segmentation_output_dir)
+                print(f"\nContinuing with transcription using segmented images from: {processing_folder}")
+                
+            except Exception as e:
+                print(f"Error during segmentation: {e}")
+                print("Continuing with original images...")
+                processing_folder = base_folder
     
     # Create Raw Transcriptions folder (.json files)
     raw_transcriptions_dir = run_output_dir / "Raw Transcriptions"
@@ -527,12 +659,45 @@ def main():
     
     try:
         if num_shots == 1:
-            print("\nSelect model for image processing:")
-            model = First_Shot.select_model()
+            # Update state
+            state = load_run_state(run_output_dir)
+            state['current_step'] = 'first_shot'
+            save_run_state(run_output_dir, state)
+            
+            # Get model (use saved model if resuming)
+            if is_resume and 'model_first_shot' in saved_state:
+                model = saved_state['model_first_shot']
+                print(f"\nUsing saved model for image processing: {model}")
+            else:
+                print("\nSelect model for image processing:")
+                model = First_Shot.select_model()
+                # Save model choice
+                state['model_first_shot'] = model
+                save_run_state(run_output_dir, state)
             
             # Use run-specific directory for output
             output_dir = run_output_dir
-            First_Shot.process_images(processing_folder, prompt_path, output_dir, run_name, model_id=model)
+            
+            # Get already processed images if resuming
+            processed_images = set()
+            if is_resume:
+                # Check for existing JSON files to skip
+                for json_file in output_dir.glob('*.json'):
+                    if 'batch' not in json_file.name:
+                        # Extract image name from JSON filename
+                        # Format: runname_first_shot_imagename.json
+                        try:
+                            with open(json_file, 'r', encoding='utf-8') as f:
+                                data = json.load(f)
+                                if 'image_name' in data:
+                                    processed_images.add(data['image_name'])
+                        except:
+                            pass
+                
+                if processed_images:
+                    print(f"\nResuming: Found {len(processed_images)} already processed images. Skipping those...")
+            
+            First_Shot.process_images(processing_folder, prompt_path, output_dir, run_name, model_id=model, skip_images=processed_images)
             
             # Convert JSON files to CSV
             print("\n=== Converting JSON files to CSV ===")
@@ -577,39 +742,118 @@ def main():
         else:  # Two shots
             print("\nTwo shots mode: Running first pass, then second pass using first pass results")
             
-            # Select models for both passes upfront
-            print("\n=== Model Selection ===")
-            print("\nSelect model for first pass processing:")
-            model1 = First_Shot.select_model()
-            print("\nSelect model for second pass processing:")
-            model2 = Second_Shot.select_model()
-            
             # Create temporary processing directories
             temp_first_dir = run_output_dir / "temp_first"
             temp_second_dir = run_output_dir / "temp_second"
             temp_first_dir.mkdir(exist_ok=True)
             temp_second_dir.mkdir(exist_ok=True)
             
-            # Run first shot
-            print("\n=== Running First Pass ===")
-            First_Shot.process_images(processing_folder, 
-                          prompt_path, temp_first_dir, 
-                          run_name, 
-                          model_id=model1)
-            print("\n=== Converting First Pass JSON files to CSV ===")
-            convert_json_to_csv(str(temp_first_dir))
+            # Determine if we need to run first shot
+            batch_json_path = None
+            first_shot_complete = False
             
-            # Find the batch JSON file from first shot
-            batch_file = list(temp_first_dir.glob(f"{run_name}_first_shot_transcriptions_batch.json"))
-            if not batch_file:
-                print("Error: Could not find first shot batch JSON file. Skipping second shot.")
-                return
+            if is_resume:
+                # Check if first shot was already completed
+                batch_file = list(temp_first_dir.glob(f"{run_name}_first_shot_transcriptions_batch.json"))
+                if batch_file:
+                    batch_json_path = batch_file[0]
+                    first_shot_complete = True
+                    print(f"\nFirst shot already completed, skipping to second shot")
             
-            batch_json_path = batch_file[0]
-            print(f"\nFound first shot batch JSON: {batch_json_path}")
+            # Select models for both passes upfront (or use saved models)
+            if is_resume and 'model_first_shot' in saved_state:
+                model1 = saved_state['model_first_shot']
+                model2 = saved_state.get('model_second_shot')
+                print(f"\nUsing saved model for first pass: {model1}")
+                if model2:
+                    print(f"Using saved model for second pass: {model2}")
+                else:
+                    print("\nSelect model for second pass processing:")
+                    model2 = Second_Shot.select_model()
+                    state = load_run_state(run_output_dir)
+                    state['model_second_shot'] = model2
+                    save_run_state(run_output_dir, state)
+            else:
+                print("\n=== Model Selection ===")
+                print("\nSelect model for first pass processing:")
+                model1 = First_Shot.select_model()
+                print("\nSelect model for second pass processing:")
+                model2 = Second_Shot.select_model()
+                
+                # Save model choices
+                state = load_run_state(run_output_dir)
+                state['model_first_shot'] = model1
+                state['model_second_shot'] = model2
+                save_run_state(run_output_dir, state)
+            
+            # Run first shot if not already complete
+            if not first_shot_complete:
+                # Update state
+                state = load_run_state(run_output_dir)
+                state['current_step'] = 'first_shot'
+                save_run_state(run_output_dir, state)
+                
+                print("\n=== Running First Pass ===")
+                
+                # Get already processed images if resuming
+                processed_images = set()
+                if is_resume:
+                    # Check for existing JSON files to skip
+                    for json_file in temp_first_dir.glob('*.json'):
+                        if 'batch' not in json_file.name:
+                            try:
+                                with open(json_file, 'r', encoding='utf-8') as f:
+                                    data = json.load(f)
+                                    if 'image_name' in data:
+                                        processed_images.add(data['image_name'])
+                            except:
+                                pass
+                    
+                    if processed_images:
+                        print(f"\nResuming: Found {len(processed_images)} already processed images in first shot. Skipping those...")
+                
+                First_Shot.process_images(processing_folder, 
+                              prompt_path, temp_first_dir, 
+                              run_name, 
+                              model_id=model1,
+                              skip_images=processed_images)
+            if not first_shot_complete:
+                print("\n=== Converting First Pass JSON files to CSV ===")
+                convert_json_to_csv(str(temp_first_dir))
+                
+                # Find the batch JSON file from first shot
+                batch_file = list(temp_first_dir.glob(f"{run_name}_first_shot_transcriptions_batch.json"))
+                if not batch_file:
+                    print("Error: Could not find first shot batch JSON file. Skipping second shot.")
+                    return
+                
+                batch_json_path = batch_file[0]
+                print(f"\nFound first shot batch JSON: {batch_json_path}")
+            
+            # Update state for second shot
+            state = load_run_state(run_output_dir)
+            state['current_step'] = 'second_shot'
+            save_run_state(run_output_dir, state)
             
             # Run second shot with the JSON file from first shot
             print("\n=== Running Second Pass using First Pass Results ===")
+            
+            # Get already processed images if resuming
+            processed_images = set()
+            if is_resume:
+                # Check for existing JSON files to skip
+                for json_file in temp_second_dir.glob('*.json'):
+                    if 'batch' not in json_file.name:
+                        try:
+                            with open(json_file, 'r', encoding='utf-8') as f:
+                                data = json.load(f)
+                                if 'image_name' in data:
+                                    processed_images.add(data['image_name'])
+                        except:
+                            pass
+                
+                if processed_images:
+                    print(f"\nResuming: Found {len(processed_images)} already processed images in second shot. Skipping those...")
             
             # Process second shot using first shot results
             Second_Shot.process_with_first_shot(
@@ -618,7 +862,8 @@ def main():
             batch_json_path, 
             temp_second_dir, 
             run_name, 
-            model_id=model2
+            model_id=model2,
+            skip_images=processed_images
             )
             
             # Convert second shot JSON files to CSV
@@ -677,6 +922,9 @@ def main():
         # Generate and save cost analysis report directly to run directory
         print("\n=== Generating Cost Analysis Report ===")
         cost_tracker.save_report_to_desktop(run_name, target_dir=str(run_output_dir))
+        
+        # Mark run as complete
+        mark_run_complete(run_output_dir)
         
     except Exception as e:
         print(f"\nError during transcription process: {str(e)}")
