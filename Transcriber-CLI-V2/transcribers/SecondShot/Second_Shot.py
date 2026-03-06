@@ -18,13 +18,17 @@ AVAILABLE_MODELS = [
     "us.anthropic.claude-opus-4-20250514-v1:0",
     "us.anthropic.claude-sonnet-4-20250514-v1:0",
     "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
+    "us.anthropic.claude-opus-4-1-20250805-v1:0",
     "us.meta.llama3-2-90b-instruct-v1:0",
     "us.meta.llama4-maverick-17b-instruct-v1:0",
     "us.amazon.nova-premier-v1:0",
     "us.amazon.nova-pro-v1:0",
     "us.amazon.nova-lite-v1:0",
+    "us.amazon.nova-2-lite-v1:0",
     "us.mistral.pixtral-large-2502-v1:0",
-    "us.anthropic.claude-opus-4-1-20250805-v1:0"
+    "us.mistral.mistral-large-3-675b-instruct",
+    "qwen.qwen3-vl-235b-a22b",
+    "google.gemma-3-27b-it"
 
 ]
 
@@ -259,37 +263,19 @@ def verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, m
             # Create verification prompt
             verification_prompt = f"""You are an expert Botanist and Geographer with a Ph.D.-level understanding, acting as a verifier reviewing a herbarium label transcription.
 
-            Please verify the following transcription against the image and correct any errors:
+Please verify the following transcription against the image and correct any errors:
 
-            {first_shot_text}
+{first_shot_text}
 
-            Return the corrected transcription in the same format. If the transcription is accurate, return it unchanged.
-            If you find information that is not entered or can be applied to new fields such as first and second political unit and Municipality, add or move it into existing fields as appropriate.
-            If you find that one of the fields for location is in an incorrect field please move it to the correct field.
-            If there is a lower-level location such as municipality, but no country, please work your way up and insert all higher-level locations.
-            Correct any misspelled locations using georeferenced knowledge. The Locality field contains many clues to detailed locations — use them.
-
-            Name formatting rule (collectedBy):
-            - Field targeted: collectedBy (also apply to any clearly collector-related fields such as "collector", "collected_by", etc.)
-            - Location: Usually found at the beginning of specimen labels or in dedicated collector fields.
-            - Format: MUST follow this exact pattern: [Initial(s)] [Last Name]
-                - Each initial MUST be a single capital letter followed by a period and a space (e.g., "R. M.").
-                - The last name MUST be capitalized with remaining letters lowercase (e.g., "Schuster").
-                - Use only the primary collector if multiple collectors are listed (ignore "&", "et al.", "and", etc.). Choose the first primary name after removing qualifiers.
-                - Remove common prefixes such as "leg.", "legit.", "coll.", "collected by" if present.
-                - Convert reversed formats ("Last, First" or "Last, F. M.") into the required initials + last name pattern.
-                - Never include punctuation after the last name (no trailing commas or periods).
-                - Never include titles (Dr., Prof., Mr., Mrs., etc.).
-                - If a name appears directly after a blurry or crossed-out name, assume the legible name is the collector.
-                - Examples:
-                    - CORRECT: "R. M. Schuster", "V. Bagdonas", "J. J. Engel", "H. S. Conard", "F. J. Hermann", "W. Kiener"
-                    - INCORRECT: "Schuster, R.M.", "R.M.Schuster", "SCHUSTER", "r. m. schuster", "Dr. R. Schuster", "R. Schuster."
-                - If initials are inferred from given given/first names, produce them as separate single-letter initials with periods and spaces (e.g., "R. M. Schuster").
-                - If multiple names appear and it's ambiguous who is primary, choose the first legible name after removing prefixes and qualifiers.
-
-            Do not create any new fields beyond those already present in the transcription. Move or correct values only within the existing field set.
-            Do not add commentary, explanations, or metadata — return only the corrected transcription in the exact same structured format as the input.
-            Do not say anything else, please just return the corrected transcription."""
+                Return the corrected transcription in the same format. If the transcription is accurate, return it unchanged.
+                If you find information that is not entered or can be applied to new fields such as first and second political unit and Municipality. 
+                If you find that one of the fields for location is in an incorrect field please move it to the correct field. 
+                If There is a lower level location such as municipality, but no country. Please work your way up and insert all higher level locations.
+                Correct any mispelled locations of all ranges. Use georefrenced knowledge.
+                The Locality field contains a lot of clues as to detailed locations
+                Please enter the information
+                Do not Create any new Fields, The fields set are as standard and dont need to be expanded upon
+                Do not say anything else, please just return the corrected transcription"""
             
             # Create temporary prompt file with explicit UTF-8 encoding
             temp_prompt_path = None

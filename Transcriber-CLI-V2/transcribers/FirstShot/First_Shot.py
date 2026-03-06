@@ -20,13 +20,17 @@ AVAILABLE_MODELS = [
     "us.anthropic.claude-opus-4-20250514-v1:0",
     "us.anthropic.claude-sonnet-4-20250514-v1:0",
     "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
+    "us.anthropic.claude-opus-4-1-20250805-v1:0",
     "us.meta.llama3-2-90b-instruct-v1:0",
     "us.meta.llama4-maverick-17b-instruct-v1:0",
     "us.amazon.nova-premier-v1:0",
     "us.amazon.nova-pro-v1:0",
     "us.amazon.nova-lite-v1:0",
+    "us.amazon.nova-2-lite-v1:0",
     "us.mistral.pixtral-large-2502-v1:0",
-    "us.anthropic.claude-opus-4-1-20250805-v1:0"
+    "us.mistral.mistral-large-3-675b-instruct",
+    "qwen.qwen3-vl-235b-a22b",
+    "google.gemma-3-27b-it"
 
 ]
 

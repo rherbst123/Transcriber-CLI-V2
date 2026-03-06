@@ -221,6 +221,7 @@ def get_standard_fieldnames(data=None):
         "secondaryCollectors",
         "recordNumber",
         "verbatimEventDate",
+        "eventDate",
         "minimumEventDate",
         "maximumEventDate",
         "verbatimIdentification",
