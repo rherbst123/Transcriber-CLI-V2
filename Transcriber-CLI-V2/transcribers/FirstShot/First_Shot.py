@@ -151,7 +151,7 @@ def process_image(image_path, prompt_path, model_id=None):
     print(response_text)
     return response_text
 
-def process_images(base_folder, prompt_path, output_dir, date_folder, model_id=None):
+def process_images(base_folder, prompt_path, output_dir, date_folder, model_id=None, skip_images=None):
     """Process multiple images from a folder
     
     Args:
@@ -160,7 +160,10 @@ def process_images(base_folder, prompt_path, output_dir, date_folder, model_id=N
         output_dir: Path to save the transcription results
         date_folder: Name of the date folder for naming the output file
         model_id: Pre-selected model ID (optional)
+        skip_images: Set of image names to skip (for resuming runs)
     """
+    if skip_images is None:
+        skip_images = set()
     # Check for Full_Images folder first (for organized images)
     collaged_folder = os.path.join(base_folder, "Full_Images")
     if os.path.exists(collaged_folder):
@@ -229,7 +232,14 @@ def process_images(base_folder, prompt_path, output_dir, date_folder, model_id=N
     
     # Process each image
     print(f"\nFound {len(image_files)} images to process")
+    skipped_count = 0
     for i, image_path in enumerate(image_files, 1):
+        # Skip if already processed (for resume functionality)
+        if image_path.name in skip_images:
+            skipped_count += 1
+            print(f"Skipping {i}/{len(image_files)}: {image_path.name} (already processed)")
+            continue
+        
         print(50*"=")
         print(f"Processing image {i}/{len(image_files)}: {image_path.name}")
         
@@ -287,6 +297,8 @@ def process_images(base_folder, prompt_path, output_dir, date_folder, model_id=N
         batch_filepath = create_batch_json_file(output_dir, date_folder, "first_shot", all_transcriptions)
         print(f"Batch JSON file created: {batch_filepath}")
     
+    if skipped_count > 0:
+        print(f"\nSkipped {skipped_count} already processed images")
     print(f"First Shot processing completed successfully! JSON files saved to {output_dir}")
 
 # Allow running this module directly for testing

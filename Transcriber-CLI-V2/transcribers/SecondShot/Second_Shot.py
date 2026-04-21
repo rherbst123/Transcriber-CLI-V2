@@ -127,6 +127,20 @@ def process_image(image_path, prompt_path, model_id):
     print(response_text)
     return response_text
 
+def verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, model_id=None, skip_images=None):
+    """Verify and correct first shot transcription results
+    
+    Args:
+        base_folder: Path to the base folder containing images
+        first_shot_json_path: Path to the first shot batch JSON file
+        output_dir: Output directory for second shot results
+        run_name: Name of the run
+        model_id: Model ID to use for verification
+        skip_images: Set of image names to skip (for resuming runs)
+    """
+    if skip_images is None:
+        skip_images = set()
+    
 def verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, model_id=None):
     if model_id is None:
         model_id = select_model()
@@ -165,8 +179,15 @@ def verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, m
     print(f"\nVerifying {len(transcriptions)} first shot transcriptions")
     
     all_transcriptions = []
+    skipped_count = 0
     for i, transcription in enumerate(transcriptions, 1):
         image_name = transcription['image_name']
+        
+        # Skip if already processed (for resume functionality)
+        if image_name in skip_images:
+            skipped_count += 1
+            print(f"\nSkipping {i}/{len(transcriptions)}: {image_name} (already processed)")
+            continue
         # Prioritize URL from first shot, fall back to URL map if not available
         # Handle segmented image names by removing '_segmentation' suffix when looking up URLs
         image_name_for_url_lookup = image_name
@@ -238,11 +259,11 @@ def verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, m
             first_shot_text = first_shot_text.encode('utf-8', errors='replace').decode('utf-8')
             
             # Create verification prompt
-            verification_prompt = f"""You are an expert Botanist and Geography with a P.H.D level understanding verifier reviewing a herbarium label transcription.
+            verification_prompt = f"""You are an expert Botanist and Geographer with a Ph.D.-level understanding, acting as a verifier reviewing a herbarium label transcription.
 
-                Please verify the following transcription against the image and correct any errors:
+Please verify the following transcription against the image and correct any errors:
 
-                {first_shot_text}
+{first_shot_text}
 
                 Return the corrected transcription in the same format. If the transcription is accurate, return it unchanged.
                 If you find information that is not entered or can be applied to new fields such as first and second political unit and Municipality. 
@@ -314,12 +335,23 @@ def verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, m
         batch_filepath = create_batch_json_file(output_dir, run_name, "second_shot_verification", all_transcriptions)
         print(f"\nBatch verification JSON file created: {batch_filepath}")
     
+    if skipped_count > 0:
+        print(f"\nSkipped {skipped_count} already processed images")
     print(f"Second Shot verification completed! JSON files saved to {output_dir}")
     return all_transcriptions
 
 # Backward compatibility alias
 def process_with_first_shot(base_folder, prompt_path, first_shot_json_path, output_dir, run_name, model_id=None):
+    """Backward compatibility wrapper for verify_first_shot
     
+    Args:
+        base_folder: Path to the base folder containing images
+        prompt_path: Path to the prompt file (not used in verification, but kept for compatibility)
+        first_shot_json_path: Path to the first shot batch JSON file
+        output_dir: Output directory for second shot results
+        run_name: Name of the run
+        model_id: Model ID to use for verification
+    """
     return verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, model_id)
 
 if __name__ == "__main__":
