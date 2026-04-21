@@ -10,7 +10,6 @@ from datetime import datetime
 from helpers.cost_analysis import cost_tracker
 from helpers.json_output import save_json_transcription, create_batch_json_file, create_json_response
 
-"""Second Shot verification module - verifies and corrects first shot transcription results"""
 
 AVAILABLE_MODELS = [
     "us.anthropic.claude-3-sonnet-20240229-v1:0",
@@ -79,19 +78,17 @@ def _clean_response_text(response_text):
             response_text = response_text[len(prefix):].lstrip()
             break
     
-    # Handle cases where response contains the prompt
-    if "## 🌿 Herbarium Label Transcription" in response_text or "**Herbarium Label Transcription**" in response_text:
-        print("Warning: Response contains the prompt instead of structured data. Extracting only the field list...")
-        field_list_start = response_text.find("verbatimCollectors:")
-        if field_list_start != -1:
-            response_text = response_text[field_list_start:]
-        else:
-            print("Could not find field list in response. Please check the model output.")
+    # # Handle cases where response contains the prompt
+    # if "## 🌿 Herbarium Label Transcription" in response_text or "**Herbarium Label Transcription**" in response_text:
+    #     field_list_start = response_text.find("verbatimCollectors:")
+    #     if field_list_start != -1:
+    #         response_text = response_text[field_list_start:]
+    #     else:
+    #         print("Could not find field list in response. Please check the model output.")
     
-    return response_text
+    # return response_text
 
 def process_image(image_path, prompt_path, model_id):
-    """Process a single image with the given prompt"""
     bedrock_runtime = boto3.client("bedrock-runtime")
     
     # Convert and standardize image
@@ -131,7 +128,6 @@ def process_image(image_path, prompt_path, model_id):
     return response_text
 
 def verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, model_id=None):
-    """Verify and correct first shot transcription results"""
     if model_id is None:
         model_id = select_model()
     
@@ -323,16 +319,7 @@ def verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, m
 
 # Backward compatibility alias
 def process_with_first_shot(base_folder, prompt_path, first_shot_json_path, output_dir, run_name, model_id=None):
-    """Backward compatibility wrapper for verify_first_shot
     
-    Args:
-        base_folder: Path to the base folder containing images
-        prompt_path: Path to the prompt file (not used in verification, but kept for compatibility)
-        first_shot_json_path: Path to the first shot batch JSON file
-        output_dir: Output directory for second shot results
-        run_name: Name of the run
-        model_id: Model ID to use for verification
-    """
     return verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, model_id)
 
 if __name__ == "__main__":
