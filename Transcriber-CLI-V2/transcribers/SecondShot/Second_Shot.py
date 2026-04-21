@@ -141,7 +141,6 @@ def verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, m
     if skip_images is None:
         skip_images = set()
     
-def verify_first_shot(base_folder, first_shot_json_path, output_dir, run_name, model_id=None):
     if model_id is None:
         model_id = select_model()
     
