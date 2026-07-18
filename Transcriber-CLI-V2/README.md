@@ -63,7 +63,7 @@ The tool will:
 ## Future Updates
 
 - [x] Scientific Name Validation (Done with Global Names Validator on Tropicos) [Global Names](https://verifier.globalnames.org/)
-- [ ] Validation on collectors, locality and dates using GBIF, IDigBio and Sybiota
+- [x] Validation on collectors, locality and dates using GBIF, IDigBio and Sybiota
 - [ ] Automatic Segmentation for all images done before transcription (75% done)
 
 ## Supported AI Models
