@@ -2,6 +2,7 @@ import requests
 import json
 import csv
 import sys
+import time
 from pathlib import Path
 from typing import List, Dict, Optional
 
@@ -52,6 +53,8 @@ def search_portal_by_barcode(barcode: str) -> Optional[Dict]:
                     if isinstance(value, list) and len(value) > 0:
                         results = value
                         break
+
+        time.sleep(0.5)
         
         return results[0] if results and len(results) > 0 else None
         
