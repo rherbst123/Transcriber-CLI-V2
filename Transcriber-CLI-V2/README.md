@@ -24,6 +24,8 @@ Transcriber CLI is designed to process and transcribe text from herbarium specim
 - Python 3.x
 - AWS account with Bedrock access
 - Properly configured AWS credentials: [AWS CLI](https://aws.amazon.com/cli/)
+- run "aws configure" in terminal to set access key and secret key
+- run "aws configure list" in terminal to verify settings: note that credentials are stored in ~/.aws directory
 
 ## Installation
 
