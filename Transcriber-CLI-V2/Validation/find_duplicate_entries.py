@@ -2,6 +2,7 @@ import requests
 import json
 import csv
 import sys
+import time
 from pathlib import Path
 from typing import List, Dict, Optional, Tuple
 
@@ -66,6 +67,8 @@ def search_portal_by_criteria(collector: str, collection_date: str, collid: str,
             target_institutions = ["F", "TENN", "MICH", "NY", "MO"]
             results = [record for record in results 
                       if record.get('institutionCode', '').strip() in target_institutions]
+        
+        time.sleep(0.5)
         
         return results if results else []
         
